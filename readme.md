@@ -1,8 +1,9 @@
 Project created with `vite` and `swc` for compilation instead of `webpack` and `cypress` for e2e tests.
 
-| How to install and run app : 
+How to install and run app :
 
 `npm i`
+
 `npm run dev`
 
 Libraries in use : 
