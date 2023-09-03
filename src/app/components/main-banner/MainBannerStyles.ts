@@ -9,13 +9,9 @@ export const StyledMainBanner = styled.div`
     width: 100%;
     height: 100%;
     background-color: #e5e5f7;
-    opacity: 0.5;
-    background-image: repeating-radial-gradient(
-        circle at 10% 50%,
-        transparent 0,
-        #e5e5f7 25px
-      ),
-      repeating-linear-gradient(#444cf755, #444cf7);
+    opacity: 0.8;
+    background-image: radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
+    background-size: 10px 10px;
     z-index: -1;
   }
 `;
