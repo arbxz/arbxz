@@ -1,4 +1,3 @@
-import Image from "next/image";
 import MainBanner from "./components/main-banner/MainBanner";
 
 export default function Home() {
