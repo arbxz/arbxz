@@ -1,35 +1,38 @@
 import styled from "styled-components";
 
 export const StyledMainBanner = styled.div`
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #e5e5f7;
-    opacity: 0.8;
-    background-image: radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px);
-    background-size: 10px 10px;
-    z-index: -1;
-  }
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   background-color: rgba(200, 143, 255, 1);
+  //   opacity: 0.8;
+  //   background-image: repeating-radial-gradient(
+  //       circle at 0 0,
+  //       transparent 0,
+  //       rgba(200, 143, 255, 1) 10px
+  //     ),
+  //     repeating-linear-gradient(rgba(165, 71, 255, 1), rgba(88, 0, 255, 1));
+  //   z-index: -1;
+  // }
 `;
 
 export const StyledMainTitle = styled.h1`
   display: block;
-  color: #333333;
-  font-size: 4rem;
+  color: white;
+  font-size: 5rem;
   font-weight: 600;
 `;
 
 export const StyledNoteCard = styled.span`
-  //   border: 2px dashed #333333;
   border-radius: 5px;
   background: white;
-  box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 5px 3px 3px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 5px 5px 3px 3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 5px 5px 3px 3px rgba(0, 0, 0, 0.3);
 `;
 
 export const StyledHighlightedText = styled.p`
@@ -45,10 +48,17 @@ export const StyledBiocontent = styled.div`
   &::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: 50%;
     left: -2.5px;
-    height: 100%;
+    transform: translateY(-50%);
+    height: 50%;
     width: 5px;
     background: #333333;
   }
+`;
+
+export const StyledSocialContainer = styled.div`
+  box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.2);
 `;
