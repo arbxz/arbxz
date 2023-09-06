@@ -10,9 +10,32 @@ const inter = League_Spartan({
 });
 
 export const metadata: Metadata = {
-  title: "arbxz",
+  viewport: { width: "device-width", initialScale: 1 },
+  title: "arbxz | Arbaaz Mowlabucus",
   description:
-    "Professional portfolio of my frontend projects and illustrations.",
+    "Arbaaz Mowlabucus professional portfolio of my frontend projects and illustrations.",
+  authors: {
+    name: "Arbaaz Mowlabucus",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_IE",
+    url: "https://www.arbxz.com/",
+    title: "Arbaaz Mowlabucus",
+    description:
+      "Check out my portfolio and professional skills I gathered throughout my career.",
+    siteName: "Arbxz",
+  },
+  keywords: [
+    "Arbaaz Mowlabucus",
+    "React Developer",
+    "JavaScript",
+    "Web Developer",
+    "Front-end Developer",
+    "UI/UX",
+    "Portfolio",
+  ],
+  robots: "index",
 };
 
 export default function RootLayout({
@@ -22,6 +45,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="google" content="nositelinkssearchbox" />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );

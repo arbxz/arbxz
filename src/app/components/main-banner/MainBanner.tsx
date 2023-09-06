@@ -26,7 +26,7 @@ const MainBanner = () => {
       <StyledMainBanner className="relative flex justify-center align-middle flex-col w-full h-screen">
         <Image
           src="/images/gradient-mesh.webp"
-          alt="Vercel Logo"
+          alt="Portfolio background"
           fill
           priority
         />
