@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { StyledNavigationWrapper } from "./NavigationStyles";
 
 const Navigation = () => {
@@ -13,12 +13,11 @@ const Navigation = () => {
       }
     };
 
-    console.log("isContentScrolled", isContentScrolled);
     window.addEventListener("scroll", handleScroll);
 
-    // return () => {
-    //   window.removeEventListener("scroll", handleScroll);
-    // };
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, [isContentScrolled]);
 
   return (
