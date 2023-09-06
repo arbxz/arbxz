@@ -21,10 +21,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IE",
     url: "https://www.arbxz.com/",
-    title: "Arbaaz Mowlabucus",
+    title: "Arbaaz Mowlabucus | Frontend Developper",
     description:
       "Check out my portfolio and professional skills I gathered throughout my career.",
-    siteName: "Arbxz",
+    images: {
+      url: "/public/logo-large.webp",
+      alt: "Logo of my brand",
+    },
+    siteName: "Arbaz Mowlabucus | Frontend Developper",
   },
   keywords: [
     "Arbaaz Mowlabucus",
@@ -35,7 +39,8 @@ export const metadata: Metadata = {
     "UI/UX",
     "Portfolio",
   ],
-  robots: "index",
+  icons: "/public/logo-large.webp",
+  robots: "index, follow",
 };
 
 export default function RootLayout({
