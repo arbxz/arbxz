@@ -24,13 +24,6 @@ const MainBanner = () => {
   return (
     <>
       <StyledMainBanner className="relative flex justify-center align-middle flex-col w-full h-screen">
-        <Image
-          src="/images/gradient-mesh.webp"
-          alt="Portfolio background"
-          fill
-          priority
-        />
-
         <Navigation />
 
         <div className="main-container my-auto flex align-middle justify-center w-full">
@@ -70,8 +63,9 @@ const MainBanner = () => {
               <StyledBiocontent className="relative flex flex-col justify-center p-4 max-w-xs">
                 <div className="rounded-2xl p-4">
                   <StyledHighlightedText>Hello visitor,</StyledHighlightedText>
-                  <p className="text-white">
-                    I am Arbaaz Mowlabucus, a developer with a strong focus on
+                  <p>
+                    I am Arbaaz Mowlabucus, a developer with my primary focus
+                    being on
                     <StyledHighlightedText>
                       ReactJS
                     </StyledHighlightedText> and{" "}

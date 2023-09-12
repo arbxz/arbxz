@@ -1,28 +1,27 @@
 import styled from "styled-components";
 
 export const StyledMainBanner = styled.div`
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   width: 100%;
-  //   height: 100%;
-  //   background-color: rgba(200, 143, 255, 1);
-  //   opacity: 0.8;
-  //   background-image: repeating-radial-gradient(
-  //       circle at 0 0,
-  //       transparent 0,
-  //       rgba(200, 143, 255, 1) 10px
-  //     ),
-  //     repeating-linear-gradient(rgba(165, 71, 255, 1), rgba(88, 0, 255, 1));
-  //   z-index: -1;
-  // }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f3f3f3;
+    opacity: 0.8;
+    background-image: radial-gradient(
+      #8a8a8a 1.9500000000000002px,
+      #f3f3f3 1.9500000000000002px
+    );
+    background-size: 39px 39px;
+    z-index: -1;
+  }
 `;
 
 export const StyledMainTitle = styled.h1`
   display: block;
-  color: white;
+  color: #3333333;
   font-size: 5rem;
   font-weight: 600;
 `;
@@ -35,7 +34,7 @@ export const StyledNoteCard = styled.span`
   -moz-box-shadow: 5px 5px 3px 3px rgba(0, 0, 0, 0.3);
 `;
 
-export const StyledHighlightedText = styled.p`
+export const StyledHighlightedText = styled.span`
   display: inline-block;
   width: auto;
   background: #333333;
