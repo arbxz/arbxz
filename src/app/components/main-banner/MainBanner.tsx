@@ -19,8 +19,21 @@ import {
   StyledMainBanner,
   StyledSocialContainer,
 } from "./MainBannerStyles";
+import { useEffect, useState } from "react";
+import TextTransition, { presets } from "react-text-transition";
 
 const MainBanner = () => {
+  const Skills = ["NextJs", "ReactJs", "CSS", "Web design", "UX", "Tailwind"];
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(
+      () => setIndex((index) => index + 1),
+      3000 // every 3 seconds
+    );
+    return () => clearTimeout(intervalId);
+  }, []);
+
   return (
     <>
       <StyledMainBanner className="relative flex justify-center align-middle flex-col w-full h-screen">
@@ -63,16 +76,17 @@ const MainBanner = () => {
               <StyledBiocontent className="relative flex flex-col justify-center p-4 max-w-xs">
                 <div className="rounded-2xl p-4">
                   <StyledHighlightedText>Hello visitor,</StyledHighlightedText>
-                  <p>
-                    I am Arbaaz Mowlabucus, a developer with my primary focus
-                    being on
-                    <StyledHighlightedText>
-                      ReactJS
-                    </StyledHighlightedText> and{" "}
-                    <StyledHighlightedText>Next.js</StyledHighlightedText>. With
-                    over 4 years of professional experience in building robust
-                    and scalable web applications.
-                  </p>
+                  <div>
+                    I am Arbaaz Mowlabucus, a fun loving dev with my primary
+                    focus being
+                    <StyledHighlightedText className="text-2xl">
+                      <TextTransition springConfig={presets.wobbly}>
+                        {Skills[index % Skills.length]}
+                      </TextTransition>
+                    </StyledHighlightedText>
+                    .<br /> With over 4 years of professional experience in
+                    building robust and scalable web applications.
+                  </div>
                 </div>
               </StyledBiocontent>
             </div>

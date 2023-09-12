@@ -10,11 +10,8 @@ export const StyledMainBanner = styled.div`
     height: 100%;
     background-color: #f3f3f3;
     opacity: 0.8;
-    background-image: radial-gradient(
-      #8a8a8a 1.9500000000000002px,
-      #f3f3f3 1.9500000000000002px
-    );
-    background-size: 39px 39px;
+    background-image: radial-gradient(#8a8a8a 2px, #f3f3f3 2px);
+    background-size: 40px 40px;
     z-index: -1;
   }
 `;
@@ -34,7 +31,7 @@ export const StyledNoteCard = styled.span`
   -moz-box-shadow: 5px 5px 3px 3px rgba(0, 0, 0, 0.3);
 `;
 
-export const StyledHighlightedText = styled.span`
+export const StyledHighlightedText = styled.div`
   display: inline-block;
   width: auto;
   background: #333333;
