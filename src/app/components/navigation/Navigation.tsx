@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
+
 import { StyledNavigationWrapper } from "./NavigationStyles";
 
 const Navigation = () => {
@@ -6,7 +7,7 @@ const Navigation = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 200) {
+      if (window.scrollY > 50) {
         setIsContentScrolled(true);
       } else {
         setIsContentScrolled(false);
@@ -25,7 +26,7 @@ const Navigation = () => {
       isContentScrolled={isContentScrolled}
       className="fixed top-0 flex h-auto w-full justify-between align-middle p-4">
       <a className="text-xl text-black" href="/">
-        Arbxz
+        Arbxz | <span className="text-sm">Arbaaz Mowlabucus</span>
       </a>
       <div className="side-menu">
         <span className="language-wrapper block text-md">EN | FR</span>
