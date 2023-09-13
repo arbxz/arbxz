@@ -1,20 +1,6 @@
 import styled from "styled-components";
 
-export const StyledMainBanner = styled.div`
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #f3f3f3;
-    opacity: 0.8;
-    background-image: radial-gradient(#8a8a8a 2px, #f3f3f3 2px);
-    background-size: 40px 40px;
-    z-index: -1;
-  }
-`;
+export const StyledMainBanner = styled.div``;
 
 export const StyledMainTitle = styled.h1`
   display: block;
