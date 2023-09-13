@@ -27,10 +27,7 @@ const MainBanner = () => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    const intervalId = setInterval(
-      () => setIndex((index) => index + 1),
-      3000 // every 3 seconds
-    );
+    const intervalId = setInterval(() => setIndex((index) => index + 1), 3000);
     return () => clearTimeout(intervalId);
   }, []);
 
@@ -47,9 +44,10 @@ const MainBanner = () => {
             </StyledNoteCard>
             <div className="flex gap-4 align-top justify-center flex-col md:flex-row">
               <div className="flex justify-end gap-5 flex-col">
-                <StyledMainTitle className="md:text-right text-left">
-                  Front-end <br /> Developper
+                <StyledMainTitle className="md:text-8xl md:text-right text-6xl text-left">
+                  Front-end <br /> Developer
                 </StyledMainTitle>
+                {/* Todo : Populate with array */}
                 <div className="flex md:justify-end gap-5 flex-row p-1.5">
                   <FontAwesomeIcon
                     className="mb-2"
@@ -79,7 +77,7 @@ const MainBanner = () => {
                   <div>
                     I am Arbaaz Mowlabucus, a fun loving dev with my primary
                     focus being
-                    <StyledHighlightedText className="text-2xl">
+                    <StyledHighlightedText className="text-4xl">
                       <TextTransition springConfig={presets.wobbly}>
                         {Skills[index % Skills.length]}
                       </TextTransition>
@@ -94,7 +92,8 @@ const MainBanner = () => {
         </div>
       </StyledMainBanner>
 
-      <StyledSocialContainer className="fixed flex bg-white rounded-3xl gap-2 flex-col px-1.5 py-4 ml-5 top-1/2 left-0 -translate-y-1/2">
+      {/* Todo : Populate with array */}
+      <StyledSocialContainer className="hidden fixed md:flex bg-white rounded-3xl gap-2 flex-col px-1.5 py-4 ml-5 top-1/2 left-0 -translate-y-1/2">
         <a
           href="https://www.linkedin.com/in/arbaaz-mowlabucus-15bb17160/"
           target="_blank">

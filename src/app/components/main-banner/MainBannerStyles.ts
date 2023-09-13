@@ -19,7 +19,6 @@ export const StyledMainBanner = styled.div`
 export const StyledMainTitle = styled.h1`
   display: block;
   color: #3333333;
-  font-size: 5rem;
   font-weight: 600;
 `;
 
