@@ -1,26 +1,27 @@
 "use client";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Image from "next/image";
-import {
-  faReact,
-  faLinkedin,
-  faInstagram,
-  faGithub,
-  faCss3,
-  faHtml5,
-  faJs,
-} from "@fortawesome/free-brands-svg-icons";
-import Navigation from "../navigation/Navigation";
-import {
-  StyledHighlightedText,
-  StyledMainTitle,
-  StyledNoteCard,
-  StyledBiocontent,
-  StyledMainBanner,
-  StyledSocialContainer,
-} from "./MainBannerStyles";
 import { useEffect, useState } from "react";
 import TextTransition, { presets } from "react-text-transition";
+
+import {
+  faCss3,
+  faGithub,
+  faHtml5,
+  faInstagram,
+  faJs,
+  faLinkedin,
+  faReact,
+} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import Navigation from "../navigation/Navigation";
+import {
+  StyledBiocontent,
+  StyledHighlightedText,
+  StyledMainBanner,
+  StyledMainTitle,
+  StyledNoteCard,
+  StyledSocialContainer,
+} from "./MainBannerStyles";
 
 const MainBanner = () => {
   const Skills = ["NextJs", "ReactJs", "CSS", "Web design", "UX", "Tailwind"];

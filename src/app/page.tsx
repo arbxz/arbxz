@@ -1,5 +1,5 @@
-import MainBanner from "./components/main-banner/MainBanner";
 import KnowledgeBlock from "./components/knowledge-block/KnowledgeBlock";
+import MainBanner from "./components/main-banner/MainBanner";
 
 export default function Home() {
   return (

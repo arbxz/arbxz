@@ -1,8 +1,9 @@
-import "./themes/globals.css";
-import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import type { Metadata } from "next";
 import { League_Spartan } from "next/font/google";
+
+import "./themes/globals.css";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 
 config.autoAddCss = false;
 const inter = League_Spartan({
