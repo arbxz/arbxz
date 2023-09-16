@@ -25,10 +25,10 @@ const Navigation = () => {
     <StyledNavigationWrapper
       isContentScrolled={isContentScrolled}
       className="fixed top-0 flex h-auto w-full justify-between align-middle p-4">
-      <a className="text-xl text-black" href="/">
+      <a className="text-xl" href="/">
         Arbxz | <span className="text-sm">Arbaaz Mowlabucus</span>
       </a>
-      <div className="side-menu">
+      <div>
         <span className="language-wrapper block text-md">EN | FR</span>
       </div>
     </StyledNavigationWrapper>

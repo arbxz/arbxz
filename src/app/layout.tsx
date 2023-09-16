@@ -2,6 +2,8 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 import type { Metadata } from "next";
 import { League_Spartan } from "next/font/google";
 
+import StyledJsxRegistry from "./registry";
+
 import "./themes/globals.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
@@ -55,7 +57,9 @@ export default function RootLayout({
         <meta charSet="utf-8" />
         <meta name="google" content="nositelinkssearchbox" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <StyledJsxRegistry>{children}</StyledJsxRegistry>
+      </body>
     </html>
   );
 }
