@@ -48,22 +48,30 @@ const MainBanner = () => {
                 <div className="flex justify-center md:justify-end gap-5 flex-row p-1.5">
                   <FontAwesomeIcon
                     className="mb-2"
-                    style={{ fontSize: "2rem", color: "#333333" }}
+                    style={{
+                      fontSize: "2rem",
+                    }}
                     icon={faReact}
                   />
                   <FontAwesomeIcon
                     className="mb-2"
-                    style={{ fontSize: "2rem", color: "#333333" }}
+                    style={{
+                      fontSize: "2rem",
+                    }}
                     icon={faHtml5}
                   />
                   <FontAwesomeIcon
                     className="mb-2"
-                    style={{ fontSize: "2rem", color: "#333333" }}
+                    style={{
+                      fontSize: "2rem",
+                    }}
                     icon={faCss3}
                   />
                   <FontAwesomeIcon
                     className="mb-2"
-                    style={{ fontSize: "2rem", color: "#333333" }}
+                    style={{
+                      fontSize: "2rem",
+                    }}
                     icon={faJs}
                   />
                 </div>
