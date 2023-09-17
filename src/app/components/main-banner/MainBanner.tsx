@@ -45,35 +45,11 @@ const MainBanner = () => {
                   Front-end <br /> Developer
                 </StyledMainTitle>
                 {/* Todo : Populate with array */}
-                <div className="flex justify-center md:justify-end gap-5 flex-row p-1.5">
-                  <FontAwesomeIcon
-                    className="mb-2"
-                    style={{
-                      fontSize: "2rem",
-                    }}
-                    icon={faReact}
-                  />
-                  <FontAwesomeIcon
-                    className="mb-2"
-                    style={{
-                      fontSize: "2rem",
-                    }}
-                    icon={faHtml5}
-                  />
-                  <FontAwesomeIcon
-                    className="mb-2"
-                    style={{
-                      fontSize: "2rem",
-                    }}
-                    icon={faCss3}
-                  />
-                  <FontAwesomeIcon
-                    className="mb-2"
-                    style={{
-                      fontSize: "2rem",
-                    }}
-                    icon={faJs}
-                  />
+                <div className="flex justify-center md:justify-end gap-5 flex-row p-1.5 text-4xl">
+                  <FontAwesomeIcon icon={faReact} />
+                  <FontAwesomeIcon icon={faHtml5} />
+                  <FontAwesomeIcon icon={faCss3} />
+                  <FontAwesomeIcon icon={faJs} />
                 </div>
               </div>
               <StyledBiocontent className="relative flex flex-col justify-center p-4 max-w-xs">
