@@ -17,7 +17,7 @@ import {
   StyledMainBanner,
   StyledMainTitle,
   StyledNoteCard,
-} from "./MainBannerStyles";
+} from "./MainSectionStyles";
 
 const MainBanner = () => {
   const Skills = ["NextJs", "ReactJs", "CSS", "Web design", "UX", "Tailwind"];

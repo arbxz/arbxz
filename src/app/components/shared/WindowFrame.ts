@@ -1,7 +1,5 @@
 import styled, { css } from "styled-components";
 
-export const StyledSkillBlock = styled.section``;
-
 export const StyledScreenDummy = styled.div`
   background: ${({ theme }) => theme.backgroundSecondary};
   border: 2px solid ${({ theme }) => theme.text};

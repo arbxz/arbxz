@@ -5,7 +5,7 @@ import {
 } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { StyledScreenDummy, StyledSkillButton } from "./KnowledgeBlockStyles";
+import { StyledScreenDummy, StyledSkillButton } from "../shared/WindowFrame";
 
 const KnowledgeBlock = () => {
   return (

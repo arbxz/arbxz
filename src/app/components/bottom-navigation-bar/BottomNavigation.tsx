@@ -1,10 +1,5 @@
 import { faFolder, faIdCard } from "@fortawesome/free-regular-svg-icons";
-import {
-  faA,
-  faDesktop,
-  faGhost,
-  faHouse,
-} from "@fortawesome/free-solid-svg-icons";
+import { faDesktop, faGhost, faHouse } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 

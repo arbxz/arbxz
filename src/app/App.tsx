@@ -8,9 +8,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 
 import BottomNavigation from "./components/bottom-navigation-bar/BottomNavigation";
-import KnowledgeBlock from "./components/knowledge-block/KnowledgeBlock";
-import MainBanner from "./components/main-banner/MainBanner";
-import { StyledSocialContainer } from "./components/main-banner/MainBannerStyles";
+import Contact from "./components/contact-section/Contact";
+import KnowledgeBlock from "./components/knowledge-section/KnowledgeSection";
+import MainBanner from "./components/main-section/MainSection";
+import { StyledSocialContainer } from "./components/main-section/MainSectionStyles";
 import { useThemeContext } from "./context/theme";
 import { StyledMain, StyledThemeButton } from "./themes/globalStyles";
 
@@ -21,6 +22,7 @@ const App = () => {
     <StyledMain className="flex min-h-screen flex-col items-center justify-start select-none">
       <MainBanner />
       <KnowledgeBlock />
+      <Contact />
       <BottomNavigation />
       {/* Todo : Populate with array */}
       <StyledSocialContainer className="hidden fixed md:flex rounded-3xl gap-2 flex-col px-3 py-4 ml-5 top-1/2 left-0 -translate-y-1/2 text-2xl">
