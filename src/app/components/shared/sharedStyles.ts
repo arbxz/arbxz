@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const StyledScreenDummy = styled.div`
   background: ${({ theme }) => theme.backgroundSecondary};
@@ -14,5 +14,15 @@ export const StyledSkillButton = styled.button<StyledSkillButtonProps>`
   border: 1px solid ${({ theme }) => theme.text};
   color: ${({ isDark, theme }) => (isDark ? theme.textSecondary : theme.text)};
   background: ${({ isDark, theme }) =>
-    isDark ? theme.background : "theme.backgroundSecondary"};
+    isDark ? theme.background : theme.backgroundSecondary};
+`;
+
+export const StyledPrimaryButton = styled.button`
+  background: ${({ theme }) => theme.background};
+  color: ${({ theme }) => theme.textSecondary};
+`;
+
+export const StyledDummyHeader = styled.div`
+  background: ${({ theme }) => theme.background};
+  color: ${({ theme }) => theme.textSecondary};
 `;

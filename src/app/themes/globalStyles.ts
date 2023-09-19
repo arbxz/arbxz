@@ -21,8 +21,3 @@ export const StyledMain = styled.main`
     z-index: -1;
   }
 `;
-
-export const StyledThemeButton = styled.button`
-  background: ${({ theme }) => theme.background};
-  color: ${({ theme }) => theme.textSecondary};
-`;

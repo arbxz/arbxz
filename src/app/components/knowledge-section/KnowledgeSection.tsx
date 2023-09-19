@@ -5,85 +5,68 @@ import {
 } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { StyledScreenDummy, StyledSkillButton } from "../shared/WindowFrame";
+import {
+  StyledDummyHeader,
+  StyledScreenDummy,
+  StyledSkillButton,
+} from "../shared/sharedStyles";
 
-const KnowledgeBlock = () => {
+interface SkillButtonsProps {
+  data: string[];
+  isDark?: boolean;
+}
+
+const KnowledgeSection = () => {
+  const skillData = [
+    "Figma",
+    "HTML/TSX/JSX",
+    "CSS/SCSS",
+    "Typescript",
+    "NextJs",
+    "ReactJs",
+    "Cypress",
+    "Vercel",
+  ];
+
+  const hobbyData = ["Digital Art", "Art", "Web design", "Photoshop"];
+
+  const SkillButtons = ({ data, isDark }: SkillButtonsProps) => {
+    return (
+      <div className="flex gap-4 flex-wrap w-full items-center justify-center p-4">
+        {data.map((skill, index) => (
+          <StyledSkillButton
+            key={index}
+            className="md:text-2xl text-xl md:px-8 px-4 md:py-2 py-1 rounded-xl md:rounded-3xl"
+            isDark={isDark}>
+            {skill}
+          </StyledSkillButton>
+        ))}
+      </div>
+    );
+  };
+
   return (
     <section
-      id="skills-block"
-      className=" align-middle justify-center h-screen w-full">
-      <StyledScreenDummy className="flex flex-auto flex-col md:w-3/5 w-4/5 min-h-4/5 mx-auto align-middle justify-start rounded-2xl overflow-hidden">
-        <div className="flex justify-self-start justify-end align-baseline gap-4 p-3 border-b bg-neutral-700">
-          <h4 className="mr-auto text-white">Things I am good at</h4>
-          <FontAwesomeIcon color="white" icon={faWindowMinimize} />
-          <FontAwesomeIcon color="white" icon={faWindowMaximize} />
-          <FontAwesomeIcon color="white" icon={faCircleXmark} />
-        </div>
-        <div className="p-4">
+      id="skills-section"
+      className="flex flex-auto items-center justify-center min-h-screen w-4/5 md:w-3/5 lg:w-1/2 mx-auto p-4">
+      <StyledScreenDummy className="flex flex-auto flex-col min-h-4/5 mx-auto items-center justify-center rounded-2xl shadow-xl overflow-hidden">
+        <StyledDummyHeader className="flex justify-end items-center w-full gap-4 p-3 border-b">
+          <h4 className="mr-auto">Things I am good at</h4>
+          <FontAwesomeIcon icon={faWindowMinimize} />
+          <FontAwesomeIcon icon={faWindowMaximize} />
+          <FontAwesomeIcon icon={faCircleXmark} />
+        </StyledDummyHeader>
+        <div className="block p-4 w-full">
           <p className="text-md text-center max-w-sm mx-auto">
             Professional skills I use in my day to day life as a react developer
           </p>
-          <div className="flex gap-4 flex-wrap w-full align-middle justify-center p-4">
-            <StyledSkillButton className="md:text-3xl text-xl md:px-8 px-4 md:py-2 py-1 rounded-xl md:rounded-3xl">
-              Figma
-            </StyledSkillButton>
-
-            <StyledSkillButton className="md:text-3xl text-xl md:px-8 px-4 md:py-2 py-1 rounded-xl md:rounded-3xl">
-              HTML/TSX/ JSX
-            </StyledSkillButton>
-
-            <StyledSkillButton className="md:text-3xl text-xl md:px-8 px-4 md:py-2 py-1 rounded-xl md:rounded-3xl">
-              CSS/SCSS
-            </StyledSkillButton>
-
-            <StyledSkillButton className="md:text-3xl text-xl md:px-8 px-4 md:py-2 py-1 rounded-xl md:rounded-3xl">
-              Typescript
-            </StyledSkillButton>
-
-            <StyledSkillButton className="md:text-3xl text-xl md:px-8 px-4 md:py-2 py-1 rounded-xl md:rounded-3xl">
-              NextJs
-            </StyledSkillButton>
-
-            <StyledSkillButton className="md:text-3xl text-xl md:px-8 px-4 md:py-2 py-1 rounded-xl md:rounded-3xl">
-              ReactJs
-            </StyledSkillButton>
-
-            <StyledSkillButton className="md:text-3xl text-xl md:px-8 px-4 md:py-2 py-1 rounded-xl md:rounded-3xl">
-              Cypress
-            </StyledSkillButton>
-
-            <StyledSkillButton className="md:text-3xl text-xl md:px-8 px-4 md:py-2 py-1 rounded-xl md:rounded-3xl">
-              Vercel
-            </StyledSkillButton>
-          </div>
+          <SkillButtons data={skillData} />
           <p className="text-xl text-center">Hobbies</p>
-          <div className="flex gap-4 flex-wrap w-full align-middle justify-center p-4">
-            <StyledSkillButton
-              className="md:text-3xl text-xl md:px-8 px-4 md:py-2 py-1 rounded-xl md:rounded-3xl"
-              isDark>
-              Digital Art
-            </StyledSkillButton>
-
-            <StyledSkillButton
-              className="md:text-3xl text-xl md:px-8 px-4 md:py-2 py-1 rounded-xl md:rounded-3xl"
-              isDark>
-              Art
-            </StyledSkillButton>
-            <StyledSkillButton
-              className="md:text-3xl text-xl md:px-8 px-4 md:py-2 py-1 rounded-xl md:rounded-3xl"
-              isDark>
-              Web design
-            </StyledSkillButton>
-            <StyledSkillButton
-              className="md:text-3xl text-xl md:px-8 px-4 md:py-2 py-1 rounded-xl md:rounded-3xl"
-              isDark>
-              Photoshop
-            </StyledSkillButton>
-          </div>
+          <SkillButtons data={hobbyData} isDark />
         </div>
       </StyledScreenDummy>
     </section>
   );
 };
 
-export default KnowledgeBlock;
+export default KnowledgeSection;

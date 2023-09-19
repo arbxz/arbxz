@@ -30,10 +30,10 @@ const MainBanner = () => {
 
   return (
     <>
-      <StyledMainBanner className="relative flex justify-center align-middle flex-col w-full h-screen">
+      <StyledMainBanner className="relative flex justify-center items-center flex-col w-full min-h-screen">
         <Navigation />
 
-        <div className="main-container my-auto flex align-middle justify-center w-full">
+        <div className="main-container my-auto flex items-center justify-center w-full">
           <div className="main-content relative md:w-full lg:w-auto p-4 flex md:flex-row flex-col gap-4 align-top justify-center">
             <StyledNoteCard className="md:absolute relative md:left-1/4 md:-top-20 p-3 text-xs">
               Welcome to my portfolio !<br />
@@ -44,7 +44,6 @@ const MainBanner = () => {
                 <StyledMainTitle className="md:text-8xl md:text-right text-6xl text-center">
                   Front-end <br /> Developer
                 </StyledMainTitle>
-                {/* Todo : Populate with array */}
                 <div className="flex justify-center md:justify-end gap-5 flex-row p-1.5 text-4xl">
                   <FontAwesomeIcon icon={faReact} />
                   <FontAwesomeIcon icon={faHtml5} />

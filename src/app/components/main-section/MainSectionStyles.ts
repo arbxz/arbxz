@@ -3,9 +3,14 @@ import styled from "styled-components";
 export const StyledMainBanner = styled.section``;
 
 export const StyledMainTitle = styled.h1`
-  display: block;
   color: ${({ theme }) => theme.text};
   font-weight: 600;
+`;
+
+export const StyledTitle = styled.h2`
+  color: ${({ theme }) => theme.text};
+  text-shadow: 5px -3px 1px rgba(200, 252, 234, 0.9),
+    -5px 3px 1px rgba(255, 0, 255, 0.4);
 `;
 
 export const StyledNoteCard = styled.span`

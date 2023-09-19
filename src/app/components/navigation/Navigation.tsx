@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from "react";
 
+import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 
+import { useThemeContext } from "@/app/context/theme";
+
+import { StyledPrimaryButton } from "../shared/sharedStyles";
 import { StyledNavigationWrapper } from "./NavigationStyles";
 
 const Navigation = () => {
+  const { theme, setTheme } = useThemeContext();
   const [isContentScrolled, setIsContentScrolled] = useState(false);
 
   useEffect(() => {
@@ -26,13 +32,22 @@ const Navigation = () => {
   return (
     <StyledNavigationWrapper
       isContentScrolled={isContentScrolled}
-      className="fixed top-0 flex h-auto w-full justify-between align-middle p-4">
+      className="fixed top-0 flex gap-6 h-auto w-full justify-start items-center p-4">
       <Link className="text-xl" href="/">
         Arbxz | <span className="text-sm">Arbaaz Mowlabucus</span>
       </Link>
-      <div>
-        <span className="language-wrapper block text-md">EN | FR</span>
-      </div>
+
+      <StyledPrimaryButton
+        title="Theme toggle"
+        className="flex items-center justify-center p-2 w-8 text-md rounded-full ml-auto"
+        onClick={() => {
+          theme == "light" ? setTheme("dark") : setTheme("light");
+        }}>
+        <FontAwesomeIcon icon={theme == "light" ? faMoon : faSun} />
+      </StyledPrimaryButton>
+
+      {/* Implement i18N */}
+      {/* <span className="text-md font-semibold">EN | FR</span> */}
     </StyledNavigationWrapper>
   );
 };
