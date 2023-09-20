@@ -11,26 +11,26 @@ import {
 const BottomNavigation = () => {
   const navigationData = [
     {
-      title: "my skills",
-      href: "#skills-block",
+      title: "My skills",
+      href: "#skills-section",
       icon: faFolder,
       id: "skills",
     },
     {
-      title: "about me",
-      href: "#about-block",
+      title: "About me",
+      href: "#about-section",
       icon: faGhost,
       id: "about",
     },
     {
-      title: "home section",
+      title: "home",
       href: "#home",
       icon: faHouse,
       id: "home",
     },
     {
       title: "Contact me",
-      href: "#contact-block",
+      href: "#contact-section",
       icon: faIdCard,
       id: "contact",
     },

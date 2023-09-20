@@ -2,17 +2,6 @@ import styled from "styled-components";
 
 export const StyledMainBanner = styled.section``;
 
-export const StyledMainTitle = styled.h1`
-  color: ${({ theme }) => theme.text};
-  font-weight: 600;
-`;
-
-export const StyledTitle = styled.h2`
-  color: ${({ theme }) => theme.text};
-  text-shadow: 5px -3px 1px rgba(200, 252, 234, 0.9),
-    -5px 3px 1px rgba(255, 0, 255, 0.4);
-`;
-
 export const StyledNoteCard = styled.span`
   border-radius: 5px;
   color: #333333;
@@ -20,15 +9,6 @@ export const StyledNoteCard = styled.span`
   box-shadow: 5px 5px 3px 3px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 5px 5px 3px 3px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 5px 5px 3px 3px rgba(0, 0, 0, 0.3);
-`;
-
-export const StyledHighlightedText = styled.div`
-  display: inline-block;
-  width: auto;
-  background: ${({ theme }) => theme.background};
-  color: ${({ theme }) => theme.textSecondary};
-  padding: 0 1rem;
-  max-width: 20rem;
 `;
 
 export const StyledBiocontent = styled.div`
@@ -42,10 +22,4 @@ export const StyledBiocontent = styled.div`
     width: 5px;
     background: ${({ theme }) => theme.background};
   }
-`;
-
-export const StyledSocialContainer = styled.div`
-  background: ${({ theme }) => theme.background};
-  color: ${({ theme }) => theme.textSecondary};
-  box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.2);
 `;

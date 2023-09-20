@@ -11,11 +11,10 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Navigation from "../navigation/Navigation";
+import { StyledHighlightedText, StyledMainTitle } from "../shared/sharedStyles";
 import {
   StyledBiocontent,
-  StyledHighlightedText,
   StyledMainBanner,
-  StyledMainTitle,
   StyledNoteCard,
 } from "./MainSectionStyles";
 
@@ -41,7 +40,7 @@ const MainBanner = () => {
             </StyledNoteCard>
             <div className="flex gap-4 align-top justify-center flex-col md:flex-row">
               <div className="flex justify-end gap-5 flex-col">
-                <StyledMainTitle className="md:text-8xl md:text-right text-6xl text-center">
+                <StyledMainTitle className="md:text-8xl md:text-right text-6xl text-center font-semibold">
                   Front-end <br /> Developer
                 </StyledMainTitle>
                 <div className="flex justify-center md:justify-end gap-5 flex-row p-1.5 text-4xl">
@@ -55,16 +54,28 @@ const MainBanner = () => {
                 <div className="rounded-2xl p-4">
                   <StyledHighlightedText>Hello visitor,</StyledHighlightedText>
                   <div>
-                    I am a fun loving dev who likes innovative and modern
-                    designs. My primary focus lies in
+                    <StyledHighlightedText isDark={true}>
+                      I am a fun loving dev who likes
+                    </StyledHighlightedText>
+                    <StyledHighlightedText isDark={true}>
+                      innovative and modern designs.
+                    </StyledHighlightedText>
+                    <StyledHighlightedText isDark={true}>
+                      My primary focus lies in
+                    </StyledHighlightedText>
                     <br />
                     <StyledHighlightedText className="text-4xl">
                       <TextTransition springConfig={presets.wobbly}>
                         {Skills[index % Skills.length]}
                       </TextTransition>
                     </StyledHighlightedText>
-                    .<br /> I am based in Mauritius and I love art, hiking and
-                    diving.
+                    .<br />
+                    <StyledHighlightedText isDark={true}>
+                      I am based in Mauritius and I love
+                    </StyledHighlightedText>
+                    <StyledHighlightedText isDark={true}>
+                      art, hiking and diving.
+                    </StyledHighlightedText>
                   </div>
                 </div>
               </StyledBiocontent>

@@ -14,17 +14,12 @@ export const StyledMessageHeader = styled.div`
 `;
 
 export const StyledMessageItem = styled.span`
-  position: relative;
-  display: flex;
-  max-width: 75%;
-  width: fit-content;
-  font-size: 16px;
-  background: ${({ theme }) => theme.background};
   color: ${({ theme }) => theme.textSecondary};
-  border-radius: 5px;
-  padding: 10px 10px;
+  background: ${({ theme }) => theme.backgroundShade};
+  max-width: 75%;
 
   &:nth-child(odd) {
     margin-left: auto;
+    background: ${({ theme }) => theme.background};
   }
 `;

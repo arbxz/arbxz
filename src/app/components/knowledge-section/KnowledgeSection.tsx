@@ -48,9 +48,9 @@ const KnowledgeSection = () => {
   return (
     <section
       id="skills-section"
-      className="flex flex-auto items-center justify-center min-h-screen w-4/5 md:w-3/5 lg:w-1/2 mx-auto p-4">
+      className="flex flex-auto items-center justify-center w-4/5 md:w-3/5 lg:w-1/2 mx-auto px-4 py-6">
       <StyledScreenDummy className="flex flex-auto flex-col min-h-4/5 mx-auto items-center justify-center rounded-2xl shadow-xl overflow-hidden">
-        <StyledDummyHeader className="flex justify-end items-center w-full gap-4 p-3 border-b">
+        <StyledDummyHeader className="flex justify-end items-center w-full gap-4 p-3">
           <h4 className="mr-auto">Things I am good at</h4>
           <FontAwesomeIcon icon={faWindowMinimize} />
           <FontAwesomeIcon icon={faWindowMaximize} />
