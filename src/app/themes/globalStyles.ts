@@ -21,3 +21,8 @@ export const StyledMain = styled.main`
     z-index: -1;
   }
 `;
+
+export const StyledFooter = styled.footer`
+  background: ${({ theme }) => theme.background};
+  color: ${({ theme }) => theme.textSecondary};
+`;

@@ -50,7 +50,7 @@ const Contact = () => {
     return (
       <>
         {highlightedTextArray.map((text, index) => (
-          <StyledHighlightedText key={index} isDark={true}>
+          <StyledHighlightedText className="text-lg" key={index} isDark={true}>
             {text}
           </StyledHighlightedText>
         ))}
@@ -67,12 +67,12 @@ const Contact = () => {
           <StyledTitle className="md:text-8xl text-6xl font-bold lg:max-w-md lg:ml-auto">
             Get to know me !
           </StyledTitle>
-          <div className="max-w-sm lg:ml-auto lg:mr-0 ml-auto mr-auto text-lg font-semibold">
+          <div className="max-w-sm lg:ml-auto lg:mr-0 ml-auto mr-auto text-lg">
             {textToHighlight()}
           </div>
         </div>
         <StyledScreenDummy className="flex flex-auto flex-col items-center justify-start md:w-2/4 lg:w-60 w-full mx-auto rounded-2xl shadow-xl overflow-hidden">
-          <StyledDummyHeader className="flex justify-end items-center w-full gap-4 p-3 border-b">
+          <StyledDummyHeader className="flex justify-end items-baseline w-full gap-4 p-3 border-b">
             <h4 className="mr-auto">Let&apos;s get in touch !</h4>
             <FontAwesomeIcon icon={faWindowMinimize} />
             <FontAwesomeIcon icon={faWindowMaximize} />
@@ -101,7 +101,7 @@ const Contact = () => {
             <StyledMessageBox className="flex flex-col gap-3 w-full p-4">
               {messageContent.map((content, index) => (
                 <StyledMessageItem
-                  className="relative flex w-fit py-3 px-4 rounded-md text-md"
+                  className="relative flex w-fit py-3 px-4 rounded-md text-sm"
                   key={index}>
                   {content}
                 </StyledMessageItem>
