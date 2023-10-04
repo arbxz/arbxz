@@ -5,6 +5,8 @@ import {
 } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import { useThemeContext } from "@/app/context/theme";
+
 import {
   StyledDummyHeader,
   StyledScreenDummy,
@@ -17,6 +19,8 @@ interface SkillButtonsProps {
 }
 
 const KnowledgeSection = () => {
+  const { setIsModalOpen } = useThemeContext();
+
   const skillData = [
     "Figma",
     "HTML/TSX/JSX",
@@ -32,7 +36,7 @@ const KnowledgeSection = () => {
 
   const SkillButtons = ({ data, isDark }: SkillButtonsProps) => {
     return (
-      <div className="flex gap-4 flex-wrap w-full items-center justify-center p-4">
+      <div className="flex gap-4 flex-wrap w-full items-center justify-center p-2">
         {data.map((skill, index) => (
           <StyledSkillButton
             key={index}
@@ -46,26 +50,33 @@ const KnowledgeSection = () => {
   };
 
   return (
-    <section
-      id="skills-section"
-      className="flex flex-auto items-center justify-center w-4/5 md:w-3/5 lg:w-1/2 mx-auto px-4 py-6">
-      <StyledScreenDummy className="flex flex-auto flex-col min-h-4/5 mx-auto items-center justify-center rounded-2xl shadow-xl overflow-hidden">
-        <StyledDummyHeader className="flex justify-end items-baseline w-full gap-4 p-3">
-          <h4 className="mr-auto">Things I am good at</h4>
+    <StyledScreenDummy className="relative h-full md:h-auto md:max-w-2xl flex flex-auto flex-col mx-auto items-center md:justify-center  md:rounded-2xl shadow-xl overflow-hidden z-10">
+      <StyledDummyHeader className="flex justify-end items-end w-full gap-4 p-3">
+        <h4 className="mr-auto">Things I am good at</h4>
+        <button
+          onClick={() => {
+            setIsModalOpen(false);
+          }}>
           <FontAwesomeIcon icon={faWindowMinimize} />
-          <FontAwesomeIcon icon={faWindowMaximize} />
+        </button>
+
+        <button
+          className="p-0"
+          onClick={() => {
+            setIsModalOpen(false);
+          }}>
           <FontAwesomeIcon icon={faCircleXmark} />
-        </StyledDummyHeader>
-        <div className="block p-4 w-full">
-          <p className="text-md text-center max-w-sm mx-auto">
-            Professional skills I use in my day to day life as a react developer
-          </p>
-          <SkillButtons data={skillData} />
-          <p className="text-xl text-center">Hobbies</p>
-          <SkillButtons data={hobbyData} isDark />
-        </div>
-      </StyledScreenDummy>
-    </section>
+        </button>
+      </StyledDummyHeader>
+      <div className="block p-4 w-full">
+        <p className="text-md text-center max-w-sm mx-auto">
+          Professional skills I use in my day to day life as a react developer
+        </p>
+        <SkillButtons data={skillData} />
+        <p className="text-xl text-center">Hobbies</p>
+        <SkillButtons data={hobbyData} isDark />
+      </div>
+    </StyledScreenDummy>
   );
 };
 

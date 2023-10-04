@@ -19,7 +19,12 @@ import {
 } from "./MainSectionStyles";
 
 const MainBanner = () => {
-  const Skills = ["NextJs", "ReactJs", "CSS", "Web design", "UX", "Tailwind"];
+  const introText = [
+    "I am a fun loving dev who likes",
+    "innovative and modern designs.",
+    "My primary focus lies in",
+  ];
+  const skills = ["NextJs", "ReactJs", "CSS", "Web design", "UX", "Tailwind"];
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -54,19 +59,15 @@ const MainBanner = () => {
                 <div className="rounded-2xl p-4">
                   <StyledHighlightedText>Hello visitor,</StyledHighlightedText>
                   <div>
-                    <StyledHighlightedText isDark={true}>
-                      I am a fun loving dev who likes
-                    </StyledHighlightedText>
-                    <StyledHighlightedText isDark={true}>
-                      innovative and modern designs.
-                    </StyledHighlightedText>
-                    <StyledHighlightedText isDark={true}>
-                      My primary focus lies in
-                    </StyledHighlightedText>
+                    {introText.map((text, index) => (
+                      <StyledHighlightedText key={index} isDark={true}>
+                        {text}
+                      </StyledHighlightedText>
+                    ))}
                     <br />
                     <StyledHighlightedText className="text-4xl">
                       <TextTransition springConfig={presets.wobbly}>
-                        {Skills[index % Skills.length]}
+                        {skills[index % skills.length]}
                       </TextTransition>
                     </StyledHighlightedText>
                     .<br />

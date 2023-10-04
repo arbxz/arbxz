@@ -6,9 +6,7 @@ export const StyledNoteCard = styled.span`
   border-radius: 5px;
   color: #333333;
   background: white;
-  box-shadow: 5px 5px 3px 3px rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 5px 5px 3px 3px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 5px 5px 3px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 3px 2px 2px rgba(0, 0, 0, 0.3);
 `;
 
 export const StyledBiocontent = styled.div`

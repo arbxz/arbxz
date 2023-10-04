@@ -29,7 +29,7 @@ const SocialList = () => {
   ];
 
   return (
-    <StyledSocialContainer className="hidden fixed md:flex rounded-3xl gap-2 flex-col px-3 py-4 ml-5 top-1/2 left-0 -translate-y-1/2 text-2xl shadow-lg">
+    <StyledSocialContainer className="hidden fixed md:flex rounded-3xl gap-2 flex-col px-2 py-4 ml-5 top-1/2 left-0 -translate-y-1/2 text-2xl shadow-lg">
       {socialAffiliations.map((affiliation, index) => (
         <Link
           key={index}
