@@ -10,7 +10,6 @@ import Image from "next/image";
 import { useThemeContext } from "@/app/context/theme";
 
 import KnowledgeSection from "../knowledge-section/KnowledgeSection";
-import Modal from "../modal/Modal";
 import RippleButtonWrapper from "../shared/shared-components/RippleButtonWrapper";
 import RippleTypingDots from "../shared/shared-components/RippleTyping";
 import {
@@ -63,7 +62,7 @@ const Contact = () => {
         id="contact-section"
         className=" items-center justify-center h-full w-full lg:max-w-7xl px-4 mb-10 lg:mb-24">
         <div className="flex flex-auto gap-4 lg:gap-20 items-center justify-center flex-col md:flex-row w-full lg:w-4/5 mx-auto">
-          <div className="block lg:flex gap-5 flex-col lg:w-1/2 w-full text-center lg:text-right">
+          <div className="inline-flex lg:flex gap-5 flex-col lg:w-1/2 w-full text-center lg:text-right">
             <StyledTitle className="md:text-8xl text-6xl font-bold lg:max-w-md lg:ml-auto">
               Get to know me !
             </StyledTitle>
@@ -75,7 +74,7 @@ const Contact = () => {
                 setModalContent(<KnowledgeSection />);
                 setIsModalOpen(true);
               }}
-              className="flex gap-4 items-center max-w-[20rem] md:text-xl text-xl md:px-6 px-4 md:py-2 py-1 rounded-xl md:rounded-3xl lg:ml-auto"
+              className="flex gap-4 items-center max-w-[20rem] md:text-xl text-xl md:px-6 px-4 md:py-2 py-1 rounded-3xl md:rounded-3xl mr-auto ml-auto lg:mr-0"
               isDark={true}>
               <FontAwesomeIcon icon={faWindowMaximize} />
               Open me !
@@ -89,8 +88,8 @@ const Contact = () => {
               <FontAwesomeIcon icon={faWindowMaximize} />
               <FontAwesomeIcon icon={faCircleXmark} />
             </StyledDummyHeader>
-            <StyledMessageBoxWrapper className="flex flex-wrap">
-              <StyledMessageHeader className="messanger-header flex flex-row gap-4 w-full items-center justify-start py-2 px-4">
+            <div className="flex flex-wrap">
+              <div className="flex flex-row gap-4 w-full items-center justify-start py-2 px-4 bg-primary text-white">
                 <div className="rounded-full overflow-hidden z-10">
                   <Image
                     src={profileImg}
@@ -108,7 +107,7 @@ const Contact = () => {
                   </span>
                   <span>Frontend Developer</span>
                 </div>
-              </StyledMessageHeader>
+              </div>
               <StyledMessageBox className="flex flex-col gap-3 w-full p-4">
                 {messageContent.map((content, index) => (
                   <StyledMessageItem
@@ -137,7 +136,7 @@ const Contact = () => {
                   </StyledPrimaryButton>
                 </RippleButtonWrapper>
               </div>
-            </StyledMessageBoxWrapper>
+            </div>
           </StyledScreenDummy>
         </div>
       </section>

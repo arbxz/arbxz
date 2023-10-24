@@ -12,13 +12,13 @@ import { StyledMain } from "./themes/globalStyles";
 const App = () => {
   const { isModalOpen, modalContent } = useThemeContext();
   return (
-    <StyledMain className="flex min-h-screen flex-col items-center justify-start select-none">
+    <StyledMain className="relative flex min-h-screen flex-col items-center justify-start select-none">
       <MainBanner />
       <Contact />
       <GraphicSection />
       <BottomNavigation />
       <SocialList />
-      {/* <Footer /> */}
+      <Footer />
       <Modal isOpen={isModalOpen}>{modalContent}</Modal>
     </StyledMain>
   );

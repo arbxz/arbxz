@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const StyledMain = styled.main`
-  position: relative;
   transition: all 0.5s linear;
   color: ${({ theme }) => theme.text};
 

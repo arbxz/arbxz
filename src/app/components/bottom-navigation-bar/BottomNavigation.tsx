@@ -43,7 +43,7 @@ const BottomNavigation = () => {
   ];
 
   return (
-    <StyledBottomNavigation className="fixed bottom-6 left-1/2 -translate-x-1/2 flex justify-center h-12 max-w-[3rem] rounded-3xl overflow-hidden">
+    <StyledBottomNavigation className="fixed hidden bottom-6 left-1/2 -translate-x-1/2 md:flex justify-center h-12 max-w-[3rem] rounded-3xl overflow-hidden">
       {navigationData.map((item) => (
         <Link key={item.id} href={item.href} title={item.title}>
           <StyledNavButton>

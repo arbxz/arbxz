@@ -2,7 +2,7 @@ import { StyledFooter } from "@/app/themes/globalStyles";
 
 const Footer = () => {
   return (
-    <StyledFooter className="flex flex-col items-center  text-center mt-16 w-full">
+    <StyledFooter className="flex md:hidden flex-col items-center  text-center mt-16 w-full">
       <div className="block lg:hidden container px-6 pt-6">
         <div className="mb-6 flex justify-center">
           <a
