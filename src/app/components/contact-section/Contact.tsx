@@ -16,20 +16,13 @@ import {
   StyledDummyHeader,
   StyledHighlightedText,
   StyledPrimaryButton,
-  StyledScreenDummy,
   StyledSkillButton,
-  StyledTitle,
 } from "../shared/sharedStyles";
-import {
-  StyledMessageBox,
-  StyledMessageBoxWrapper,
-  StyledMessageHeader,
-  StyledMessageItem,
-} from "./ContactStyles";
+import { StyledMessageBox } from "./ContactStyles";
 import profileImg from "/public/images/arbaaz-picture.jpg";
 
 const Contact = () => {
-  const { theme, setIsModalOpen, setModalContent } = useThemeContext();
+  const { setIsModalOpen, setModalContent } = useThemeContext();
 
   const messageContent = [
     "I've also served as a Scrum Master, improving my knowledge of agile methodologies and team dynamics. My attention to detail and commitment to best practices guarantee robust applications. Let's collaborate to bring your vision to life and optimize user experiences!",
@@ -60,12 +53,12 @@ const Contact = () => {
     <>
       <section
         id="contact-section"
-        className=" items-center justify-center h-full w-full lg:max-w-7xl px-4 mb-10 lg:mb-24">
-        <div className="flex flex-auto gap-4 lg:gap-20 items-center justify-center flex-col md:flex-row w-full lg:w-4/5 mx-auto">
+        className="w-full lg:max-w-7xl p-4 mb-10 lg:mb-24 ">
+        <div className="bg-redAccent rounded-xl p-8 flex flex-auto gap-4 lg:gap-20 items-center justify-center flex-col lg:flex-row w-full lg:w-4/5 mx-auto shadow-md hover:shadow-xl transition-shadow ease-out duration-300">
           <div className="inline-flex lg:flex gap-5 flex-col lg:w-1/2 w-full text-center lg:text-right">
-            <StyledTitle className="md:text-8xl text-6xl font-bold lg:max-w-md lg:ml-auto">
+            <h2 className="font-system-ui md:text-7xl text-6xl font-extrabold lg:max-w-md lg:ml-auto text-primary">
               Get to know me !
-            </StyledTitle>
+            </h2>
             <div className="max-w-sm lg:ml-auto lg:mr-0 ml-auto mr-auto text-lg">
               {textToHighlight()}
             </div>
@@ -81,7 +74,7 @@ const Contact = () => {
             </StyledSkillButton>
           </div>
 
-          <StyledScreenDummy className="flex flex-col items-center justify-start w-full lg:w-1/2 mx-auto rounded-2xl shadow-xl overflow-hidden">
+          <div className="flex flex-col items-center justify-start w-full sm:w-3/5 lg:w-1/2 mx-auto rounded-2xl shadow-xl overflow-hidden">
             <StyledDummyHeader className="flex justify-end items-baseline w-full gap-4 p-3 border-b">
               <h4 className="mr-auto">Let&apos;s get in touch !</h4>
               <FontAwesomeIcon icon={faWindowMinimize} />
@@ -110,14 +103,14 @@ const Contact = () => {
               </div>
               <StyledMessageBox className="flex flex-col gap-3 w-full p-4">
                 {messageContent.map((content, index) => (
-                  <StyledMessageItem
-                    className="relative flex w-fit py-3 px-4 rounded-md text-sm"
+                  <span
+                    className="relative flex w-fit max-w-[75%] py-3 px-4 rounded-md text-sm text-white bg-primary odd:ml-auto odd:text-primary odd:bg-white"
                     key={index}>
                     {content}
-                  </StyledMessageItem>
+                  </span>
                 ))}
               </StyledMessageBox>
-              <div className="flex items-center gap-4 w-full p-4">
+              <div className="flex items-center gap-4 w-full p-4 bg-white">
                 <input
                   className="bg-gray-200 appearance-none border-2 border-gray-200 rounded-3xl w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
                   type="text"
@@ -126,8 +119,7 @@ const Contact = () => {
                   name="Email"
                   aria-label="Email and message"
                 />
-                <RippleButtonWrapper
-                  color={theme == "light" ? "#444cf7" : "#ffffff"}>
+                <RippleButtonWrapper color="#F74545">
                   <StyledPrimaryButton
                     type="submit"
                     title="Send message"
@@ -137,7 +129,7 @@ const Contact = () => {
                 </RippleButtonWrapper>
               </div>
             </div>
-          </StyledScreenDummy>
+          </div>
         </div>
       </section>
     </>

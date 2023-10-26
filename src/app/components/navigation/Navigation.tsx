@@ -33,8 +33,8 @@ const Navigation = () => {
     <StyledNavigationWrapper
       isContentScrolled={isContentScrolled}
       className="fixed top-0 flex gap-6 h-auto w-full justify-start items-center p-4">
-      <Link className="text-xl" href="/">
-        Arbxz | <span className="text-sm">Arbaaz Mowlabucus</span>
+      <Link className="text-2xl" href="/">
+        Arbxz | <span className="text-xl">Arbaaz Mowlabucus</span>
       </Link>
 
       <StyledPrimaryButton

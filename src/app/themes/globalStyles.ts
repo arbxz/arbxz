@@ -12,11 +12,12 @@ export const StyledMain = styled.main`
     width: 100%;
     height: 100%;
     background-color: ${({ theme }) => theme.body};
-    background-image: radial-gradient(
-      #8a8a8a 2px,
-      ${({ theme }) => theme.body} 2px
-    );
-    background-size: 40px 40px;
+    // background-image: radial-gradient(
+    //   #8a8a8a 2px,
+    //   ${({ theme }) => theme.body} 2px
+    // );
+    // background-size: 40px 40px;
+
     z-index: -1;
   }
 `;

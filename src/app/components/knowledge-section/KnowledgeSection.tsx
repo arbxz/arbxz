@@ -50,7 +50,7 @@ const KnowledgeSection = () => {
   };
 
   return (
-    <div className="relative h-full md:h-auto md:max-w-2xl flex flex-auto flex-col mx-auto items-center md:justify-center  md:rounded-2xl shadow-xl overflow-hidden z-10">
+    <div className="relative h-full md:h-auto md:max-w-2xl flex flex-col mx-auto items-center md:justify-center  md:rounded-2xl shadow-xl overflow-hidden z-10">
       <StyledDummyHeader className="flex items-center w-full gap-4 p-3">
         <h4 className="mr-auto">Things I am good at</h4>
 
@@ -62,7 +62,7 @@ const KnowledgeSection = () => {
           <FontAwesomeIcon className="text-3xl" icon={faCircleXmark} />
         </button>
       </StyledDummyHeader>
-      <StyledScreenDummy className="block p-4 w-full">
+      <StyledScreenDummy className="block p-4 w-full h-full">
         <p className="text-md text-center max-w-sm mx-auto">
           Professional skills I use in my day to day life as a react developer
         </p>

@@ -1,3 +1,4 @@
+import ArtSection from "./components/art-section/ArtSection";
 import BottomNavigation from "./components/bottom-navigation-bar/BottomNavigation";
 import Contact from "./components/contact-section/Contact";
 import Footer from "./components/footer/Footer";
@@ -15,7 +16,8 @@ const App = () => {
     <StyledMain className="relative flex min-h-screen flex-col items-center justify-start select-none">
       <MainBanner />
       <Contact />
-      <GraphicSection />
+      <ArtSection />
+      {/* <GraphicSection /> */}
       <BottomNavigation />
       <SocialList />
       <Footer />

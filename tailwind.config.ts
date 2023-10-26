@@ -10,6 +10,11 @@ const config: Config = {
     colors: {
       primary: "#333333",
       white: "#ffffff",
+      red: "#f74545",
+      redAccent: "#f7eee6",
+      purple: "#8FACE1",
+      orange: "#F74545",
+      pink: "#F12E72",
     },
     extend: {
       backgroundImage: {

@@ -10,16 +10,10 @@ interface DarkThemeProps {
 
 export const StyledMainTitle = styled.h1`
   color: ${({ theme }) => theme.text};
-  text-shadow: 2px -2px 2px rgba(0, 0, 0, 0.2);
-  text-shadow: 3px -3px 2px rgba(200, 252, 234, 0.9),
-    -3px 3px 2px rgba(255, 0, 255, 0.3);
 `;
 
 export const StyledTitle = styled.h2`
   color: ${({ theme }) => theme.text};
-  text-shadow: 3px -3px 2px rgba(200, 252, 234, 0.9),
-    -3px 3px 2px rgba(255, 0, 255, 0.3);
-  // text-shadow: 2px -2px 2px rgba(0, 0, 0, 0.2);
 `;
 
 export const StyledHighlightedText = styled.div<DarkThemeProps>`

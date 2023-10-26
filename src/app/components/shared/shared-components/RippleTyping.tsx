@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 const StyledTypingDots = styled.span`
   display: inline-block;
   width: 7px;
@@ -19,7 +20,7 @@ const StyledTypingDots = styled.span`
   }
 
   &:first-child {
-    background-color: ${({ theme }) => theme.backgroundSecondary};
+    background-color: white;
   }
 
   &:first-child::before {
@@ -27,7 +28,7 @@ const StyledTypingDots = styled.span`
   }
 
   &:nth-child(2) {
-    background-color: ${({ theme }) => theme.backgroundSecondary};
+    background-color: white;
     transform: scale(0.9);
   }
 
@@ -36,7 +37,7 @@ const StyledTypingDots = styled.span`
   }
 
   &:nth-child(3) {
-    background-color: ${({ theme }) => theme.backgroundSecondary};
+    background-color: white;
     transform: scale(0.8);
   }
 
@@ -45,7 +46,7 @@ const StyledTypingDots = styled.span`
   }
 
   &:nth-child(4) {
-    background-color: ${({ theme }) => theme.backgroundSecondary};
+    background-color: white;
     transform: scale(0.7);
   }
 
@@ -54,7 +55,7 @@ const StyledTypingDots = styled.span`
   }
 
   &:last-child {
-    background-color: ${({ theme }) => theme.backgroundSecondary};
+    background-color: white;
     transform: scale(0.6);
   }
 

@@ -21,8 +21,6 @@ export const StyledNavButton = styled.button`
 export const StyledBottomNavigation = styled.nav`
   background: ${({ theme }) => theme.background};
   color: ${({ theme }) => theme.textSecondary};
-  box-shadow: 4px -4px 2px rgba(200, 252, 234, 0.9),
-    -5px 5px 2px rgba(255, 0, 255, 0.3);
   transition: max-width 0.3s ease-out;
 
   &:hover {

@@ -44,9 +44,9 @@ const MainBanner = () => {
               This website is currently in development
             </StyledNoteCard>
             <div className="flex gap-4 align-top justify-center flex-col md:flex-row">
-              <div className="flex justify-end gap-5 flex-col">
-                <StyledMainTitle className="md:text-8xl md:text-right text-6xl text-center font-semibold">
-                  Front-end <br /> Developer
+              <div className="flex lg:w-3/5 justify-end gap-5 lg:gap-10 flex-col">
+                <StyledMainTitle className="text-7xl md:text-8xl md:text-right text-center font-bold font-system-ui">
+                  Frontend <br /> Developer
                 </StyledMainTitle>
                 <div className="flex justify-center md:justify-end gap-5 flex-row p-1.5 text-4xl">
                   <FontAwesomeIcon icon={faReact} />
@@ -55,8 +55,8 @@ const MainBanner = () => {
                   <FontAwesomeIcon icon={faJs} />
                 </div>
               </div>
-              <StyledBiocontent className="relative flex flex-col justify-center p-4 max-w-xs">
-                <div className="rounded-2xl p-4">
+              <StyledBiocontent className="relative flex flex-col justify-center p-4 lg:w-2/5 max-w-[500px]">
+                <div className="text-xl rounded-2xl p-4">
                   <StyledHighlightedText>Hello visitor,</StyledHighlightedText>
                   <div>
                     {introText.map((text, index) => (
@@ -65,7 +65,7 @@ const MainBanner = () => {
                       </StyledHighlightedText>
                     ))}
                     <br />
-                    <StyledHighlightedText className="text-4xl">
+                    <StyledHighlightedText className="text-4xl font-semibold font-system-ui">
                       <TextTransition springConfig={presets.wobbly}>
                         {skills[index % skills.length]}
                       </TextTransition>
