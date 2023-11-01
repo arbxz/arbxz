@@ -8,10 +8,22 @@ const Context = createContext();
 
 export const ThemeProviderContext = ({ children }) => {
   const [theme, setTheme] = useState("light");
-
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalContent, setModalContent] = useState();
   return (
-    <Context.Provider value={{ theme, setTheme }}>
-      <ThemeProvider theme={theme == "light" ? lightTheme : darkTheme}>
+    <Context.Provider
+      value={{
+        theme,
+        isModalOpen,
+        setTheme,
+        setIsModalOpen,
+        modalContent,
+        setModalContent,
+      }}>
+      <ThemeProvider
+        theme={theme == "light" ? lightTheme : darkTheme}
+        isModalOpen={setIsModalOpen}
+        modalContent={modalContent}>
         {children}
       </ThemeProvider>
     </Context.Provider>
