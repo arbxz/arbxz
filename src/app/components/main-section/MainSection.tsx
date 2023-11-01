@@ -39,9 +39,10 @@ const MainBanner = () => {
 
         <div className="my-auto flex items-center justify-center w-full">
           <div className="main-content relative md:w-full lg:w-auto p-4 flex md:flex-row flex-col gap-4 align-top justify-center">
-            <StyledNoteCard className="hidden md:absolute relative md:left-1/4 md:-top-20 p-3 text-xs">
+            <StyledNoteCard className="md:absolute relative md:left-1/4 md:-top-20 p-3 text-md">
               Welcome to my portfolio !<br />
-              This website is currently in development
+              This website is currently under development,
+              <br /> you can still look around :D
             </StyledNoteCard>
             <div className="flex gap-4 align-center justify-center flex-col md:flex-row">
               <div className="flex lg:w-3/5 justify-end  gap-5 lg:gap-10 flex-col">
