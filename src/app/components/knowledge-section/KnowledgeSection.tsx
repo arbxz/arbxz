@@ -39,6 +39,7 @@ const KnowledgeSection = () => {
       <div className="flex gap-4 flex-wrap w-full items-center justify-center p-2">
         {data.map((skill, index) => (
           <StyledSkillButton
+            type="button"
             key={index}
             className="md:text-2xl text-xl md:px-8 px-4 md:py-2 py-1 rounded-xl md:rounded-3xl"
             isDark={isDark}>
@@ -55,6 +56,7 @@ const KnowledgeSection = () => {
         <h4 className="mr-auto">Things I am good at</h4>
 
         <button
+          type="button"
           className="p-0"
           onClick={() => {
             setIsModalOpen(false);

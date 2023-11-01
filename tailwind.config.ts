@@ -11,6 +11,7 @@ const config: Config = {
       primary: "#333333",
       white: "#ffffff",
       red: "#f74545",
+      brown: "#fae2cd",
       redAccent: "#f7eee6",
       purple: "#8FACE1",
       orange: "#F74545",
@@ -18,9 +19,9 @@ const config: Config = {
     },
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "newspaper-img": "url('/public/images/bgProps/newspaper-dummy.png')",
+        "teared-paper": "url('/public/images/bgProps/torn-paper.png')",
+        "paper-torn-top": "url('/public/images/bgProps/paper-torn-top.png')",
       },
     },
   },

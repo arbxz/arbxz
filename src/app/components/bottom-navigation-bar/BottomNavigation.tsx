@@ -46,7 +46,7 @@ const BottomNavigation = () => {
     <StyledBottomNavigation className="fixed hidden bottom-6 left-1/2 -translate-x-1/2 md:flex justify-center h-12 max-w-[3rem] rounded-3xl overflow-hidden">
       {navigationData.map((item) => (
         <Link key={item.id} href={item.href} title={item.title}>
-          <StyledNavButton>
+          <StyledNavButton type="button">
             <FontAwesomeIcon icon={item.icon} />
             <span>{item.title}</span>
           </StyledNavButton>

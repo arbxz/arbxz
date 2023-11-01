@@ -8,10 +8,6 @@ interface DarkThemeProps {
   isDark?: boolean;
 }
 
-export const StyledMainTitle = styled.h1`
-  color: ${({ theme }) => theme.text};
-`;
-
 export const StyledTitle = styled.h2`
   color: ${({ theme }) => theme.text};
 `;

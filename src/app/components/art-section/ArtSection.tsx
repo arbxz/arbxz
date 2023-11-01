@@ -9,7 +9,7 @@ const ArtSection = () => {
   return (
     <>
       <section className="relative w-full lg:max-w-5xl p-4">
-        <div className="bg-pink rounded-xl shadow-md hover:shadow-xl transition-shadow ease-out duration-300 flex flex-1 lg:flex-row flex-col items-center justify-center mx-auto p-8">
+        <div className="bg-redAccent rounded-xl shadow-md hover:shadow-xl transition-shadow ease-out duration-300 flex flex-1 lg:flex-row flex-col items-center justify-center mx-auto p-8">
           <div className="flex flex-col lg:w-1/2 justify-end gap-4">
             <span className="lg:text-left text-center text-primary text-2xl font-semibold">
               <span className="block text-6xl font-system-ui font-extrabold mb-8">

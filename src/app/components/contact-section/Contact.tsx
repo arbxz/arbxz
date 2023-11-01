@@ -18,7 +18,6 @@ import {
   StyledPrimaryButton,
   StyledSkillButton,
 } from "../shared/sharedStyles";
-import { StyledMessageBox } from "./ContactStyles";
 import profileImg from "/public/images/arbaaz-picture.jpg";
 
 const Contact = () => {
@@ -53,28 +52,31 @@ const Contact = () => {
     <>
       <section
         id="contact-section"
-        className="w-full lg:max-w-7xl p-4 mb-10 lg:mb-24 ">
-        <div className="bg-redAccent rounded-xl p-8 flex flex-auto gap-4 lg:gap-20 items-center justify-center flex-col lg:flex-row w-full lg:w-4/5 mx-auto shadow-md hover:shadow-xl transition-shadow ease-out duration-300">
+        className="w-full lg:max-w-7xl p-4 mb-10 lg:mb-24">
+        <div className="bg-redAccent bg-newspaper rounded-xl md:p-8 p-2 flex flex-auto gap-4 lg:gap-20 items-center justify-center flex-col lg:flex-row w-full lg:w-4/5 mx-auto shadow-md hover:shadow-xl transition-shadow ease-out duration-300">
           <div className="inline-flex lg:flex gap-5 flex-col lg:w-1/2 w-full text-center lg:text-right">
-            <h2 className="font-system-ui md:text-7xl text-6xl font-extrabold lg:max-w-md lg:ml-auto text-primary">
-              Get to know me !
-            </h2>
-            <div className="max-w-sm lg:ml-auto lg:mr-0 ml-auto mr-auto text-lg">
+            <div className="relative bg-teared-paper">
+              <h2 className="block font-system-ui md:text-7xl text-6xl font-extrabold lg:max-w-md lg:ml-auto text-primary relative z-10">
+                Get to know me !
+              </h2>
+            </div>
+            <div className="relative max-w-sm lg:ml-auto lg:mr-0 ml-auto mr-auto text-lg">
               {textToHighlight()}
             </div>
             <StyledSkillButton
+              type="button"
               onClick={() => {
                 setModalContent(<KnowledgeSection />);
                 setIsModalOpen(true);
               }}
-              className="flex gap-4 items-center max-w-[20rem] md:text-xl text-xl md:px-6 px-4 md:py-2 py-1 rounded-3xl md:rounded-3xl mr-auto ml-auto lg:mr-0"
+              className="flex gap-4 items-center max-w-[20rem] md:text-xl text-xl md:px-6 px-4 md:py-2 py-1 rounded-3xl md:rounded-3xl mr-auto ml-auto lg:mr-0 hover:scale-105 hover:shadow-md transition-all"
               isDark={true}>
               <FontAwesomeIcon icon={faWindowMaximize} />
               Open me !
             </StyledSkillButton>
           </div>
 
-          <div className="flex flex-col items-center justify-start w-full sm:w-3/5 lg:w-1/2 mx-auto rounded-2xl shadow-xl overflow-hidden">
+          <div className="flex flex-col items-center justify-start w-full sm:w-3/5 lg:w-1/2 mx-auto rounded-2xl shadow-2xl overflow-hidden">
             <StyledDummyHeader className="flex justify-end items-baseline w-full gap-4 p-3 border-b">
               <h4 className="mr-auto">Let&apos;s get in touch !</h4>
               <FontAwesomeIcon icon={faWindowMinimize} />
@@ -101,7 +103,7 @@ const Contact = () => {
                   <span>Frontend Developer</span>
                 </div>
               </div>
-              <StyledMessageBox className="flex flex-col gap-3 w-full p-4">
+              <div className="relative bg-brown flex flex-col gap-3 w-full p-4">
                 {messageContent.map((content, index) => (
                   <span
                     className="relative flex w-fit max-w-[75%] py-3 px-4 rounded-md text-sm text-white bg-primary odd:ml-auto odd:text-primary odd:bg-white"
@@ -109,7 +111,7 @@ const Contact = () => {
                     {content}
                   </span>
                 ))}
-              </StyledMessageBox>
+              </div>
               <div className="flex items-center gap-4 w-full p-4 bg-white">
                 <input
                   className="bg-gray-200 appearance-none border-2 border-gray-200 rounded-3xl w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
@@ -119,9 +121,9 @@ const Contact = () => {
                   name="Email"
                   aria-label="Email and message"
                 />
-                <RippleButtonWrapper color="#F74545">
+                <RippleButtonWrapper color="#f74545">
                   <StyledPrimaryButton
-                    type="submit"
+                    type="button"
                     title="Send message"
                     className="relative flex items-center justify-center p-3 text-base rounded-full ml-auto z-10">
                     <FontAwesomeIcon icon={faPaperPlane} />

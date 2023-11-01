@@ -32,12 +32,13 @@ const Navigation = () => {
   return (
     <StyledNavigationWrapper
       isContentScrolled={isContentScrolled}
-      className="fixed top-0 flex gap-6 h-auto w-full justify-start items-center p-4">
-      <Link className="text-2xl" href="/">
+      className="fixed top-0 flex gap-6 h-auto w-full justify-start items-center p-3 before:shadow-md">
+      <Link className="text-xl text-primary" href="/">
         Arbxz | <span className="text-xl">Arbaaz Mowlabucus</span>
       </Link>
 
       <StyledPrimaryButton
+        type="button"
         title="Theme toggle"
         className="flex items-center justify-center p-2 w-8 text-md rounded-full ml-auto"
         onClick={() => {

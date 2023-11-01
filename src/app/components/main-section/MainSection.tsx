@@ -11,7 +11,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Navigation from "../navigation/Navigation";
-import { StyledHighlightedText, StyledMainTitle } from "../shared/sharedStyles";
+import { StyledHighlightedText } from "../shared/sharedStyles";
 import {
   StyledBiocontent,
   StyledMainBanner,
@@ -34,20 +34,20 @@ const MainBanner = () => {
 
   return (
     <>
-      <StyledMainBanner className="relative flex justify-center items-center flex-col w-full min-h-screen">
+      <StyledMainBanner className="main-container relative flex justify-center items-center flex-col w-full min-h-screen">
         <Navigation />
 
-        <div className="main-container my-auto flex items-center justify-center w-full">
+        <div className="my-auto flex items-center justify-center w-full">
           <div className="main-content relative md:w-full lg:w-auto p-4 flex md:flex-row flex-col gap-4 align-top justify-center">
-            <StyledNoteCard className="md:absolute relative md:left-1/4 md:-top-20 p-3 text-xs">
+            <StyledNoteCard className="hidden md:absolute relative md:left-1/4 md:-top-20 p-3 text-xs">
               Welcome to my portfolio !<br />
               This website is currently in development
             </StyledNoteCard>
-            <div className="flex gap-4 align-top justify-center flex-col md:flex-row">
-              <div className="flex lg:w-3/5 justify-end gap-5 lg:gap-10 flex-col">
-                <StyledMainTitle className="text-7xl md:text-8xl md:text-right text-center font-bold font-system-ui">
+            <div className="flex gap-4 align-center justify-center flex-col md:flex-row">
+              <div className="flex lg:w-3/5 justify-end  gap-5 lg:gap-10 flex-col">
+                <h1 className="text-primary text-7xl md:text-8xl md:text-right text-center font-bold font-system-ui">
                   Frontend <br /> Developer
-                </StyledMainTitle>
+                </h1>
                 <div className="flex justify-center md:justify-end gap-5 flex-row p-1.5 text-4xl">
                   <FontAwesomeIcon icon={faReact} />
                   <FontAwesomeIcon icon={faHtml5} />
