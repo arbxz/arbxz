@@ -14,7 +14,7 @@ export const StyledNavigationWrapper = styled.nav<StyledNavigationProps>`
     ${(props) => css`
       width: ${props.isContentScrolled ? "100%" : 0};
     `}
-    background: white;
+    background: ${({ theme }) => theme.backgroundSecondary};
     transition: width 0.3s ease-out;
     z-index: -1;
   }

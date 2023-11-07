@@ -21,7 +21,7 @@ import {
 import profileImg from "/public/images/arbaaz-picture.jpg";
 
 const Contact = () => {
-  const { setIsModalOpen, setModalContent } = useThemeContext();
+  const { theme, setIsModalOpen, setModalContent } = useThemeContext();
 
   const messageContent = [
     "I've also served as a Scrum Master, improving my knowledge of agile methodologies and team dynamics. My attention to detail and commitment to best practices guarantee robust applications. Let's collaborate to bring your vision to life and optimize user experiences!",
@@ -53,7 +53,10 @@ const Contact = () => {
       <section
         id="contact-section"
         className="w-full lg:max-w-7xl p-4 mb-10 lg:mb-24">
-        <div className="bg-redAccent bg-newspaper rounded-xl md:p-8 p-2 flex flex-auto gap-4 lg:gap-20 items-center justify-center flex-col lg:flex-row w-full lg:w-4/5 mx-auto shadow-md hover:shadow-xl transition-shadow ease-out duration-300">
+        <div
+          className={`bg-white bg-newspaper  ${
+            theme === "dark" ? "bg-blend-exclusion" : "bg-blend-luminosity"
+          } rounded-xl md:p-8 p-2 flex flex-auto gap-4 lg:gap-20 items-center justify-center flex-col lg:flex-row w-full lg:w-4/5 mx-auto shadow-md hover:shadow-xl transition-shadow ease-out duration-300`}>
           <div className="inline-flex lg:flex gap-5 flex-col lg:w-1/2 w-full text-center lg:text-right">
             <div className="relative bg-teared-paper">
               <h2 className="block font-system-ui md:text-7xl text-6xl font-extrabold lg:max-w-md lg:ml-auto text-primary relative z-10">
@@ -103,10 +106,10 @@ const Contact = () => {
                   <span>Frontend Developer</span>
                 </div>
               </div>
-              <div className="relative bg-brown flex flex-col gap-3 w-full p-4">
+              <div className="relative bg-white flex flex-col gap-3 w-full p-4">
                 {messageContent.map((content, index) => (
                   <span
-                    className="relative flex w-fit max-w-[75%] py-3 px-4 rounded-md text-sm text-white bg-primary odd:ml-auto odd:text-primary odd:bg-white"
+                    className="relative flex w-fit max-w-[75%] py-3 px-4 rounded-md text-sm text-white bg-primary odd:ml-auto odd:text-primary odd:bg-white shadow-md"
                     key={index}>
                     {content}
                   </span>

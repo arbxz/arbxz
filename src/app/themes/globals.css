@@ -38,7 +38,6 @@ body {
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
-  background-blend-mode: hard-light;
 }
 
 .bg-teared-paper::before {
@@ -60,8 +59,15 @@ body {
 }
 
 .main-container {
-  background-image: url(../../../public/images/bgProps/paper-torn-top.png);
   background-size: contain;
   background-position: top center;
   background-repeat: no-repeat;
+}
+
+.main-container-light {
+  background-image: url(../../../public/images/bgProps/paper-torn-top.png);
+}
+
+.main-container-dark {
+  background-image: url(../../../public/images/bgProps/paper-torn-top-dark.png);
 }
