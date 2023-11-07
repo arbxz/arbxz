@@ -55,7 +55,7 @@ const Contact = () => {
         className="w-full lg:max-w-7xl p-4 mb-10 lg:mb-24">
         <div
           className={`bg-white bg-newspaper  ${
-            theme === "dark" ? "bg-blend-exclusion" : "bg-blend-luminosity"
+            theme === "dark" ? "bg-blend-luminosity" : "bg-blend-luminosity"
           } rounded-xl md:p-8 p-2 flex flex-auto gap-4 lg:gap-20 items-center justify-center flex-col lg:flex-row w-full lg:w-4/5 mx-auto shadow-md hover:shadow-xl transition-shadow ease-out duration-300`}>
           <div className="inline-flex lg:flex gap-5 flex-col lg:w-1/2 w-full text-center lg:text-right">
             <div className="relative bg-teared-paper">
@@ -124,7 +124,7 @@ const Contact = () => {
                   name="Email"
                   aria-label="Email and message"
                 />
-                <RippleButtonWrapper color="#f74545">
+                <RippleButtonWrapper color="#333333">
                   <StyledPrimaryButton
                     type="button"
                     title="Send message"

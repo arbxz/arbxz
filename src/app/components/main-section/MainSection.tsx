@@ -39,7 +39,7 @@ const MainBanner = () => {
     <>
       <StyledMainBanner
         className={`main-container ${
-          theme === "dark" ? "main-container-dark" : "main-container-"
+          theme === "dark" ? "main-container-" : "main-container-"
         } relative bg-blend-luminosity flex justify-center items-center flex-col w-full min-h-screen`}>
         <Navigation />
 
