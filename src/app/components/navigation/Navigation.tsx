@@ -37,7 +37,7 @@ const Navigation = () => {
         Arbxz | <span className="text-lg">Arbaaz Mowlabucus</span>
       </Link>
 
-      <StyledPrimaryButton
+      {/* <StyledPrimaryButton
         type="button"
         title="Theme toggle"
         className="flex items-center justify-center p-2 w-8 text-md rounded-full ml-auto"
@@ -47,8 +47,7 @@ const Navigation = () => {
         <FontAwesomeIcon icon={theme == "light" ? faMoon : faSun} />
       </StyledPrimaryButton>
 
-      {/* Implement i18N */}
-      <span className="text-md">EN | FR</span>
+      <span className="text-md">EN | FR</span> */}
     </StyledNavigationWrapper>
   );
 };

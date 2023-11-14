@@ -4,7 +4,7 @@ import { League_Spartan } from "next/font/google";
 
 import StyledJsxRegistry from "./registry";
 
-import "./themes/globals.css";
+import "./themes/globals.scss";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
 config.autoAddCss = false;
@@ -13,7 +13,6 @@ const inter = League_Spartan({
 });
 
 export const metadata: Metadata = {
-  viewport: { width: "device-width", initialScale: 1 },
   title: "arbxz | Arbaaz Mowlabucus",
   description:
     "Arbaaz Mowlabucus professional portfolio of my frontend projects and illustrations.",

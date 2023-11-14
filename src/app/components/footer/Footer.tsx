@@ -5,7 +5,7 @@ const Footer = () => {
     <StyledFooter className="block w-full mt-16 p-4">
       <div className="flex flex-col md:flex-row container gap-4 px-6 py-6">
         <div>
-          <ul className="text-left text-xl">
+          <ul className="text-left text-sm">
             <li>
               <h4 className="font-bold text-2xl">Resource credits : </h4>
             </li>

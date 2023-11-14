@@ -11,13 +11,15 @@ import { StyledMain } from "./themes/globalStyles";
 // TODO FIX RELATIVE IMPORT
 
 const App = () => {
-  const { isModalOpen, modalContent } = useThemeContext();
+  const { isModalOpen, modalContent, theme } = useThemeContext();
   return (
-    <StyledMain className="relative flex min-h-screen flex-col items-center justify-start select-none">
+    <StyledMain
+      className={`relative flex min-h-screen flex-col items-center justify-start select-none  ${
+        theme === "dark" && "theme-dark"
+      }`}>
       <MainBanner />
       <Contact />
       <ArtSection />
-      {/* <GraphicSection /> */}
       <BottomNavigation />
       <SocialList />
       <Footer />
