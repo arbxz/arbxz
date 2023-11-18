@@ -3,16 +3,13 @@ import React, { useEffect, useState } from "react";
 import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
-import { useThemeContext } from "@/app/context/theme";
-
-import { StyledPrimaryButton } from "../shared/sharedStyles";
 import { StyledNavigationWrapper } from "./NavigationStyles";
 
 const Navigation = () => {
-  const { theme, setTheme } = useThemeContext();
   const [isContentScrolled, setIsContentScrolled] = useState(false);
-
+  const { resolvedTheme, setTheme } = useTheme();
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -31,24 +28,45 @@ const Navigation = () => {
 
   return (
     <StyledNavigationWrapper
-      isContentScrolled={isContentScrolled}
-      className="fixed top-0 flex gap-6 h-auto w-full justify-start items-center p-3 before:shadow-md">
-      <Link className="text-xl text-primary" href="/">
-        Arbxz | <span className="text-xl">Arbaaz Mowlabucus</span>
-      </Link>
+      className={`fixed top-0 h-auto w-full p-3 before:shadow-md z-50 ${
+        isContentScrolled && "content-scrolled"
+      }`}>
+      <div className="flex gap-6 max-w-5xl justify-start items-center mx-auto">
+        <Link className="text-xl" href="/">
+          Arbxz <span className="text-accent">|</span>{" "}
+          <span className="text-lg">Arbaaz Mowlabucus</span>
+        </Link>
 
-      <StyledPrimaryButton
-        type="button"
-        title="Theme toggle"
-        className="flex items-center justify-center p-2 w-8 text-md rounded-full ml-auto"
-        onClick={() => {
-          theme == "light" ? setTheme("dark") : setTheme("light");
-        }}>
-        <FontAwesomeIcon icon={theme == "light" ? faMoon : faSun} />
-      </StyledPrimaryButton>
+        <div className="hidden md:flex mx-auto justify-center items-center gap-4 text-center font-semibold">
+          <Link
+            className="relative py-2 before:absolute before:bottom-0 before:left-0 before:h-1 before:w-0 before:bg-accent hover:before:w-full before:transition-all before:duration-300"
+            href="#projects">
+            Projects
+          </Link>
+          <Link
+            className="relative py-2 before:absolute before:bottom-0 before:left-0 before:h-1 before:w-0 before:bg-accent hover:before:w-full before:transition-all before:duration-300"
+            href="#designs">
+            Designs
+          </Link>
+          <Link
+            className="relative py-2 before:absolute before:bottom-0 before:left-0 before:h-1 before:w-0 before:bg-accent hover:before:w-full before:transition-all before:duration-300"
+            href="#aboutme">
+            About me
+          </Link>
+        </div>
 
-      {/* Implement i18N */}
-      {/* <span className="text-md font-semibold">EN | FR</span> */}
+        <button
+          type="button"
+          title="Theme toggle"
+          className="flex items-center justify-center p-2 w-8 text-md rounded-full ml-auto bg-foreground text-background"
+          onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}>
+          <FontAwesomeIcon icon={resolvedTheme == "light" ? faMoon : faSun} />
+        </button>
+
+        <span className="text-md">
+          EN <span className="text-accent">|</span> FR
+        </span>
+      </div>
     </StyledNavigationWrapper>
   );
 };

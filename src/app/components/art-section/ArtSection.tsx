@@ -8,11 +8,11 @@ import psdIcon from "/public/images/icons/photoshop.svg";
 const ArtSection = () => {
   return (
     <>
-      <section className="relative w-full lg:max-w-5xl p-4">
-        <div className="bg-redAccent rounded-xl shadow-md hover:shadow-xl transition-shadow ease-out duration-300 flex flex-1 lg:flex-row flex-col items-center justify-center mx-auto p-8">
+      <section id="designs" className="relative w-full lg:max-w-5xl p-4">
+        <div className="bg-primary rounded-xl shadow-md hover:shadow-xl transition-shadow ease-out duration-300 flex flex-1 lg:flex-row flex-col items-center justify-center mx-auto p-8">
           <div className="flex flex-col lg:w-1/2 justify-end gap-4">
             <span className="lg:text-left text-center text-primary text-2xl font-semibold">
-              <span className="block text-6xl font-system-ui font-extrabold mb-8">
+              <span className="block text-white text-6xl font-system-ui font-extrabold mb-8">
                 Need some graphic work done ?
               </span>
               <span className="inline-block w-auto bg-white mb-2 p-2">
@@ -27,18 +27,21 @@ const ArtSection = () => {
             </span>
             <div className="flex flex-row lg:justify-start justify-center gap-4 mt-5">
               <Image
+                className="transition-all duration-300 ease-in-out hover:-translate-y-3"
                 src={psdIcon}
                 width={45}
                 height={45}
                 alt="photoshop icon"
               />
               <Image
+                className="transition-all duration-300 ease-in-out hover:-translate-y-3"
                 src={illustratorIcon}
                 width={45}
                 height={45}
                 alt="illustrator icon"
               />
               <Image
+                className="transition-all duration-300 ease-in-out hover:-translate-y-3 bg-white rounded-full p-2 overflow-hidden"
                 src={clipstudioIcon}
                 width={45}
                 height={45}

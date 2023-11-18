@@ -1,28 +1,29 @@
+import { ThemeProvider } from "next-themes";
+
 import ArtSection from "./components/art-section/ArtSection";
-import BottomNavigation from "./components/bottom-navigation-bar/BottomNavigation";
 import Contact from "./components/contact-section/Contact";
 import Footer from "./components/footer/Footer";
-import GraphicSection from "./components/graphic-section/GraphicSection";
 import MainBanner from "./components/main-section/MainSection";
 import Modal from "./components/modal/Modal";
+import ProjectSection from "./components/project-section/ProjectSection";
 import SocialList from "./components/social-list/SocialList";
-import { useThemeContext } from "./context/theme";
-import { StyledMain } from "./themes/globalStyles";
-// TODO FIX RELATIVE IMPORT
+import { useModalContext } from "./context/modal";
 
 const App = () => {
-  const { isModalOpen, modalContent } = useThemeContext();
+  const { isModalOpen, modalContent } = useModalContext();
+
   return (
-    <StyledMain className="relative flex min-h-screen flex-col items-center justify-start select-none">
-      <MainBanner />
-      <Contact />
-      <ArtSection />
-      {/* <GraphicSection /> */}
-      <BottomNavigation />
-      <SocialList />
-      <Footer />
-      <Modal isOpen={isModalOpen}>{modalContent}</Modal>
-    </StyledMain>
+    <ThemeProvider>
+      <main className="relative bg-body text-foreground flex min-h-screen flex-col items-center justify-start select-none text-">
+        <MainBanner />
+        <ProjectSection />
+        <Contact />
+        <ArtSection />
+        <SocialList />
+        <Footer />
+        <Modal isOpen={isModalOpen}>{modalContent}</Modal>
+      </main>
+    </ThemeProvider>
   );
 };
 

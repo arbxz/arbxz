@@ -8,14 +8,12 @@ const config: Config = {
   ],
   theme: {
     colors: {
+      foreground: "var(--foreground)",
+      background: "var(--background)",
+      body: "var(--body)",
+      accent: "var(--accent)",
       primary: "#333333",
       white: "#ffffff",
-      red: "#f74545",
-      brown: "#fae2cd",
-      redAccent: "#f7eee6",
-      purple: "#8FACE1",
-      orange: "#F74545",
-      pink: "#F12E72",
     },
     extend: {
       backgroundImage: {
