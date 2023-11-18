@@ -1,40 +1,33 @@
 import styled from "styled-components";
 
-export const StyledScreenDummy = styled.div`
-  background: ${({ theme }) => theme.backgroundSecondary};
-`;
-
 interface DarkThemeProps {
   isDark?: boolean;
 }
-
-export const StyledTitle = styled.h2`
-  color: ${({ theme }) => theme.text};
-`;
 
 export const StyledHighlightedText = styled.div<DarkThemeProps>`
   display: inline-block;
   width: auto;
   padding: 0 1rem;
   margin-bottom: 3px;
-  color: ${({ isDark, theme }) => (isDark ? theme.text : theme.textSecondary)};
-  background: ${({ isDark, theme }) =>
-    isDark ? theme.backgroundSecondary : theme.background};
+  color: var(--background);
+  background: var(--foreground);
 `;
 
-export const StyledSkillButton = styled.button<DarkThemeProps>`
-  border: 1px solid ${({ theme }) => theme.text};
-  color: ${({ isDark, theme }) => (isDark ? theme.textSecondary : theme.text)};
-  background: ${({ isDark, theme }) =>
-    isDark ? theme.background : theme.backgroundSecondary};
+export const StyledSlider = styled.div`
+  position: relative;
+  height: 100px;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
 `;
 
-export const StyledPrimaryButton = styled.button`
-  background: ${({ theme }) => theme.background};
-  color: ${({ theme }) => theme.textSecondary};
+export const StyledSliderTrack = styled.div`
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
 `;
 
-export const StyledDummyHeader = styled.div`
-  background: ${({ theme }) => theme.background};
-  color: ${({ theme }) => theme.textSecondary};
+export const StyledSlide = styled.div`
+  height: 100px;
+  width: 250px;
 `;

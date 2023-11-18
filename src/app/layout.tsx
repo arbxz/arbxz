@@ -4,7 +4,7 @@ import { League_Spartan } from "next/font/google";
 
 import StyledJsxRegistry from "./registry";
 
-import "./themes/globals.scss";
+import "./themes/styles.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
 config.autoAddCss = false;
@@ -13,9 +13,10 @@ const inter = League_Spartan({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.arbxz.com"),
   title: "arbxz | Arbaaz Mowlabucus",
   description:
-    "Arbaaz Mowlabucus professional portfolio of my frontend projects and illustrations.",
+    "Arbaaz Mowlabucus's professional portfolio of frontend projects and illustrations.",
   authors: {
     name: "Arbaaz Mowlabucus",
   },
@@ -34,7 +35,8 @@ export const metadata: Metadata = {
   },
   keywords: [
     "Arbaaz Mowlabucus",
-    "React Developer",
+    "ReactJs Developer",
+    "NextJs Developer",
     "JavaScript",
     "Web Developer",
     "Front-end Developer",
