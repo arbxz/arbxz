@@ -35,7 +35,7 @@ const Contact = () => {
     return (
       <>
         {highlightedTextArray.map((text, index) => (
-          <StyledHighlightedText className="text-lg" key={index} isDark={false}>
+          <StyledHighlightedText className="text-lg" key={index}>
             {text}
           </StyledHighlightedText>
         ))}
@@ -45,12 +45,12 @@ const Contact = () => {
 
   return (
     <>
-      <section id="aboutme" className="w-full lg:max-w-5xl p-4 mb-10 lg:mb-24">
+      <section id="aboutme" className="w-full lg:max-w-5xl p-4 mb-10">
         <div
           className={`bg-background rounded-xl md:p-8 p-2 flex flex-auto gap-4 lg:gap-20 items-center justify-center flex-col lg:flex-row w-full mx-auto shadow-md hover:shadow-xl transition-shadow ease-out duration-300`}>
           <div className="inline-flex lg:flex gap-5 flex-col lg:w-1/2 w-full text-center lg:text-right">
             <div className="relative">
-              <h2 className="block font-system-ui md:text-7xl text-6xl font-extrabold lg:max-w-md lg:ml-auto text-foreground relative z-10">
+              <h2 className="block font-system-ui md:text-7xl text-4xl font-extrabold lg:max-w-md lg:ml-auto text-foreground relative z-10">
                 Get to know me !
               </h2>
             </div>

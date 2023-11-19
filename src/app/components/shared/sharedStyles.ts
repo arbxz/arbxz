@@ -1,10 +1,5 @@
 import styled from "styled-components";
-
-interface DarkThemeProps {
-  isDark?: boolean;
-}
-
-export const StyledHighlightedText = styled.div<DarkThemeProps>`
+export const StyledHighlightedText = styled.div`
   display: inline-block;
   width: auto;
   padding: 0 1rem;
@@ -16,7 +11,7 @@ export const StyledHighlightedText = styled.div<DarkThemeProps>`
 export const StyledSlider = styled.div`
   position: relative;
   height: 100px;
-  width: 100%;
+  width: 100vw;
   margin: auto;
   overflow: hidden;
 `;
@@ -24,7 +19,7 @@ export const StyledSlider = styled.div`
 export const StyledSliderTrack = styled.div`
   animation: scroll 40s linear infinite;
   display: flex;
-  width: calc(250px * 14);
+  width: calc(250px * 22);
 `;
 
 export const StyledSlide = styled.div`

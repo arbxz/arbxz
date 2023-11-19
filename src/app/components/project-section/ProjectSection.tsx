@@ -27,10 +27,11 @@ const ProjectSection = () => {
   const ProjectCard = ({ project }: { project: InterfaceProjectItem }) => {
     return (
       <div
-        className="relative bg-white flex card w-full md:w-64 min-h-64 md:flex-col flex-row rounded-md shadow-md ease-in-out transition-all duration-300 hover:shadow-lg hover:-translate-y-3 overflow-hidden"
+        className="relative bg-white flex card w-full sm:w-64 min-h-64 sm:flex-col flex-row rounded-md shadow-md ease-in-out transition-all duration-300 hover:shadow-lg hover:-translate-y-3 overflow-hidden"
         key={project.name}>
         <div className="card-header">
           <Image
+            className=" object-center object-cover"
             src={project.src}
             width={256}
             height={256}
@@ -39,10 +40,10 @@ const ProjectSection = () => {
           />
         </div>
         <div className="card-body p-4 text-primary text-left">
-          <span className="block text-xl font-semibold mb-2">
+          <span className="block text-xl font-semibold md:mb-2">
             {project.name}
           </span>
-          <span className="block border-b text-md py-2 mb-2">
+          <span className="block border-b text-md md:py-2 py-1 md:mb-2 mb-1">
             {project.description}
           </span>
           <span className="flex items-center gap-3 bg-primary text-white p-2 rounded">
@@ -67,10 +68,10 @@ const ProjectSection = () => {
     <section id="projects" className="w-full lg:max-w-5xl mx-auto md:py-8 p-4">
       <div className="text-center">
         <div className="inline-block mx-auto text-center md:mb-12 mb-3">
-          <h2 className="font-system-ui font-semibold uppercase p-2 bg-primary text-white text-5xl">
+          <h2 className="font-system-ui font-semibold uppercase p-2 bg-primary text-white text-3xl md:text-5xl">
             Recent Projects
           </h2>
-          <span className="block font-system-ui font-semibold p-2 bg-white text-primary text-xl">
+          <span className="block font-system-ui font-semibold p-2 bg-white text-primary text-lg md:text-xl">
             Check out what Ive been working on !
           </span>
         </div>
