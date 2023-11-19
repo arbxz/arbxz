@@ -2,6 +2,7 @@ import { ThemeProvider } from "next-themes";
 
 import ArtSection from "./components/art-section/ArtSection";
 import Contact from "./components/contact-section/Contact";
+import FigmaSection from "./components/figma-section/FigmaSection";
 import Footer from "./components/footer/Footer";
 import MainBanner from "./components/main-section/MainSection";
 import Modal from "./components/modal/Modal";
@@ -18,6 +19,7 @@ const App = () => {
         <MainBanner />
         <ProjectSection />
         <Contact />
+        <FigmaSection />
         <ArtSection />
         <SocialList />
         <Footer />

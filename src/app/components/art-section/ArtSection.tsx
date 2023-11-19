@@ -9,19 +9,19 @@ const ArtSection = () => {
   return (
     <>
       <section id="designs" className="relative w-full lg:max-w-5xl p-4">
-        <div className="bg-primary rounded-xl shadow-md hover:shadow-xl transition-shadow ease-out duration-300 flex flex-1 lg:flex-row flex-col items-center justify-center mx-auto p-8">
+        <div className="bg-primary rounded-xl shadow-md hover:shadow-xl transition-shadow ease-out duration-300 flex flex-1 lg:flex-row flex-col items-center justify-center mx-auto p-3 md:p-8">
           <div className="flex flex-col lg:w-1/2 justify-end gap-4">
-            <span className="lg:text-left text-center text-primary text-2xl font-semibold">
-              <span className="block text-white text-6xl font-system-ui font-extrabold mb-8">
+            <span className="lg:text-left text-center text-primary md:text-2xl text-lg font-semibold">
+              <span className="block text-white text-2xl md:text-6xl font-system-ui font-extrabold mb-8">
                 Need some graphic work done ?
               </span>
-              <span className="inline-block w-auto bg-white mb-2 p-2">
+              <span className="inline-block w-auto bg-white mb-2 md:p-2 p-1">
                 or maybe some sketches or logos ?
               </span>
-              <span className="inline-block bg-white p-2 font-bold text-3xl mb-2">
+              <span className="inline-block bg-white md:p-2 p-1 font-bold text-xl md:text-3xl mb-2">
                 Not a problem !
               </span>
-              <span className="block bg-white p-2">
+              <span className="block bg-white md:p-2 p-1">
                 I am very experienced in handling tools like
               </span>
             </span>

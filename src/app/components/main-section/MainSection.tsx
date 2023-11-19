@@ -39,7 +39,7 @@ const MainBanner = () => {
                 <StyledHighlightedText>Hello visitor,</StyledHighlightedText>
                 <div>
                   {introText.map((text, index) => (
-                    <StyledHighlightedText key={index} isDark={true}>
+                    <StyledHighlightedText key={index}>
                       {text}
                     </StyledHighlightedText>
                   ))}
@@ -52,10 +52,10 @@ const MainBanner = () => {
                     </span>
                   </StyledHighlightedText>
                   <br />
-                  <StyledHighlightedText isDark={true}>
+                  <StyledHighlightedText>
                     I am based in Mauritius and I
                   </StyledHighlightedText>
-                  <StyledHighlightedText isDark={true}>
+                  <StyledHighlightedText>
                     love art, hiking and diving.
                   </StyledHighlightedText>
                 </div>
