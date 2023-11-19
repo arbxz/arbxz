@@ -2,7 +2,7 @@ import { createContext, useContext, useState } from "react";
 
 const Context = createContext();
 
-export const ThemeProviderContext = ({ children }) => {
+export const ModalProviderContext = ({ children }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState();
 
@@ -14,9 +14,7 @@ export const ThemeProviderContext = ({ children }) => {
         modalContent,
         setModalContent,
       }}>
-      <div isModalOpen={setIsModalOpen} modalContent={modalContent}>
-        {children}
-      </div>
+      {children}
     </Context.Provider>
   );
 };

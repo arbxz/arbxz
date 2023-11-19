@@ -1,3 +1,4 @@
+"use-client";
 import {
   faCircleXmark,
   faPaperPlane,
@@ -17,7 +18,6 @@ import profileImg from "/public/images/arbaaz-picture.jpg";
 
 const Contact = () => {
   const { setIsModalOpen, setModalContent } = useModalContext();
-
   const messageContent = [
     "I've also served as a Scrum Master, improving my knowledge of agile methodologies and team dynamics. My attention to detail and commitment to best practices guarantee robust applications. Let's collaborate to bring your vision to life and optimize user experiences!",
     "Hmmm, sounds interesting.\nCan I get in touch with you ?",
@@ -99,7 +99,7 @@ const Contact = () => {
               <div className="relative bg-square flex flex-col gap-3 w-full p-4">
                 {messageContent.map((content, index) => (
                   <span
-                    className="relative flex w-fit max-w-[75%] py-3 px-4 rounded-md text-sm text-white bg-primary odd:ml-auto odd:text-primary odd:bg-white shadow-md hover:odd:-translate-x-4 hover:even:translate-x-4 hover:scale-105 transition-all duration-300"
+                    className="relative h-auto flex w-fit max-w-[75%] py-3 px-4 rounded-md text-sm text-white bg-primary odd:ml-auto odd:text-primary odd:bg-white shadow-md hover:odd:-translate-x-4 hover:even:translate-x-4 hover:scale-105 transition-all duration-300"
                     key={index}>
                     {content}
                   </span>

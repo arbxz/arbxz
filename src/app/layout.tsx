@@ -53,7 +53,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html suppressHydrationWarning={true} lang="en">
       <head>
         <meta charSet="utf-8" />
         <meta name="google" content="nositelinkssearchbox" />
