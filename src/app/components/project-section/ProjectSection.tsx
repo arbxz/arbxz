@@ -65,9 +65,11 @@ const ProjectSection = () => {
   };
 
   return (
-    <section id="projects" className="w-full lg:max-w-5xl mx-auto md:py-8 p-4">
+    <section
+      id="projects"
+      className="w-full mb-10 lg:max-w-5xl mx-auto md:py-8 p-4">
       <div className="text-center">
-        <div className="inline-block mx-auto text-center md:mb-12 mb-3">
+        <div className="inline-block mx-auto text-center md:mb-12 mb-8">
           <h2 className="font-system-ui font-semibold uppercase p-2 bg-primary text-white text-3xl md:text-5xl">
             Recent Projects
           </h2>

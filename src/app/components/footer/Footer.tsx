@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer className="block bg-background text-foreground w-full mt-16 p-4">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-5xl w-full mx-auto">
         <div className="flex flex-col md:flex-row container gap-4 px-6 py-6 md:py-0">
           <div className="md:hidden block mx-auto mb-6 md:mb-0">
             <ul className="flex md:flex-col justify-center gap-2">
@@ -61,7 +61,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <span className="p-4 text-center">© 2023 Arbaaz Mowlabucus</span>
+        <div className="w-full p-4 text-center">© 2023 Arbaaz Mowlabucus</div>
       </div>
     </footer>
   );

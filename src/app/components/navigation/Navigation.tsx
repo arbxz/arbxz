@@ -28,7 +28,7 @@ const Navigation = () => {
 
   return (
     <StyledNavigationWrapper
-      className={`fixed top-0 h-auto w-full p-3 before:shadow-md z-50 ${
+      className={`fixed top-0 h-auto w-full p-4 before:shadow-md z-50 ${
         isContentScrolled && "content-scrolled"
       }`}>
       <div className="flex gap-6 max-w-5xl justify-start items-center mx-auto">

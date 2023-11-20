@@ -23,7 +23,7 @@ const MainBanner = () => {
   return (
     <section className="relative bg-radial  flex justify-center items-center flex-col w-full min-h-[90vh]">
       <Navigation />
-      <div className="flex items-center justify-center w-full pt-10">
+      <div className="flex items-center justify-center w-full pt-20 md:pt-0">
         <div className="relative md:w-full lg:w-auto p-4 flex md:flex-row flex-col gap-4 align-top justify-center">
           <div className="flex gap-4 align-center justify-center flex-col md:flex-row">
             <div className="flex lg:w-3/5 justify-center flex-col">
