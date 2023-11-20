@@ -93,10 +93,10 @@ html {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-250px * 7));
-    -webkit-transform: translateX(calc(-250px * 7));
-    -moz-transform: translateX(calc(-250px * 7));
-    -ms-transform: translateX(calc(-250px * 7));
-    -o-transform: translateX(calc(-250px * 7));
+    transform: translateX(calc(-250px * 9));
+    -webkit-transform: translateX(calc(-250px * 9));
+    -moz-transform: translateX(calc(-250px * 9));
+    -ms-transform: translateX(calc(-250px * 9));
+    -o-transform: translateX(calc(-250px * 9));
   }
 }

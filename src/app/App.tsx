@@ -18,7 +18,7 @@ const App = () => {
   return (
     <ThemeProvider>
       <main className="relative text-foreground flex min-h-screen flex-col items-center justify-start select-none">
-        <div className="fixed w-full h-screen object-cover top-0 left-0 -z-0">
+        <div className="fixed w-full h-screen object-cover top-0 left-0 -z-10">
           <Image
             src={WebsiteBg}
             fill
@@ -30,9 +30,9 @@ const App = () => {
 
         <MainBanner />
         <ProjectSection />
-        <Contact />
         <FigmaSection />
         <ArtSection />
+        <Contact />
         <SocialList />
         <Footer />
         <Modal isOpen={isModalOpen}>{modalContent}</Modal>

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 export const StyledHighlightedText = styled.div`
   display: inline-block;
   width: auto;
@@ -11,18 +12,20 @@ export const StyledHighlightedText = styled.div`
 export const StyledSlider = styled.div`
   position: relative;
   height: 100px;
+  margin: 0 auto;
   width: 100vw;
-  margin: auto;
   overflow: hidden;
 `;
 
 export const StyledSliderTrack = styled.div`
   animation: scroll 40s linear infinite;
   display: flex;
-  width: calc(250px * 22);
+  width: calc(250px * 18);
 `;
 
 export const StyledSlide = styled.div`
+  display: flex;
+  justify-items: center;
   height: 100px;
   width: 250px;
 `;
