@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import TextTransition, { presets } from "react-text-transition";
 
-import { useModalContext } from "@/app/context/modal";
-
 import Navigation from "../navigation/Navigation";
 import ImageCarousel from "../shared/shared-components/ImageCarousel";
 import { StyledHighlightedText } from "../shared/sharedStyles";
