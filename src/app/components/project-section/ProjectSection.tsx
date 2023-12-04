@@ -27,8 +27,7 @@ const ProjectSection = () => {
       src: cocagneImg,
       url: "https://www.cocagne.fr/",
       name: "Cocagne.fr",
-      description:
-        "I implemented the frontend of this website within a team using NextJs and tailwind",
+      description: "Developped the UI/Front end using Tailwind + Next",
       tech: "NextJS",
     },
   ];
@@ -36,7 +35,7 @@ const ProjectSection = () => {
   const ProjectCard = ({ project }: { project: InterfaceProjectItem }) => {
     return (
       <div
-        className="relative bg-white flex card w-full sm:w-64 min-h-64 sm:flex-col flex-row rounded-md shadow-md ease-in-out transition-all duration-300 hover:shadow-lg hover:-translate-y-3 overflow-hidden"
+        className="relative font-system-ui bg-white flex card w-full sm:w-64 min-h-64 sm:flex-col flex-row rounded-md shadow-md ease-in-out transition-all duration-300 hover:shadow-lg hover:-translate-y-3 overflow-hidden"
         key={project.name}>
         <div className="w-2/5 h-auto sm:w-64 sm:h-44 object-cover object-bottom overflow-hidden">
           <Image
@@ -52,7 +51,7 @@ const ProjectSection = () => {
           <span className="block text-xl font-semibold md:mb-2">
             {project.name}
           </span>
-          <span className="block border-b text-md md:py-2 py-1 md:mb-2 mb-1">
+          <span className="block border-b text-md md:py-2 py-1 md:mb-2 mb-1 overflow-hidden text-ellipsis">
             {project.description}
           </span>
           <span className="flex items-center gap-3 bg-primary text-white p-2 rounded">
@@ -76,7 +75,7 @@ const ProjectSection = () => {
   return (
     <section
       id="projects"
-      className="w-full mb-10 lg:max-w-5xl mx-auto md:py-8 p-4">
+      className="w-full mb-10 lg:max-w-7xl mx-auto md:py-8 p-4">
       <div className="text-center">
         <div className="inline-block mx-auto text-center md:mb-12 mb-8">
           <h2 className="font-system-ui font-semibold uppercase p-2 bg-primary text-white text-3xl md:text-5xl">

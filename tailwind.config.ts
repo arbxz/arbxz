@@ -10,9 +10,10 @@ const config: Config = {
     colors: {
       foreground: "var(--foreground)",
       background: "var(--background)",
+      backgroundSecondary: "var(--backgroundSecondary)",
       body: "var(--body)",
       accent: "var(--accent)",
-      primary: "#333333",
+      primary: "#040202",
       white: "#ffffff",
     },
     extend: {
