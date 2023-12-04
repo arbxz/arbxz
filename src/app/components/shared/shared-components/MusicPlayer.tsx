@@ -7,6 +7,7 @@ import { faPlus } from "@fortawesome/free-solid-svg-icons/faPlus";
 import { faRepeat } from "@fortawesome/free-solid-svg-icons/faRepeat";
 import { faShuffle } from "@fortawesome/free-solid-svg-icons/faShuffle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const MusicPlayer = () => {
   return (
     <div className="px-4">
