@@ -47,7 +47,7 @@ const Contact = () => {
     <>
       <section id="aboutme" className="w-full lg:max-w-5xl p-4 mb-10">
         <div
-          className={`bg-background rounded-xl md:p-8 p-2 flex flex-auto gap-4 lg:gap-20 items-center justify-center flex-col lg:flex-row w-full mx-auto shadow-md hover:shadow-xl transition-shadow ease-out duration-300`}>
+          className={`bg-accent rounded-xl md:p-8 p-2 flex flex-auto gap-4 lg:gap-20 items-center justify-center flex-col lg:flex-row w-full mx-auto shadow-md hover:shadow-xl transition-shadow ease-out duration-300`}>
           <div className="inline-flex lg:flex gap-5 flex-col lg:w-1/2 w-full text-center lg:text-right">
             <div className="relative">
               <h2 className="block font-system-ui md:text-7xl text-4xl font-extrabold lg:max-w-md lg:ml-auto text-foreground relative z-10">
@@ -69,7 +69,7 @@ const Contact = () => {
             </button>
           </div>
 
-          <div className="flex flex-col items-center justify-start w-full sm:w-3/5 lg:w-1/2 mx-auto rounded-2xl shadow-2xl overflow-hidden">
+          <div className="flex flex-col items-center justify-start w-full sm:w-3/5 lg:w-1/2 mx-auto rounded-2xl shadow-md overflow-hidden">
             <div className="flex justify-end items-baseline bg-foreground text-background w-full gap-4 p-3 border-b">
               <h4 className="mr-auto">Let&apos;s get in touch !</h4>
               <FontAwesomeIcon icon={faWindowMinimize} />
@@ -90,13 +90,13 @@ const Contact = () => {
                 </div>
                 <div className="text-sm z-10">
                   <span className="flex items-center gap-3 font-semibold">
-                    Arbaaz Mowlabucus{" "}
+                    Arbaaz Mowlabucus
                     <span className="inline-block rounded-full w-3 h-3 overflow-hidden bg-amber-400"></span>
                   </span>
                   <span>Frontend Developer</span>
                 </div>
               </div>
-              <div className="relative bg-square flex flex-col gap-3 w-full p-4">
+              <div className="relative bg-white flex flex-col gap-3 w-full p-4">
                 {messageContent.map((content, index) => (
                   <span
                     className="relative h-auto flex w-fit max-w-[75%] py-3 px-4 rounded-md text-sm text-white bg-primary odd:ml-auto odd:text-primary odd:bg-white shadow-md hover:odd:-translate-x-4 hover:even:translate-x-4 hover:scale-105 transition-all duration-300"

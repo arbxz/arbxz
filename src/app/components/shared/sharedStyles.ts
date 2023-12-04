@@ -25,6 +25,7 @@ export const StyledSliderTrack = styled.div`
 
 export const StyledSlide = styled.div`
   display: flex;
+  align-items: center;
   justify-items: center;
   height: 100px;
   width: 250px;

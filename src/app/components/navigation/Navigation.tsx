@@ -28,28 +28,28 @@ const Navigation = () => {
 
   return (
     <StyledNavigationWrapper
-      className={`fixed top-0 h-auto w-full p-4 before:shadow-md z-50 ${
-        isContentScrolled && "content-scrolled"
+      className={`fixed top-0 h-auto w-full py-2 md:px-6 px-2 ease-in-out duration-300 max-w-7xl md:before:rounded-full before:shadow-md z-50 ${
+        isContentScrolled && "content-scrolled md:translate-y-1"
       }`}>
-      <div className="flex gap-6 max-w-5xl justify-start items-center mx-auto">
-        <Link className="text-xl" href="/">
-          Arbxz <span className="text-accent">|</span>{" "}
+      <div className="flex gap-6 w-full max-w-7xl justify-start items-center mx-auto">
+        <Link className="flex items-center text-xl gap-2" href="/">
+          Arbxz <span className="text-foreground">|</span>
           <span className="text-lg">Arbaaz Mowlabucus</span>
         </Link>
 
         <div className="hidden md:flex mx-auto justify-center items-center gap-4 text-center font-semibold">
           <Link
-            className="relative py-2 before:absolute before:bottom-0 before:left-0 before:h-1 before:w-0 before:bg-accent hover:before:w-full before:transition-all before:duration-300"
+            className="relative py-2 before:absolute before:bottom-0 before:left-0 before:h-1 before:w-0 before:bg-foreground hover:before:w-full before:transition-all before:duration-300"
             href="#projects">
             Projects
           </Link>
           <Link
-            className="relative py-2 before:absolute before:bottom-0 before:left-0 before:h-1 before:w-0 before:bg-accent hover:before:w-full before:transition-all before:duration-300"
+            className="relative py-2 before:absolute before:bottom-0 before:left-0 before:h-1 before:w-0 before:bg-foreground hover:before:w-full before:transition-all before:duration-300"
             href="#designs">
             Designs
           </Link>
           <Link
-            className="relative py-2 before:absolute before:bottom-0 before:left-0 before:h-1 before:w-0 before:bg-accent hover:before:w-full before:transition-all before:duration-300"
+            className="relative py-2 before:absolute before:bottom-0 before:left-0 before:h-1 before:w-0 before:bg-foreground hover:before:w-full before:transition-all before:duration-300"
             href="#aboutme">
             About me
           </Link>
@@ -64,7 +64,7 @@ const Navigation = () => {
         </button>
 
         <span className="text-md">
-          EN <span className="text-accent">|</span> FR
+          EN <span className="text-foreground">|</span> FR
         </span>
       </div>
     </StyledNavigationWrapper>
