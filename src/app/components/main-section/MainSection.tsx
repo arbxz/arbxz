@@ -21,7 +21,7 @@ const MainBanner = () => {
   }, []);
 
   return (
-    <section className="relative flex justify-center items-center flex-col w-full pt-28 mb-8">
+    <section className="relative flex justify-center items-center flex-col w-full md:pt-28 mb-8">
       <Navigation />
       <div className="flex items-center justify-center w-full pt-20 md:pt-0">
         <div className="relative md:w-full lg:w-auto p-4 flex md:flex-row flex-col gap-4 align-top justify-center">
