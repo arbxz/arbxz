@@ -9,7 +9,7 @@ const ArtSection = () => {
   return (
     <>
       <section id="designs" className="relative w-full lg:max-w-7xl p-4">
-        <div className="lg:gap-10 flex-col-reverse md:flex-col md:gap-5 gap-3 flex flex-1 lg:flex-row items-center justify-center mx-auto p-3 md:p-8">
+        <div className="lg:gap-10 flex-col-reverse md:gap-5 gap-3 flex flex-1 lg:flex-row items-center justify-center mx-auto p-3 md:p-8">
           <ArtDeck />
           <div className="flex flex-col lg:w-1/2 justify-end gap-4">
             <span className="lg:text-left text-center text-background md:text-2xl text-lg font-semibold">

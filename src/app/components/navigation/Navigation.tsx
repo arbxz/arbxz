@@ -28,12 +28,12 @@ const Navigation = () => {
 
   return (
     <StyledNavigationWrapper
-      className={`fixed top-0 h-auto w-full py-2 md:px-6 px-2 ease-in-out duration-300 max-w-7xl md:before:rounded-full before:shadow-md z-50 ${
-        isContentScrolled && "content-scrolled md:translate-y-1"
+      className={`fixed top-0 text-foreground h-auto w-full py-2 md:px-6 px-2 ease-in-out duration-300 max-w-7xl lg:before:rounded-full before:shadow-md z-50 ${
+        isContentScrolled && "content-scrolled text-white lg:translate-y-1"
       }`}>
       <div className="flex gap-6 w-full max-w-7xl justify-start items-center mx-auto">
         <Link className="flex items-center text-xl gap-2" href="/">
-          Arbxz <span className="text-foreground">|</span>
+          Arbxz <span>|</span>
           <span className="text-lg">Arbaaz Mowlabucus</span>
         </Link>
 
@@ -64,7 +64,7 @@ const Navigation = () => {
         </button>
 
         <span className="text-md">
-          EN <span className="text-foreground">|</span> FR
+          EN <span>|</span> FR
         </span>
       </div>
     </StyledNavigationWrapper>

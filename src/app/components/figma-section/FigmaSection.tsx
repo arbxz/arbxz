@@ -7,15 +7,15 @@ import FigmaImgMobile from "/public/screenshot-mobile.png";
 const FigmaSection = () => {
   return (
     <section className="md:py-8 mb-10">
-      <div className="flex md:flex-row flex-col items-start justify-start md:gap-10 gap-5 max-w-5xl mx-auto p-4">
-        <div className="flex flex-row gap-8 justify-center items-start">
+      <div className="flex xs:flex-row flex-col items-center justify-center md:gap-10 gap-5 max-w-5xl mx-auto p-4">
+        <div className="flex flex-col gap-8 justify-center items-center">
           <Image
             src={FigmaLogo}
             width={100}
             loading="lazy"
             alt={"logo of figma"}
           />
-          <div className="max-w-3xl">
+          <div className="max-w-3xl mx-auto text-center md:lg-left">
             <span className="inline-block p-2 text-background bg-foreground text-4xl mb-4">
               Figma
             </span>
