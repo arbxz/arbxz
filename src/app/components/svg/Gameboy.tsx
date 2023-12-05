@@ -7,7 +7,7 @@ interface SVGProps {
 const GameboySVG = ({ colorShade, color }: SVGProps) => {
   return (
     <svg
-      className="flex mx-auto"
+      className="flex mx-auto w-full"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
