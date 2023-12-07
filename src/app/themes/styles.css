@@ -16,7 +16,7 @@
   --backgroundSecondary: #1b1b25;
   --foreground: #040202;
   --accent: hsl(15, 85%, 48%);
-  --accentSecondary: #f83d5c;
+  --accentSecondary: rgb(255, 138, 28);
   --body: #f3f3f3;
 }
 
@@ -49,6 +49,16 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.gradientTitle {
+  background: linear-gradient(135deg, var(--accentSecondary), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  color: inherit;
+  -webkit-text-fill-color: transparent;
 }
 
 h1,

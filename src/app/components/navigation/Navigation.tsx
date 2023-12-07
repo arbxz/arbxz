@@ -5,8 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 
-import styles from "./Navigation.module.css";
-
 const Navigation = () => {
   const [isContentScrolled, setIsContentScrolled] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
@@ -32,12 +30,12 @@ const Navigation = () => {
         isContentScrolled && "bg-accent text-white shadow-md  lg:translate-y-2"
       }`}>
       <div className="flex gap-6 w-full max-w-7xl justify-start items-center mx-auto">
-        <Link className="flex items-center text-xl gap-2" href="/">
+        <Link className="flex items-center text-lg gap-2" href="/">
           Arbxz <span>|</span>
-          <span className="text-xl">Arbaaz Mowlabucus</span>
+          <span className="text-lg">Arbaaz Mowlabucus</span>
         </Link>
 
-        <div className="hidden text-lg md:flex mx-auto justify-center items-center gap-4 text-center font-semibold">
+        <div className="hidden text-md md:flex mx-auto justify-center items-center gap-4 text-center font-semibold">
           <Link
             className="relative py-2 before:absolute before:bottom-0 before:left-0 before:h-1 before:w-0 before:bg-foreground hover:before:w-full before:transition-all before:duration-300"
             href="#projects">

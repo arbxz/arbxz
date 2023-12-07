@@ -11,14 +11,14 @@ import Image from "next/image";
 import { useModalContext } from "@/app/context/modal";
 
 import KnowledgeSection from "../knowledge-section/KnowledgeSection";
-import RippleButtonWrapper from "../shared/shared-components/RippleButtonWrapper";
 import RippleTypingDots from "../shared/shared-components/RippleTyping";
 import profileImg from "/public/images/arbaaz-picture.jpg";
 
 const Contact = () => {
+  const API_KEY = process.env.WEB3FORMS_API_KEY;
   const { setIsModalOpen, setModalContent } = useModalContext();
   const messageContent = [
-    "I've also served as a Scrum Master, improving my knowledge of agile methodologies and team dynamics. My attention to detail and commitment to best practices guarantee robust applications. Let's collaborate to bring your vision to life and optimize user experiences!",
+    "I've also served as a Scrum Master, improving my knowledge of agile methodologies and team dynamics.",
     "Hmmm, sounds interesting.\nCan I get in touch with you ?",
     "Sure ! ᕙ(⇀‸↼‶)ᕗ\nJust send me your info down below haha :D",
     // eslint-disable-next-line react/jsx-key
@@ -41,6 +41,28 @@ const Contact = () => {
       </>
     );
   };
+
+  async function handleSubmit(event: any) {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", API_KEY || "TEST");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: json,
+    });
+    const result = await response.json();
+    if (result.success) {
+    }
+  }
 
   return (
     <>
@@ -104,22 +126,43 @@ const Contact = () => {
                 ))}
               </div>
               <div className="flex items-center gap-4 w-full p-4 bg-white">
-                <input
-                  className="appearance-none border-2 rounded-3xl w-full py-2 px-4 leading-tight shadow-md focus:outline-none focus:bg-white focus:border-purple-500"
-                  type="text"
-                  title="Message input"
-                  placeholder="Type your email and message"
-                  name="Email"
-                  aria-label="Email and message"
-                />
-                <RippleButtonWrapper color="#333333">
+                <form
+                  onSubmit={handleSubmit}
+                  className="flex w-full flex-col gap-4">
+                  <div className="flex lg:flex-row flex-col gap-4">
+                    <input
+                      className="appearance-none border-2 rounded-xl w-full py-2 px-4 leading-tight shadow-md focus:outline-none focus:bg-white focus:border-purple-500"
+                      type="text"
+                      title="Message input"
+                      placeholder="Type your name"
+                      name="Name"
+                      aria-label="Name"
+                    />
+                    <input
+                      className="appearance-none border-2 rounded-xl w-full py-2 px-4 leading-tight shadow-md focus:outline-none focus:bg-white focus:border-purple-500"
+                      type="email"
+                      title="Message input"
+                      placeholder="Type your email"
+                      name="Email"
+                      aria-label="Email"
+                    />
+                  </div>
+                  <textarea
+                    className="appearance-none border-2 rounded-xl w-full py-2 px-4 leading-tight shadow-md focus:outline-none focus:bg-white focus:border-purple-500"
+                    title="Message input"
+                    placeholder="Type your messsage"
+                    name="Message"
+                    aria-label="Message"
+                  />
+
                   <button
-                    type="button"
+                    type="submit"
                     title="Send message"
-                    className="relative bg-foreground text-background flex items-center justify-center p-3 text-base rounded-full ml-auto z-10">
+                    className="w-full flex text-background bg-foreground gap-4 items-center justify-center px-4 py-2 text-base rounded-xl ml-auto z-10">
+                    Send Message
                     <FontAwesomeIcon icon={faPaperPlane} />
                   </button>
-                </RippleButtonWrapper>
+                </form>
               </div>
             </div>
           </div>
