@@ -1,3 +1,4 @@
+import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 
 import ArtDeck from "./ArtDeck";
@@ -6,12 +7,33 @@ import illustratorIcon from "/public/images/icons/illustrator.svg";
 import psdIcon from "/public/images/icons/photoshop.svg";
 
 const ArtSection = () => {
+  const cardVariants: Variants = {
+    offscreen: {
+      x: 350,
+    },
+    onscreen: {
+      x: 0,
+      scale: 1,
+      transition: {
+        type: "spring",
+        bounce: 0.4,
+      },
+    },
+  };
+
   return (
     <>
-      <div id="designs" className="relative w-full lg:max-w-7xl p-4">
+      <motion.div
+        id="designs"
+        className="relative w-full lg:max-w-7xl p-4"
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.8 }}>
         <div className="lg:gap-10 flex-col-reverse md:gap-5 gap-4 flex lg:flex-row items-center justify-center">
           <ArtDeck />
-          <div className="flex flex-col lg:w-1/2 justify-end gap-4">
+          <motion.div
+            className="flex lg:w-1/2 flex-col justify-end gap-4"
+            variants={cardVariants}>
             <div className="text-left text-xl">
               <span className="block md:text-6xl text-4xl text-foreground font-bold md:mb-4 mb-2">
                 Need some graphic work done ?
@@ -51,9 +73,9 @@ const ArtSection = () => {
                 alt="clipstudio icon"
               />
             </div>
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

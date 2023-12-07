@@ -1,5 +1,6 @@
 import { faEye, faWrench } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { motion, Variants } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
@@ -31,6 +32,22 @@ const ProjectSection = () => {
       tech: "NextJS",
     },
   ];
+
+  const cardVariants: Variants = {
+    offscreen: {
+      y: 300,
+      scale: 0.8,
+    },
+    onscreen: {
+      y: 10,
+      scale: 1,
+      transition: {
+        type: "spring",
+        bounce: 0.4,
+        duration: 0.8,
+      },
+    },
+  };
 
   const ProjectCard = ({ project }: { project: InterfaceProjectItem }) => {
     return (
@@ -86,11 +103,19 @@ const ProjectSection = () => {
           </span>
         </div>
 
-        <div className="flex flex-wrap gap-4 md:gap-6 items-start justify-center">
-          {projectList.map((project) => (
-            <ProjectCard key={project.name} project={project} />
-          ))}
-        </div>
+        <motion.div
+          className="card-container"
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, amount: 0.8 }}>
+          <motion.div
+            className="flex flex-wrap gap-4 md:gap-6 items-start justify-center"
+            variants={cardVariants}>
+            {projectList.map((project) => (
+              <ProjectCard key={project.name} project={project} />
+            ))}
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );

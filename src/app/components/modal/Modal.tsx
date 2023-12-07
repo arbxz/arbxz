@@ -9,7 +9,7 @@ const Modal = ({ isOpen, children }: ModalProps) => {
   return (
     <>
       <div
-        className={`${styles.modal} fixed w-full h-full z-50 ${
+        className={`${styles.modal} fixed w-full h-full z-[999] ${
           isOpen ? "visible opacity-100" : "invisible opacity-0"
         } before:${isOpen ? "opacity-90" : "opacity-0"}
         }`}>

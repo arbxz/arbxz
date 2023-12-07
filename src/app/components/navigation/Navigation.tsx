@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 
 import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { motion, useScroll } from "framer-motion";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 
 const Navigation = () => {
+  const { scrollYProgress } = useScroll();
   const [isContentScrolled, setIsContentScrolled] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
   useEffect(() => {
@@ -26,8 +28,8 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 text-foreground h-auto w-full py-2 md:px-6 px-2 transition-all ease-in-out duration-300 lg:max-w-5xl xl:max-w-7xl lg:rounded-full z-50 ${
-        isContentScrolled && "bg-accent text-white shadow-md  lg:translate-y-2"
+      className={`fixed top-0 text-foreground h-auto w-full py-2 md:px-6 px-2 transition-all ease-in-out duration-300 lg:max-w-5xl xl:max-w-7xl z-50 ${
+        isContentScrolled && "bg-accent text-white shadow-md"
       }`}>
       <div className="flex gap-6 w-full max-w-7xl justify-start items-center mx-auto">
         <Link className="flex items-center text-lg gap-2" href="/">
@@ -65,6 +67,10 @@ const Navigation = () => {
           EN <span>|</span> FR
         </span>
       </div>
+      <motion.div
+        className="progress-bar lg:top-[51px] top-[48px]"
+        style={{ scaleX: scrollYProgress }}
+      />
     </nav>
   );
 };

@@ -16,7 +16,7 @@ const App = () => {
 
   return (
     <ThemeProvider>
-      <main className="relative snap-container text-base text-foreground flex gap-5 min-h-screen flex-col items-center justify-start select-none scoll">
+      <main className="relative snap-container text-base text-foreground flex gap-5 md:pb-10 pb-8 min-h-screen flex-col items-center justify-start select-none scoll">
         <MainBanner />
         <MusicPlayer />
         <ProjectSection />
