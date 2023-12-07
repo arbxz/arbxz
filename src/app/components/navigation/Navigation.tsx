@@ -28,10 +28,10 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 text-foreground h-auto w-full py-2 md:px-6 px-2 transition-all ease-in-out duration-300 lg:max-w-5xl xl:max-w-7xl z-50 ${
+      className={`fixed top-0 text-foreground h-auto w-full py-2 md:px-6 px-2 transition-all ease-in-out duration-300 z-50 ${
         isContentScrolled && "bg-accent text-white shadow-md"
       }`}>
-      <div className="flex gap-6 w-full max-w-7xl justify-start items-center mx-auto">
+      <div className="flex gap-6 w-full max-w-7xl justify-start items-center mx-auto lg:max-w-5xl xl:max-w-7xl">
         <Link className="flex items-center text-lg gap-2" href="/">
           Arbxz <span>|</span>
           <span className="text-lg">Arbaaz Mowlabucus</span>
