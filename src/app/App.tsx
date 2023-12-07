@@ -16,9 +16,7 @@ const App = () => {
 
   return (
     <ThemeProvider>
-      <main className="relative text-base text-foreground flex min-h-screen flex-col items-center justify-start select-none">
-        {/* Add blobs */}
-
+      <main className="relative snap-container text-base text-foreground flex min-h-screen flex-col items-center justify-start select-none scoll">
         <MainBanner />
         <MusicPlayer />
         <ProjectSection />

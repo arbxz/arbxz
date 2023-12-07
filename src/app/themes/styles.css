@@ -51,15 +51,20 @@ h2 {
   letter-spacing: -2%;
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-250px * 9));
-    -webkit-transform: translateX(calc(-250px * 9));
-    -moz-transform: translateX(calc(-250px * 9));
-    -ms-transform: translateX(calc(-250px * 9));
-    -o-transform: translateX(calc(-250px * 9));
-  }
+.snap-container {
+  scroll-snap-type: y mandatory;
+  overflow: auto;
+}
+
+section {
+  scroll-snap-align: start;
+}
+
+.highlightedText {
+  display: inline-block;
+  width: auto;
+  padding: 0 1rem;
+  margin-bottom: 3px;
+  color: var(--background);
+  background: var(--foreground);
 }

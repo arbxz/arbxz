@@ -11,7 +11,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { StyledSlide, StyledSlider, StyledSliderTrack } from "../sharedStyles";
+import styles from "../Shared.module.css";
 
 const ImageCarousel = () => {
   const icons = [
@@ -36,16 +36,16 @@ const ImageCarousel = () => {
   ];
   return (
     <>
-      <div className="flex justify-center items-center w-full mt-8">
-        <StyledSlider>
-          <StyledSliderTrack>
+      <div className="flex justify-center items-center w-full">
+        <div className={styles.slider}>
+          <div className={styles.sliderTrack}>
             {icons.map((icon, index) => (
-              <StyledSlide key={index}>
+              <div className={styles.slide} key={index}>
                 <FontAwesomeIcon className="mx-auto" size="4x" icon={icon} />
-              </StyledSlide>
+              </div>
             ))}
-          </StyledSliderTrack>
-        </StyledSlider>
+          </div>
+        </div>
       </div>
     </>
   );

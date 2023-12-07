@@ -14,7 +14,7 @@ const MusicPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <div className="p-4">
+    <section className="p-4">
       <div className="bg-foreground text-background rounded-lg shadow-md overflow-hidden">
         <div className="flex flex-col md:flex-row items-center">
           <div className="h-[250px] md:h-[150px] w-full md:w-[150px] bg-music"></div>
@@ -58,7 +58,7 @@ const MusicPlayer = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

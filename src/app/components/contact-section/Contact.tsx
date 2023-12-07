@@ -13,7 +13,6 @@ import { useModalContext } from "@/app/context/modal";
 import KnowledgeSection from "../knowledge-section/KnowledgeSection";
 import RippleButtonWrapper from "../shared/shared-components/RippleButtonWrapper";
 import RippleTypingDots from "../shared/shared-components/RippleTyping";
-import { StyledHighlightedText } from "../shared/sharedStyles";
 import profileImg from "/public/images/arbaaz-picture.jpg";
 
 const Contact = () => {
@@ -35,9 +34,9 @@ const Contact = () => {
     return (
       <>
         {highlightedTextArray.map((text, index) => (
-          <StyledHighlightedText className="text-xl" key={index}>
+          <div className="highlightedText text-xl" key={index}>
             {text}
-          </StyledHighlightedText>
+          </div>
         ))}
       </>
     );
