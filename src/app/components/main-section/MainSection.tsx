@@ -20,12 +20,14 @@ const MainBanner = () => {
   }, []);
 
   return (
-    <section className="relative flex justify-center items-center flex-col w-full">
+    <div className="relative flex gap-5 justify-center items-center flex-col w-full">
       <Navigation />
       <div className="relative md:w-full lg:w-auto px-4 md:pt-32 pt-28 flex md:flex-row flex-col gap-4 align-top justify-center">
         <div className="flex md::w-1/2 justify-center flex-col">
           <h1 className="text-4xl md:text-6xl md:text-right text-center font-bold mb-4">
-            Frontend <br /> Developer
+            <span className={styles.gradientTitle}>
+              Frontend <br /> Developer
+            </span>
           </h1>
           <span className="italic text-md md:text-right ml-auto md:max-w-md">
             <b className="text-accent">Disclaimer</b> : This website is in
@@ -40,7 +42,7 @@ const MainBanner = () => {
               {text}
             </div>
           ))}
-          <div className="md:text-6xl text3xl highlightedText text-accent font-semibold self-start">
+          <div className="md:text-6xl text3xl highlightedText font-semibold self-start">
             <TextTransition springConfig={presets.wobbly}>
               {skills[index % skills.length]}
             </TextTransition>
@@ -54,7 +56,7 @@ const MainBanner = () => {
         </div>
       </div>
       <ImageCarousel />
-    </section>
+    </div>
   );
 };
 

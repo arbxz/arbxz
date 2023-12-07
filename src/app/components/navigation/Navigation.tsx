@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 
-import { StyledNavigationWrapper } from "./NavigationStyles";
+import styles from "./Navigation.module.css";
 
 const Navigation = () => {
   const [isContentScrolled, setIsContentScrolled] = useState(false);
@@ -27,9 +27,9 @@ const Navigation = () => {
   }, [isContentScrolled]);
 
   return (
-    <StyledNavigationWrapper
-      className={`fixed top-0 text-foreground h-auto w-full py-2 md:px-6 px-2 ease-in-out duration-300 max-w-7xl lg:before:rounded-full before:shadow-md z-50 ${
-        isContentScrolled && "content-scrolled text-white lg:translate-y-2"
+    <nav
+      className={`fixed top-0 text-foreground h-auto w-full py-2 md:px-6 px-2 transition-all ease-in-out duration-300 lg:max-w-5xl xl:max-w-7xl lg:rounded-full z-50 ${
+        isContentScrolled && "bg-accent text-white shadow-md  lg:translate-y-2"
       }`}>
       <div className="flex gap-6 w-full max-w-7xl justify-start items-center mx-auto">
         <Link className="flex items-center text-xl gap-2" href="/">
@@ -67,7 +67,7 @@ const Navigation = () => {
           EN <span>|</span> FR
         </span>
       </div>
-    </StyledNavigationWrapper>
+    </nav>
   );
 };
 

@@ -27,7 +27,7 @@ const SocialList = () => {
   ];
 
   return (
-    <div className="hidden bg-foreground text-background fixed md:flex rounded-3xl gap-2 flex-col justify-center items-center px-2 py-4 mr-5 top-1/2 right-0 -translate-y-1/2 text-xl shadow-md hover:shadow-lg hover:scale-110 transition-all duration-300">
+    <div className="hidden bg-accent text-white fixed md:flex rounded-3xl gap-2 flex-col justify-center items-center px-2 py-4 mr-5 top-1/2 right-0 -translate-y-1/2 text-xl shadow-md hover:shadow-lg hover:scale-110 transition-all duration-300">
       {socialAffiliations.map((affiliation, index) => (
         <Link
           key={index}

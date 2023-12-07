@@ -40,7 +40,9 @@ const ImageCarousel = () => {
         <div className={styles.slider}>
           <div className={styles.sliderTrack}>
             {icons.map((icon, index) => (
-              <div className={styles.slide} key={index}>
+              <div
+                className={`${styles.slide} md:h-20 md:w-60 h-14 w-40`}
+                key={index}>
                 <FontAwesomeIcon className="mx-auto" size="4x" icon={icon} />
               </div>
             ))}

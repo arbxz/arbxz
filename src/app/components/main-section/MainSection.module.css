@@ -6,5 +6,15 @@
   transform: translateY(-50%);
   height: 60%;
   width: 5px;
-  background: var(--accent);
+  background: linear-gradient(25deg, var(--accentSecondary), var(--accent));
+}
+
+.gradientTitle {
+  background: linear-gradient(135deg, var(--accentSecondary), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  color: inherit;
+  -webkit-text-fill-color: transparent;
 }

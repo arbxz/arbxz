@@ -8,7 +8,7 @@ import psdIcon from "/public/images/icons/photoshop.svg";
 const ArtSection = () => {
   return (
     <>
-      <section id="designs" className="relative w-full lg:max-w-7xl p-4">
+      <div id="designs" className="relative w-full lg:max-w-7xl p-4">
         <div className="lg:gap-10 flex-col-reverse md:gap-5 gap-4 flex lg:flex-row items-center justify-center">
           <ArtDeck />
           <div className="flex flex-col lg:w-1/2 justify-end gap-4">
@@ -53,7 +53,7 @@ const ArtSection = () => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </>
   );
 };

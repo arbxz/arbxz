@@ -44,7 +44,7 @@ const Contact = () => {
 
   return (
     <>
-      <section id="aboutme" className="w-full lg:max-w-5xl md:p-4">
+      <div id="aboutme" className="w-full lg:max-w-5xl md:p-4">
         <div
           className={`bg-accent md:rounded-xl md:p-6 p-4 flex gap-4 lg:gap-20 items-center justify-center flex-col lg:flex-row w-full mx-auto shadow-md hover:shadow-xl transition-shadow ease-out duration-300`}>
           <div className="inline-flex lg:flex gap-5 flex-col lg:w-1/2 w-full text-center lg:text-right">
@@ -124,7 +124,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </>
   );
 };

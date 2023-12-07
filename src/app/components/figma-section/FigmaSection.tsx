@@ -6,7 +6,7 @@ import FigmaImgMobile from "/public/screenshot-mobile.png";
 
 const FigmaSection = () => {
   return (
-    <section className="md:py-8 mb-10">
+    <div className="md:py-8 mb-10">
       <div className="flex xs:flex-row flex-col items-center justify-center md:gap-10 gap-5 max-w-5xl mx-auto p-4">
         <div className="flex flex-col gap-8 justify-center items-center">
           <Image
@@ -45,7 +45,7 @@ const FigmaSection = () => {
           />
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

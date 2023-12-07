@@ -73,7 +73,7 @@ const ProjectSection = () => {
   };
 
   return (
-    <section
+    <div
       id="projects"
       className="w-full mb-10 lg:max-w-7xl mx-auto md:py-8 p-4">
       <div className="text-center">
@@ -92,7 +92,7 @@ const ProjectSection = () => {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
