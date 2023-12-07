@@ -9,26 +9,26 @@ const ArtSection = () => {
   return (
     <>
       <section id="designs" className="relative w-full lg:max-w-7xl p-4">
-        <div className="lg:gap-10 flex-col-reverse md:gap-5 gap-3 flex flex-1 lg:flex-row items-center justify-center mx-auto p-3 md:p-8">
+        <div className="lg:gap-10 flex-col-reverse md:gap-5 gap-4 flex lg:flex-row items-center justify-center">
           <ArtDeck />
           <div className="flex flex-col lg:w-1/2 justify-end gap-4">
-            <span className="lg:text-left text-center text-background md:text-2xl text-lg font-semibold">
-              <span className="block text-foreground blocktext-2xl md:text-6xl text-4xl font-system-ui font-extrabold md:mb-8 mb-2">
+            <div className="text-left text-xl">
+              <span className="block md:text-6xl text-4xl text-foreground font-bold md:mb-4 mb-2">
                 Need some graphic work done ?
               </span>
-              <span className="inline-block w-auto bg-foreground text-background mb-2 md:p-2 p-1">
-                or maybe some sketches or logos ?
-              </span>
-
-              <br />
-              <span className="inline-block bg-foreground text-background md:p-2 p-1 font-bold text-xl md:text-3xl mb-2">
-                Not a problem !
-              </span>
-              <span className="inline-block bg-foreground text-background md:p-2 p-1">
-                I am very experienced in handling tools like
-              </span>
-            </span>
-            <div className="flex flex-row lg:justify-start justify-center gap-4 mt-5">
+              <div className="flex flex-col justify-start gap-2 text-lg">
+                <span className="self-start bg-foreground text-background md:p-2 p-1">
+                  or maybe some sketches or logos ?
+                </span>
+                <span className="self-start bg-foreground text-background md:p-2 p-1">
+                  Not a problem !
+                </span>
+                <span className="self-start bg-foreground text-background md:p-2 p-1">
+                  I am very experienced in handling tools like
+                </span>
+              </div>
+            </div>
+            <div className="flex flex-row justify-start gap-4 mt-4">
               <Image
                 className="transition-all duration-300 ease-in-out hover:-translate-y-3"
                 src={psdIcon}

@@ -34,10 +34,10 @@ const Navigation = () => {
       <div className="flex gap-6 w-full max-w-7xl justify-start items-center mx-auto">
         <Link className="flex items-center text-xl gap-2" href="/">
           Arbxz <span>|</span>
-          <span className="text-lg">Arbaaz Mowlabucus</span>
+          <span className="text-xl">Arbaaz Mowlabucus</span>
         </Link>
 
-        <div className="hidden md:flex mx-auto justify-center items-center gap-4 text-center font-semibold">
+        <div className="hidden text-lg md:flex mx-auto justify-center items-center gap-4 text-center font-semibold">
           <Link
             className="relative py-2 before:absolute before:bottom-0 before:left-0 before:h-1 before:w-0 before:bg-foreground hover:before:w-full before:transition-all before:duration-300"
             href="#projects">
@@ -63,7 +63,7 @@ const Navigation = () => {
           <FontAwesomeIcon icon={resolvedTheme == "light" ? faMoon : faSun} />
         </button>
 
-        <span className="text-md">
+        <span className="text-lg">
           EN <span>|</span> FR
         </span>
       </div>

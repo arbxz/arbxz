@@ -16,7 +16,7 @@ const App = () => {
 
   return (
     <ThemeProvider>
-      <main className="relative text-foreground flex min-h-screen flex-col items-center justify-start select-none">
+      <main className="relative text-base text-foreground flex min-h-screen flex-col items-center justify-start select-none">
         {/* Add blobs */}
 
         <MainBanner />

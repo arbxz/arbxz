@@ -19,7 +19,7 @@ const MusicPlayer = () => {
         <div className="flex flex-col md:flex-row items-center">
           <div className="h-[250px] md:h-[150px] w-full md:w-[150px] bg-music"></div>
           <div className="px-8 py-4">
-            <span className="block text-2xl font-semibold mb-2">
+            <span className="block text-xl font-semibold mb-2">
               Wanna put some music on?
             </span>
             <span className="block text-lg font-light"> Games Worldbeat</span>

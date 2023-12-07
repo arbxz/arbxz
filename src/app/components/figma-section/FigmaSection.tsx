@@ -16,11 +16,11 @@ const FigmaSection = () => {
             alt={"logo of figma"}
           />
           <div className="max-w-3xl mx-auto text-center md:lg-left">
-            <span className="inline-block p-2 text-background bg-foreground text-4xl mb-4">
+            <span className="inline-block p-2 text-background bg-foreground md:text-6xl text-4xl mb-4">
               Figma
             </span>
             <br />
-            <span className="text-foreground lg:max-w-2xl md:text-3xl text-xl">
+            <span className="text-foreground lg:max-w-2xl text-xl">
               I excel in Figma, efficiently creating and implementing designs
               with precision.
             </span>

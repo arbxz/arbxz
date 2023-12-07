@@ -31,7 +31,7 @@ const KnowledgeSection = () => {
           <button
             type="button"
             key={index}
-            className=" bg-foreground text-background md:text-2xl text-xl md:px-8 px-4 md:py-2 py-1 rounded-xl md:rounded-3xl">
+            className=" bg-foreground text-background text-xl md:px-8 px-4 md:py-2 py-1 rounded-xl md:rounded-3xl">
             {skill}
           </button>
         ))}
@@ -53,8 +53,8 @@ const KnowledgeSection = () => {
           <FontAwesomeIcon className="text-3xl" icon={faCircleXmark} />
         </button>
       </div>
-      <div className="block p-4 w-full h-full">
-        <p className="text-md text-center max-w-sm mx-auto">
+      <div className="block p-4 w-full h-full bg-white">
+        <p className="text-xl text-center max-w-sm mx-auto">
           Professional skills I use in my day to day life as a react developer
         </p>
         <SkillButtons data={skillData} />

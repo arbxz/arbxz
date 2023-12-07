@@ -35,7 +35,7 @@ const ProjectSection = () => {
   const ProjectCard = ({ project }: { project: InterfaceProjectItem }) => {
     return (
       <div
-        className="relative font-system-ui bg-white flex card w-full sm:w-64 min-h-64 sm:flex-col flex-row rounded-md shadow-md ease-in-out transition-all duration-300 hover:shadow-lg hover:-translate-y-3 overflow-hidden"
+        className="relative bg-white flex card w-full sm:w-64 min-h-64 sm:flex-col flex-row rounded-md shadow-md ease-in-out transition-all duration-300 hover:shadow-lg hover:-translate-y-3 overflow-hidden"
         key={project.name}>
         <div className="w-2/5 h-auto sm:w-64 sm:h-44 object-cover object-bottom overflow-hidden">
           <Image
@@ -51,7 +51,7 @@ const ProjectSection = () => {
           <span className="block text-xl font-semibold md:mb-2">
             {project.name}
           </span>
-          <span className="block border-b text-md md:py-2 py-1 md:mb-2 mb-1 overflow-hidden text-ellipsis">
+          <span className="block border-b md:py-2 py-1 md:mb-2 mb-1 overflow-hidden text-ellipsis">
             {project.description}
           </span>
           <span className="flex items-center gap-3 bg-primary text-white p-2 rounded">
@@ -78,10 +78,10 @@ const ProjectSection = () => {
       className="w-full mb-10 lg:max-w-7xl mx-auto md:py-8 p-4">
       <div className="text-center">
         <div className="inline-block mx-auto text-center md:mb-12 mb-8">
-          <h2 className="font-system-ui font-semibold uppercase p-2 bg-primary text-white text-3xl md:text-5xl">
+          <h2 className="font-semibold p-2 bg-primary text-white text-4xl md:text-6xl">
             Recent Projects
           </h2>
-          <span className="block font-system-ui font-semibold p-2 bg-white text-primary text-lg md:text-xl">
+          <span className="block font-semibold p-2 bg-white text-primary text-xl md:text-xl">
             Check out what Ive been working on !
           </span>
         </div>
