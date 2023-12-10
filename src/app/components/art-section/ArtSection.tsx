@@ -9,10 +9,10 @@ import psdIcon from "/public/images/icons/photoshop.svg";
 const ArtSection = () => {
   const cardVariants: Variants = {
     offscreen: {
-      x: 350,
+      y: 350,
     },
     onscreen: {
-      x: 0,
+      y: 0,
       scale: 1,
       transition: {
         type: "spring",
