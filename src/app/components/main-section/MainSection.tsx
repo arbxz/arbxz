@@ -12,7 +12,6 @@ import Navigation from "../navigation/Navigation";
 import Container from "../shared/Container";
 import Card from "../shared/shared-components/Card";
 import ImageCarousel from "../shared/shared-components/ImageCarousel";
-import styles from "./MainSection.module.css";
 
 const MainBanner = () => {
   const introText = [
@@ -51,8 +50,7 @@ const MainBanner = () => {
                 initial={{ y: -500 }}
                 animate={{ y: 0 }}
                 transition={{ type: "spring", stiffness: 100 }}>
-                <div
-                  className={`relative mainSection flex flex-col justify-center p-4 ${styles.mainSection}`}>
+                <div className="relative mainSection flex flex-col justify-center p-4">
                   <div className="highlightedText self-start">
                     Hello visitor,
                   </div>
