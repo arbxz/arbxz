@@ -21,9 +21,8 @@ const App = () => {
         <MusicPlayer />
         <ProjectSection />
         <ArtSection />
-        <FigmaSection />
+        {/* <FigmaSection /> */}
         <Contact />
-        <SocialList />
         <Footer />
         <Modal isOpen={isModalOpen}>{modalContent}</Modal>
       </main>

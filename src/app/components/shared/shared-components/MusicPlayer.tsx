@@ -90,7 +90,7 @@ const MusicPlayer = () => {
             <FontAwesomeIcon icon={faPlus} />
           </div>
         </div>
-        <div className="bg-backgroundSecondary">
+        <div className="bg-foreground">
           <div className="flex justify-center items-center px-8 pt-4 pb-2  gap-8 text-xl opacity-80">
             <FontAwesomeIcon
               onClick={() => {

@@ -15,6 +15,7 @@ const config: Config = {
       accent: "var(--accent)",
       primary: "#040202",
       white: "#ffffff",
+      red: "var(--red)",
     },
     extend: {
       backgroundImage: {

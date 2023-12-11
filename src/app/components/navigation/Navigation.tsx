@@ -28,10 +28,12 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 text-foreground h-auto w-full py-2 md:px-6 px-2 transition-all ease-in-out duration-300 z-50 ${
-        isContentScrolled && "bg-accent text-white shadow-md"
+      className={`fixed ${
+        resolvedTheme === "dark" ? "glassBgDark" : "glassBgLight"
+      } top-0 glassBg text-foreground h-auto w-full py-2 md:px-6 px-2 transition-all ease-in-out duration-300 z-50 ${
+        isContentScrolled && "shadow-sm"
       }`}>
-      <div className="flex gap-6 w-full max-w-7xl justify-start items-center mx-auto lg:max-w-5xl xl:max-w-7xl">
+      <div className="flex gap-6 w-full md:justify-start justify-between items-center">
         <Link className="flex items-center text-lg gap-2" href="/">
           Arbxz <span>|</span>
           <span className="text-lg">Arbaaz Mowlabucus</span>
@@ -55,17 +57,21 @@ const Navigation = () => {
           </Link>
         </div>
 
-        <button
-          type="button"
-          title="Theme toggle"
-          className="flex items-center justify-center p-2 w-8 text-md rounded-full ml-auto bg-foreground text-background"
-          onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}>
-          <FontAwesomeIcon icon={resolvedTheme == "light" ? faMoon : faSun} />
-        </button>
+        <div className="flex gap-4 items-center">
+          <button
+            type="button"
+            title="Theme toggle"
+            className="flex items-center justify-center p-2 w-8 text-md rounded-full ml-auto bg-foreground text-background"
+            onClick={() =>
+              setTheme(resolvedTheme === "dark" ? "light" : "dark")
+            }>
+            <FontAwesomeIcon icon={resolvedTheme == "light" ? faMoon : faSun} />
+          </button>
 
-        <span className="text-lg">
-          EN <span>|</span> FR
-        </span>
+          <span className="text-lg">
+            EN <span>|</span> FR
+          </span>
+        </div>
       </div>
       <motion.div
         className="progress-bar lg:top-[51px] top-[48px]"
