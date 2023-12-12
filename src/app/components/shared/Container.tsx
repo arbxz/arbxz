@@ -1,10 +1,14 @@
 interface ContainerProps {
   children: React.ReactNode;
+  flexDirection?: "row" | "col";
 }
 
-const Container = ({ children }: ContainerProps) => {
+const Container = ({ children, flexDirection }: ContainerProps) => {
   return (
-    <div className="flex justify-center items-start gap-4 flex-col max-w-6xl w-full mx-auto p-4 md:p-8">
+    <div
+      className={`relative flex flex-wrap justify-center items-start gap-4 ${
+        flexDirection === "col" ? "flex-col" : "flex-row"
+      } max-w-6xl w-full mx-auto p-4 md:p-8`}>
       {children}
     </div>
   );

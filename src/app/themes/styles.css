@@ -6,6 +6,7 @@
   --foreground: #ffffff;
   --background: #131315;
   --backgroundSecondary: #0d0d0d;
+  --backgroundtertiary: #1c1c1c;
   --accent: #7712dc;
   --accentSecondary: #d2c;
   --body: #0d0d0d;
@@ -16,6 +17,7 @@
   --foreground: #040202;
   --background: #ffffff;
   --backgroundSecondary: #f8f8f8;
+  --backgroundtertiary: #f7f1f1;
   --accent: hsl(15, 85%, 48%);
   --accentSecondary: #d2c;
   --body: #f3f3f3;
@@ -80,7 +82,7 @@ h2 {
 }
 
 footer {
-  position: fixed;
+  position: relative;
   bottom: 0;
   left: 0;
   right: 0;

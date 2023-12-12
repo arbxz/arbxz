@@ -11,6 +11,7 @@ const config: Config = {
       foreground: "var(--foreground)",
       background: "var(--background)",
       backgroundSecondary: "var(--backgroundSecondary)",
+      backgroundTertiary: "var(--backgroundTertiary)",
       body: "var(--body)",
       accent: "var(--accent)",
       primary: "#040202",

@@ -2,13 +2,14 @@ import { ThemeProvider } from "next-themes";
 
 import ArtSection from "./components/art-section/ArtSection";
 import Contact from "./components/contact-section/Contact";
-import FigmaSection from "./components/figma-section/FigmaSection";
 import Footer from "./components/footer/Footer";
 import MainBanner from "./components/main-section/MainSection";
 import Modal from "./components/modal/Modal";
+import Navigation from "./components/navigation/Navigation";
 import ProjectSection from "./components/project-section/ProjectSection";
+import Container from "./components/shared/Container";
 import MusicPlayer from "./components/shared/shared-components/MusicPlayer";
-import SocialList from "./components/social-list/SocialList";
+import SkillSection from "./components/skills-section/SkillsSection";
 import { useModalContext } from "./context/modal";
 
 const App = () => {
@@ -16,16 +17,22 @@ const App = () => {
 
   return (
     <ThemeProvider>
-      <main className="relative snap-container text-base text-foreground flex gap-5 md:pb-10 pb-8 min-h-screen flex-col items-center justify-start select-none scoll">
+      <Navigation />
+      <main className="relative p-4 snap-container text-base text-foreground flex md:pb-24 pb-8 min-h-screen flex-col items-center justify-start select-none scroll">
         <MainBanner />
-        <MusicPlayer />
-        <ProjectSection />
+        <Container>
+          <div className="flex flex-wrap w-full gap-4 justify-center">
+            <SkillSection />
+            <MusicPlayer />
+          </div>
+        </Container>
         <ArtSection />
-        {/* <FigmaSection /> */}
+        {/* Add figma back */}
+        <ProjectSection />
         <Contact />
-        <Footer />
         <Modal isOpen={isModalOpen}>{modalContent}</Modal>
       </main>
+      <Footer />
     </ThemeProvider>
   );
 };

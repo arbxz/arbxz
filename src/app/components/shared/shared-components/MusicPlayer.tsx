@@ -8,6 +8,8 @@ import { faPlay } from "@fortawesome/free-solid-svg-icons/faPlay";
 import { faPlus } from "@fortawesome/free-solid-svg-icons/faPlus";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import Card from "./Card";
+
 const tracks = [
   {
     title: "Sleepy Cat",
@@ -71,69 +73,65 @@ const MusicPlayer = () => {
   }, [isPlaying, audioRef]);
 
   return (
-    <div className="p-4">
-      <div className="bg-foreground text-background rounded-lg shadow-md overflow-hidden">
-        <div className="flex flex-col md:flex-row items-center">
-          <div className="h-[250px] md:h-[150px] w-full md:w-[150px] bg-music"></div>
-          <div className="px-8 py-4">
-            <span className="block text-xl font-semibold mb-2">
-              Wanna put some music on?
-            </span>
-            <span className="block text-lg font-light">
-              {currentTrack.title}
-            </span>
-            <span className="text-sm">{currentTrack.author}</span>
-          </div>
-          <div className="hidden md:flex flex-col items-center justify-center gap-4 text-xl p-4 opacity-80 bg-foreground">
-            <FontAwesomeIcon icon={faSpotify} />
-            <FontAwesomeIcon icon={faEllipsis} />
-            <FontAwesomeIcon icon={faPlus} />
-          </div>
+    <Card styles="flex gap-4 flex-col w-full sm:w-auto">
+      <div className="bg-backgroundSecondary flex flex-col lg:flex-row items-center">
+        <div className="h-[250px] sm:h-[190px] w-full lg:w-[200px] bg-music"></div>
+        <div className="lg:px-8 lg:py-4 px-4 py-2">
+          <span className="block text-xl font-semibold mb-2">
+            Wanna put some music on?
+          </span>
+          <span className="block text-lg font-light">{currentTrack.title}</span>
+          <span className="text-sm">{currentTrack.author}</span>
         </div>
-        <div className="bg-foreground">
-          <div className="flex justify-center items-center px-8 pt-4 pb-2  gap-8 text-xl opacity-80">
-            <FontAwesomeIcon
-              onClick={() => {
-                handlePrevious();
-              }}
-              icon={faForward}
-              className="rotate-180 cursor-pointer"
-            />
-            <button onClick={() => setIsPlaying(!isPlaying)}>
-              {isPlaying ? (
-                <FontAwesomeIcon
-                  icon={faPause}
-                  className="flex items-center justify-center rounded-full border border-backgeound p-2 w-6 h-6 cursor-pointer"
-                />
-              ) : (
-                <FontAwesomeIcon
-                  icon={faPlay}
-                  className="cursor-pointer flex items-center justify-center rounded-full border border-backgeound p-2 w-6 h-6"
-                />
-              )}
-            </button>
-
-            <FontAwesomeIcon
-              className="cursor-pointer"
-              onClick={() => {
-                handleNext();
-              }}
-              icon={faForward}
-            />
-          </div>
-          <div className="flex px-8 gap-4">
-            <div className="relative w-full  py-4">
-              <audio src={currentTrack.src} ref={audioRef} />
-              <div className="h-[2px] w-full rounded-full overflow-hidden bg-accent opacity-50"></div>
-              <div className="absolute top-1/2 -translate-y-1/2 h-[2px] w-16 rounded-full overflow-hidden bg-accent"></div>
-            </div>
-            <span className="text-sm">
-              {formatTime(audioRef.current?.duration)}
-            </span>
-          </div>
+        <div className="hidden lg:flex flex-col items-center justify-center gap-4 text-xl p-4 opacity-80 bg-backgroundTertiary">
+          <FontAwesomeIcon icon={faSpotify} />
+          <FontAwesomeIcon icon={faEllipsis} />
+          <FontAwesomeIcon icon={faPlus} />
         </div>
       </div>
-    </div>
+      <div className="bg-backgroundTertiary">
+        <div className="flex justify-center items-center lg:px-8 px-4 pt-2 pb-2 gap-8 text-xl opacity-80">
+          <FontAwesomeIcon
+            onClick={() => {
+              handlePrevious();
+            }}
+            icon={faForward}
+            className="rotate-180 cursor-pointer"
+          />
+          <button onClick={() => setIsPlaying(!isPlaying)}>
+            {isPlaying ? (
+              <FontAwesomeIcon
+                icon={faPause}
+                className="flex items-center justify-center rounded-full border border-backgeound p-2 w-6 h-6 cursor-pointer"
+              />
+            ) : (
+              <FontAwesomeIcon
+                icon={faPlay}
+                className="cursor-pointer flex items-center justify-center rounded-full border border-backgeound p-2 w-6 h-6"
+              />
+            )}
+          </button>
+
+          <FontAwesomeIcon
+            className="cursor-pointer"
+            onClick={() => {
+              handleNext();
+            }}
+            icon={faForward}
+          />
+        </div>
+        <div className="flex px-8 gap-4">
+          <div className="relative w-full  py-4">
+            <audio src={currentTrack.src} ref={audioRef} />
+            <div className="h-[2px] w-full rounded-full overflow-hidden bg-accent opacity-50"></div>
+            <div className="absolute top-1/2 -translate-y-1/2 h-[2px] w-16 rounded-full overflow-hidden bg-accent"></div>
+          </div>
+          <span className="text-sm">
+            {formatTime(audioRef.current?.duration)}
+          </span>
+        </div>
+      </div>
+    </Card>
   );
 };
 
