@@ -73,9 +73,9 @@ const MusicPlayer = () => {
   }, [isPlaying, audioRef]);
 
   return (
-    <Card styles="flex gap-4 flex-col w-full sm:w-auto">
-      <div className="bg-backgroundSecondary flex flex-col lg:flex-row items-center">
-        <div className="h-[250px] sm:h-[190px] w-full lg:w-[200px] bg-music"></div>
+    <Card styles="flex sm:flex-col w-full h-full">
+      <div className="bg-background flex flex-col lg:flex-row items-center">
+        <div className="hidden md:block h-[250px] sm:h-[170px] w-full lg:w-[200px] bg-music"></div>
         <div className="lg:px-8 lg:py-4 px-4 py-2">
           <span className="block text-xl font-semibold mb-2">
             Wanna put some music on?
@@ -83,13 +83,13 @@ const MusicPlayer = () => {
           <span className="block text-lg font-light">{currentTrack.title}</span>
           <span className="text-sm">{currentTrack.author}</span>
         </div>
-        <div className="hidden lg:flex flex-col items-center justify-center gap-4 text-xl p-4 opacity-80 bg-backgroundTertiary">
+        <div className="hidden lg:flex flex-col items-center justify-center gap-4 text-xl p-4 opacity-80">
           <FontAwesomeIcon icon={faSpotify} />
           <FontAwesomeIcon icon={faEllipsis} />
           <FontAwesomeIcon icon={faPlus} />
         </div>
       </div>
-      <div className="bg-backgroundTertiary">
+      <div className="bg-background p-4">
         <div className="flex justify-center items-center lg:px-8 px-4 pt-2 pb-2 gap-8 text-xl opacity-80">
           <FontAwesomeIcon
             onClick={() => {

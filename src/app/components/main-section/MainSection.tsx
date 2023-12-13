@@ -8,9 +8,9 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
+import Card from "../shared/Card";
 import Container from "../shared/Container";
-import Card from "../shared/shared-components/Card";
-import ImageCarousel from "../shared/shared-components/ImageCarousel";
+import ImageCarousel from "../shared/ImageCarousel";
 
 const MainBanner = () => {
   const introText = [
@@ -35,6 +35,7 @@ const MainBanner = () => {
         width={1200}
         height={1200}
       />
+
       <Card glass styles="w-full mt-16 xxl:mt-40 md:max-w-3xl mx-auto">
         <div className="py-8 md:py-16">
           <div className="relative max-w-3xl mb-4 px-4 flex md:flex-row flex-col gap-4 items-center md:justify-center">
@@ -44,8 +45,8 @@ const MainBanner = () => {
               </span>
             </h1>
             <motion.div
-              initial={{ y: -500 }}
-              animate={{ y: 0 }}
+              initial={{ x: 500 }}
+              animate={{ x: 0 }}
               transition={{ type: "spring", stiffness: 100 }}>
               <div className="relative mainSection flex flex-col justify-center p-4">
                 <div className="highlightedText self-start">Hello visitor,</div>

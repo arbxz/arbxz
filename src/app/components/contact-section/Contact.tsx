@@ -7,8 +7,8 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 
-import Card from "../shared/shared-components/Card";
-import RippleTypingDots from "../shared/shared-components/RippleTyping";
+import Card from "../shared/Card";
+import RippleTypingDots from "../shared/RippleTyping";
 import profileImg from "/public/images/arbaaz-picture.jpg";
 
 const Contact = () => {

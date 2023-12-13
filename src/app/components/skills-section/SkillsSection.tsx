@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useModalContext } from "@/app/context/modal";
 
 import KnowledgeSection from "../knowledge-section/KnowledgeSection";
-import Card from "../shared/shared-components/Card";
+import Card from "../shared/Card";
 
 const SkillSection = () => {
   const { setIsModalOpen, setModalContent } = useModalContext();
@@ -27,7 +27,7 @@ const SkillSection = () => {
   return (
     <Card
       glass
-      styles="p-4 flex gap-4 flex-col w-full sm:max-w-md w-full sm:w-auto">
+      styles="p-4 flex gap-4 flex-col h-full w-full sm:max-w-md w-full sm:w-auto">
       <h2 className="md:text-6xl text-3xl font-bold">
         Get to
         <br /> know me !

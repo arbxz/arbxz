@@ -81,8 +81,6 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
         <span className="flex gap-4">{children} </span>
         <span className="flex gap-4">{children} </span>
         <span className="flex gap-4">{children} </span>
-        <span className="flex gap-4">{children} </span>
-        <span className="flex gap-4">{children} </span>
       </motion.div>
     </div>
   );

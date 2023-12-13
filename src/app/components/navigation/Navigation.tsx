@@ -74,7 +74,7 @@ const Navigation = () => {
         </div>
       </div>
       <motion.div
-        className="progress-bar lg:top-[51px] top-[48px]"
+        className="progress-bar lg:top-[52px] top-[48px]"
         style={{ scaleX: scrollYProgress }}
       />
     </nav>
