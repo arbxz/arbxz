@@ -25,9 +25,7 @@ const SkillSection = () => {
     );
   };
   return (
-    <Card
-      glass
-      styles="p-4 flex gap-4 flex-col h-full w-full sm:max-w-md w-full sm:w-auto">
+    <Card styles="p-4 flex gap-4 flex-col h-full w-full sm:max-w-md w-full">
       <h2 className="md:text-6xl text-3xl font-bold">
         Get to
         <br /> know me !

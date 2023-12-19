@@ -68,9 +68,9 @@ const Navigation = () => {
             <FontAwesomeIcon icon={resolvedTheme == "light" ? faMoon : faSun} />
           </button>
 
-          <span className="text-lg">
+          {/* <span className="text-lg">
             EN <span>|</span> FR
-          </span>
+          </span> */}
         </div>
       </div>
       <motion.div

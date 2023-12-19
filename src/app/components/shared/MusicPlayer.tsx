@@ -74,7 +74,7 @@ const MusicPlayer = () => {
 
   return (
     <Card styles="flex sm:flex-col w-full h-full">
-      <div className="bg-background flex flex-col lg:flex-row items-center">
+      <div className="bg-background flex flex-col lg:flex-row items-center justify-start">
         <div className="hidden md:block h-[250px] sm:h-[170px] w-full lg:w-[200px] bg-music"></div>
         <div className="lg:px-8 lg:py-4 px-4 py-2">
           <span className="block text-xl font-semibold mb-2">
@@ -83,7 +83,7 @@ const MusicPlayer = () => {
           <span className="block text-lg font-light">{currentTrack.title}</span>
           <span className="text-sm">{currentTrack.author}</span>
         </div>
-        <div className="hidden lg:flex flex-col items-center justify-center gap-4 text-xl p-4 opacity-80">
+        <div className="hidden lg:flex flex-col items-center justify-center gap-4 text-xl p-4 opacity-80 ml-auto">
           <FontAwesomeIcon icon={faSpotify} />
           <FontAwesomeIcon icon={faEllipsis} />
           <FontAwesomeIcon icon={faPlus} />

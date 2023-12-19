@@ -20,12 +20,13 @@ const App = () => {
 
   return (
     <ThemeProvider>
-      <div className={isModalOpen && "fixed"}>
+      <div className={isModalOpen && "fixed w-full pr-4"}>
         <Navigation />
-        <main className="relative p-4 snap-container text-base text-foreground flex md:pb-24 pb-8 min-h-screen flex-col items-center justify-start select-none scroll">
+        <main className="relative p-4 text-base text-foreground flex gap-4 flex-col items-center justify-start select-none">
           <MainBanner />
           <motion.div
             id="skils"
+            className="w-full"
             initial="offscreen"
             whileInView="onscreen"
             viewport={{ once: true, amount: 0.8 }}>
@@ -35,17 +36,16 @@ const App = () => {
                   <SkillSection />
                 </motion.div>
                 <motion.div
-                  className="w-full sm:w-auto"
+                  className="w-full sm:w-8/12"
                   variants={slideUpVariants}>
                   <MusicPlayer />
                 </motion.div>
               </div>
             </Container>
           </motion.div>
-          <ArtSection />
-          {/* Add figma back */}
           <ProjectSection />
-          <Contact />
+          <ArtSection />
+          {/* <Contact /> */}
           <Modal isOpen={isModalOpen}>{modalContent}</Modal>
         </main>
         <Footer />

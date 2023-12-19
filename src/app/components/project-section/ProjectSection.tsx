@@ -4,6 +4,7 @@ import { motion, Variants } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
+import Container from "../shared/Container";
 import cocagneImg from "/public/cocagne.jpeg";
 import jeanPigeonImg from "/public/sample3.png";
 
@@ -35,15 +36,13 @@ const ProjectSection = () => {
 
   const cardVariants: Variants = {
     offscreen: {
-      y: 300,
-      scale: 0.8,
+      x: -1300,
     },
     onscreen: {
-      y: 10,
-      scale: 1,
+      x: 0,
       transition: {
         type: "spring",
-        bounce: 0.4,
+        bounce: 0.3,
         duration: 0.8,
       },
     },
@@ -52,7 +51,7 @@ const ProjectSection = () => {
   const ProjectCard = ({ project }: { project: InterfaceProjectItem }) => {
     return (
       <div
-        className="relative bg-white flex card w-full sm:w-64 min-h-64 sm:flex-col flex-row rounded-md shadow-md ease-in-out transition-all duration-300 hover:shadow-lg hover:-translate-y-3 overflow-hidden"
+        className="relative bg-backgroundSecondary flex w-full sm:w-64 min-h-64 sm:flex-col flex-row rounded-2xl scale-[.99] shadow-md transition-all duration-300 hover:shadow-lg hover:scale-100 overflow-hidden"
         key={project.name}>
         <div className="w-2/5 h-auto sm:w-64 sm:h-44 object-cover object-bottom overflow-hidden">
           <Image
@@ -64,41 +63,32 @@ const ProjectSection = () => {
             placeholder="blur"
           />
         </div>
-        <div className="card-body w-3/5 sm:w-full p-4 text-primary text-left">
-          <span className="block text-xl font-semibold md:mb-2">
-            {project.name}
-          </span>
-          <span className="block border-b md:py-2 py-1 md:mb-2 mb-1 overflow-hidden text-ellipsis">
+        <div className="flex flex-col items-center gap-4 w-3/5 sm:w-full p-4 text-foreground text-left">
+          <span className="block text-xl font-semibold">{project.name}</span>
+          <span className="text-center overflow-hidden text-ellipsis">
             {project.description}
           </span>
-          <span className="flex items-center gap-3 bg-primary text-white p-2 rounded">
-            <FontAwesomeIcon icon={faWrench} />
+          <span className="flex items-center justify-center gap-3 border border-accent text-sm text-accent rounded-3xl px-4 py-1">
+            <FontAwesomeIcon icon={faWrench} /> |
             <span className="font-medium">{project.tech}</span>
           </span>
         </div>
         <Link
           href={project.url}
           target="_blank"
-          className="cursor-pointer hover-sheet absolute w-full h-full bg-primary ease-in-out transition-opacity hover:opacity-70 opacity-0">
-          <FontAwesomeIcon
-            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-white text-3xl"
-            icon={faEye}
-          />
-        </Link>
+          className="cursor-pointer"></Link>
       </div>
     );
   };
 
   return (
-    <div
-      id="projects"
-      className="w-full mb-10 lg:max-w-7xl mx-auto md:py-8 p-4">
-      <div className="text-center">
-        <div className="inline-block mx-auto text-center md:mb-12 mb-8">
-          <h2 className="font-semibold p-2 bg-primary text-white text-4xl md:text-6xl">
+    <Container>
+      <div id="projects" className="w-full">
+        <div className="flex flex-col md:flex-row items-baseline gap-4 text-left mb-4">
+          <h2 className="font-semibold text-accent text-4xl md:text-6xl">
             Recent Projects
           </h2>
-          <span className="block font-semibold p-2 bg-white text-primary text-xl md:text-xl">
+          <span className="font-semibold text-foreground text-xl md:text-xl">
             Check out what Ive been working on !
           </span>
         </div>
@@ -109,7 +99,7 @@ const ProjectSection = () => {
           whileInView="onscreen"
           viewport={{ once: true, amount: 0.8 }}>
           <motion.div
-            className="flex flex-wrap gap-4 md:gap-6 items-start justify-center"
+            className="flex flex-wrap gap-4 md:gap-6 items-start justify-start"
             variants={cardVariants}>
             {projectList.map((project) => (
               <ProjectCard key={project.name} project={project} />
@@ -117,7 +107,7 @@ const ProjectSection = () => {
           </motion.div>
         </motion.div>
       </div>
-    </div>
+    </Container>
   );
 };
 

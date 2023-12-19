@@ -9,7 +9,6 @@ interface CardProps {
 }
 
 const Card = ({ children, glass, styles }: CardProps) => {
-  const { resolvedTheme } = useTheme();
 
   return (
     <div
