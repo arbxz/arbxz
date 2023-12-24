@@ -24,14 +24,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IE",
     url: "https://www.arbxz.com/",
-    title: "Arbaaz Mowlabucus | Frontend Developper",
+    title: "Arbaaz Mowlabucus | Frontend Engineer",
     description:
       "Check out my portfolio and professional skills I gathered throughout my career.",
     images: {
       url: "/public/logo-large.webp",
       alt: "Logo of my brand",
     },
-    siteName: "Arbaz Mowlabucus | Frontend Developper",
+    siteName: "Arbaz Mowlabucus | Frontend Engineer",
   },
   keywords: [
     "Arbaaz Mowlabucus",
@@ -47,11 +47,7 @@ export const metadata: Metadata = {
   robots: "index, follow",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html suppressHydrationWarning={true} lang="en">
       <head>
@@ -64,3 +60,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+export default RootLayout;

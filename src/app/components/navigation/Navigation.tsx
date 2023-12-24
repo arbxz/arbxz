@@ -6,10 +6,13 @@ import { motion, useScroll } from "framer-motion";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 
+import LanguageSwitcher from "../shared/LanguageSwitch";
+
 const Navigation = () => {
+  const { resolvedTheme, setTheme } = useTheme();
   const { scrollYProgress } = useScroll();
   const [isContentScrolled, setIsContentScrolled] = useState(false);
-  const { resolvedTheme, setTheme } = useTheme();
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -30,30 +33,30 @@ const Navigation = () => {
     <nav
       className={`fixed ${
         resolvedTheme === "dark" ? "glassBgDark" : "glassBgLight"
-      } top-0 glassBg text-foreground h-auto w-full py-2 md:px-6 px-2 transition-all ease-in-out duration-300 z-50 ${
-        isContentScrolled && "shadow-sm"
+      } top-0 glassBg text-foreground shadow-sm h-auto w-full py-2 md:px-6 px-2 transition-all ease-in-out duration-300 z-50 ${
+        isContentScrolled && "shadow-md"
       }`}>
-      <div className="flex gap-6 w-full md:justify-start justify-between items-center">
+      <div className="flex gap-6 w-full justify-between items-center">
         <Link className="flex items-center text-lg gap-2" href="/">
           Arbxz <span>|</span>
-          <span className="text-lg">Arbaaz Mowlabucus</span>
+          <span className="text-lg">Arbaaz Mowlabucus.</span>
         </Link>
 
-        <div className="hidden text-md md:flex mx-auto justify-center items-center gap-4 text-center font-semibold">
+        <div className="hidden text-md md:flex justify-start items-center gap-4 font-semibold">
           <Link
             className="relative py-2 before:absolute before:bottom-0 before:left-0 before:h-1 before:w-0 before:bg-foreground hover:before:w-full before:transition-all before:duration-300"
             href="#projects">
-            Projects
+            projects.
           </Link>
           <Link
             className="relative py-2 before:absolute before:bottom-0 before:left-0 before:h-1 before:w-0 before:bg-foreground hover:before:w-full before:transition-all before:duration-300"
             href="#designs">
-            Designs
+            designs.
           </Link>
           <Link
             className="relative py-2 before:absolute before:bottom-0 before:left-0 before:h-1 before:w-0 before:bg-foreground hover:before:w-full before:transition-all before:duration-300"
             href="#aboutme">
-            About me
+            about me.
           </Link>
         </div>
 
@@ -65,12 +68,14 @@ const Navigation = () => {
             onClick={() =>
               setTheme(resolvedTheme === "dark" ? "light" : "dark")
             }>
-            <FontAwesomeIcon icon={resolvedTheme == "light" ? faMoon : faSun} />
+            {resolvedTheme == "light" || undefined ? (
+              <FontAwesomeIcon d="" icon={faMoon} />
+            ) : (
+              <FontAwesomeIcon d="" icon={faSun} />
+            )}
           </button>
 
-          {/* <span className="text-lg">
-            EN <span>|</span> FR
-          </span> */}
+          {/* <LanguageSwitcher /> */}
         </div>
       </div>
       <motion.div

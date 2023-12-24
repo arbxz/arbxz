@@ -75,7 +75,16 @@ const MusicPlayer = () => {
   return (
     <Card styles="flex sm:flex-col w-full h-full">
       <div className="bg-background flex flex-col lg:flex-row items-center justify-start">
-        <div className="hidden md:block h-[250px] sm:h-[170px] w-full lg:w-[200px] bg-music"></div>
+        <div className="relative hidden md:block h-[250px] sm:h-[170px] w-full lg:w-[200px] bg-music">
+          <div className="spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
         <div className="lg:px-8 lg:py-4 px-4 py-2">
           <span className="block text-xl font-semibold mb-2">
             Wanna put some music on?

@@ -24,7 +24,7 @@ const KnowledgeSection = () => {
 
   const hobbyData = ["Digital Art", "Art", "Web design", "Photoshop"];
 
-  const SkillButtons = ({ data, isDark }: SkillButtonsProps) => {
+  const SkillButtons = ({ data }: SkillButtonsProps) => {
     return (
       <div className="flex gap-4 flex-wrap w-full items-center justify-center p-2">
         {data.map((skill, index) => (

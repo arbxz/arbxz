@@ -30,7 +30,7 @@ const ArtSection = () => {
     <>
       <Container flexDirection="col">
         <Image
-          className="absolute top-28 md:top-9 lg:top-16 left-1/2 -translate-x-1/2 -z-0"
+          className="absolute w-auto h-auto top-28 md:top-9 lg:top-16 left-1/2 -translate-x-1/2 -z-0"
           src={"/images/bgProps/circle-scatter-haikei.svg"}
           width={1000}
           height={1000}

@@ -29,7 +29,7 @@ const MainBanner = () => {
   return (
     <Container flexDirection="col">
       <Image
-        className="absolute top-28 md:top-9 lg:top-16 left-1/2 -translate-x-1/2 -z-0"
+        className="absolute top-28 md:top-9 lg:top-16 left-1/2 -translate-x-1/2 -z-0 w-auto h-auto"
         src={"/images/bgProps/blob-haikei.svg"}
         alt="background prop"
         width={1200}
@@ -41,7 +41,7 @@ const MainBanner = () => {
           <div className="relative max-w-3xl mb-4 px-4 flex md:flex-row flex-col gap-4 items-center md:justify-center">
             <h1 className="md::w-1/2 text-5xl md:text-7xl md:text-right text-center font-bold">
               <span>
-                Frontend <br /> Developer
+                Frontend <br /> Engineer
               </span>
             </h1>
             <motion.div

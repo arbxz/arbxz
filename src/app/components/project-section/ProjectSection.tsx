@@ -1,4 +1,4 @@
-import { faEye, faWrench } from "@fortawesome/free-solid-svg-icons";
+import { faWrench } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion, Variants } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
@@ -51,32 +51,30 @@ const ProjectSection = () => {
   const ProjectCard = ({ project }: { project: InterfaceProjectItem }) => {
     return (
       <div
-        className="relative bg-backgroundSecondary flex w-full sm:w-64 min-h-64 sm:flex-col flex-row rounded-2xl scale-[.99] shadow-md transition-all duration-300 hover:shadow-lg hover:scale-100 overflow-hidden"
+        className="relative bg-background flex w-full sm:w-64 min-h-64 sm:flex-col flex-row rounded-2xl scale-[.99] shadow-md transition-all duration-300 hover:shadow-lg hover:scale-100 overflow-hidden"
         key={project.name}>
-        <div className="w-2/5 h-auto sm:w-64 sm:h-44 object-cover object-bottom overflow-hidden">
-          <Image
-            className="object-cover w-full h-full"
-            src={project.src}
-            height={256}
-            width={256}
-            alt={project.name}
-            placeholder="blur"
-          />
-        </div>
-        <div className="flex flex-col items-center gap-4 w-3/5 sm:w-full p-4 text-foreground text-left">
-          <span className="block text-xl font-semibold">{project.name}</span>
-          <span className="text-center overflow-hidden text-ellipsis">
-            {project.description}
-          </span>
-          <span className="flex items-center justify-center gap-3 border border-accent text-sm text-accent rounded-3xl px-4 py-1">
-            <FontAwesomeIcon icon={faWrench} /> |
-            <span className="font-medium">{project.tech}</span>
-          </span>
-        </div>
-        <Link
-          href={project.url}
-          target="_blank"
-          className="cursor-pointer"></Link>
+        <Link href={project.url} target="_blank" className="cursor-pointer">
+          <div className="w-2/5 h-auto sm:w-64 sm:h-44 object-cover object-bottom overflow-hidden">
+            <Image
+              className="object-cover w-full h-full"
+              src={project.src}
+              height={256}
+              width={256}
+              alt={project.name}
+              placeholder="blur"
+            />
+          </div>
+          <div className="flex flex-col items-center gap-4 w-3/5 sm:w-full p-4 text-foreground text-left">
+            <span className="block text-xl font-semibold">{project.name}</span>
+            <span className="text-center overflow-hidden text-ellipsis">
+              {project.description}
+            </span>
+            <span className="flex items-center justify-center gap-3 border border-accent text-sm text-accent rounded-3xl px-4 py-1">
+              <FontAwesomeIcon icon={faWrench} /> |
+              <span className="font-medium">{project.tech}</span>
+            </span>
+          </div>
+        </Link>
       </div>
     );
   };
