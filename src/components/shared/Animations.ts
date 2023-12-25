@@ -35,7 +35,7 @@ export const slideInLeftVariants: Variants = {
 export const slideUpVariants: Variants = {
   offscreen: {
     scale: 0.9,
-    y: 500,
+    y: 200,
   },
   onscreen: {
     scale: 1,

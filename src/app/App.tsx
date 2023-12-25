@@ -1,22 +1,26 @@
 import { motion } from "framer-motion";
 
-import ArtSection from "./components/art-section/ArtSection";
-import Footer from "./components/footer/Footer";
-import MainBanner from "./components/main-section/MainSection";
-import Modal from "./components/modal/Modal";
-import Navigation from "./components/navigation/Navigation";
-import ProjectSection from "./components/project-section/ProjectSection";
-import { slideUpVariants } from "./components/shared/Animations";
-import Container from "./components/shared/Container";
-import MusicPlayer from "./components/shared/MusicPlayer";
-import SkillSection from "./components/skills-section/SkillsSection";
-import { useModalContext } from "./context/modal";
+import SkillSection from "@/components/about-section/AboutSection";
+import ArtSection from "@/components/design-section/DesignSection";
+import Footer from "@/components/footer/Footer";
+import MainBanner from "@/components/main-section/MainSection";
+import Modal from "@/components/modal/Modal";
+import Navigation from "@/components/navigation/Navigation";
+import ProjectSection from "@/components/project-section/ProjectSection";
+import { slideUpVariants } from "@/components/shared/Animations";
+import Container from "@/components/shared/Container";
+import MusicPlayer from "@/components/shared/MusicPlayer";
+
+import { useModalContext } from "../context/modal";
 
 const App = () => {
   const { isModalOpen, modalContent } = useModalContext();
 
   return (
-    <div className={`${isModalOpen && "fixed h-full w-full lg:pr-4"} `}>
+    <div
+      className={`${
+        isModalOpen && "fixed h-full w-full lg:pr-4"
+      } overflow-hidden`}>
       <Navigation />
       <main className="relative p-4 text-base text-foreground flex gap-4 flex-col items-center justify-start select-none">
         <MainBanner />

@@ -2,7 +2,7 @@
 import { ThemeProvider } from "next-themes";
 
 import App from "./App";
-import { ModalProviderContext } from "./context/modal";
+import { ModalProviderContext } from "../context/modal";
 
 function Home() {
   return (

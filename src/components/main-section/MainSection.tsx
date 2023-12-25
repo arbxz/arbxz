@@ -88,7 +88,7 @@ const MainBanner = () => {
               <span>Github</span>
             </div>
             <Link
-              className="text-foreground bg-background px-4 py-2 rounded-full text-center border-[1px] border-white transition-colors duration-300 hover:border-background hover:text-background hover:bg-foreground"
+              className="text-foreground bg-background px-4 py-2 rounded-full text-center border-2 border-white transition-colors duration-300 hover:border-background hover:text-background hover:bg-foreground"
               href="https://github.com/arbxz"
               target="_blank">
               Open me
@@ -100,7 +100,7 @@ const MainBanner = () => {
               <span>Linkedin</span>
             </div>
             <Link
-              className="text-background bg-foreground px-4 py-2 rounded-full text-center border-[1px] border-foreground transition-colors duration-300 hover:border-foreground hover:text-foreground hover:bg-background"
+              className="text-background bg-foreground px-4 py-2 rounded-full text-center border-2 border-foreground transition-colors duration-300 hover:border-foreground hover:text-foreground hover:bg-background"
               href="https://www.linkedin.com/in/arbaaz-mowlabucus-15bb17160/"
               target="_blank">
               Open me

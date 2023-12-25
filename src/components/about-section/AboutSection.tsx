@@ -1,9 +1,9 @@
 import { faWindowMaximize } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { useModalContext } from "@/app/context/modal";
+import { useModalContext } from "@/context/modal";
 
-import KnowledgeSection from "../knowledge-section/KnowledgeSection";
+import KnowledgeSection from "../about-modal-content/AboutModalContent";
 import Card from "../shared/Card";
 
 const SkillSection = () => {

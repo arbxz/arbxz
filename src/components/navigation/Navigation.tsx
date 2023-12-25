@@ -38,7 +38,7 @@ const Navigation = () => {
       }`}>
       <div className="flex gap-6 w-full justify-between items-center">
         <Link className="flex items-center text-lg gap-2" href="/">
-          Arbxz <span>|</span>
+          <span className="text-accent">Arbxz</span> <span>|</span>
           <span className="text-lg">Arbaaz Mowlabucus.</span>
         </Link>
 

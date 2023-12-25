@@ -31,20 +31,12 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  background-attachment: fixed;
-  background-size: cover;
-}
-
 [data-theme="dark"] body {
   background-color: var(--backgroundSecondary);
 }
 
 [data-theme="light"] body {
   background-color: var(--backgroundSecondary);
-}
-
-.bg-music {
 }
 
 h1,
@@ -81,10 +73,6 @@ h2 {
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
   display: flex;
   justify-content: flex-start;
   align-items: center;

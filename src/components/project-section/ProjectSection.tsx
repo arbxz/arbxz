@@ -29,7 +29,7 @@ const ProjectSection = () => {
       src: cocagneImg,
       url: "https://www.cocagne.fr/",
       name: "Cocagne.fr",
-      description: "Developped the UI/Front end using Tailwind + Next",
+      description: "Developped the UI using Tailwind + Next",
       tech: "NextJS",
     },
   ];
@@ -84,7 +84,7 @@ const ProjectSection = () => {
       <div id="projects" className="w-full">
         <div className="flex flex-col md:flex-row items-baseline gap-4 text-left mb-4">
           <h2 className="font-semibold text-accent text-4xl md:text-6xl">
-            Recent Projects
+            <span className="text-foreground">Recent</span> projects
           </h2>
           <span className="font-semibold text-foreground text-xl md:text-xl">
             Check out what Ive been working on !

@@ -1,7 +1,7 @@
 import { faCircleXmark } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { useModalContext } from "@/app/context/modal";
+import { useModalContext } from "@/context/modal";
 
 interface SkillButtonsProps {
   data: string[];

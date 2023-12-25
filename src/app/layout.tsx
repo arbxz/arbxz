@@ -4,7 +4,7 @@ import { League_Spartan } from "next/font/google";
 
 import StyledJsxRegistry from "./registry";
 
-import "./themes/styles.css";
+import "../themes/styles.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
 config.autoAddCss = false;

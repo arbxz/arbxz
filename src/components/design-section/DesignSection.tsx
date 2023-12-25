@@ -1,12 +1,8 @@
-import { faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 
 import Card from "../shared/Card";
 import Container from "../shared/Container";
-import ArtDeck from "./ArtDeck";
 import clipstudioIcon from "/public/images/icons/clipstudio.svg";
 import illustratorIcon from "/public/images/icons/illustrator.svg";
 import psdIcon from "/public/images/icons/photoshop.svg";
@@ -32,8 +28,8 @@ const ArtSection = () => {
         <Image
           className="absolute w-auto h-auto top-28 md:top-9 lg:top-16 left-1/2 -translate-x-1/2 -z-0"
           src={"/images/bgProps/circle-scatter-haikei.svg"}
-          width={1000}
-          height={1000}
+          width={500}
+          height={500}
           alt="backgrouynd prop"
         />
         <div className="text-center w-full">
