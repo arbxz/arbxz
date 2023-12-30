@@ -1,4 +1,3 @@
-import { config } from "@fortawesome/fontawesome-svg-core";
 import type { Metadata } from "next";
 import { League_Spartan } from "next/font/google";
 
@@ -7,7 +6,6 @@ import { Providers } from "./providers";
 import "../themes/styles.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
-config.autoAddCss = false;
 const inter = League_Spartan({
   subsets: ["latin"],
 });
