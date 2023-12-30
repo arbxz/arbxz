@@ -1,7 +1,7 @@
 import { faCircleXmark } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { useModalContext } from "@/context/modal";
+import { useAppContext } from "@/context/appContext";
 
 interface SkillButtonsProps {
   data: string[];
@@ -9,7 +9,7 @@ interface SkillButtonsProps {
 }
 
 const KnowledgeSection = () => {
-  const { setIsModalOpen } = useModalContext();
+  const { setIsModalOpen } = useAppContext();
 
   const skillData = [
     "Figma",

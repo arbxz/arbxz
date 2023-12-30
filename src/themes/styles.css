@@ -19,7 +19,7 @@
   --foreground: #040202;
   --background: #ffffff;
   --backgroundSecondary: #f5f5f7;
-  --backgroundTertiary: #f7f1f1;
+  --backgroundTertiary: #f7f7f7;
   --accent: hsl(15, 85%, 48%);
   --accentSecondary: #d2c;
   --body: #f3f3f3;
@@ -51,6 +51,14 @@ h2 {
 
 .snap-container > div {
   scroll-snap-align: center;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .highlightedText {
@@ -187,5 +195,21 @@ footer::before {
 
   100% {
     transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+  }
+}
+
+.loader-spinner {
+  width: 56px;
+  height: 56px;
+  border: 11.2px var(--accent) double;
+  border-left-style: solid;
+  border-radius: 50%;
+  animation: loaderspinner 0.75s infinite linear;
+  -webkit-animation: loaderspinner 0.75s infinite linear;
+}
+
+@keyframes loaderspinner {
+  to {
+    transform: rotate(360deg);
   }
 }

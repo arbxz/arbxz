@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useState } from "react";
 
 import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
@@ -5,8 +7,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion, useScroll } from "framer-motion";
 import Link from "next/link";
 import { useTheme } from "next-themes";
-
-import LanguageSwitcher from "../shared/LanguageSwitch";
 
 const Navigation = () => {
   const { resolvedTheme, setTheme } = useTheme();
@@ -69,13 +69,11 @@ const Navigation = () => {
               setTheme(resolvedTheme === "dark" ? "light" : "dark")
             }>
             {resolvedTheme == "light" || undefined ? (
-              <FontAwesomeIcon d="" icon={faMoon} />
+              <FontAwesomeIcon icon={faMoon} />
             ) : (
-              <FontAwesomeIcon d="" icon={faSun} />
+              <FontAwesomeIcon icon={faSun} />
             )}
           </button>
-
-          {/* <LanguageSwitcher /> */}
         </div>
       </div>
       <motion.div

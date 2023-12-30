@@ -2,7 +2,7 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 import type { Metadata } from "next";
 import { League_Spartan } from "next/font/google";
 
-import StyledJsxRegistry from "./registry";
+import { Providers } from "./providers";
 
 import "../themes/styles.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -55,7 +55,7 @@ function RootLayout({ children }: { children: React.ReactNode }) {
         <meta name="google" content="nositelinkssearchbox" />
       </head>
       <body className={inter.className}>
-        <StyledJsxRegistry>{children}</StyledJsxRegistry>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

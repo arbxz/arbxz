@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useRef, useState } from "react";
 
 import { faSpotify } from "@fortawesome/free-brands-svg-icons/faSpotify";
@@ -107,7 +109,7 @@ const MusicPlayer = () => {
             icon={faForward}
             className="rotate-180 cursor-pointer"
           />
-          <button onClick={() => setIsPlaying(!isPlaying)}>
+          <button type="button" onClick={() => setIsPlaying(!isPlaying)}>
             {isPlaying ? (
               <FontAwesomeIcon
                 icon={faPause}

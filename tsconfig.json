@@ -30,7 +30,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "dist/types/**/*.ts",
-    "src/context/modal.js"
+    "src/context/appContext.js"
   ],
   "exclude": ["node_modules"]
 }

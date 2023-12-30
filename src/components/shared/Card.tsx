@@ -1,5 +1,3 @@
-import { useTheme } from "next-themes";
-
 interface CardProps {
   children: React.ReactNode;
   theme?: string;

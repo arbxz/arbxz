@@ -1,13 +1,13 @@
 import { faWindowMaximize } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { useModalContext } from "@/context/modal";
+import { useAppContext } from "@/context/appContext";
 
 import KnowledgeSection from "../about-modal-content/AboutModalContent";
 import Card from "../shared/Card";
 
 const SkillSection = () => {
-  const { setIsModalOpen, setModalContent } = useModalContext();
+  const { setIsModalOpen, setModalContent } = useAppContext();
   const textToHighlight = () => {
     const highlightedTextArray = [
       "I'm a results-driven Frontend Developer",

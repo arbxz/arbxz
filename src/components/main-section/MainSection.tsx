@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import Clock from "react-live-clock";
 import TextTransition, { presets } from "react-text-transition";

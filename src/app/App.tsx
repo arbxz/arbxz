@@ -11,10 +11,10 @@ import { slideUpVariants } from "@/components/shared/Animations";
 import Container from "@/components/shared/Container";
 import MusicPlayer from "@/components/shared/MusicPlayer";
 
-import { useModalContext } from "../context/modal";
+import { useAppContext } from "../context/appContext";
 
 const App = () => {
-  const { isModalOpen, modalContent } = useModalContext();
+  const { isModalOpen, modalContent } = useAppContext();
 
   return (
     <div
