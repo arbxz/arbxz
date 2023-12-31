@@ -37,10 +37,11 @@ const Accordion = ({ title, options }: AccordionProps) => {
           transition={{ duration: 0.2 }}
           style={{ originY: 0.55 }}>
           <svg width="15" height="15" viewBox="0 0 20 20">
-            <path className="fill-foregroun" d="M0 7 L 20 7 L 10 16" />
+            <path className="fill-foreground" d="M0 7 L 20 7 L 10 16" />
           </svg>
         </motion.div>
       </motion.button>
+
       <motion.ul
         className="w-full flex flex-col translate-y-1 gap-2 bg-backgroundTertiary shadow rounded-md"
         variants={{

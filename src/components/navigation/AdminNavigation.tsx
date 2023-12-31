@@ -1,11 +1,15 @@
 "use client";
 
+import { useRef } from "react";
+
 import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 
 import { useAppContext } from "@/context/appContext";
+import { useDimensions } from "@/hooks/useDimensions";
 
 import Dropdown from "../ui-elements/Dropdown";
 import { MenuToggle } from "../ui-elements/MenuToggle";
@@ -13,7 +17,8 @@ import { MenuToggle } from "../ui-elements/MenuToggle";
 const AdminNavigation = () => {
   const { resolvedTheme, setTheme } = useTheme();
   const { isAsideOpen, setIsAsideOpen } = useAppContext();
-
+  const containerRef = useRef(null);
+  const { height } = useDimensions(containerRef);
   const userOptions = [
     { label: "profile.", action: () => {} },
     { label: "account settings.", action: () => {} },
@@ -22,9 +27,17 @@ const AdminNavigation = () => {
 
   return (
     <header>
-      <nav className="glassBgLight relative rounded-full text-foreground shadow h-auto w-full py-2 md:px-6 px-4 transition-all ease-in-out duration-300 z-50">
+      <nav className="relative rounded-full text-foreground shadow shadow-customShadow h-auto w-full py-2 md:px-6 px-4 transition-all ease-in-out duration-300 z-50">
         <div className="flex gap-4 w-full justify-between items-center">
-          <MenuToggle toggle={() => setIsAsideOpen(!isAsideOpen)} />
+          <motion.nav
+            initial={isAsideOpen}
+            animate={isAsideOpen ? "open" : "closed"}
+            custom={height}
+            ref={containerRef}
+            className="relative flex flex-col gap-4">
+            <MenuToggle toggle={() => setIsAsideOpen(!isAsideOpen)} />
+          </motion.nav>
+
           <Link className="flex items-center text-lg gap-2 mr-auto" href="/">
             Arbxz | Admin Template
           </Link>

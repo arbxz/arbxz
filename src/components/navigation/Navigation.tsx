@@ -2,14 +2,14 @@
 
 import React, { useEffect, useState } from "react";
 
-import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion, useScroll } from "framer-motion";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 
+import ThemeToggle from "../ui-elements/ThemeToggle";
+
 const Navigation = () => {
-  const { resolvedTheme, setTheme } = useTheme();
+  const { resolvedTheme } = useTheme();
   const { scrollYProgress } = useScroll();
   const [isContentScrolled, setIsContentScrolled] = useState(false);
 
@@ -33,16 +33,14 @@ const Navigation = () => {
     <nav
       className={`fixed ${
         resolvedTheme === "dark" ? "glassBgDark" : "glassBgLight"
-      } top-0 glassBg text-foreground shadow-sm h-auto w-full py-2 md:px-6 px-2 transition-all ease-in-out duration-300 z-50 ${
-        isContentScrolled && "shadow-md"
-      }`}>
+      } top-0 glassBg text-foreground shadow shadow-customShadow w-full py-3 md:px-6 px-2 transition-all ease-in-out duration-300 z-50`}>
       <div className="flex gap-6 w-full justify-between items-center">
         <Link className="flex items-center text-lg gap-2" href="/">
           <span className="text-accent">Arbxz</span> <span>|</span>
           <span className="text-lg">Arbaaz Mowlabucus.</span>
         </Link>
 
-        <div className="hidden text-md md:flex justify-start items-center gap-4 font-semibold">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden text-md md:flex justify-start items-center gap-4 font-semibold">
           <Link
             className="relative py-2 before:absolute before:bottom-0 before:left-0 before:h-1 before:w-0 before:bg-foreground hover:before:w-full before:transition-all before:duration-300"
             href="#projects">
@@ -61,19 +59,7 @@ const Navigation = () => {
         </div>
 
         <div className="flex gap-4 items-center">
-          <button
-            type="button"
-            title="Theme toggle"
-            className="flex items-center justify-center p-2 w-8 text-md rounded-full ml-auto bg-foreground text-background"
-            onClick={() =>
-              setTheme(resolvedTheme === "dark" ? "light" : "dark")
-            }>
-            {resolvedTheme == "light" || undefined ? (
-              <FontAwesomeIcon icon={faMoon} />
-            ) : (
-              <FontAwesomeIcon icon={faSun} />
-            )}
-          </button>
+          <ThemeToggle />
         </div>
       </div>
       <motion.div

@@ -13,6 +13,7 @@
   --red: hsl(15, 85%, 48%);
   --glassBg: rgba(27, 27, 37, 0.5);
   --glassBgTint: rgba(27, 27, 37, 0.25);
+  --customShadow: #040202;
 }
 
 [data-theme="light"] {
@@ -25,32 +26,19 @@
   --body: #f3f3f3;
   --glassBg: rgba(255, 255, 255, 0.5);
   --glassBgTint: rgba(255, 255, 255, 0.25);
+  --customShadow: rgb(0 0 0 / 0.1);
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-[data-theme="dark"] body {
-  background-color: var(--backgroundSecondary);
-}
-
-[data-theme="light"] body {
-  background-color: var(--backgroundSecondary);
-}
-
 h1,
-h2 {
+h2,
+h3,
+h4,
+h5 {
   letter-spacing: -2%;
-}
-
-.snap-container {
-  scroll-snap-type: y mandatory;
-  overflow: auto;
-}
-
-.snap-container > div {
-  scroll-snap-align: center;
 }
 
 .no-scrollbar::-webkit-scrollbar {

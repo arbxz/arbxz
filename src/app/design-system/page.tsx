@@ -1,7 +1,5 @@
 import { Metadata } from "next";
 
-import Container from "@/components/shared/Container";
-
 import PageContent from "./pageContent";
 
 export const metadata: Metadata = {
@@ -40,9 +38,9 @@ export const metadata: Metadata = {
 
 function Dashboard() {
   return (
-    <Container>
+    <div className="pt-4 w-full">
       <PageContent />
-    </Container>
+    </div>
   );
 }
 

@@ -34,7 +34,7 @@ const ArtSection = () => {
         />
         <div className="text-center w-full">
           <h2 className="text-4xl md:text-6xl font-semibold">
-            UI/<span className="text-accent">UX</span>
+            UI/<span className="text-accent">UX.</span>
           </h2>
           <span className="border border-accent text-sm text-accent rounded-3xl px-4 py-1">
             Figma | Adobe XD

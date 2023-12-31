@@ -17,6 +17,7 @@ const config: Config = {
       primary: "#040202",
       white: "#ffffff",
       red: "var(--red)",
+      customShadow: "var(--customShadow)",
     },
     extend: {
       backgroundImage: {

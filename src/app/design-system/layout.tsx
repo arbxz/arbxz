@@ -19,13 +19,11 @@ function RootLayout({ children }: { children: React.ReactNode }) {
           <Loader />
         </div>
       ) : (
-        <div className="flex h-screen overflow-hidden">
-          <div className="relative flex flex-1 flex-col px-4 pt-4 gap-4">
-            <AdminNavigation />
-            <div className="flex w-full">
-              <Aside />
-              <main className="w-full">{children}</main>
-            </div>
+        <div className="relative flex flex-col px-4 pt-4 gap-4 min-h-screen h-full">
+          <AdminNavigation />
+          <div className="flex">
+            <Aside />
+            <main className="w-full">{children}</main>
           </div>
         </div>
       )}
