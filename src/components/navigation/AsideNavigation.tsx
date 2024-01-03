@@ -44,7 +44,11 @@ export const AsideNavigation = () => (
   <motion.ul variants={variants} className="flex flex-col gap-4">
     {itemIds.map((i) => (
       <motion.li key={i} variants={variants2} whileTap={{ scale: 0.95 }}>
-        <Accordion options={uiOptions} title="Accordion" />
+        <Accordion
+          defaultState={i % 2 == 0 ? true : false}
+          options={uiOptions}
+          title="Accordion"
+        />
       </motion.li>
     ))}
   </motion.ul>

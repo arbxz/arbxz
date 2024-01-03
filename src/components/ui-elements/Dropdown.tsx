@@ -42,7 +42,7 @@ const Dropdown = ({ buttonText, options }: DropdownProps) => {
         </motion.div>
       </motion.button>
       <motion.ul
-        className="absolute top-full left-1/2 w-full -translate-x-1/2 flex flex-col gap-2 shadow bg-foreground p-2"
+        className="absolute top-full left-1/2 w-auto whitespace-nowrap -translate-x-1/2 flex flex-col gap-2 shadow bg-foreground p-2"
         variants={{
           open: {
             clipPath: "inset(0% 0% 0% 0% round 10px)",
@@ -66,7 +66,7 @@ const Dropdown = ({ buttonText, options }: DropdownProps) => {
         {options.map((option, index) => (
           <motion.li
             key={index}
-            className="text-background block p-2 cursor-pointer"
+            className="text-background hover:bg-background-secondary hover:text-foreground duration-200 transition-colors rounded p-2 cursor-pointer"
             variants={itemVariants}
             onClick={() => {
               option.action;

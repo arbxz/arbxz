@@ -13,7 +13,7 @@ function RootLayout({ children }: { children: React.ReactNode }) {
   }, []);
 
   return (
-    <div className="select-none bg-background text-foreground">
+    <div className="select-none bg-background-secondary text-foreground">
       {loading ? (
         <div className="h-screen w-full flex items-center justify-center">
           <Loader />

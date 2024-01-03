@@ -5,6 +5,7 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
 import Container from "../shared/Container";
+import adminImg from "/public/admin.jpeg";
 import cocagneImg from "/public/cocagne.jpeg";
 import jeanPigeonImg from "/public/sample3.png";
 
@@ -23,6 +24,13 @@ const ProjectSection = () => {
       url: "https://www.jeanpigeon.xyz/",
       name: "Jean-Pigeon",
       description: "A small website I co-authored with a friend.",
+      tech: "NextJS",
+    },
+    {
+      src: adminImg,
+      url: "https://www.arbxz.com/design-system",
+      name: "Arbxz | Admin Dashboard",
+      description: "An admin dashboard created using tailwind",
       tech: "NextJS",
     },
     {
@@ -51,16 +59,17 @@ const ProjectSection = () => {
   const ProjectCard = ({ project }: { project: InterfaceProjectItem }) => {
     return (
       <div
-        className="relative bg-background flex w-full sm:w-64 min-h-64 sm:flex-col flex-row rounded-2xl scale-[.99] shadow-md transition-all duration-300 hover:shadow-lg hover:scale-100 overflow-hidden"
+        className="relative bg-background flex w-full sm:w-64 min-h-64 sm:flex-col flex-row rounded-2xl scale-[.99] shadow transition-all duration-300 hover:shadow-md hover:scale-100 overflow-hidden"
         key={project.name}>
         <Link href={project.url} target="_blank" className="cursor-pointer">
-          <div className="w-2/5 h-auto sm:w-64 sm:h-44 object-cover object-bottom overflow-hidden">
+          <div className="w-2/5 h-auto sm:w-64 sm:h-44">
             <Image
               className="object-cover w-full h-full"
               src={project.src}
               height={256}
               width={256}
               alt={project.name}
+              objectPosition="top center"
               placeholder="blur"
             />
           </div>

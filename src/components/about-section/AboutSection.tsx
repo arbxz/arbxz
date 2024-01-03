@@ -9,15 +9,15 @@ import Card from "../shared/Card";
 const SkillSection = () => {
   const { setIsModalOpen, setModalContent } = useAppContext();
   const textToHighlight = () => {
-    const highlightedTextArray = [
+    const highlightArray = [
       "I'm a results-driven Frontend Engineer",
       "with expertise in ..",
     ];
 
     return (
       <>
-        {highlightedTextArray.map((text, index) => (
-          <div className="highlightedText text-xl" key={index}>
+        {highlightArray.map((text, index) => (
+          <div className="highlight text-xl" key={index}>
             {text}
           </div>
         ))}

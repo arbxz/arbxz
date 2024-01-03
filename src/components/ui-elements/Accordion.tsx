@@ -5,6 +5,7 @@ import { motion, Variants } from "framer-motion";
 interface AccordionProps {
   title: React.ReactNode | string;
   options: { label: string; action: () => void }[];
+  defaultState?: boolean;
 }
 
 const itemVariants: Variants = {
@@ -16,8 +17,12 @@ const itemVariants: Variants = {
   closed: { opacity: 0, y: 20, transition: { duration: 0.2 } },
 };
 
-const Accordion = ({ title, options }: AccordionProps) => {
-  const [isOpen, setIsOpen] = useState(false);
+const Accordion = ({
+  title,
+  options,
+  defaultState = false,
+}: AccordionProps) => {
+  const [isOpen, setIsOpen] = useState(defaultState);
 
   return (
     <motion.div
@@ -25,7 +30,7 @@ const Accordion = ({ title, options }: AccordionProps) => {
       animate={isOpen ? "open" : "closed"}
       className="relative">
       <motion.button
-        className="flex items-center justify-between gap-4 py-2 px-4 cursor-pointer w-full rounded-md bg-backgroundSecondary"
+        className="flex items-center justify-between gap-4 py-2 px-4 cursor-pointer w-full rounded-md bg-background"
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(!isOpen)}>
         {title}
@@ -43,7 +48,7 @@ const Accordion = ({ title, options }: AccordionProps) => {
       </motion.button>
 
       <motion.ul
-        className="w-full flex flex-col translate-y-1 gap-2 bg-backgroundTertiary shadow rounded-md"
+        className="w-full flex flex-col translate-y-1 gap-2 bg-background shadow rounded-md"
         variants={{
           open: {
             clipPath: "inset(0% 0% 0% 0% round 6px)",
@@ -69,7 +74,7 @@ const Accordion = ({ title, options }: AccordionProps) => {
         {options.map((option, index) => (
           <motion.li
             key={index}
-            className="text-foreground block py-2 px-4 cursor-pointer"
+            className="text-foreground py-2 px-4 hover:bg-accent duration-300 transition-colors cursor-pointer"
             variants={itemVariants}
             onClick={() => {
               option.action;

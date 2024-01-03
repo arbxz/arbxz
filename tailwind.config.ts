@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+const plugin = require("tailwindcss/plugin");
 
 const config: Config = {
   content: [
@@ -10,14 +11,20 @@ const config: Config = {
     colors: {
       foreground: "var(--foreground)",
       background: "var(--background)",
-      backgroundSecondary: "var(--backgroundSecondary)",
-      backgroundTertiary: "var(--backgroundTertiary)",
+      "background-secondary": "var(--background-secondary)",
+      "background-tertiary": "var(--background-tertiary)",
       body: "var(--body)",
       accent: "var(--accent)",
       primary: "#040202",
       white: "#ffffff",
-      red: "var(--red)",
-      customShadow: "var(--customShadow)",
+      active: "#0071e3",
+      danger: "hsl(15, 85%, 48%)",
+      success: "#00C6C2",
+      warning: "#F9B163",
+      "custom-shadow": "var(--custom-shadow)",
+      "form-active": "#00C6C2",
+      glass: "var(--glassBg)",
+      "glass-tint": "var(--glassBgTint)",
     },
     extend: {
       backgroundImage: {
@@ -27,6 +34,39 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addBase, addComponents, addUtilities, theme }: any) {
+      addBase({
+        html: { scrollBehaviour: "smooth" },
+        h1: {
+          letterSpacing: "-2%",
+        },
+        h2: {
+          letterSpacing: "-2%",
+        },
+      });
+      addComponents({
+        ".highlight": {
+          display: "inline-block",
+          width: "auto",
+          padding: "0 1rem",
+          marginBottom: "3px",
+          color: theme("colors.background"),
+          background: theme("colors.foreground"),
+        },
+        ".glass": {
+          background: theme("colors.glass"),
+          backdropFilter: "blur(10px)",
+          borderColor: theme("colors.glass-tint"),
+          borderWidth: "1px",
+        },
+      });
+      addUtilities({
+        ".content-auto": {
+          contentVisibility: "auto",
+        },
+      });
+    }),
+  ],
 };
 export default config;

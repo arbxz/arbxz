@@ -1,17 +1,21 @@
+"use client";
+
 import { cva, VariantProps } from "class-variance-authority";
+import { motion } from "framer-motion";
 
 const buttonStyles = cva(
-  "rounded-full py-1 px-4 w-full border-2 min-w-[100px] max-w-[100px] font-sm shadow transition-colors duration-300",
+  "rounded-full py-2 px-4 w-full border-2 min-w-[125px] max-w-[150px] font-sm shadow transition-colors duration-300 border-2 focus:ring",
   {
     variants: {
       intent: {
-        primary: "bg-background hover:bg-backgroundSecondary text-foreground",
+        primary:
+          "bg-background hover:bg-foreground text-foreground hover:text-background",
         secondary:
-          "bg-foreground hover:bg-background hover:text-foreground text-background border-2 active:border-foreground",
+          "bg-active hover:bg-background hover:text-active text-white active:border-foreground",
         tertiary:
-          "bg-white text-accent hover:bg-accent hover:text-white border-2 border-accent active:border-accent",
+          "bg-success hover:bg-background hover:text-success text-white active:border-foreground",
         danger:
-          "bg-red text-white hover:bg-white hover:text-red border-2 border-red active:border-red",
+          "bg-danger text-white hover:bg-white hover:text-danger border-danger active:border-danger",
       },
       defaultVariants: {
         intent: "primary",
@@ -22,12 +26,24 @@ const buttonStyles = cva(
 
 interface ButtonProps extends VariantProps<typeof buttonStyles> {
   text: string;
+  // action: () => void;
 }
 
-export default function Button({ intent, text, ...props }: ButtonProps) {
+export default function Button({
+  intent,
+  text,
+  // action,
+  ...props
+}: ButtonProps) {
   return (
-    <button type="button" className={buttonStyles({ intent })} {...props}>
+    <motion.button
+      type="button"
+      className={buttonStyles({ intent })}
+      {...props}
+      whileTap={{ scale: 0.95 }}
+      // onClick={action}
+    >
       {text}
-    </button>
+    </motion.button>
   );
 }

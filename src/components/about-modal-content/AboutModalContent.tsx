@@ -53,7 +53,7 @@ const KnowledgeSection = () => {
           <FontAwesomeIcon className="text-3xl" icon={faCircleXmark} />
         </button>
       </div>
-      <div className="block p-4 w-full h-full bg-backgroundSecondary">
+      <div className="block p-4 w-full h-full bg-background-secondary">
         <p className="text-xl text-center max-w-sm mx-auto">
           Professional skills I use in my day to day life as a react developer
         </p>

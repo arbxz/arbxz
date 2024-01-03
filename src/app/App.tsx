@@ -20,7 +20,7 @@ const App = () => {
     <div
       className={`${
         isModalOpen && "fixed h-full w-full lg:pr-4"
-      } overflow-hidden bg-backgroundSecondary`}>
+      } overflow-hidden bg-background-secondary`}>
       <Navigation />
       <main className="relative p-4 text-base text-foreground flex gap-4 flex-col items-center justify-start select-none">
         <MainBanner />

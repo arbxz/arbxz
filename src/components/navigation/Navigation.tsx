@@ -1,39 +1,15 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-
 import { motion, useScroll } from "framer-motion";
 import Link from "next/link";
-import { useTheme } from "next-themes";
 
 import ThemeToggle from "../ui-elements/ThemeToggle";
 
 const Navigation = () => {
-  const { resolvedTheme } = useTheme();
   const { scrollYProgress } = useScroll();
-  const [isContentScrolled, setIsContentScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsContentScrolled(true);
-      } else {
-        setIsContentScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [isContentScrolled]);
 
   return (
-    <nav
-      className={`fixed ${
-        resolvedTheme === "dark" ? "glassBgDark" : "glassBgLight"
-      } top-0 glassBg text-foreground shadow shadow-customShadow w-full py-3 md:px-6 px-2 transition-all ease-in-out duration-300 z-50`}>
+    <nav className="fixed top-0 glass text-foreground shadow shadow-custom-shadow w-full py-3 md:px-6 px-2 transition-all ease-in-out duration-300 z-50">
       <div className="flex gap-6 w-full justify-between items-center">
         <Link className="flex items-center text-lg gap-2" href="/">
           <span className="text-accent">Arbxz</span> <span>|</span>
@@ -63,7 +39,7 @@ const Navigation = () => {
         </div>
       </div>
       <motion.div
-        className="progress-bar lg:top-[55px] top-[50.5px]"
+        className="fixed left-0 right-0 h-[2.5px] bg-accent z-20 origin-top-left lg:top-[55px] top-[50.5px]"
         style={{ scaleX: scrollYProgress }}
       />
     </nav>

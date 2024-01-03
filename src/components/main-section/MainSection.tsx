@@ -13,6 +13,8 @@ import Link from "next/link";
 import Card from "../shared/Card";
 import Container from "../shared/Container";
 import ImageCarousel from "../shared/ImageCarousel";
+import Button from "../ui-elements/Button";
+import Input from "../ui-elements/Input";
 
 const MainBanner = () => {
   const introText = [
@@ -51,21 +53,21 @@ const MainBanner = () => {
               animate={{ x: 0 }}
               transition={{ type: "spring", stiffness: 100 }}>
               <div className="relative mainSection flex flex-col justify-center p-4">
-                <div className="highlightedText self-start">Hello visitor,</div>
+                <div className="highlight self-start">Hello visitor,</div>
                 {introText.map((text, index) => (
-                  <div className="self-start highlightedText" key={index}>
+                  <div className="self-start highlight" key={index}>
                     {text}
                   </div>
                 ))}
-                <div className="md:text-6xl text-4xl highlightedText font-semibold self-start">
+                <div className="md:text-6xl text-4xl highlight font-semibold self-start">
                   <TextTransition springConfig={presets.wobbly}>
                     {skills[index % skills.length]}
                   </TextTransition>
                 </div>
-                <div className="highlightedText self-start">
+                <div className="highlight self-start">
                   I am based in Mauritius and I
                 </div>
-                <div className="highlightedText self-start">
+                <div className="highlight self-start">
                   love art, hiking and diving.
                 </div>
               </div>
@@ -74,12 +76,25 @@ const MainBanner = () => {
           <ImageCarousel />
         </div>
       </Card>
+      {/* 
+      <Card styles="absolute top-1/2 -left-1/4 p-4 pt-6 flex flex-col justify-end items-end rounded-xl gap-4">
+        <Input
+          id="emailID"
+          name="Email field"
+          label="Email field"
+          value="badEmail"
+          type="email"
+          errorMessage="Enter a valid email address."
+        />
+        <Button intent="danger" text="Update" />
+      </Card> */}
+
       <div className="flex flex-wrap md:flex-nowrap gap-4 items-stretch justify-stretch w-full mx-auto md:max-w-3xl">
-        <Card styles="flex items-center w-full p-8 bg-red text-white">
+        <Card styles="flex items-center w-full p-8 bg-danger text-white">
           <Clock
             format={"HH:mmA"}
             ticking
-            className="md:p-4 p-4 mx-auto"
+            className="p-4 mx-auto"
             style={{ fontSize: "3.5em" }}
           />
         </Card>
