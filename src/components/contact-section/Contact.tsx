@@ -68,7 +68,7 @@ const Contact = () => {
               Arbaaz Mowlabucus
               <span className="inline-block rounded-full w-3 h-3 overflow-hidden bg-amber-400"></span>
             </span>
-            <span>Frontend Developer</span>
+            <span>Frontend Engineer</span>
           </div>
         </div>
         <div className="relative bg-white flex flex-col gap-3 w-full p-4">

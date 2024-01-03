@@ -10,7 +10,7 @@ const SkillSection = () => {
   const { setIsModalOpen, setModalContent } = useAppContext();
   const textToHighlight = () => {
     const highlightedTextArray = [
-      "I'm a results-driven Frontend Developer",
+      "I'm a results-driven Frontend Engineer",
       "with expertise in ..",
     ];
 
