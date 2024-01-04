@@ -5,14 +5,16 @@ import { motion } from "framer-motion";
 import Accordion from "../ui-elements/Accordion";
 
 const uiOptions = [
-  { label: "ui.", action: () => {} },
-  { label: "forms", action: () => {} },
-  { label: "calendar.", action: () => {} },
+  { label: "ui.", href: "/design-system/" },
+  { label: "forms", href: "/design-system/form-view" },
+  { label: "lists.", href: "/design-system/list-view" },
 ];
 
-const itemIds = [0, 1, 2, 3, 4];
-
-const colors = ["#FF008C", "#D309E1", "#9C1AFF", "#7700FF", "#4400FF"];
+const formOptions = [
+  { label: "sign in.", href: "/design-system/sign-in" },
+  { label: "sign up", href: "/design-system/sign-up" },
+  { label: "product form.", href: "/design-system/" },
+];
 
 const variants = {
   open: {
@@ -42,27 +44,11 @@ const variants2 = {
 
 export const AsideNavigation = () => (
   <motion.ul variants={variants} className="flex flex-col gap-4">
-    {itemIds.map((i) => (
-      <motion.li key={i} variants={variants2} whileTap={{ scale: 0.95 }}>
-        <Accordion
-          defaultState={i % 2 == 0 ? true : false}
-          options={uiOptions}
-          title="Accordion"
-        />
-      </motion.li>
-    ))}
+    <motion.li variants={variants2} whileTap={{ scale: 0.95 }}>
+      <Accordion defaultState options={uiOptions} title="UI elements" />
+    </motion.li>
+    <motion.li variants={variants2} whileTap={{ scale: 0.95 }}>
+      <Accordion defaultState options={formOptions} title="Forms" />
+    </motion.li>
   </motion.ul>
 );
-
-export const MenuItem = ({ i }: any) => {
-  const style = { border: `2px solid ${colors[i]}` };
-  return (
-    <motion.li
-      variants={variants2}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}>
-      <div className="icon-placeholder" style={style} />
-      <div className="text-placeholder" style={style} />
-    </motion.li>
-  );
-};

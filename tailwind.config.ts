@@ -10,6 +10,7 @@ const config: Config = {
   theme: {
     colors: {
       foreground: "var(--foreground)",
+      "foreground-shade": "var(--foreground-shade)",
       background: "var(--background)",
       "background-secondary": "var(--background-secondary)",
       "background-tertiary": "var(--background-tertiary)",
@@ -24,7 +25,9 @@ const config: Config = {
       "custom-shadow": "var(--custom-shadow)",
       "form-active": "#00C6C2",
       glass: "var(--glassBg)",
+      "glass-invert": "var(--glassBgInvert)",
       "glass-tint": "var(--glassBgTint)",
+      transparent: "transparent",
     },
     extend: {
       backgroundImage: {

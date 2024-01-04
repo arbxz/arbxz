@@ -1,148 +1,73 @@
-import Image from "next/image";
+import { faEye } from "@fortawesome/free-regular-svg-icons";
+import { faChartLine, faDollar } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import Card from "@/components/shared/Card";
+import Chat from "@/components/shared/Chat";
 import Alert from "@/components/ui-elements/Alert";
-import Box from "@/components/ui-elements/Box";
-import Button from "@/components/ui-elements/Button";
-import Input from "@/components/ui-elements/Input";
 
 const PageContent = () => {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 no-scrollbar overflow-y-auto pb-4">
       <Alert />
-      <div className="flex flex-col md:flex-row gap-4">
-        <Box>
-          <h1 className="text-4xl font-bold">Welcome !</h1>
-          <br />
-          <h2 className="text-2xl font-bold">
-            This ia a work in progress I will be constantly adding elements to
-            this poject every week or so!
-          </h2>
-          <br />
-          <h3 className="inline-block bg-background-secondary p-2 shadow-sm rounded">
-            Be sure to check it out.
-          </h3>
-        </Box>
 
-        <Box>
-          <div className="flex flex-col gap-4">
-            <div className="flex items-center justify-start gap-4 p-2 rounded shadow-sm cursor-pointer duration-300 transition-all hover:bg-background-secondary hover:translate-x-1">
-              <div className="relative">
-                <Image
-                  className="rounded-full shadow"
-                  src="/images/arbaaz-picture.jpg"
-                  width={50}
-                  height={50}
-                  alt="user image"
-                />
-                <span className="absolute top-0 -left-2 h-6 w-6 flex items-center justify-center text-center text-white bg-active text-xs rounded-full">
-                  25
+      <div className="flex gap-4">
+        <div className="flex flex-col gap-4">
+          <div className="flex gap-4">
+            <Card glass styles="bg-foreground w-auto">
+              <div className="flex flex-col gap-1 p-4 text-background">
+                <span className="w-8 h-8 flex items-center justify-center text-center bg-background glass text-foreground shadow-sm rounded-full">
+                  <FontAwesomeIcon className="text-sm" icon={faEye} />
                 </span>
+                <span className="flex items-center text-2xl">+ 15%</span>
+                <span className="text-sm">Views this month</span>
+                <span className="text-xs text-success ml-auto">+ 15</span>
               </div>
-
-              <div className="flex flex-col">
-                <span className="font-semibold">Arbaaz Mowlabucus</span>
-                <span className="text-sm">
-                  Hey can you check out this graph ?
+            </Card>
+            <Card glass styles="bg-foreground w-auto">
+              <div className="flex flex-col gap-1 p-4 text-background">
+                <span className="w-8 h-8 flex items-center justify-center text-center bg-background glass text-foreground shadow-sm rounded-full">
+                  <FontAwesomeIcon className="text-sm" icon={faDollar} />
                 </span>
+                <span className="flex items-center text-2xl">$ 2799</span>
+                <span className="text-sm">Net Income this month</span>
+                <span className="text-xs text-success ml-auto">+ $ 350</span>
               </div>
-
-              <span className="text-sm font-light self-end">19h:30</span>
-            </div>
-            <div className="flex items-center justify-start gap-4 p-2 rounded shadow-sm cursor-pointer duration-300 transition-all hover:bg-background-secondary hover:translate-x-1">
-              <div className="relative">
-                <Image
-                  className="rounded-full shadow"
-                  src="/images/arbaaz-picture.jpg"
-                  width={50}
-                  height={50}
-                  alt="user image"
-                />
-                <span className="absolute top-0 -left-2 h-6 w-6 flex items-center justify-center text-center text-white bg-active text-xs rounded-full">
-                  25
+            </Card>
+            <Card glass styles="bg-foreground w-auto">
+              <div className="flex flex-col gap-1 p-4 text-background">
+                <span className="w-8 h-8 flex items-center justify-center text-center bg-background glass text-foreground shadow-sm rounded-full">
+                  <FontAwesomeIcon className="text-sm" icon={faChartLine} />
                 </span>
+                <span className="flex items-center text-2xl">$ 350.00</span>
+                <span className="text-sm">Share prices</span>
+                <span className="text-xs text-danger ml-auto">- 5%</span>
               </div>
-
-              <div className="flex flex-col">
-                <span className="font-semibold">Arbaaz Mowlabucus</span>
-                <span className="text-sm">
-                  Hey can you check out this graph ?
-                </span>
-              </div>
-
-              <span className="text-sm font-light self-end">19h:30</span>
-            </div>
-            <div className="flex items-center justify-start gap-4 p-2 rounded shadow-sm cursor-pointer duration-300 transition-all hover:bg-background-secondary hover:translate-x-1">
-              <div className="relative">
-                <Image
-                  className="rounded-full shadow"
-                  src="/images/arbaaz-picture.jpg"
-                  width={50}
-                  height={50}
-                  alt="user image"
-                />
-                <span className="absolute top-0 -left-2 h-6 w-6 flex items-center justify-center text-center text-white bg-active text-xs rounded-full">
-                  25
-                </span>
-              </div>
-
-              <div className="flex flex-col">
-                <span className="font-semibold">Arbaaz Mowlabucus</span>
-                <span className="text-sm">
-                  Hey can you check out this graph ?
-                </span>
-              </div>
-
-              <span className="text-sm font-light self-end">19h:30</span>
-            </div>
+            </Card>
           </div>
-        </Box>
-      </div>
-
-      <Box>
-        <div className="flex flex-col gap-8">
-          <div className="flex flex-wrap gap-2">
-            <Button intent="primary" text="Create" /> <br /> <br />
-            <Button intent="secondary" text="Update" /> <br /> <br />
-            <Button intent="danger" text="Delete" /> <br /> <br />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            <Input
-              id="textID"
-              name="Textfield"
-              label="Text field"
-              type="text"
-            />
-            <Input
-              id="emailID"
-              name="Email field"
-              label="Email field"
-              value="badEmail"
-              type="email"
-              errorMessage="Enter a valid email address."
-            />
-            <Input
-              id="searchID"
-              name="Search field"
-              label="Search field"
-              type="search"
-            />
-            <Input
-              id="passwordID"
-              name="Password field"
-              label="Password field"
-              type="password"
-              value="1234"
-            />
-            <Input
-              id="numberID"
-              name="Number field"
-              label="Number field"
-              type="number"
-            />
-            <Input id="urlID" name="URL field" label="URL field" type="url" />
-          </div>
+          <Card styles="p-4 w-full" glass>
+            <h1 className="text-4xl font-bold gradient-text">Welcome !</h1>
+            <br />
+            <h2 className="text-2xl font-semibold">
+              This ia a work in progress I will be constantly adding elements to
+              this poject every week or so!
+            </h2>
+            <br />
+            <h3 className="inline-block bg-background p-4 shadow rounded-xl">
+              Be sure to check it out.
+            </h3>
+          </Card>
         </div>
-      </Box>
+        <Card glass styles="w-full p-4">
+          <div className="flex flex-col gap-4">
+            <h3>Inbox</h3>
+            <Chat />
+            <Chat />
+            <Chat />
+            <Chat />
+          </div>
+        </Card>
+      </div>
     </div>
   );
 };

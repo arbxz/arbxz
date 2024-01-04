@@ -1,7 +1,5 @@
 import { Metadata } from "next";
 
-import PageContent from "./pageContent";
-
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.arbxz.com"),
   title: "arbxz | Admin Dashboard",
@@ -39,11 +37,7 @@ export const metadata: Metadata = {
 };
 
 function Dashboard() {
-  return (
-    <div className="w-full">
-      <PageContent />
-    </div>
-  );
+  return <div className="w-full">Test test</div>;
 }
 
 export default Dashboard;

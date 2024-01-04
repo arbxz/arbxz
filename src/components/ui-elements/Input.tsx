@@ -1,7 +1,7 @@
 import { cva, VariantProps } from "class-variance-authority";
 
 const inputStyles = cva(
-  "peer focus:outline-0 invalid:border-danger block w-full rounded-md border-2 border-foreground bg-background px-4 py-2 focus:border-active duration-200 transition-colors",
+  "peer focus:outline-0 invalid:border-danger w-full rounded-md border-[1px] border-foreground-shade bg-transparent px-4 py-2 focus:border-active duration-200 transition-colors",
   {
     variants: {
       intent: {
@@ -29,7 +29,7 @@ interface InputProps extends VariantProps<typeof inputStyles> {
   errorMessage?: string;
 }
 
-export default function Button({
+export default function Input({
   intent,
   id,
   value,
@@ -40,7 +40,7 @@ export default function Button({
   ...props
 }: InputProps) {
   return (
-    <fieldset className="relative flex-1">
+    <fieldset className="relative flex-1 w-full">
       <input
         placeholder={" "}
         id={id}
@@ -50,7 +50,7 @@ export default function Button({
         className={inputStyles({ intent })}
         {...props}></input>
       <span className="absolute -top-[1px] left-3 h-[4px] w-auto scale-x-[0.001] peer-focus:scale-x-100 peer-[:not(:placeholder-shown)]:scale-x-100 bg-background duration-200 transition-transform">
-        <span className="opacity-0">{label}</span>
+        <span className="opacity-0">{label + "x"}</span>
       </span>
       <label
         className="absolute w-fit top-[22px] -translate-y-1/2 left-2 text-sm px-2 duration-200 transition-transform peer-focus:-translate-y-[165%] peer-invalid:text-danger peer-focus:text-active peer-[:not(:placeholder-shown)]:-translate-y-[165%] cursor-text"

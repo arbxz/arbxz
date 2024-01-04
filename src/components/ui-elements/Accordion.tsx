@@ -1,10 +1,11 @@
 import { useState } from "react";
 
 import { motion, Variants } from "framer-motion";
+import Link from "next/link";
 
 interface AccordionProps {
   title: React.ReactNode | string;
-  options: { label: string; action: () => void }[];
+  options: { label: string; href: string }[];
   defaultState?: boolean;
 }
 
@@ -72,14 +73,12 @@ const Accordion = ({
           },
         }}>
         {options.map((option, index) => (
-          <motion.li
-            key={index}
-            className="text-foreground py-2 px-4 hover:bg-accent duration-300 transition-colors cursor-pointer"
-            variants={itemVariants}
-            onClick={() => {
-              option.action;
-            }}>
-            {option.label}
+          <motion.li key={index} variants={itemVariants}>
+            <Link
+              className="block w-full text-foreground py-2 px-4 hover:bg-accent duration-300 transition-colors cursor-pointer"
+              href={option.href}>
+              {option.label}
+            </Link>
           </motion.li>
         ))}
       </motion.ul>

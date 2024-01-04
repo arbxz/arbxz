@@ -55,13 +55,13 @@ const MainBanner = () => {
               <div className="relative mainSection flex flex-col justify-center p-4">
                 <div className="highlight self-start">Hello visitor,</div>
                 {introText.map((text, index) => (
-                  <div className="self-start highlight" key={index}>
+                  <span className="self-start highlight" key={index}>
                     {text}
-                  </div>
+                  </span>
                 ))}
                 <div className="md:text-6xl text-4xl highlight font-semibold self-start">
                   <TextTransition springConfig={presets.wobbly}>
-                    {skills[index % skills.length]}
+                    <span>{skills[index % skills.length]}</span>
                   </TextTransition>
                 </div>
                 <div className="highlight self-start">

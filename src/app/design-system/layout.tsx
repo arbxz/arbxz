@@ -1,6 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
 
+import Image from "next/image";
+
 import Aside from "@/components/aside/Aside";
 import AdminNavigation from "@/components/navigation/AdminNavigation";
 import Loader from "@/components/ui-elements/Loader";
@@ -19,11 +21,20 @@ function RootLayout({ children }: { children: React.ReactNode }) {
           <Loader />
         </div>
       ) : (
-        <div className="relative flex flex-col px-4 pt-4 gap-4 min-h-screen h-full">
+        <div className="relative flex flex-col gap-4 min-h-screen h-full">
+          <Image
+            className="fixed md:top-0 lg:-top-5 left-1/2 -translate-x-1/2 -z-0 w-full h-full object-contain"
+            src={"/images/bgProps/blob-haikei.svg"}
+            alt="background prop"
+            width={2000}
+            height={2000}
+          />
           <AdminNavigation />
-          <div className="flex">
+          <div className="fixed w-full gap-4 h-full flex z-0 px-4">
             <Aside />
-            <main className="w-full">{children}</main>
+            <main className="md:pt-24 h-full w-full no-scrollbar overflow-y-auto">
+              {children}
+            </main>
           </div>
         </div>
       )}

@@ -4,7 +4,7 @@ interface BoxProps {
 
 const Box = ({ children }: BoxProps) => {
   return (
-    <div className="relative w-full p-4 bg-background shadow rounded-2xl">
+    <div className="relative w-full p-4 bg-background shadow rounded-2xl glass">
       {children}
     </div>
   );

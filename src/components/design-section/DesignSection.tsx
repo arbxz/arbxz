@@ -34,7 +34,7 @@ const ArtSection = () => {
         />
         <div className="text-center w-full">
           <h2 className="text-4xl md:text-6xl font-semibold">
-            UI/<span className="text-accent">UX.</span>
+            UI/<span className="gradient-text">UX.</span>
           </h2>
           <span className="border border-accent text-sm text-accent rounded-3xl px-4 py-1">
             Figma | Adobe XD
@@ -52,7 +52,7 @@ const ArtSection = () => {
               <motion.div
                 className="flex flex-col gap-4"
                 variants={cardVariants}>
-                <Card glass styles="h-full p-4 md:max-w-md">
+                <Card styles="h-full p-4 md:max-w-md">
                   <div className="text-left text-xl">
                     <span className="block lg:text-6xl text-4xl text-foreground font-bold md:mb-4 mb-2">
                       Need some design work done ?
@@ -99,7 +99,7 @@ const ArtSection = () => {
               </motion.div>
             </motion.div>
 
-            <Card styles="p-4 flex flex-col gap-4 glass justify-center">
+            <Card styles="p-4 flex flex-col gap-4 glass justify-center" glass>
               <Card styles="w-[120px] h-[120px] mx-auto p-4 flex items-center justify-center shadow-inner">
                 <Image
                   className="p-4"

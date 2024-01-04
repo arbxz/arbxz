@@ -43,8 +43,8 @@ const App = () => {
             </div>
           </Container>
         </motion.div>
-        <ProjectSection />
         <ArtSection />
+        <ProjectSection />
         <Modal isOpen={isModalOpen}>{modalContent}</Modal>
       </main>
       <Footer />

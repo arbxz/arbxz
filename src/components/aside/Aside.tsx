@@ -14,7 +14,7 @@ const Aside = () => {
   const { height } = useDimensions(containerRef);
 
   return (
-    <aside className="relative md:flex hidden flex-col gap-4 p-4 md:w-72 lg:w-96 no-scrollbar overflow-y-auto">
+    <aside className="relative md:pt-24 md:flex hidden flex-col gap-4 md:w-72 lg:w-96 no-scrollbar overflow-y-auto">
       <motion.nav
         initial={true}
         animate={isAsideOpen ? "open" : "closed"}

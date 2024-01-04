@@ -29,7 +29,7 @@ const ProjectSection = () => {
     {
       src: adminImg,
       url: "https://www.arbxz.com/design-system",
-      name: "Arbxz | Admin Dashboard",
+      name: "Admin Dashboard",
       description: "An admin dashboard created using tailwind",
       tech: "NextJS",
     },
@@ -64,7 +64,7 @@ const ProjectSection = () => {
         <Link href={project.url} target="_blank" className="cursor-pointer">
           <div className="w-2/5 h-auto sm:w-64 sm:h-44">
             <Image
-              className="object-cover w-full h-full"
+              className="object-contain object-top w-full h-full"
               src={project.src}
               height={256}
               width={256}
@@ -91,11 +91,11 @@ const ProjectSection = () => {
   return (
     <Container>
       <div id="projects" className="w-full">
-        <div className="flex flex-col md:flex-row items-baseline gap-4 text-left mb-4">
-          <h2 className="font-semibold text-accent text-4xl md:text-6xl">
-            <span className="text-foreground">Recent</span> projects.
+        <div className="flex flex-col justify-center items-center gap-4 text-center mb-4">
+          <h2 className="font-semibold text-4xl md:text-6xl">
+            Recent <span className="gradient-text">projects.</span>
           </h2>
-          <span className="font-semibold text-foreground text-xl md:text-xl">
+          <span className="font-semibold text-foreground text-xl md:text-md">
             Check out what Ive been working on !
           </span>
         </div>
