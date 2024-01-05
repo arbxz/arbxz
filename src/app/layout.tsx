@@ -1,3 +1,4 @@
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { League_Spartan } from "next/font/google";
 
@@ -56,6 +57,7 @@ function RootLayout({ children }: { children: React.ReactNode }) {
       </head>
       <body className={inter.className}>
         <Providers>{children}</Providers>
+        <SpeedInsights />
       </body>
     </html>
   );
