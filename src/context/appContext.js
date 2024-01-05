@@ -5,7 +5,7 @@ const Context = createContext();
 
 export const AppProviderContext = ({ children }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isAsideOpen, setIsAsideOpen] = useState(true);
+  const [isAsideOpen, setIsAsideOpen] = useState(false);
   const [modalContent, setModalContent] = useState();
 
   return (

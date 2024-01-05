@@ -11,10 +11,10 @@ const PageContent = () => {
     <div className="flex flex-col gap-4 no-scrollbar overflow-y-auto pb-4">
       <Alert />
 
-      <div className="flex gap-4">
+      <div className="flex flex-col lg:flex-row gap-4">
         <div className="flex flex-col gap-4">
           <div className="flex gap-4">
-            <Card glass styles="bg-foreground w-auto">
+            <Card glass styles="bg-foreground flex-grow w-full">
               <div className="flex flex-col gap-1 p-4 text-background">
                 <span className="w-8 h-8 flex items-center justify-center text-center bg-background glass text-foreground shadow-sm rounded-full">
                   <FontAwesomeIcon className="text-sm" icon={faEye} />
@@ -24,17 +24,17 @@ const PageContent = () => {
                 <span className="text-xs text-success ml-auto">+ 15</span>
               </div>
             </Card>
-            <Card glass styles="bg-foreground w-auto">
+            <Card glass styles="bg-foreground flex-grow w-full">
               <div className="flex flex-col gap-1 p-4 text-background">
                 <span className="w-8 h-8 flex items-center justify-center text-center bg-background glass text-foreground shadow-sm rounded-full">
                   <FontAwesomeIcon className="text-sm" icon={faDollar} />
                 </span>
                 <span className="flex items-center text-2xl">$ 2799</span>
-                <span className="text-sm">Net Income this month</span>
+                <span className="text-sm">Net Income</span>
                 <span className="text-xs text-success ml-auto">+ $ 350</span>
               </div>
             </Card>
-            <Card glass styles="bg-foreground w-auto">
+            <Card glass styles="bg-foreground flex-grow w-full">
               <div className="flex flex-col gap-1 p-4 text-background">
                 <span className="w-8 h-8 flex items-center justify-center text-center bg-background glass text-foreground shadow-sm rounded-full">
                   <FontAwesomeIcon className="text-sm" icon={faChartLine} />

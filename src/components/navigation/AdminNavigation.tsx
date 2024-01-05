@@ -23,8 +23,8 @@ const AdminNavigation = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full p-4 z-10">
-      <nav className="glass relative flex gap-2 md:gap-4 w-full justify-between items-center rounded-full text-foreground shadow shadow-custom-shadow h-auto py-2 px-4 transition-all ease-in-out duration-300 z-50">
+    <header className="md:fixed top-0 left-0 w-full md:p-4 z-10">
+      <nav className="glass relative flex gap-2 md:gap-4 w-full justify-between items-center md:rounded-full text-foreground shadow shadow-custom-shadow h-auto py-2 px-4 transition-all ease-in-out duration-300 z-50">
         <motion.nav
           initial={isAsideOpen}
           animate={isAsideOpen ? "open" : "closed"}
@@ -34,8 +34,13 @@ const AdminNavigation = () => {
           <MenuToggle toggle={() => setIsAsideOpen(!isAsideOpen)} />
         </motion.nav>
 
-        <Link className="flex items-center text-lg gap-2 mr-auto" href="/">
-          <span className="gradient-text">Arbxz </span>| Admin Template
+        <Link
+          className="flex items-center text-lg gap-2 mr-auto"
+          href="/design-system">
+          <span className="gradient-text font-semibold md:font-normal">
+            Arbxz{" "}
+          </span>
+          <span className="hidden md:inline-block">| Admin Template</span>
         </Link>
 
         <Dropdown

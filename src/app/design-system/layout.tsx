@@ -6,9 +6,11 @@ import Image from "next/image";
 import Aside from "@/components/aside/Aside";
 import AdminNavigation from "@/components/navigation/AdminNavigation";
 import Loader from "@/components/ui-elements/Loader";
+import { useAppContext } from "@/context/appContext";
 
 function RootLayout({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState<boolean>(true);
+  const { isAsideOpen } = useAppContext();
 
   useEffect(() => {
     setTimeout(() => setLoading(false), 1000);
@@ -30,9 +32,14 @@ function RootLayout({ children }: { children: React.ReactNode }) {
             height={2000}
           />
           <AdminNavigation />
-          <div className="fixed w-full gap-4 h-full flex z-0 px-4">
+          <div className="md:fixed w-full md:gap-4 h-full flex z-0 px-4">
             <Aside />
-            <main className="md:pt-24 h-full w-full no-scrollbar overflow-y-auto">
+            <main
+              className={`${
+                isAsideOpen
+                  ? "md:relative fixed left-0 px-4 md:px-0"
+                  : "relative"
+              } md:pt-24 h-full w-full no-scrollbar overflow-y-auto`}>
               {children}
             </main>
           </div>

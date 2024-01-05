@@ -14,20 +14,22 @@ const Aside = () => {
   const { height } = useDimensions(containerRef);
 
   return (
-    <aside className="relative md:pt-24 md:flex hidden flex-col gap-4 md:w-72 lg:w-96 no-scrollbar overflow-y-auto">
-      <motion.nav
-        initial={true}
-        animate={isAsideOpen ? "open" : "closed"}
-        custom={height}
-        ref={containerRef}
-        className="relative flex flex-col gap-4">
-        <motion.div
-          className="absolute top-0 left-0 bottom-0 w-full"
-          variants={sidebar}
-        />
+    <motion.nav
+      initial={true}
+      animate={isAsideOpen ? "open" : "closed"}
+      custom={height}
+      ref={containerRef}>
+      <motion.aside
+        className={`
+        ${
+          isAsideOpen
+            ? "w-full md:w-72 md:translate-x-0"
+            : "md:w-0 md:-translate-x-80"
+        } overflow-hidden origin-top-left transition-all duration-300 fixed md:relative top-0 left-0 bg-background-secondary p-4 md:p-0 md:bg-transparent w-full h-screen md:h-full pt-20 md:pt-24 md:flex flex-col gap-4 no-scrollbar overflow-y-auto z-50`}
+        variants={sidebar}>
         <AsideNavigation />
-      </motion.nav>
-    </aside>
+      </motion.aside>
+    </motion.nav>
   );
 };
 

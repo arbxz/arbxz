@@ -50,7 +50,7 @@ export const slideUpVariants: Variants = {
 
 export const sidebar = {
   open: (height = 1000) => ({
-    clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
+    clipPath: `circle(${height * 2 + 200}px at 15px 15px)`,
     transition: {
       type: "spring",
       stiffness: 20,
@@ -58,9 +58,9 @@ export const sidebar = {
     },
   }),
   closed: {
-    clipPath: "circle(30px at 40px 40px)",
+    clipPath: "circle(30px at 15px 15px)",
     transition: {
-      delay: 0.5,
+      delay: 0.2,
       type: "spring",
       stiffness: 400,
       damping: 40,
