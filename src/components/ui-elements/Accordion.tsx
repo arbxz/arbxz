@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { motion, Variants } from "framer-motion";
+import { AnimatePresence, motion, Variants } from "framer-motion";
 import Link from "next/link";
 
 interface AccordionProps {
@@ -48,40 +48,38 @@ const Accordion = ({
         </motion.div>
       </motion.button>
 
-      <motion.ul
-        className="w-full flex flex-col translate-y-1 gap-2 bg-background shadow rounded-md"
-        variants={{
-          open: {
-            clipPath: "inset(0% 0% 0% 0% round 6px)",
-            height: "auto",
-            transition: {
-              type: "spring",
-              bounce: 0,
-              duration: 0.7,
-              delayChildren: 0.3,
-              staggerChildren: 0.05,
-            },
-          },
-          closed: {
-            clipPath: "inset(10% 50% 90% 50% round 6px)",
-            height: 0,
-            transition: {
-              type: "spring",
-              bounce: 0,
-              duration: 0.3,
-            },
-          },
-        }}>
-        {options.map((option, index) => (
-          <motion.li key={index} variants={itemVariants}>
-            <Link
-              className="block w-full text-foreground py-2 px-4 hover:bg-accent duration-300 transition-colors cursor-pointer"
-              href={option.href}>
-              {option.label}
-            </Link>
-          </motion.li>
-        ))}
-      </motion.ul>
+      <AnimatePresence initial={false}>
+        {isOpen && (
+          <motion.ul
+            className="flex flex-col translate-y-1 bg-background rounded-md"
+            key="content"
+            initial="collapsed"
+            animate="open"
+            exit="collapsed"
+            variants={{
+              open: {
+                opacity: 1,
+                height: "auto",
+                clipPath: "inset(0% 0% 0% 0% round 6px)",
+              },
+              collapsed: {
+                opacity: 0,
+                height: 0,
+                clipPath: "inset(10% 50% 90% 50% round 6px)",
+              },
+            }}>
+            {options.map((option, index) => (
+              <motion.li key={index} variants={itemVariants}>
+                <Link
+                  className="block w-full text-foreground py-2 px-4 hover:bg-accent hover:text-white duration-300 transition-colors cursor-pointer"
+                  href={option.href}>
+                  {option.label}
+                </Link>
+              </motion.li>
+            ))}
+          </motion.ul>
+        )}
+      </AnimatePresence>
     </motion.div>
   );
 };

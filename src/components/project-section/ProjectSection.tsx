@@ -69,7 +69,6 @@ const ProjectSection = () => {
               height={256}
               width={256}
               alt={project.name}
-              objectPosition="top center"
               placeholder="blur"
             />
           </div>

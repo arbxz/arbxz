@@ -4,23 +4,10 @@ import PageContent from "./pageContent";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.arbxz.com"),
-  title: "arbxz | Admin Dashboard",
+  title: "Admin Dashboard | Arbxz",
   description: "Admin dashboard created from NextJs",
   authors: {
     name: "Arbaaz Mowlabucus",
-  },
-  openGraph: {
-    type: "website",
-    locale: "en_IE",
-    url: "https://www.arbxz.com/design-system",
-    title: "Arbaaz Mowlabucus | Frontend Engineer",
-    description:
-      "Check out my portfolio and professional skills I gathered throughout my career.",
-    images: {
-      url: "/public/logo-large.webp",
-      alt: "Logo of my brand",
-    },
-    siteName: "Arbaz Mowlabucus | Frontend Engineer",
   },
   keywords: [
     "Arbaaz Mowlabucus",
@@ -34,8 +21,6 @@ export const metadata: Metadata = {
     "UI/UX",
     "Portfolio",
   ],
-  icons: "/public/logo-large.webp",
-  robots: "index, follow",
 };
 
 function Dashboard() {
