@@ -19,14 +19,14 @@ const App = () => {
   return (
     <div
       className={`${
-        isModalOpen && "fixed h-full w-full lg:pr-4"
+        isModalOpen && "fixed h-full w-full"
       } overflow-hidden bg-background-secondary`}>
       <Navigation />
-      <main className="relative p-4 text-base text-foreground flex gap-4 flex-col items-center justify-start select-none">
+      <main className="relative p-4 text-base text-foreground flex gap-4 md:gap-8 flex-col items-center justify-center select-none">
         <MainBanner />
         <motion.div
           id="skils"
-          className="w-full"
+          className="w-auto"
           initial="offscreen"
           whileInView="onscreen"
           viewport={{ once: true, amount: 0.8 }}>
@@ -43,8 +43,8 @@ const App = () => {
             </div>
           </Container>
         </motion.div>
-        <ArtSection />
         <ProjectSection />
+        <ArtSection />
         <Modal isOpen={isModalOpen}>{modalContent}</Modal>
       </main>
       <Footer />

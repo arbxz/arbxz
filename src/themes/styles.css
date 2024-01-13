@@ -5,15 +5,16 @@
 :root {
   --foreground: #ffffff;
   --foreground-shade: rgba(255, 255, 255, 0.5);
-  --background: #272730;
-  --background-secondary: #131315;
+  --background: rgb(39, 39, 48);
+  --background-secondary: rgb(19, 19, 30);
   --background-tertiary: #676769;
-  --accent: hsl(15, 85%, 48%);
+  --accent: rgb(226, 70, 18);
   --body: #0d0d0d;
   --glassBg: rgba(27, 27, 37, 0.5);
   --glassBgInvert: rgba(255, 255, 255, 0.5);
   --glassBgTint: rgba(27, 27, 37, 0.25);
   --custom-shadow: rgba(4, 2, 2, 0.6);
+  --text-active: #03dac6;
 }
 
 [data-theme="light"] {
@@ -28,6 +29,7 @@
   --glassBgInvert: rgba(27, 27, 37, 0.5);
   --glassBgTint: rgba(255, 255, 255, 0.25);
   --custom-shadow: rgb(0 0 0 / 0.1);
+  --text-active: #0071e3;
 }
 
 html {
@@ -43,43 +45,13 @@ html {
     scrollbar-width: none;
   }
   .gradient-text {
-    background-image: linear-gradient(60deg, #ff0066, var(--accent));
+    background-image: linear-gradient(90deg, var(--accent), #ff0066);
     background-clip: text;
     color: transparent;
   }
 }
 
 @layer components {
-  footer {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 20px;
-    background-image: radial-gradient(
-      rgba(0, 0, 0, 0) 1px,
-      var(--background) 1px
-    );
-    background-size: 4px 4px;
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-    -moz-backdrop-filter: blur(3px);
-    font-size: 14px;
-    line-height: 14px;
-    z-index: 99;
-  }
-
-  footer::before {
-    display: block;
-    content: "";
-    position: absolute;
-    top: -1px;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: var(--accent);
-    opacity: 0.2;
-  }
-
   .spinner {
     position: absolute;
     top: calc(50% - 30px);

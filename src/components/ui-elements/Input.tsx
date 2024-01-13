@@ -1,38 +1,13 @@
-import { cva, VariantProps } from "class-variance-authority";
-
-const inputStyles = cva(
-  "peer focus:outline-0 invalid:border-danger w-full rounded-md border-[1px] border-foreground-shade bg-transparent px-4 py-2 focus:border-active duration-200 transition-colors",
-  {
-    variants: {
-      intent: {
-        primary: "",
-        secondary:
-          "bg-foreground hover:bg-background hover:text-foreground text-background border-2 active:border-foreground",
-        tertiary:
-          "bg-white text-accent hover:bg-accent hover:text-white border-2 border-accent active:border-accent",
-        danger:
-          "bg-danger text-white hover:bg-white hover:text-danger border-2 border-danger active:border-danger",
-      },
-      defaultVariants: {
-        intent: "primary",
-      },
-    },
-  }
-);
-
-interface InputProps extends VariantProps<typeof inputStyles> {
+interface InputProps {
   id: string;
   name: string;
-  value?: any;
   type: string;
   label: string;
   errorMessage?: string;
 }
 
 export default function Input({
-  intent,
   id,
-  value,
   name,
   type,
   label,
@@ -46,9 +21,9 @@ export default function Input({
         id={id}
         name={name}
         type={type}
-        value={value || null}
-        className={inputStyles({ intent })}
-        {...props}></input>
+        className="peer focus:outline-0 invalid:border-danger w-full rounded-md border-[1px] border-foreground-shade bg-transparent px-4 py-2 focus:border-active duration-200 transition-colors"
+        {...props}
+      />
       <span className="absolute -top-[1px] left-3 h-[4px] w-auto scale-x-[0.001] peer-focus:scale-x-100 peer-[:not(:placeholder-shown)]:scale-x-100 bg-background duration-200 transition-transform">
         <span className="opacity-0">{label + "x"}</span>
       </span>

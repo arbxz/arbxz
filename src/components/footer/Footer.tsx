@@ -1,9 +1,7 @@
 const Footer = () => {
   return (
-    <footer className="footer w-full p-4">
-      <div className="font-bold text-left font-mono">
-        © 2023 Arbaaz Mowlabucus
-      </div>
+    <footer className="mt-8 text-center py-8 px-4 bg-background">
+      © 2024 Arbaaz Mowlabucus
     </footer>
   );
 };

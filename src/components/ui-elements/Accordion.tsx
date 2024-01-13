@@ -31,7 +31,7 @@ const Accordion = ({
       animate={isOpen ? "open" : "closed"}
       className="relative">
       <motion.button
-        className="flex items-center justify-between gap-4 py-2 px-4 cursor-pointer w-full rounded-md bg-background"
+        className="flex items-center justify-between gap-4 py-2 px-4 cursor-pointer w-full rounded-md bg-form-active text-white"
         whileTap={{ scale: 0.95 }}
         onClick={() => setIsOpen(!isOpen)}>
         {title}
@@ -43,7 +43,7 @@ const Accordion = ({
           transition={{ duration: 0.2 }}
           style={{ originY: 0.55 }}>
           <svg width="15" height="15" viewBox="0 0 20 20">
-            <path className="fill-foreground" d="M0 7 L 20 7 L 10 16" />
+            <path className="fill-white" d="M0 7 L 20 7 L 10 16" />
           </svg>
         </motion.div>
       </motion.button>
@@ -71,7 +71,7 @@ const Accordion = ({
             {options.map((option, index) => (
               <motion.li key={index} variants={itemVariants}>
                 <Link
-                  className="block w-full text-foreground py-2 px-4 hover:bg-accent hover:text-white duration-300 transition-colors cursor-pointer"
+                  className="block w-full text-foreground py-2 px-4 hover:bg-form-active hover:text-white duration-300 transition-colors cursor-pointer"
                   href={option.href}>
                   {option.label}
                 </Link>

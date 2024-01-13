@@ -90,13 +90,11 @@ const ProjectSection = () => {
   return (
     <Container>
       <div id="projects" className="w-full">
-        <div className="flex flex-col justify-center items-center gap-4 text-center mb-4">
-          <h2 className="font-semibold text-4xl md:text-6xl">
-            Recent <span className="gradient-text">projects.</span>
-          </h2>
-          <span className="font-semibold text-foreground text-xl md:text-md">
-            Check out what Ive been working on !
+        <div className="flex flex-col justify-center items-center gap-4 text-center mb-8 lg:mb-16">
+          <span className="relative border border-accent text-sm text-accent rounded-3xl px-4 py-1 before:content-[''] before:h-full before:w-full before:absolute hover:text-white before:top-0 before:-left-40 hover:before:left-0 before:-z-0 overflow-hidden before:duration-400 before:transition-all  before:bg-accent">
+            <span className="relative z-10">View my best work</span>
           </span>
+          <h2 className="font-semibold text-4xl md:text-6xl">projects.</h2>
         </div>
 
         <motion.div

@@ -13,7 +13,9 @@ const uiOptions = [
 const formOptions = [
   { label: "sign in.", href: "/design-system/sign-in" },
   { label: "sign up", href: "/design-system/sign-up" },
-  { label: "product form.", href: "/design-system/" },
+  { label: "admin customization.", href: "/design-admin/" },
+  { label: "product form.", href: "/add-product/" },
+  { label: "category form.", href: "/add-category/" },
 ];
 
 const variants = {

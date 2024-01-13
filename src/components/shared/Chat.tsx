@@ -11,7 +11,7 @@ const Chat = () => {
           height={50}
           alt="user image"
         />
-        <span className="absolute top-0 -left-2 h-6 w-6 flex items-center justify-center text-center text-white bg-active text-xs rounded-full">
+        <span className="absolute top-0 -left-2 h-6 w-6 flex items-center justify-center text-center text-white bg-form-active text-xs rounded-full">
           25
         </span>
       </div>

@@ -1,61 +1,54 @@
-import { Metadata } from "next";
+import {
+  faBolt,
+  faExclamationCircle,
+  faWarning,
+} from "@fortawesome/free-solid-svg-icons";
 
+import Alert from "@/components/ui-elements/Alert";
 import Box from "@/components/ui-elements/Box";
 import Button from "@/components/ui-elements/Button";
+import Checkbox from "@/components/ui-elements/Checkbox";
+import FileUpload from "@/components/ui-elements/FileUpload";
 import Input from "@/components/ui-elements/Input";
-
-export const metadata: Metadata = {
-  metadataBase: new URL("https://www.arbxz.com"),
-  title: "arbxz | Admin Dashboard",
-  description: "Admin dashboard created from NextJs",
-  authors: {
-    name: "Arbaaz Mowlabucus",
-  },
-  openGraph: {
-    type: "website",
-    locale: "en_IE",
-    url: "https://www.arbxz.com/design-system",
-    title: "Arbaaz Mowlabucus | Frontend Engineer",
-    description:
-      "Check out my portfolio and professional skills I gathered throughout my career.",
-    images: {
-      url: "/public/logo-large.webp",
-      alt: "Logo of my brand",
-    },
-    siteName: "Arbaz Mowlabucus | Frontend Engineer",
-  },
-  keywords: [
-    "Arbaaz Mowlabucus",
-    "Frontend engineer",
-    "ReactJs",
-    "NextJs",
-    "JavaScript",
-    "Web developer",
-    "Front-end",
-    "developer",
-    "UI/UX",
-    "Portfolio",
-  ],
-  icons: "/public/logo-large.webp",
-  robots: "index, follow",
-};
+import Radio from "@/components/ui-elements/Radio";
+import TextArea from "@/components/ui-elements/TextArea";
 
 function formView() {
   return (
     <Box>
       <div className="flex flex-col gap-8">
-        <div className="flex flex-wrap gap-2">
-          <Button intent="primary" text="Create" /> <br /> <br />
-          <Button intent="secondary" text="Update" /> <br /> <br />
-          <Button intent="danger" text="Delete" /> <br /> <br />
+        <span>tag based textarea | searchable dropdown</span>
+
+        <h2 className="text-3xl">Alerts</h2>
+
+        <div className="flex flex-col gap-2">
+          <Alert intent="info" text="This is an info alert" icon={faBolt} />
+          <Alert
+            intent="danger"
+            text="This is an error alert"
+            icon={faExclamationCircle}
+          />
+          <Alert
+            intent="warning"
+            text="This is an warning alert"
+            icon={faWarning}
+          />
         </div>
+
+        <h2 className="text-3xl">Buttons</h2>
+        <div className="flex flex-wrap gap-4">
+          <Button intent="primary" text="Create" />
+          <Button intent="secondary" text="Update" />
+          <Button intent="danger" text="Delete" />
+          <Button intent="secondary" text="Icon Button" icon={faBolt} />
+        </div>
+        <h2 className="text-3xl">Inputs</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           <Input id="textID" name="Textfield" label="Text field" type="text" />
           <Input
             id="emailID"
             name="Email field"
             label="Email field"
-            value="badEmail"
             type="email"
             errorMessage="Enter a valid email address."
           />
@@ -70,7 +63,6 @@ function formView() {
             name="Password field"
             label="Password field"
             type="password"
-            value="1234"
           />
           <Input
             id="numberID"
@@ -79,6 +71,52 @@ function formView() {
             type="number"
           />
           <Input id="urlID" name="URL field" label="URL field" type="url" />
+        </div>
+        <div>
+          <TextArea id="urlID" name="URL field" label="URL field" type="url" />
+        </div>
+        <div className="flex gap-10 md:gap-20">
+          <div>
+            <h2 className="text-3xl mb-4">Radio</h2>
+            <Radio
+              id="basic-plan"
+              label="Basic plan"
+              subLabel="Select our basic plan free for a limited time only"
+              value="basic"
+              ariaLabel="basic-plan-radio"
+            />
+            <Radio
+              id="premium-plan"
+              label="Premium plan"
+              subLabel="Select our premium plan for $9.99"
+              value="premium"
+              ariaLabel="premium-plan-radio"
+            />
+          </div>
+          <div>
+            <h2 className="text-3xl mb-4">Checkbox</h2>
+            <Checkbox
+              id="Write"
+              label="Write access"
+              value="write"
+              ariaLabel="write-access-radio"
+            />
+            <Checkbox
+              id="Read"
+              label="Read only access"
+              value="read"
+              ariaLabel="read-access-radio"
+            />
+            <Checkbox
+              id="Admin"
+              label="Admin access"
+              value="admin"
+              ariaLabel="admin-access-radio"
+            />
+          </div>
+        </div>
+        <div>
+          <FileUpload />
         </div>
       </div>
     </Box>

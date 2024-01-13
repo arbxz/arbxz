@@ -10,9 +10,10 @@ const Navigation = () => {
 
   return (
     <nav className="fixed top-0 glass text-foreground shadow shadow-custom-shadow w-full py-3 md:px-6 px-2 transition-all ease-in-out duration-300 z-50">
-      <div className="flex gap-6 w-full justify-between items-center">
+      <div className="flex gap-6 w-full justify-between items-center md:max-w-6xl md:px-4 mx-auto">
         <Link className="flex items-center text-lg gap-2" href="/">
-          <span className="gradient-text">Arbxz</span> <span>|</span>
+          <span className="gradient-text font-semibold">Arbxz</span>
+          <span>|</span>
           <span className="text-lg">Arbaaz Mowlabucus.</span>
         </Link>
 

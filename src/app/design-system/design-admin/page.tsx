@@ -9,7 +9,20 @@ function SignIn() {
     <div className="flex justify-center w-full">
       <Card glass styles="mx-auto">
         <div className="flex flex-col flex-wrap gap-4 justify-center items-center p-4 md:p-8 w-full">
-          <h1 className="text-4xl font-bold gradient-text">Sign in.</h1>
+          <h1 className="text-4xl font-bold gradient-text">Add product</h1>
+          <span>
+            admin name : textbox
+            <br /> logo : upload
+            <br /> font : string
+            <br /> theme : color picker
+            <br /> description : text input
+            <br /> tagline : text input
+            <br /> contact details : address/phone/email
+            <br /> Language : dropdown
+            <br />
+            opening hours : time input
+          </span>
+
           <Input
             id="EmailID"
             name="User email"
@@ -29,7 +42,7 @@ function SignIn() {
             className="hover:scale-[1.05] duration-300 transition-transform">
             Forgot your password ?
           </Link>
-          <Button intent="secondary" text="sign in." />
+          <Button intent="primary" text="sign in." />
         </div>
       </Card>
     </div>

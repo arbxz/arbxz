@@ -1,44 +1,6 @@
-import { Metadata } from "next";
-
 import Box from "@/components/ui-elements/Box";
 import Button from "@/components/ui-elements/Button";
 import Input from "@/components/ui-elements/Input";
-
-export const metadata: Metadata = {
-  metadataBase: new URL("https://www.arbxz.com"),
-  title: "arbxz | Admin Dashboard",
-  description: "Admin dashboard created from NextJs",
-  authors: {
-    name: "Arbaaz Mowlabucus",
-  },
-  openGraph: {
-    type: "website",
-    locale: "en_IE",
-    url: "https://www.arbxz.com/design-system",
-    title: "Arbaaz Mowlabucus | Frontend Engineer",
-    description:
-      "Check out my portfolio and professional skills I gathered throughout my career.",
-    images: {
-      url: "/public/logo-large.webp",
-      alt: "Logo of my brand",
-    },
-    siteName: "Arbaz Mowlabucus | Frontend Engineer",
-  },
-  keywords: [
-    "Arbaaz Mowlabucus",
-    "Frontend engineer",
-    "ReactJs",
-    "NextJs",
-    "JavaScript",
-    "Web developer",
-    "Front-end",
-    "developer",
-    "UI/UX",
-    "Portfolio",
-  ],
-  icons: "/public/logo-large.webp",
-  robots: "index, follow",
-};
 
 function Dashboard() {
   return (

@@ -20,6 +20,8 @@ export const metadata: Metadata = {
     "developer",
     "UI/UX",
     "Portfolio",
+    "admin",
+    "admin dashboard",
   ],
 };
 

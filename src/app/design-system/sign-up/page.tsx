@@ -1,45 +1,7 @@
-import { Metadata } from "next";
-import Link from "next/link";
-
 import Card from "@/components/shared/Card";
 import Button from "@/components/ui-elements/Button";
+import Checkbox from "@/components/ui-elements/Checkbox";
 import Input from "@/components/ui-elements/Input";
-
-export const metadata: Metadata = {
-  metadataBase: new URL("https://www.arbxz.com"),
-  title: "arbxz | Admin Dashboard",
-  description: "Admin dashboard created from NextJs",
-  authors: {
-    name: "Arbaaz Mowlabucus",
-  },
-  openGraph: {
-    type: "website",
-    locale: "en_IE",
-    url: "https://www.arbxz.com/design-system",
-    title: "Arbaaz Mowlabucus | Frontend Engineer",
-    description:
-      "Check out my portfolio and professional skills I gathered throughout my career.",
-    images: {
-      url: "/public/logo-large.webp",
-      alt: "Logo of my brand",
-    },
-    siteName: "Arbaz Mowlabucus | Frontend Engineer",
-  },
-  keywords: [
-    "Arbaaz Mowlabucus",
-    "Frontend engineer",
-    "ReactJs",
-    "NextJs",
-    "JavaScript",
-    "Web developer",
-    "Front-end",
-    "developer",
-    "UI/UX",
-    "Portfolio",
-  ],
-  icons: "/public/logo-large.webp",
-  robots: "index, follow",
-};
 
 function SignUp() {
   return (
@@ -48,7 +10,7 @@ function SignUp() {
         <div className="flex flex-col flex-wrap gap-4 justify-center items-center p-4 md:p-8 w-full">
           <h1 className="text-4xl font-bold gradient-text">Sign Up.</h1>
           <span>Join the team</span>
-          <div className="flex gap-4 w-full">
+          <div className="flex justify-start gap-4 w-full">
             <Input
               id="NameID"
               name="Name"
@@ -97,7 +59,13 @@ function SignUp() {
             errorMessage="Password can't be different password above."
           />
 
-          <Button intent="primary" text="sign up." />
+          <Checkbox
+            id="newsletter"
+            label="Subscribe to our newsletter"
+            ariaLabel="newsletter checkbox"
+          />
+
+          <Button intent="secondary" text="sign up." />
         </div>
       </Card>
     </div>

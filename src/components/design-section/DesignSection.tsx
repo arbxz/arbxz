@@ -32,13 +32,13 @@ const ArtSection = () => {
           height={500}
           alt="backgrouynd prop"
         />
-        <div className="text-center w-full">
-          <h2 className="text-4xl md:text-6xl font-semibold">
+        <div className="text-center w-full mb-8">
+          <h2 className="text-4xl md:text-6xl font-semibold mb-4">
             UI/<span className="gradient-text">UX.</span>
           </h2>
-          <span className="border border-accent text-sm text-accent rounded-3xl px-4 py-1">
-            Figma | Adobe XD
-          </span>
+          <div className="relative inline-block border border-accent text-sm text-accent rounded-3xl px-4 py-1 before:content-[''] before:h-full before:w-full before:absolute hover:text-white before:top-0 before:-left-40 hover:before:left-0 before:-z-0 overflow-hidden before:duration-400 before:transition-all before:bg-accent">
+            <span className="relative z-10">Figma | Adobe XD</span>
+          </div>
         </div>
 
         <div>
@@ -54,14 +54,14 @@ const ArtSection = () => {
                 variants={cardVariants}>
                 <Card styles="h-full p-4 md:max-w-md">
                   <div className="text-left text-xl">
-                    <span className="block lg:text-6xl text-4xl text-foreground font-bold md:mb-4 mb-2">
+                    <span className="block lg:text-5xl text-4xl text-foreground font-semibold md:mb-4 mb-2">
                       Need some design work done ?
                     </span>
                     <div className="flex flex-col justify-start gap-2 text-lg">
-                      <span className="self-start bg-foreground text-background md:p-2 p-1">
+                      <span className="self-start bg-foreground text-background md:px-2 md:py-1 p-1">
                         Not a problem !
                       </span>
-                      <span className="self-start bg-foreground text-background md:p-2 p-1">
+                      <span className="self-start bg-foreground text-background md:px-2 md:py-1 p-1">
                         I am very experienced in handling tools like
                       </span>
                     </div>

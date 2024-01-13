@@ -9,8 +9,6 @@ import Alert from "@/components/ui-elements/Alert";
 const PageContent = () => {
   return (
     <div className="flex flex-col gap-4 no-scrollbar overflow-y-auto pb-4">
-      <Alert />
-
       <div className="flex flex-col lg:flex-row gap-4">
         <div className="flex flex-col gap-4">
           <div className="flex gap-4">

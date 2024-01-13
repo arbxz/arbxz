@@ -23,9 +23,9 @@ const Aside = () => {
         className={`
         ${
           isAsideOpen
-            ? "w-full md:w-72 md:translate-x-0"
-            : "md:w-0 md:-translate-x-80"
-        } overflow-hidden origin-top-left transition-all duration-300 fixed md:relative top-0 left-0 bg-background-secondary p-4 md:p-0 md:bg-transparent w-full h-screen md:h-full pt-20 md:pt-24 no-scrollbar overflow-y-auto z-50`}
+            ? "w-full lg:w-72 lg:translate-x-0 lg:pr-4"
+            : "lg:w-0 lg:-translate-x-80"
+        } overflow-hidden origin-top-left transition-all duration-300 fixed lg:relative top-0 left-0 bg-background-secondary p-4 lg:p-0 lg:bg-transparent w-full h-screen lg:h-full pt-20 lg:pt-24 no-scrollbar overflow-y-auto z-50`}
         variants={sidebar}>
         <AsideNavigation />
       </motion.aside>
