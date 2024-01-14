@@ -26,8 +26,8 @@ const SkillSection = () => {
   };
   return (
     <Card
-      glass
-      styles="p-4 flex gap-4 flex-col h-full w-full sm:max-w-md w-full">
+      background="glass"
+      styles="p-4 flex gap-4 flex-col h-full w-full sm:max-w-md w-full hover:bg-form-active hover:text-white transition-colors duration-300">
       <h2 className="md:text-6xl text-3xl font-bold">
         Get to
         <br /> know me !

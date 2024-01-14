@@ -15,6 +15,7 @@
   --glassBgTint: rgba(27, 27, 37, 0.25);
   --custom-shadow: rgba(4, 2, 2, 0.6);
   --text-active: #03dac6;
+  --color-shadow: rgba(0, 113, 227, 0.3);
 }
 
 [data-theme="light"] {
@@ -30,6 +31,7 @@
   --glassBgTint: rgba(255, 255, 255, 0.25);
   --custom-shadow: rgb(0 0 0 / 0.1);
   --text-active: #0071e3;
+  --color-shadow: rgb(0 0 0 / 0.1);
 }
 
 html {
@@ -45,9 +47,13 @@ html {
     scrollbar-width: none;
   }
   .gradient-text {
-    background-image: linear-gradient(90deg, var(--accent), #ff0066);
+    background-image: linear-gradient(90deg, #0071e3, #6121c9);
     background-clip: text;
     color: transparent;
+  }
+
+  .gradient {
+    background-color: linear-gradient(90deg, #0071e3, #6121c9);
   }
 }
 

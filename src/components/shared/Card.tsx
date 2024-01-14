@@ -1,16 +1,15 @@
 interface CardProps {
   children: React.ReactNode;
-  theme?: string;
+  background?: string;
   styles?: string;
-  padding?: string;
-  glass?: boolean;
 }
 
-const Card = ({ children, glass, styles }: CardProps) => {
+const Card = ({ children, background, styles }: CardProps) => {
   return (
     <div
       className={`relative text-foreground shadow-sm overflow-hidden rounded-3xl ${styles} ${
-        glass ? "glass" : "bg-background"
+        background ||
+        "bg-background hover:scale-[1.02] transition-transform duration-300"
       }`}>
       {children}
     </div>

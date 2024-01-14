@@ -11,6 +11,7 @@ import { faPlus } from "@fortawesome/free-solid-svg-icons/faPlus";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Card from "./Card";
+import WaveBackground from "./WaveBackground";
 
 const tracks = [
   {
@@ -75,7 +76,7 @@ const MusicPlayer = () => {
   }, [isPlaying, audioRef]);
 
   return (
-    <Card styles="flex sm:flex-col w-full h-full">
+    <Card styles="relative flex sm:flex-col w-full h-full">
       <div className="bg-background flex flex-col lg:flex-row items-center justify-start">
         <div className="relative hidden md:block h-[250px] sm:h-[170px] w-full lg:w-[200px] bg-music">
           <div className="spinner">
@@ -95,12 +96,13 @@ const MusicPlayer = () => {
           <span className="text-sm">{currentTrack.author}</span>
         </div>
         <div className="hidden lg:flex flex-col items-center justify-center gap-4 text-xl p-4 opacity-80 ml-auto">
-          <FontAwesomeIcon icon={faSpotify} />
+          <FontAwesomeIcon className="text-[#1ED760]" icon={faSpotify} />
           <FontAwesomeIcon icon={faEllipsis} />
           <FontAwesomeIcon icon={faPlus} />
         </div>
       </div>
-      <div className="bg-background p-4">
+      <div className="relative p-4">
+        <WaveBackground />
         <div className="flex justify-center items-center lg:px-8 px-4 pt-2 pb-2 gap-8 text-xl opacity-80">
           <FontAwesomeIcon
             onClick={() => {

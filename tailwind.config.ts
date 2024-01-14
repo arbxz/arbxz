@@ -28,6 +28,7 @@ const config: Config = {
       "glass-invert": "var(--glassBgInvert)",
       "glass-tint": "var(--glassBgTint)",
       transparent: "transparent",
+      "color-shadow": "var(--color-shadow)",
     },
     extend: {
       backgroundImage: {

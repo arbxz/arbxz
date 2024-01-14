@@ -12,7 +12,7 @@ const PageContent = () => {
       <div className="flex flex-col lg:flex-row gap-4">
         <div className="flex flex-col gap-4">
           <div className="flex gap-4">
-            <Card glass styles="bg-foreground flex-grow w-full">
+            <Card background="glass" styles="bg-foreground flex-grow w-full">
               <div className="flex flex-col gap-1 p-4 text-background">
                 <span className="w-8 h-8 flex items-center justify-center text-center bg-background glass text-foreground shadow-sm rounded-full">
                   <FontAwesomeIcon className="text-sm" icon={faEye} />
@@ -22,7 +22,7 @@ const PageContent = () => {
                 <span className="text-xs text-success ml-auto">+ 15</span>
               </div>
             </Card>
-            <Card glass styles="bg-foreground flex-grow w-full">
+            <Card background="glass" styles="bg-foreground flex-grow w-full">
               <div className="flex flex-col gap-1 p-4 text-background">
                 <span className="w-8 h-8 flex items-center justify-center text-center bg-background glass text-foreground shadow-sm rounded-full">
                   <FontAwesomeIcon className="text-sm" icon={faDollar} />
@@ -32,7 +32,7 @@ const PageContent = () => {
                 <span className="text-xs text-success ml-auto">+ $ 350</span>
               </div>
             </Card>
-            <Card glass styles="bg-foreground flex-grow w-full">
+            <Card background="glass" styles="bg-foreground flex-grow w-full">
               <div className="flex flex-col gap-1 p-4 text-background">
                 <span className="w-8 h-8 flex items-center justify-center text-center bg-background glass text-foreground shadow-sm rounded-full">
                   <FontAwesomeIcon className="text-sm" icon={faChartLine} />
@@ -43,7 +43,7 @@ const PageContent = () => {
               </div>
             </Card>
           </div>
-          <Card styles="p-4 w-full" glass>
+          <Card styles="p-4 w-full" background="glass">
             <h1 className="text-4xl font-bold gradient-text">Welcome !</h1>
             <br />
             <h2 className="text-2xl font-semibold">
@@ -56,7 +56,7 @@ const PageContent = () => {
             </h3>
           </Card>
         </div>
-        <Card glass styles="w-full p-4">
+        <Card background="glass" styles="w-full p-4">
           <div className="flex flex-col gap-4">
             <h3>Inbox</h3>
             <Chat />

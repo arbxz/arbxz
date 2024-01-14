@@ -7,7 +7,7 @@ import Input from "@/components/ui-elements/Input";
 function SignIn() {
   return (
     <div className="flex justify-center w-full">
-      <Card glass styles="mx-auto">
+      <Card background="glass" styles="mx-auto">
         <div className="flex flex-col flex-wrap gap-4 justify-center items-center p-4 md:p-8 w-full">
           <h1 className="text-4xl font-bold gradient-text">Add product</h1>
           <span>

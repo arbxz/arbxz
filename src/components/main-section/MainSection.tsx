@@ -13,13 +13,12 @@ import Link from "next/link";
 import Card from "../shared/Card";
 import Container from "../shared/Container";
 import ImageCarousel from "../shared/ImageCarousel";
-import Button from "../ui-elements/Button";
-import Input from "../ui-elements/Input";
 
 const MainBanner = () => {
   const introText = [
-    "I am a fun loving dev who likes",
-    "innovative and modern designs.",
+    "I am Arbaaz Mowlabucus",
+    "a fun dev who loves implementing ",
+    "modern and innovative solutions.",
     "My primary focus lies in",
   ];
   const skills = ["NextJs", "ReactJs", "SCSS", "UX", "Tailwind"];
@@ -40,7 +39,9 @@ const MainBanner = () => {
         height={1200}
       />
 
-      <Card glass styles="w-full mt-16 xxl:mt-40 md:max-w-3xl mx-auto">
+      <Card
+        background="glass"
+        styles="w-full mt-16 xxl:mt-40 md:max-w-3xl mx-auto">
         <div className="py-8 md:py-16">
           <div className="relative max-w-3xl mb-4 px-4 flex md:flex-row flex-col gap-4 items-center md:justify-center">
             <h1 className="md::w-1/2 text-5xl md:text-7xl md:text-right text-center font-bold">
@@ -53,7 +54,6 @@ const MainBanner = () => {
               animate={{ x: 0 }}
               transition={{ type: "spring", stiffness: 100 }}>
               <div className="relative mainSection flex flex-col justify-center p-4">
-                <div className="highlight self-start">Hello visitor,</div>
                 {introText.map((text, index) => (
                   <span className="self-start highlight" key={index}>
                     {text}
@@ -64,30 +64,12 @@ const MainBanner = () => {
                     <span>{skills[index % skills.length]}</span>
                   </TextTransition>
                 </div>
-                <div className="highlight self-start">
-                  I am based in Mauritius and I
-                </div>
-                <div className="highlight self-start">
-                  love art, hiking and diving.
-                </div>
               </div>
             </motion.div>
           </div>
           <ImageCarousel />
         </div>
       </Card>
-      {/* 
-      <Card styles="absolute top-1/2 -left-1/4 p-4 pt-6 flex flex-col justify-end items-end rounded-xl gap-4">
-        <Input
-          id="emailID"
-          name="Email field"
-          label="Email field"
-          value="badEmail"
-          type="email"
-          errorMessage="Enter a valid email address."
-        />
-        <Button intent="danger" text="Update" />
-      </Card> */}
 
       <div className="flex flex-wrap md:flex-nowrap gap-4 items-stretch justify-stretch w-full mx-auto md:max-w-3xl">
         <Card styles="flex items-center w-full p-8 bg-danger text-white">

@@ -2,6 +2,8 @@
 
 import { useRef } from "react";
 
+import { faBoltLightning } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -37,10 +39,12 @@ const AdminNavigation = () => {
         <Link
           className="flex items-center text-lg gap-2 mr-auto"
           href="/design-system">
-          <span className="gradient-text font-semibold lg:font-normal">
-            Arbxz
-          </span>
-          <span className="hidden lg:inline-block">| Admin Template</span>
+          <FontAwesomeIcon
+            className="text-form-active"
+            icon={faBoltLightning}
+          />
+          <span className="font-semibold text-form-active">Arbxz</span>
+          <span className="hidden lg:inline-block">| Admin</span>
         </Link>
 
         <Dropdown

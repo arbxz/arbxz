@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 
 import SkillSection from "@/components/about-section/AboutSection";
-import ArtSection from "@/components/design-section/DesignSection";
+import ArtSection from "@/components/art-section/ArtSection";
+import DesignSection from "@/components/design-section/DesignSection";
 import Footer from "@/components/footer/Footer";
 import MainBanner from "@/components/main-section/MainSection";
 import Modal from "@/components/modal/Modal";
@@ -44,6 +45,7 @@ const App = () => {
           </Container>
         </motion.div>
         <ProjectSection />
+        <DesignSection />
         <ArtSection />
         <Modal isOpen={isModalOpen}>{modalContent}</Modal>
       </main>
