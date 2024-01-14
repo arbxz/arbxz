@@ -17,7 +17,6 @@ function Dashboard() {
             id="emailID"
             name="Email field"
             label="Email field"
-            value="badEmail"
             type="email"
             errorMessage="Enter a valid email address."
           />
@@ -32,7 +31,6 @@ function Dashboard() {
             name="Password field"
             label="Password field"
             type="password"
-            value="1234"
           />
           <Input
             id="numberID"

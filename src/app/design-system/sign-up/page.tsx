@@ -17,7 +17,6 @@ function SignUp() {
               label="Name"
               type="Text"
               errorMessage="Can't be empty."
-              value={"John"}
             />
             <Input
               id="SurnameID"
@@ -41,7 +40,6 @@ function SignUp() {
             name="User email"
             label="Email field"
             type="Email"
-            value={"John mail"}
             errorMessage="Please enter a valid email."
           />
           <Input
@@ -63,6 +61,7 @@ function SignUp() {
             id="newsletter"
             label="Subscribe to our newsletter"
             ariaLabel="newsletter checkbox"
+            value={"subscribed"}
           />
 
           <Button intent="secondary" text="sign up." />
