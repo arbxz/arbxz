@@ -64,7 +64,7 @@ const DesignSection = () => {
           <Card styles="hidden md:block md:w-3/4 lg:w-3/4 h-full -translate-y-16 md:translate-y-0 md:ml-48 md:mt-8">
             <Image
               className="object-cover"
-              src={"/figma.png"}
+              src={"/figma.webp"}
               width={1500}
               height={1500}
               alt={"design image"}

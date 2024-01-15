@@ -30,13 +30,7 @@ const config: Config = {
       transparent: "transparent",
       "color-shadow": "var(--color-shadow)",
     },
-    extend: {
-      backgroundImage: {
-        "newspaper-img": "url('/public/images/bgProps/newspaper-dummy.png')",
-        "teared-paper": "url('/public/images/bgProps/torn-paper.png')",
-        "paper-torn-top": "url('/public/images/bgProps/paper-torn-top.png')",
-      },
-    },
+    extend: {},
   },
   plugins: [
     plugin(function ({ addBase, addComponents, addUtilities, theme }: any) {

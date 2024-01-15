@@ -6,7 +6,7 @@ const Chat = () => {
       <div className="relative">
         <Image
           className="rounded-full shadow"
-          src="/images/arbaaz-picture.jpg"
+          src="/arbaaz-picture.webp"
           width={50}
           height={50}
           alt="user image"

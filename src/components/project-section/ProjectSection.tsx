@@ -5,9 +5,9 @@ import Link from "next/link";
 
 import Container from "../shared/Container";
 import Button from "../ui-elements/Button";
-import adminImg from "/public/admin.png";
-import cocagneImg from "/public/cocagne.png";
-import jeanPigeonImg from "/public/sample3.png";
+import adminImg from "/public/admin.webp";
+import cocagneImg from "/public/cocagne.webp";
+import jeanPigeonImg from "/public/sample3.webp";
 
 interface InterfaceProjectItem {
   src: StaticImageData;

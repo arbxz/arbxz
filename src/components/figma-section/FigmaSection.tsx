@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-import FigmaImg from "/public/figma-screenshot.png";
+import FigmaImg from "/public/figma-screenshot.webp";
 import FigmaLogo from "/public/images/icons/figma.svg";
-import FigmaImgMobile from "/public/screenshot-mobile.png";
+import FigmaImgMobile from "/public/screenshot-mobile.webp";
 
 const FigmaSection = () => {
   return (

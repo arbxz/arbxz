@@ -9,7 +9,7 @@ import Image from "next/image";
 
 import Card from "../shared/Card";
 import RippleTypingDots from "../shared/RippleTyping";
-import profileImg from "/public/images/arbaaz-picture.jpg";
+import profileImg from "/public/arbaaz-picture.webp";
 
 const Contact = () => {
   const API_KEY = process.env.WEB3FORMS_API_KEY;
