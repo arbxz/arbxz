@@ -35,7 +35,6 @@
     "typescript": "5.1.6"
   },
   "devDependencies": {
-    "cross-env": "^7.0.3",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "styled-components": "^6.0.7"
