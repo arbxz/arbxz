@@ -1,17 +1,14 @@
 const MojiLight = () => {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      version="1.1"
-      viewBox="0 0 800 800">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 800 800">
       <defs>
         <radialGradient id="ccclaymoji-grad-dark" r="93%" cx="20%" cy="20%">
-          <stop offset="70%" stop-color="#0071e3" stop-opacity="0"></stop>
-          <stop offset="97%" stop-color="#0047b0" stop-opacity="1"></stop>
+          <stop offset="70%" stopColor="#0071e3" stopOpacity="0"></stop>
+          <stop offset="97%" stopColor="#0047b0" stopOpacity="1"></stop>
         </radialGradient>
         <radialGradient id="ccclaymoji-grad-light" r="65%" cx="28%" cy="20%">
-          <stop offset="0%" stop-color="#629fff" stop-opacity="0.75"></stop>
-          <stop offset="100%" stop-color="#0071e3" stop-opacity="0"></stop>
+          <stop offset="0%" stopColor="#629fff" stopOpacity="0.75"></stop>
+          <stop offset="100%" stopColor="#0071e3" stopOpacity="0"></stop>
         </radialGradient>
         <filter
           id="ccclaymoji-blur"
@@ -21,7 +18,7 @@ const MojiLight = () => {
           height="400%"
           filterUnits="objectBoundingBox"
           primitiveUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB">
+          colorInterpolationFilters="sRGB">
           <feGaussianBlur
             stdDeviation="30"
             x="0%"
@@ -40,7 +37,7 @@ const MojiLight = () => {
           height="400%"
           filterUnits="objectBoundingBox"
           primitiveUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB">
+          colorInterpolationFilters="sRGB">
           <feGaussianBlur
             stdDeviation="2"
             x="0%"
@@ -59,13 +56,13 @@ const MojiLight = () => {
           height="400%"
           filterUnits="objectBoundingBox"
           primitiveUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB">
+          colorInterpolationFilters="sRGB">
           <feDropShadow
             stdDeviation="10"
             dx="10"
             dy="10"
-            flood-color="#000000"
-            flood-opacity="0.2"
+            floodColor="#000000"
+            floodOpacity="0.2"
             x="0%"
             y="0%"
             width="100%"
@@ -79,18 +76,18 @@ const MojiLight = () => {
           y1="0%"
           x2="50%"
           y2="100%">
-          <stop offset="20%" stop-color="#555555" stop-opacity="1"></stop>
+          <stop offset="20%" stopColor="#555555" stopOpacity="1"></stop>
           <stop
             offset="100%"
-            stop-color="hsla(0, 0%, 0%, 1.00)"
-            stop-opacity="0"></stop>
+            stopColor="hsla(0, 0%, 0%, 1.00)"
+            stopOpacity="0"></stop>
         </linearGradient>
         <linearGradient id="mouth-light" x1="50%" y1="0%" x2="50%" y2="100%">
-          <stop offset="0%" stop-color="#ff8fff" stop-opacity="1"></stop>
+          <stop offset="0%" stopColor="#ff8fff" stopOpacity="1"></stop>
           <stop
             offset="100%"
-            stop-color="hsla(290, 87%, 47%, 1.00)"
-            stop-opacity="0"></stop>
+            stopColor="hsla(290, 87%, 47%, 1.00)"
+            stopOpacity="0"></stop>
         </linearGradient>
         <filter
           id="mouth-shadow"
@@ -100,13 +97,13 @@ const MojiLight = () => {
           height="400%"
           filterUnits="objectBoundingBox"
           primitiveUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB">
+          colorInterpolationFilters="sRGB">
           <feDropShadow
             stdDeviation="10"
             dx="10"
             dy="10"
-            flood-color="#8800ad"
-            flood-opacity="0.2"
+            floodColor="#8800ad"
+            floodOpacity="0.2"
             x="0%"
             y="0%"
             width="100%"
@@ -114,7 +111,7 @@ const MojiLight = () => {
             result="dropShadow"></feDropShadow>
         </filter>
       </defs>
-      <g stroke-linecap="round">
+      <g strokeLinecap="round">
         <path
           d="M650 449.99998478233977C650 602.9582058065985 552.9582210242588 726.9541626799139 400 726.9541626799139C247.04245283018867 726.9541626799139 150 602.9582058065985 150 449.99998478233977C150 297.04243761252843 247.04245283018867 173.04580688476562 400 173.04580688476562C552.9582210242588 173.04580688476562 650 297.04243761252843 650 449.99998478233977Z "
           fill="#0047b0"
@@ -159,14 +156,14 @@ const MojiLight = () => {
           filter="url(#inner-blur)"></ellipse>
         <path
           d="M337.5 512.25Q380.5 563.25 462.5 512.25 "
-          stroke-width="20"
+          strokeWidth="20"
           stroke="hsla(290, 87%, 47%, 1.00)"
           fill="none"
           filter="url(#mouth-shadow)"
           transform="rotate(19, 400, 400)"></path>
         <path
           d="M337.5 512.25Q380.5 563.25 462.5 512.25 "
-          stroke-width="6.666666666666667"
+          strokeWidth="6.666666666666667"
           stroke="url(#mouth-light)"
           fill="none"
           filter="url(#inner-blur)"

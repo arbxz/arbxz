@@ -76,9 +76,9 @@ const MusicPlayer = () => {
   }, [isPlaying, audioRef]);
 
   return (
-    <Card styles="relative flex sm:flex-col w-full h-full">
+    <Card styles="relative flex flex-col w-full h-full">
       <div className="bg-background flex flex-col lg:flex-row items-center justify-start">
-        <div className="relative hidden md:block h-[250px] sm:h-[170px] w-full lg:w-[200px] bg-music">
+        <div className="relative block h-[250px] sm:h-[170px] w-full lg:w-[200px] bg-music">
           <div className="spinner">
             <div></div>
             <div></div>

@@ -44,7 +44,8 @@ function SignIn() {
           />
           <Link
             href=""
-            className="hover:scale-[1.05] duration-300 transition-transform">
+            className="hover:scale-[1.05] duration-300 transition-transform"
+            prefetch={false}>
             Forgot your password ?
           </Link>
           <Button intent="primary" text="sign in." />

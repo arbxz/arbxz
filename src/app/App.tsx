@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
 
 import SkillSection from "@/components/about-section/AboutSection";
 import ArtSection from "@/components/art-section/ArtSection";
 import DesignSection from "@/components/design-section/DesignSection";
 import Footer from "@/components/footer/Footer";
 import MainBanner from "@/components/main-section/MainSection";
-import Modal from "@/components/modal/Modal";
 import Navigation from "@/components/navigation/Navigation";
 import ProjectSection from "@/components/project-section/ProjectSection";
 import { slideUpVariants } from "@/components/shared/Animations";
@@ -14,13 +14,15 @@ import MusicPlayer from "@/components/shared/MusicPlayer";
 
 import { useAppContext } from "../context/appContext";
 
+const Modal = dynamic(() => import("@/components/modal/Modal"));
+
 const App = () => {
   const { isModalOpen, modalContent } = useAppContext();
 
   return (
     <div
       className={`${
-        isModalOpen && "fixed h-full w-full"
+        isModalOpen && "overflow-hidden"
       } overflow-hidden bg-background-secondary`}>
       <Navigation />
       <main className="relative p-4 text-base text-foreground flex gap-4 md:gap-8 flex-col items-center justify-center select-none">
@@ -47,7 +49,7 @@ const App = () => {
         <ProjectSection />
         <DesignSection />
         <ArtSection />
-        <Modal isOpen={isModalOpen}>{modalContent}</Modal>
+        {isModalOpen && <Modal isOpen={isModalOpen}>{modalContent}</Modal>}
       </main>
       <Footer />
     </div>

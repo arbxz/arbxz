@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Clock from "react-live-clock";
 import TextTransition, { presets } from "react-text-transition";
 
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
@@ -11,6 +10,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Card from "../shared/Card";
+import Clock from "../shared/Clock";
 import Container from "../shared/Container";
 import ImageCarousel from "../shared/ImageCarousel";
 
@@ -32,7 +32,7 @@ const MainBanner = () => {
   return (
     <Container flexDirection="col">
       <Image
-        className="absolute top-28 md:top-9 lg:top-16 left-1/2 -translate-x-1/2 -z-0 w-auto h-auto"
+        className="absolute top-28 md:top-9 lg:top-48 left-1/2 -translate-x-1/2 -z-0 w-auto h-auto"
         src={"/images/bgProps/blob-haikei.svg"}
         alt="background prop"
         width={1200}
@@ -42,8 +42,8 @@ const MainBanner = () => {
       <Card
         background="glass"
         styles="w-full mt-16 xxl:mt-40 md:max-w-3xl mx-auto">
-        <div className="py-8 md:py-16">
-          <div className="relative max-w-3xl mb-4 px-4 flex md:flex-row flex-col gap-4 items-center md:justify-center">
+        <div className="py-8 md:py-16 lg:py-24">
+          <div className="relative max-w-3xl mb-16 px-4 flex md:flex-row flex-col gap-4 items-center md:justify-center">
             <h1 className="md::w-1/2 text-5xl md:text-7xl md:text-right text-center font-bold">
               <span>
                 Frontend <br /> Engineer.
@@ -72,13 +72,8 @@ const MainBanner = () => {
       </Card>
 
       <div className="flex flex-wrap md:flex-nowrap gap-4 items-stretch justify-stretch w-full mx-auto md:max-w-3xl">
-        <Card styles="flex items-center w-full p-8 bg-danger text-white">
-          <Clock
-            format={"HH:mmA"}
-            ticking
-            className="p-4 mx-auto"
-            style={{ fontSize: "3.5em" }}
-          />
+        <Card styles="flex items-center w-full p-8 bg-danger text-white text-6xl text-center">
+          <Clock />
         </Card>
         <div className="flex min-w-max gap-4">
           <Card styles="flex justify-between flex-col gap-4 p-4 bg-foreground">
@@ -89,7 +84,8 @@ const MainBanner = () => {
             <Link
               className="text-foreground bg-background px-4 py-2 rounded-full text-center border-2 border-white transition-colors duration-300 hover:border-background hover:text-background hover:bg-foreground"
               href="https://github.com/arbxz"
-              target="_blank">
+              target="_blank"
+              prefetch={false}>
               Open me
             </Link>
           </Card>
@@ -101,7 +97,8 @@ const MainBanner = () => {
             <Link
               className="text-background bg-foreground px-4 py-2 rounded-full text-center border-2 border-foreground transition-colors duration-300 hover:border-foreground hover:text-foreground hover:bg-background"
               href="https://www.linkedin.com/in/arbaaz-mowlabucus-15bb17160/"
-              target="_blank">
+              target="_blank"
+              prefetch={false}>
               Open me
             </Link>
           </Card>

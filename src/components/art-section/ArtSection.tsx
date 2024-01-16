@@ -1,7 +1,5 @@
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { motion, useDragControls } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 
@@ -12,7 +10,6 @@ import Button from "../ui-elements/Button";
 
 const ArtSection = () => {
   const { resolvedTheme } = useTheme();
-  const controls = useDragControls();
   return (
     <div id="art">
       <div className="group flex flex-col justify-center h-64 w-64 text-center bg-accent shadow-xl text-white rounded-3xl mx-auto p-4 md:p-8">
@@ -30,14 +27,14 @@ const ArtSection = () => {
                 version="1.1"
                 viewBox="0 0 800 800">
                 <g
-                  stroke-width="10"
+                  strokeWidth="10"
                   stroke="hsl(227, 71%, 57%)"
                   fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round">
+                  strokeLinecap="round"
+                  strokeLinejoin="round">
                   <path
                     d="M265.44680976867676 249.7407989501953Q133.44680976867676 562.7407989501953 565.4468097686768 549.7407989501953 "
-                    marker-end="url(#SvgjsMarker1311)"></path>
+                    markerEnd="url(#SvgjsMarker1311)"></path>
                 </g>
                 <defs>
                   <marker
@@ -74,7 +71,8 @@ const ArtSection = () => {
               </div>
               <Link
                 href="https://www.instagram.com/wulver.bd/?hl=en"
-                target="_blank">
+                target="_blank"
+                prefetch={false}>
                 <Button intent="secondary" text="here!" />
               </Link>
             </Card>

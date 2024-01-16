@@ -1,10 +1,13 @@
 "use client";
 import { useEffect, useState } from "react";
 
-import Aside from "@/components/aside/Aside";
+import dynamic from "next/dynamic";
+
 import AdminNavigation from "@/components/navigation/AdminNavigation";
 import Loader from "@/components/ui-elements/Loader";
 import { useAppContext } from "@/context/appContext";
+
+const Aside = dynamic(() => import("@/components/aside/Aside"));
 
 function RootLayout({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState<boolean>(true);

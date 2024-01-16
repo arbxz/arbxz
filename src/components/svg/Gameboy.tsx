@@ -20,11 +20,11 @@ const GameboySVG = ({ colorShade, color }: SVGProps) => {
       xmlSpace="preserve">
       <style type="text/css">{`
        	.st0{fill:${color ? color : "#FFFFFF"};
-        stroke:#000000;stroke-width:1.7096;stroke-miterlimit:10;}
+        stroke:#000000;strokeWidth:1.7096;stroke-miterlimit:10;}
            .st1{fill:${color ? color : "#FFFFFF"};}
            .st3{fill:#FFFFFF;}
            .st4{fill:${colorShade ? colorShade : "#FFFFFF"};}
-           .st2{fill:none;stroke:#000000;stroke-width:0.8548;stroke-miterlimit:10;}
+           .st2{fill:none;stroke:#000000;strokeWidth:0.8548;stroke-miterlimit:10;}
       `}</style>
       <path
         id="Top_frame"

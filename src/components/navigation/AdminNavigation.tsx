@@ -38,7 +38,8 @@ const AdminNavigation = () => {
 
         <Link
           className="flex items-center text-lg gap-2 mr-auto"
-          href="/design-system">
+          href="/design-system"
+          prefetch={false}>
           <FontAwesomeIcon
             className="text-form-active"
             icon={faBoltLightning}

@@ -13,7 +13,7 @@ import Input from "@/components/ui-elements/Input";
 import Radio from "@/components/ui-elements/Radio";
 import TextArea from "@/components/ui-elements/TextArea";
 
-function formView() {
+function FormView() {
   return (
     <Box>
       <div className="flex flex-col gap-8">
@@ -123,4 +123,4 @@ function formView() {
   );
 }
 
-export default formView;
+export default FormView;

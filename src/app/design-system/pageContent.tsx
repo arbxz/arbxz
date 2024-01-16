@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Card from "@/components/shared/Card";
 import Chat from "@/components/shared/Chat";
-import Alert from "@/components/ui-elements/Alert";
 
 const PageContent = () => {
   return (

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Card from "../shared/Card";
 import Container from "../shared/Container";
 import WaveBackground from "../shared/WaveBackground";
+import figma from "/public/figma.webp";
 import clipstudioIcon from "/public/images/icons/clipstudio.svg";
 import illustratorIcon from "/public/images/icons/illustrator.svg";
 import psdIcon from "/public/images/icons/photoshop.svg";
@@ -64,10 +65,12 @@ const DesignSection = () => {
           <Card styles="hidden md:block md:w-3/4 lg:w-3/4 h-full -translate-y-16 md:translate-y-0 md:ml-48 md:mt-8">
             <Image
               className="object-cover"
-              src={"/figma.webp"}
+              src={figma}
               width={1500}
               height={1500}
               alt={"design image"}
+              placeholder="blur"
+              loading="lazy"
             />
           </Card>
 
@@ -95,7 +98,7 @@ const DesignSection = () => {
             <div className="flex md:flex-col h-full gap-4 md:justify-end justify-center">
               <Card styles="h-24 w-24 p-4 flex items-center justify-center">
                 <Image
-                  className="transition-all duration-300 ease-in-out hover:-translate-y-3"
+                  className="transition-all w-auto duration-300 ease-in-out hover:-translate-y-3"
                   src={psdIcon}
                   width={45}
                   height={45}
@@ -104,7 +107,7 @@ const DesignSection = () => {
               </Card>
               <Card styles="h-24 w-24 p-4 flex items-center justify-center">
                 <Image
-                  className="transition-all duration-300 ease-in-out hover:-translate-y-3"
+                  className="w-auto transition-all duration-300 ease-in-out hover:-translate-y-3"
                   src={illustratorIcon}
                   width={45}
                   height={45}

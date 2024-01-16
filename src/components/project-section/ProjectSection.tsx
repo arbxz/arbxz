@@ -59,7 +59,7 @@ const ProjectSection = () => {
   const ProjectCard = ({ project }: { project: InterfaceProjectItem }) => {
     return (
       <div
-        className="relative group bg-background flex w-full sm:w-1/2 md:w-1/3 lg:w-1/4 min-h-64 sm:flex-col flex-row rounded-3xl scale-[.99] shadow transition-all duration-300 hover:shadow-md hover:scale-100 overflow-hidden"
+        className="relative group bg-white flex w-full sm:w-1/2 md:w-1/3 lg:w-1/4 min-h-64 sm:flex-col flex-row rounded-3xl scale-[.99] shadow transition-all duration-300 hover:shadow-md hover:scale-100 overflow-hidden"
         key={project.name}>
         <div className="absolute top-0 left-0 w-full h-full z-10">
           <Image
@@ -73,6 +73,7 @@ const ProjectSection = () => {
         </div>
         <Link
           href={project.url}
+          prefetch={false}
           target="_blank"
           className="flex flex-wrap items-center w-full h-64 opacity-0 hover:opacity-100 border-2 border-transparent hover:glass transition-all duration-300 z-20 cursor-pointer">
           <div className="flex flex-col items-center gap-2 w-full p-4 text-foreground text-left">

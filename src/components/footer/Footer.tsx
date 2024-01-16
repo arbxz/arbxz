@@ -9,6 +9,7 @@ const Footer = () => {
       <Link
         href={"https://www.linkedin.com/in/arbaaz-mowlabucus-15bb17160/"}
         target="_blank"
+        prefetch={false}
         className="flex flex-col gap-4 justify-center text-xl text-center">
         <span>Contact me</span>
         <Button intent="secondary" text="LinkedIn" icon={faLinkedin} />

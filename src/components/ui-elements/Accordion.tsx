@@ -71,6 +71,7 @@ const Accordion = ({
             {options.map((option, index) => (
               <motion.li key={index} variants={itemVariants}>
                 <Link
+                  prefetch={false}
                   className="block w-full text-foreground py-2 px-4 hover:bg-form-active hover:text-white duration-300 transition-colors cursor-pointer"
                   href={option.href}>
                   {option.label}
