@@ -25,11 +25,11 @@ const App = () => {
         isModalOpen && "overflow-hidden"
       } overflow-hidden bg-background-secondary`}>
       <Navigation />
-      <main className="relative p-4 text-base text-foreground flex gap-4 md:gap-8 flex-col items-center justify-center select-none">
+      <main className="relative p-4 text-base text-foreground flex gap-4 flex-col items-center justify-center select-none">
         <MainBanner />
         <motion.div
           id="skils"
-          className="w-auto"
+          className="w-full"
           initial="offscreen"
           whileInView="onscreen"
           viewport={{ once: true, amount: 0.8 }}>
@@ -38,9 +38,7 @@ const App = () => {
               <motion.div variants={slideUpVariants}>
                 <SkillSection />
               </motion.div>
-              <motion.div
-                className="w-full sm:w-8/12"
-                variants={slideUpVariants}>
+              <motion.div className="w-full" variants={slideUpVariants}>
                 <MusicPlayer />
               </motion.div>
             </div>

@@ -10,8 +10,8 @@ const SkillSection = () => {
   const { setIsModalOpen, setModalContent } = useAppContext();
   const textToHighlight = () => {
     const highlightArray = [
-      "I'm a results-driven Frontend Engineer",
-      "with expertise in ..",
+      "I'm a results-driven Frontend ",
+      "Engineer, with expertise in ..",
     ];
 
     return (
@@ -27,8 +27,8 @@ const SkillSection = () => {
   return (
     <Card
       background="glass"
-      styles="p-4 flex gap-4 flex-col h-full w-full sm:max-w-md w-full hover:bg-form-active hover:text-white transition-colors duration-300">
-      <h2 className="md:text-6xl text-3xl font-bold">
+      styles="p-4 flex text-center gap-4 flex-col justify-center items-center h-full w-full hover:bg-accent hover:text-white transition-colors duration-300">
+      <h2 className="text-6xl font-bold">
         Get to
         <br /> know me !
       </h2>
@@ -39,7 +39,7 @@ const SkillSection = () => {
           setModalContent(<KnowledgeSection />);
           setIsModalOpen(true);
         }}
-        className="bg-foreground text-background border-foreground flex gap-4 items-center max-w-[20rem] text-xl md:px-6 px-4 md:py-2 py-1 rounded-3xl ml-auto mt-auto lg:mt-0 hover:scale-105 hover:shadow-md transition-all">
+        className="bg-foreground text-background border-foreground flex gap-4 items-center max-w-[20rem] text-xl md:px-6 px-4 md:py-2 py-1 rounded-3xl hover:scale-105 hover:shadow-md transition-all">
         <FontAwesomeIcon icon={faWindowMaximize} />
         Open me !
       </button>

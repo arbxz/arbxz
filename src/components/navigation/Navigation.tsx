@@ -9,8 +9,8 @@ const Navigation = () => {
   const { scrollYProgress } = useScroll();
 
   return (
-    <nav className="fixed top-0 glass text-foreground shadow shadow-custom-shadow w-full py-3 md:px-6 px-2 transition-all ease-in-out duration-300 z-50">
-      <div className="flex gap-6 w-full justify-between items-center md:max-w-6xl md:px-4 mx-auto">
+    <nav className="fixed top-0 text-foreground w-full md:px-4 md:py-4 transition-all ease-in-out duration-300 z-50">
+      <div className="glass max-w-6xl flex gap-6 w-full justify-between items-center mx-auto px-4 py-3 md:rounded-xl shadow overflow-hidden">
         <Link
           className="flex items-center text-xl gap-2"
           href="/"
@@ -48,11 +48,11 @@ const Navigation = () => {
         <div className="flex gap-4 items-center">
           <ThemeToggle />
         </div>
+        <motion.div
+          className="absolute -bottom-[2px] left-0 right-0 h-2 bg-accent z-20 origin-bottom-left"
+          style={{ scaleX: scrollYProgress }}
+        />
       </div>
-      <motion.div
-        className="fixed bottom-0 left-0 right-0 h-[2.5px] bg-accent z-20 origin-top-left"
-        style={{ scaleX: scrollYProgress }}
-      />
     </nav>
   );
 };
