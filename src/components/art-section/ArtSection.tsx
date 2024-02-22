@@ -54,28 +54,27 @@ const ArtSection = () => {
             </div>
             {resolvedTheme === "dark" ? <MojiDark /> : <MojiLight />}
           </div>
-          <div className="relative flex gap-4">
-            <div className="flex text-center p-4 rounded-3xl items-center">
+          <div className="relative flex items-center gap-4">
+            <div className="flex text-center p-4 rounded items-center">
               <div>
                 I am also a <span className="text-accent">digital artist</span>
                 <br /> with experience in
                 <br /> comic and anime style art.
               </div>
             </div>
-            <Card
-              background="bg-form-active"
-              styles="flex w-1/2 md:w-40 justify-between shadow-lg flex-col gap-4 p-4">
-              <div className="flex gap-4 items-center text-white">
-                <FontAwesomeIcon className="text-3xl" icon={faInstagram} />
-                <span>Insta</span>
-              </div>
-              <Link
-                href="https://www.instagram.com/wulver.bd/?hl=en"
-                target="_blank"
-                prefetch={false}>
-                <Button intent="secondary" text="here!" />
-              </Link>
-            </Card>
+            <Link
+              href="https://www.instagram.com/wulver.bd/?hl=en"
+              target="_blank"
+              prefetch={false}>
+              <Card
+                background="bg-form-active"
+                styles="flex w-fit justify-between shadow-lg flex-col gap-4 px-4 py-2">
+                <div className="flex gap-4 items-center text-white">
+                  <FontAwesomeIcon className="text-3xl" icon={faInstagram} />
+                  <span>Insta</span>
+                </div>
+              </Card>
+            </Link>
           </div>
         </div>
         {/* <div>

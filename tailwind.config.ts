@@ -16,6 +16,7 @@ const config: Config = {
       "background-tertiary": "var(--background-tertiary)",
       body: "var(--body)",
       accent: "var(--accent)",
+      "accent-2": "var(--accent-2)",
       primary: "#040202",
       white: "#ffffff",
       active: "var(--text-active)",

@@ -76,7 +76,9 @@ const MainBanner = () => {
           </Card>
 
           <div className="flex flex-wrap md:flex-nowrap gap-4 items-stretch justify-stretch w-full">
-            <Card styles="flex w-full items-center p-8 bg-danger text-white text-6xl text-center">
+            <Card
+              background="bg-accent"
+              styles="flex w-full items-center p-8 text-white text-6xl text-center">
               <Clock />
             </Card>
 
