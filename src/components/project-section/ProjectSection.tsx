@@ -6,6 +6,7 @@ import Container from "../shared/Container";
 import Button from "../ui-elements/Button";
 import adminImg from "/public/admin.webp";
 import cocagneImg from "/public/cocagne.webp";
+import nuzanimoImg from "/public/logo_nuzanimo.png";
 import jeanPigeonImg from "/public/sample3.webp";
 
 interface InterfaceProjectItem {
@@ -13,7 +14,7 @@ interface InterfaceProjectItem {
   url: string;
   name: string;
   description: string;
-  tech: string;
+  tech: string[];
 }
 
 const ProjectSection = () => {
@@ -23,21 +24,21 @@ const ProjectSection = () => {
       url: "https://www.jeanpigeon.xyz/",
       name: "Jean-Pigeon",
       description: "A small website I co-authored with a friend.",
-      tech: "NextJS",
+      tech: ["NextJS"],
     },
     {
       src: adminImg,
       url: "https://www.arbxz.com/design-system",
       name: "Admin Dashboard",
       description: "An admin dashboard created using tailwind",
-      tech: "NextJS",
+      tech: ["NextJS"],
     },
     {
-      src: cocagneImg,
-      url: "https://www.cocagne.fr/",
-      name: "Cocagne.fr",
-      description: "Developped the UI using Tailwind + Next",
-      tech: "NextJS",
+      src: nuzanimoImg,
+      url: "https://www.nuzanimo.org/",
+      name: "nuzanimo.org",
+      description: "NGO website created to help stray animals",
+      tech: ["NextJs", "TailwindCSS", "Sanity"],
     },
   ];
 
