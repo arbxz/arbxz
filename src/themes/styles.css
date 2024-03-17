@@ -2,43 +2,79 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground: #ffffff;
-  --foreground-shade: rgba(255, 255, 255, 0.5);
-  --background: rgb(39, 39, 48);
-  --background-secondary: rgb(19, 19, 30);
-  --background-tertiary: #676769;
-  --accent: #a261f9;
-  --accent-2: #def861;
-  --body: #0d0d0d;
-  --glassBg: rgba(27, 27, 37, 0.5);
-  --glassBgInvert: rgba(255, 255, 255, 0.5);
-  --glassBgTint: rgba(27, 27, 37, 0.25);
-  --custom-shadow: rgba(4, 2, 2, 0.6);
-  --text-active: #03dac6;
-  --color-shadow: rgba(0, 113, 227, 0.3);
-}
-
-[data-theme="light"] {
-  --foreground: rgb(4, 2, 2);
-  --foreground-shade: rgba(4, 2, 2, 0.8);
-  --background: #ffffff;
-  --background-secondary: #f5f5f7;
-  --background-tertiary: #f7f7f7;
-  --accent: hsl(15, 85%, 48%);
-  --accent-2: #def861;
-  --body: #f3f3f3;
-  --glassBg: rgba(255, 255, 255, 0.5);
-  --glassBgInvert: rgba(27, 27, 37, 0.5);
-  --glassBgTint: rgba(255, 255, 255, 0.25);
-  --custom-shadow: rgb(0 0 0 / 0.1);
-  --text-active: #0071e3;
-  --color-shadow: rgb(0 0 0 / 0.1);
-}
-
 html {
   scroll-behavior: smooth;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  :root {
+    --foreground: #ffffff;
+    --foreground-shade: rgba(255, 255, 255, 0.5);
+    --background: rgb(39, 39, 48);
+    --background-secondary: rgb(19, 19, 30);
+    --background-tertiary: #676769;
+    --arbxz-accent: hsl(15, 85%, 48%);
+    --accent-2: #def861;
+    --body: #0d0d0d;
+    --glassBg: rgba(27, 27, 37, 0.5);
+    --glassBgInvert: rgba(255, 255, 255, 0.5);
+    --glassBgTint: rgba(27, 27, 37, 0.25);
+    --custom-shadow: rgba(4, 2, 2, 0.6);
+    --text-active: #03dac6;
+    --color-shadow: rgba(0, 113, 227, 0.3);
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  [data-theme="light"] {
+    --foreground: rgb(4, 2, 2);
+    --foreground-shade: rgba(4, 2, 2, 0.8);
+    --background: #ffffff;
+    --background-secondary: #f5f5f7;
+    --background-tertiary: #f7f7f7;
+    --arbxz-accent: hsl(15, 85%, 48%);
+    --accent-2: #def861;
+    --body: #f3f3f3;
+    --glassBg: rgba(255, 255, 255, 0.5);
+    --glassBgInvert: rgba(27, 27, 37, 0.5);
+    --glassBgTint: rgba(255, 255, 255, 0.25);
+    --custom-shadow: rgb(0 0 0 / 0.1);
+    --text-active: #0071e3;
+    --color-shadow: rgb(0 0 0 / 0.1);
+  }
 }
 
 @layer utilities {
@@ -84,11 +120,11 @@ html {
   }
 
   .spinner > div {
-    background-color: var(--background);
+    background-color: var(--accent);
     height: 100%;
     position: absolute;
     width: 100%;
-    border: 2.2px solid var(--accent);
+    border: 2.2px solid var(--arbxz-accent);
   }
 
   .spinner div:nth-of-type(1) {

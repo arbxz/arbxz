@@ -1,50 +1,42 @@
-import { faWindowMaximize } from "@fortawesome/free-regular-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useTranslations } from "next-intl";
 
-import { useAppContext } from "@/context/appContext";
+import Container from "../shared/Container";
+import MusicPlayer from "../shared/MusicPlayer";
+import About from "./About";
 
-import KnowledgeSection from "../about-modal-content/AboutModalContent";
-import Card from "../shared/Card";
-
-const SkillSection = () => {
-  const { setIsModalOpen, setModalContent } = useAppContext();
-  const textToHighlight = () => {
-    const highlightArray = [
-      "I'm a results-driven Frontend ",
-      "Engineer, with expertise in ..",
-    ];
-
-    return (
-      <>
-        {highlightArray.map((text, index) => (
-          <div className="highlight text-xl" key={index}>
-            {text}
-          </div>
-        ))}
-      </>
-    );
-  };
+const AboutSection = () => {
+  const t = useTranslations("Misc");
   return (
-    <Card
-      background="glass"
-      styles="p-4 flex text-center gap-4 flex-col justify-center items-center h-full w-full hover:bg-accent hover:text-white transition-colors duration-300">
-      <h2 className="text-6xl font-bold">
-        Get to
-        <br /> know me !
-      </h2>
-      <div className="text-xl">{textToHighlight()}</div>
-      <button
-        type="button"
-        onClick={() => {
-          setModalContent(<KnowledgeSection />);
-          setIsModalOpen(true);
-        }}
-        className="bg-foreground text-background border-foreground flex gap-4 items-center max-w-[20rem] text-xl md:px-6 px-4 md:py-2 py-1 rounded-3xl hover:scale-105 hover:shadow-md transition-all">
-        <FontAwesomeIcon icon={faWindowMaximize} />
-        Open me !
-      </button>
-    </Card>
+    // <motion.div
+    //   id="skils"
+    //   className="w-full"
+    //   initial="offscreen"
+    //   whileInView="onscreen"
+    //   viewport={{ once: true, amount: 0.8 }}>
+    //   <Container>
+    //     <div className="flex flex-wrap sm:flex-nowrap w-full gap-4 justify-stretch items-stretch">
+    //       <motion.div variants={slideUpVariants}>
+    //         <About />
+    //       </motion.div>
+    //       <motion.div className="w-full" variants={slideUpVariants}>
+    //         <MusicPlayer />
+    //       </motion.div>
+    //     </div>
+    //   </Container>
+    // </motion.div>
+    <div id="skils" className="w-full">
+      <Container>
+        <div className="flex flex-wrap sm:flex-nowrap w-full gap-4 justify-stretch items-stretch">
+          <div>
+            <About />
+          </div>
+          <div className="w-full">
+            <MusicPlayer text={t("music")} />
+          </div>
+        </div>
+      </Container>
+    </div>
   );
 };
 
-export default SkillSection;
+export default AboutSection;

@@ -5,14 +5,14 @@ import { motion } from "framer-motion";
 import Accordion from "../ui-elements/Accordion";
 
 const uiOptions = [
-  { label: "ui.", href: "/design-system/" },
-  { label: "forms", href: "/design-system/form-view" },
-  { label: "lists.", href: "/design-system/list-view" },
+  { label: "ui.", href: "/admin/" },
+  { label: "forms", href: "/admin/form-view" },
+  { label: "lists.", href: "/admin/list-view" },
 ];
 
 const formOptions = [
-  { label: "sign in.", href: "/design-system/sign-in" },
-  { label: "sign up", href: "/design-system/sign-up" },
+  { label: "sign in.", href: "/admin/sign-in" },
+  { label: "sign up", href: "/admin/sign-up" },
 ];
 
 const variants = {

@@ -26,7 +26,11 @@ const tracks = [
   },
 ];
 
-const MusicPlayer = () => {
+interface MusicPlayerProps {
+  text: string;
+}
+
+const MusicPlayer = ({ text }: MusicPlayerProps) => {
   const [trackIndex, setTrackIndex] = useState(0);
   const [currentTrack, setCurrentTrack] = useState(tracks[trackIndex]);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -89,9 +93,7 @@ const MusicPlayer = () => {
           </div>
         </div>
         <div className="lg:px-8 lg:py-4 px-4 py-2">
-          <span className="block text-xl font-semibold mb-2">
-            Wanna put some music on?
-          </span>
+          <span className="block text-xl font-semibold mb-2">{text}</span>
           <span className="block text-lg font-light">{currentTrack.title}</span>
           <span className="text-sm">{currentTrack.author}</span>
         </div>
@@ -136,8 +138,8 @@ const MusicPlayer = () => {
         <div className="flex px-8 gap-4">
           <div className="relative w-full  py-4">
             <audio src={currentTrack.src} ref={audioRef} />
-            <div className="h-[2px] w-full rounded-full overflow-hidden bg-accent opacity-50"></div>
-            <div className="absolute top-1/2 -translate-y-1/2 h-[2px] w-16 rounded-full overflow-hidden bg-accent"></div>
+            <div className="h-[2px] w-full rounded-full overflow-hidden bg-arbxz-accent opacity-50"></div>
+            <div className="absolute top-1/2 -translate-y-1/2 h-[2px] w-16 rounded-full overflow-hidden bg-arbxz-accent"></div>
           </div>
           <span className="text-sm">
             {formatTime(audioRef.current?.duration)}

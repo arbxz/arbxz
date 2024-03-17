@@ -1,9 +1,7 @@
-"use client";
+import { redirect } from "next/navigation";
 
-import App from "./App";
+const RootPage = () => {
+  redirect("/en");
+};
 
-function Home() {
-  return <App />;
-}
-
-export default Home;
+export default RootPage;

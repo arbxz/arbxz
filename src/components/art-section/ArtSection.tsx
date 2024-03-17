@@ -1,22 +1,20 @@
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
-import { useTheme } from "next-themes";
+import { useTranslations } from "next-intl";
 
 import Card from "../shared/Card";
-import MojiDark from "../svg/MojiDark";
-import MojiLight from "../svg/MojiLight";
-import Button from "../ui-elements/Button";
+import Moji from "../svg/Moji";
 
 const ArtSection = () => {
-  const { resolvedTheme } = useTheme();
+  const t = useTranslations("Art");
   return (
     <div id="art">
-      <div className="group flex flex-col justify-center h-64 w-64 text-center bg-accent shadow-xl text-white rounded-3xl mx-auto p-4 md:p-8">
-        <div className="relative flex justify-center w-40 mx-auto border border-white text-sm text-white rounded-3xl px-4 py-1 mb-4 before:content-[''] before:h-full before:w-full before:absolute group-hover:text-accent before:top-0 before:-left-60 group-hover:before:left-0 before:-z-0 overflow-hidden before:duration-700 before:transition-all before:bg-white">
-          <span className="relative inline-block z-10">creative</span>
+      <div className="group flex flex-col justify-center h-64 w-64 text-center bg-arbxz-accent shadow-xl text-white rounded-3xl mx-auto p-4 md:p-8">
+        <div className="relative flex justify-center w-40 mx-auto border border-white text-sm text-white rounded-3xl px-4 py-1 mb-4 before:content-[''] before:h-full before:w-full before:absolute group-hover:text-arbxz-accent before:top-0 before:-left-60 group-hover:before:left-0 before:-z-0 overflow-hidden before:duration-700 before:transition-all before:bg-white">
+          <span className="relative inline-block z-10">{t("tag")}</span>
         </div>
-        <h2 className="font-semibold text-4xl md:text-6xl">artwork.</h2>
+        <h2 className="font-semibold text-4xl md:text-4xl">{t("title")}</h2>
       </div>
       <div>
         <div>
@@ -52,15 +50,11 @@ const ArtSection = () => {
                 </defs>
               </svg>
             </div>
-            {resolvedTheme === "dark" ? <MojiDark /> : <MojiLight />}
+            <Moji />
           </div>
           <div className="relative flex items-center gap-4">
             <div className="flex text-center p-4 rounded items-center">
-              <div>
-                I am also a <span className="text-accent">digital artist</span>
-                <br /> with experience in
-                <br /> comic and anime style art.
-              </div>
+              <div className="sm:max-w-[150px]">{t("text")}</div>
             </div>
             <Link
               href="https://www.instagram.com/wulver.bd/?hl=en"
@@ -77,28 +71,6 @@ const ArtSection = () => {
             </Link>
           </div>
         </div>
-        {/* <div>
-          <motion.div
-            className="cursor-grab"
-            drag
-            dragConstraints={{
-              top: -50,
-              left: -50,
-              right: 50,
-              bottom: 50,
-            }}
-            dragControls={controls}>
-            <div className="w-20 h-20 bg-danger">
-              <Image
-                src={"/images/art/sketch.webp"}
-                width={500}
-                height={500}
-                alt="illustraton of my artwork"
-                className="select-none"
-              />
-            </div>
-          </motion.div>
-        </div> */}
       </div>
     </div>
   );

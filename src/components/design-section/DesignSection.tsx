@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 import Card from "../shared/Card";
 import Container from "../shared/Container";
@@ -8,6 +9,7 @@ import illustratorIcon from "/public/images/icons/illustrator.svg";
 import psdIcon from "/public/images/icons/photoshop.svg";
 
 const DesignSection = () => {
+  const t = useTranslations("UX");
   return (
     <>
       <Container flexDirection="col">
@@ -17,23 +19,16 @@ const DesignSection = () => {
               background="glass"
               styles="group flex items-center justify-center w-full p-16">
               <div className="text-center text-xl">
-                <div className="relative inline-block mb-4 border border-accent text-sm text-accent rounded-3xl px-4 py-1 before:content-[''] before:h-full before:w-full before:absolute group-hover:text-white before:top-0 before:-left-40 group-hover:before:left-0 before:-z-0 overflow-hidden before:duration-700 before:transition-all before:bg-accent">
+                <div className="relative inline-block mb-4 border border-arbxz-accent text-sm text-arbxz-accent rounded-3xl px-4 py-1 before:content-[''] before:h-full before:w-full before:absolute group-hover:text-white before:top-0 before:-left-40 group-hover:before:left-0 before:-z-0 overflow-hidden before:duration-700 before:transition-all before:bg-arbxz-accent">
                   <span className="relative z-10">Figma | Adobe XD</span>
                 </div>
 
                 <h2 className="text-4xl md:text-6xl font-semibold mb-4">
-                  UI/<span className="text-accent">UX.</span>
+                  UI/<span className="text-arbxz-accent">UX.</span>
                 </h2>
 
                 <div>
-                  <span>
-                    I also prepare sketches
-                    <span className="font-bold text-accent">
-                      {" "}
-                      customized
-                    </span>{" "}
-                    to your needs.
-                  </span>
+                  <span>{t("text")}</span>
                 </div>
               </div>
             </Card>
@@ -63,8 +58,7 @@ const DesignSection = () => {
               />
             </Card>
             <span className="text-xl md:text-4xl text-center">
-              I use <span className="text-accent font-semibold">Figma</span>,
-              efficiently creating and implementing designs with precision.
+              {t("subheading")}
             </span>
           </Card>
 

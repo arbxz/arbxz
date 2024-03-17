@@ -1,0 +1,47 @@
+{
+  "Index": {
+    "title": "Hallo Welt!"
+  },
+  "Nav": {
+    "design": "Designs.",
+    "about": "über mich.",
+    "project": "Projekte.",
+    "art": "Kunst."
+  },
+  "Main": {
+    "quote": "Digitale Erlebnisse gestalten, eine Codezeile nach der anderen.",
+    "job": "Frontend-Entwickler.",
+    "about": {
+      "p1": "Ich bin Arbaaz Mowlabucus,",
+      "p2": "ein Spaßentwickler, der es liebt, moderne und innovative Lösungen umzusetzen.",
+      "p3": "Mein Hauptfokus liegt auf",
+      "p4": "der Frontend-Entwicklung."
+    },
+    "open": "Öffne mich"
+  },
+  "About": {
+    "title": "Lerne mich kennen!",
+    "text": "Ich bin ein ergebnisorientierter Frontend-Entwickler mit Expertise in ..",
+    "button": "Öffne mich!",
+    "modalheader": "Dinge, in denen ich gut bin",
+    "modalsubheader": "Berufliche Fähigkeiten, die ich als Frontend-Entwickler im Alltag einsetze",
+    "hobby": "Hobbys"
+  },
+  "Misc": {
+    "music": "Möchtest du etwas Musik hören?",
+    "contact": "Kontaktiere mich!"
+  },
+  "Project": {
+    "title": "Projekte.",
+    "text": "Arbeit hier anzeigen!"
+  },
+  "UX": {
+    "subheading": "Ich verwende Figma, um effizient Drahtmodelle und Prototypen zu erstellen.",
+    "text": "Ich bereite auch Skizzen vor, die auf Ihre Bedürfnisse zugeschnitten sind."
+  },
+  "Art": {
+    "title": "Kunstwerke.",
+    "tag": "kreativ",
+    "text": "Ich liebe es, in meiner Freizeit Kunst zu schaffen."
+  }
+}

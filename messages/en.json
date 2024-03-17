@@ -1,0 +1,47 @@
+{
+  "Index": {
+    "title": "Hello world!"
+  },
+  "Nav": {
+    "design": "designs.",
+    "about": "about me.",
+    "project": "projects.",
+    "art": "art."
+  },
+  "Main": {
+    "quote": "Crafting Digital Experiences, One Line of Code at a Time.",
+    "job": "Frontend Engineer.",
+    "about": {
+      "p1": "I am Arbaaz Mowlabucus",
+      "p2": "a fun dev who loves implementing ",
+      "p3": "modern and innovative solutions.",
+      "p4": "My primary focus lies in"
+    },
+    "open": "Open me"
+  },
+  "About": {
+    "title": "Get to know me !",
+    "text": "I'm a results-driven Frontend Engineer, with expertise in ..",
+    "button": "Open me !",
+    "modalheader": "Things I am good at",
+    "modalsubheader": "Professional skills I use in my day to day life as a frontend Engineer",
+    "hobby": "Hobbies"
+  },
+  "Misc": {
+    "music": "Want to listen to some music ?",
+    "contact": "Contact me !"
+  },
+  "Project": {
+    "title": "projects.",
+    "text": "View work here !"
+  },
+  "UX": {
+    "subheading": "I use Figma, efficiently creating wireframes and prototypes.",
+    "text": "I also prepare sketches customized to your needs."
+  },
+  "Art": {
+    "title": "artwork.",
+    "tag": "creative",
+    "text": "I love to create art in my free time."
+  }
+}

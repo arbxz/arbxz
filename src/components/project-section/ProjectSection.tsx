@@ -1,11 +1,11 @@
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import Image, { StaticImageData } from "next/image";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
 
+import { Link } from "../../navigation";
 import Container from "../shared/Container";
 import Button from "../ui-elements/Button";
 import adminImg from "/public/admin.webp";
-import cocagneImg from "/public/cocagne.webp";
 import nuzanimoImg from "/public/logo_nuzanimo.png";
 import jeanPigeonImg from "/public/sample3.webp";
 
@@ -18,6 +18,8 @@ interface InterfaceProjectItem {
 }
 
 const ProjectSection = () => {
+  const t = useTranslations("Project");
+
   const projectList: InterfaceProjectItem[] = [
     {
       src: jeanPigeonImg,
@@ -28,7 +30,7 @@ const ProjectSection = () => {
     },
     {
       src: adminImg,
-      url: "https://www.arbxz.com/design-system",
+      url: "/admin",
       name: "Admin Dashboard",
       description: "An admin dashboard created using tailwind",
       tech: ["NextJS"],
@@ -61,7 +63,7 @@ const ProjectSection = () => {
           href={project.url}
           prefetch={false}
           target="_blank"
-          className="flex flex-wrap items-center w-full h-64 opacity-0 hover:opacity-100 border-2 border-transparent overflow-hidden before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:-z-10 before:bg-background hover:before:opacity-50 transition-all duration-300 z-20 cursor-pointer">
+          className="flex flex-wrap items-center w-full h-64 opacity-0 hover:opacity-100 border-2 border-transparent overflow-hidden before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:-z-10 before:bg-background hover:before:opacity-95 transition-all duration-300 z-20 cursor-pointer">
           <div className="flex flex-col items-center gap-2 w-full p-4 text-foreground text-left">
             <span className="block text-lg font-semibold">{project.name}</span>
             <span className="text-center text-base overflow-hidden text-ellipsis mb-2">
@@ -78,13 +80,11 @@ const ProjectSection = () => {
     <Container>
       <div id="projects" className="w-full">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 items-start justify-center w-full">
-          <div className="group flex flex-col justify-center w-full h-64 text-center bg-accent text-white rounded-3xl p-4 md:p-8">
-            <div className="relative flex justify-center w-40 mx-auto border border-white text-sm text-white rounded-3xl px-4 py-1 mb-4 before:content-[''] before:h-full before:w-full before:absolute group-hover:text-accent before:top-0 before:-left-60 group-hover:before:left-0 before:-z-0 overflow-hidden before:duration-700 before:transition-all before:bg-white">
-              <span className="relative inline-block z-10">
-                View my best work
-              </span>
+          <div className="group flex flex-col justify-center w-full h-64 text-center bg-arbxz-accent text-white rounded-3xl p-4 md:p-8">
+            <div className="relative flex justify-center w-40 mx-auto border border-white text-sm text-white rounded-3xl px-4 py-1 mb-4 before:content-[''] before:h-full before:w-full before:absolute group-hover:text-arbxz-accent before:top-0 before:-left-60 group-hover:before:left-0 before:-z-0 overflow-hidden before:duration-700 before:transition-all before:bg-white">
+              <span className="relative inline-block z-10">{t("text")}</span>
             </div>
-            <h2 className="font-semibold text-4xl md:text-6xl">projects.</h2>
+            <h2 className="font-semibold text-4xl md:text-4xl">{t("title")}</h2>
           </div>
           {projectList.map((project) => (
             <ProjectCard key={project.name} project={project} />
