@@ -1,4 +1,3 @@
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { League_Spartan } from "next/font/google";
 
@@ -62,10 +61,10 @@ function RootLayout({
       <head>
         <meta charSet="utf-8" />
         <meta name="google" content="nositelinkssearchbox" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className={inter.className}>
         <Providers>{children}</Providers>
-        <SpeedInsights />
       </body>
     </html>
   );
