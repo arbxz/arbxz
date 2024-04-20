@@ -1,8 +1,8 @@
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 import { useTranslations } from "next-intl";
 
-import { Link } from "../../navigation";
 import Container from "../shared/Container";
 import Button from "../ui-elements/Button";
 import adminImg from "/public/admin.webp";
@@ -30,7 +30,7 @@ const ProjectSection = () => {
     },
     {
       src: adminImg,
-      url: "/admin",
+      url: "https://arbxz.dev/en/admin",
       name: "Admin Dashboard",
       description: "An admin dashboard created using tailwind",
       tech: ["NextJS"],

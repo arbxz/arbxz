@@ -5,10 +5,10 @@ import { useRef } from "react";
 import { faBoltLightning } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
-import Link from "next/link";
 
 import { useAppContext } from "@/context/appContext";
 import { useDimensions } from "@/hooks/useDimensions";
+import { Link } from "@/utils/navigation";
 
 import Dropdown from "../ui-elements/Dropdown";
 import { MenuToggle } from "../ui-elements/MenuToggle";
