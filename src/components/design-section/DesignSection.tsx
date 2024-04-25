@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { useTheme } from "next-themes";
 
 import Card from "../shared/Card";
 import Container from "../shared/Container";
@@ -10,6 +11,8 @@ import psdIcon from "/public/images/icons/photoshop.svg";
 
 const DesignSection = () => {
   const t = useTranslations("UX");
+  const { resolvedTheme } = useTheme();
+
   return (
     <>
       <Container flexDirection="col">
@@ -33,12 +36,17 @@ const DesignSection = () => {
               </div>
             </Card>
 
-            <Card styles="hidden md:block h-48">
+            <Card styles="hidden md:block h-64" background="bg-white">
               <Image
-                src="/images/bgProps/3dshapes.jpg"
+                src={
+                  resolvedTheme === "light"
+                    ? "/images/bgProps/dino.gif"
+                    : "/images/bgProps/dino.gif"
+                }
                 width={500}
                 height={200}
                 alt="3dshape image"
+                className="object-cover w-full h-full"
               />
             </Card>
           </div>
