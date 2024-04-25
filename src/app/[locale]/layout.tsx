@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { League_Spartan } from "next/font/google";
+import { NextIntlClientProvider, useMessages } from "next-intl";
 
 import { Providers } from "../providers";
 
@@ -56,6 +57,8 @@ function RootLayout({
   children,
   params: { locale },
 }: Readonly<RootLayoutProps>) {
+  const messages = useMessages();
+
   return (
     <html suppressHydrationWarning={true} lang={locale}>
       <head>
@@ -64,7 +67,9 @@ function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className={inter.className}>
-        <Providers>{children}</Providers>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <Providers>{children}</Providers>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

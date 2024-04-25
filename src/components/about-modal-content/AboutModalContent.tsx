@@ -8,7 +8,7 @@ interface SkillButtonsProps {
   isDark?: boolean;
 }
 
-const KnowledgeSection = () => {
+const AboutModalContent = () => {
   const { setIsModalOpen } = useAppContext();
 
   const skillData = [
@@ -20,6 +20,9 @@ const KnowledgeSection = () => {
     "ReactJs",
     "Cypress",
     "Vercel",
+    "Redux",
+    "TailwindCSS",
+    "Jest",
   ];
 
   const hobbyData = ["Digital Art", "Art", "Web design", "Photoshop"];
@@ -66,4 +69,4 @@ const KnowledgeSection = () => {
   );
 };
 
-export default KnowledgeSection;
+export default AboutModalContent;

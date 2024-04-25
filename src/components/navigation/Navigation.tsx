@@ -5,6 +5,7 @@ import NavigationButtons from "./NavigationButtons";
 
 const Navigation = () => {
   const t = useTranslations("Nav");
+
   return (
     <nav className="sticky max-w-6xl top-0 text-foreground w-full md:px-4 md:py-4 transition-all ease-in-out duration-300 z-50 mx-auto">
       <div className="glass flex gap-6 w-full justify-between items-center mx-auto px-4 py-3 md:rounded-xl shadow-sm overflow-hidden">

@@ -191,12 +191,18 @@ const Moji = () => {
     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 800 800">
       <defs>
         <radialGradient id="ccclaymoji-grad-dark" r="93%" cx="20%" cy="20%">
-          <stop offset="70%" stopColor="#0071e3" stopOpacity="0"></stop>
+          <stop
+            offset="70%"
+            stopColor="hsl(166, 100%, 73%)"
+            stopOpacity="0"></stop>
           <stop offset="97%" stopColor="#0047b0" stopOpacity="1"></stop>
         </radialGradient>
         <radialGradient id="ccclaymoji-grad-light" r="65%" cx="28%" cy="20%">
           <stop offset="0%" stopColor="#629fff" stopOpacity="0.75"></stop>
-          <stop offset="100%" stopColor="#0071e3" stopOpacity="0"></stop>
+          <stop
+            offset="100%"
+            stopColor="hsl(166, 100%, 73%)"
+            stopOpacity="0"></stop>
         </radialGradient>
         <filter
           id="ccclaymoji-blur"
