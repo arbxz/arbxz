@@ -5,6 +5,7 @@ import Footer from "@/components/footer/Footer";
 import MainBanner from "@/components/main-section/MainSection";
 import Navigation from "@/components/navigation/Navigation";
 import ProjectSection from "@/components/project-section/ProjectSection";
+
 const PageContent = () => {
   return (
     <div className="overflow-hidden bg-background-secondary">
@@ -12,11 +13,11 @@ const PageContent = () => {
       <main className="relative px-4 text-base text-foreground flex gap-4 flex-col items-center justify-center select-none">
         <MainBanner />
         <AboutSection />
-        <div className="px-4 h-1 w-full bg-arbxz-accent max-w-4xl rounded my-4 shadow-lg"></div>
+        <div className="px-4 h-1 w-full bg-arbxz-accent max-w-4xl rounded my-4 shadow"></div>
         <ProjectSection />
 
         <DesignSection />
-        <div className="px-4 h-1 w-full bg-arbxz-accent max-w-4xl rounded my-4 shadow-md"></div>
+        <div className="px-4 h-1 w-full bg-arbxz-accent max-w-4xl rounded my-4 shadow"></div>
 
         <ArtSection />
       </main>

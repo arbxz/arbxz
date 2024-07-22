@@ -8,6 +8,7 @@ import Button from "../ui-elements/Button";
 import adminImg from "/public/admin.webp";
 import nuzanimoImg from "/public/logo_nuzanimo.png";
 import jeanPigeonImg from "/public/sample3.webp";
+import zap from "/public/zap-webapp.png";
 
 interface InterfaceProjectItem {
   src: StaticImageData;
@@ -22,10 +23,11 @@ const ProjectSection = () => {
 
   const projectList: InterfaceProjectItem[] = [
     {
-      src: jeanPigeonImg,
-      url: "https://www.jeanpigeon.xyz/",
-      name: "Jean-Pigeon",
-      description: "A small website I co-authored with a friend.",
+      src: zap,
+      url: "https://zap-webapp.vercel.app",
+      name: "Zap",
+      description:
+        "A power outage monitoring website, inspired from Sandeep Ramgoolam talk from Devcon 2024.",
       tech: ["NextJS"],
     },
     {
@@ -42,12 +44,19 @@ const ProjectSection = () => {
       description: "NGO website created to help stray animals",
       tech: ["NextJs", "TailwindCSS", "Sanity"],
     },
+    {
+      src: jeanPigeonImg,
+      url: "https://www.jeanpigeon.xyz/",
+      name: "Jean-Pigeon",
+      description: "A small website I co-authored with a friend.",
+      tech: ["NextJS"],
+    },
   ];
 
   const ProjectCard = ({ project }: { project: InterfaceProjectItem }) => {
     return (
       <div
-        className="relative group bg-white flex w-full min-h-64 sm:flex-col flex-row rounded-3xl scale-[.99] shadow transition-all duration-300 hover:shadow-md hover:scale-100 overflow-hidden"
+        className="relative group bg-white flex w-full min-h-64 sm:flex-col flex-row rounded-3xl scale-[.95] shadow transition-all duration-300 hover:shadow-md hover:scale-100 overflow-hidden"
         key={project.name}>
         <div className="absolute top-0 left-0 w-full h-full z-10">
           <Image
@@ -63,7 +72,7 @@ const ProjectSection = () => {
           href={project.url}
           prefetch={false}
           target="_blank"
-          className="flex flex-wrap items-center w-full h-64 opacity-0 hover:opacity-100 border-2 border-transparent overflow-hidden before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:-z-10 before:bg-background hover:before:opacity-95 transition-all duration-300 z-20 cursor-pointer">
+          className="flex flex-wrap items-center w-full h-64 opacity-0 hover:opacity-100 overflow-hidden before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:-z-10 before:bg-background hover:before:opacity-95 transition-all duration-300 z-20 cursor-pointer">
           <div className="flex flex-col items-center gap-2 w-full p-4 text-foreground text-left">
             <span className="block text-lg font-semibold">{project.name}</span>
             <span className="text-center text-base overflow-hidden text-ellipsis mb-2">
