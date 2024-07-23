@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import Container from "../shared/Container";
 import Button from "../ui-elements/Button";
 import adminImg from "/public/admin.webp";
+import exxonMotors from "/public/exxonmotors_logo.jpg";
 import nuzanimoImg from "/public/logo_nuzanimo.png";
 import jeanPigeonImg from "/public/sample3.webp";
 import zap from "/public/zap-webapp.png";
@@ -36,6 +37,14 @@ const ProjectSection = () => {
       name: "Admin Dashboard",
       description: "An admin dashboard created using tailwind",
       tech: ["NextJS"],
+    },
+    {
+      src: exxonMotors,
+      url: "https://exxon-motors.vercel.app",
+      name: "Exxon Motors",
+      description:
+        "Product showcase website for Exxon Motors, developed using NextJS and TailwindCSS",
+      tech: ["NextJs", "TailwindCSS", "Sanity"],
     },
     {
       src: nuzanimoImg,
