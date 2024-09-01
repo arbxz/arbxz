@@ -18,13 +18,13 @@ html {
   :root {
     --foreground: #ffffff;
     --foreground-shade: rgba(255, 255, 255, 0.5);
-    --background: rgb(39, 39, 48);
-    --background-secondary: rgb(19, 19, 30);
+    --background: hsl(23, 15%, 10%);
+    --background-secondary: hsl(20 14.3% 4.1%);
     --background-tertiary: #676769;
     --arbxz-accent: hsl(15, 85%, 48%);
     --accent-2: #def861;
     --body: #0d0d0d;
-    --glassBg: rgba(27, 27, 37, 0.5);
+    --glassBg: hsl(12, 12%, 8%);
     --glassBgInvert: rgba(255, 255, 255, 0.5);
     --glassBgTint: rgba(27, 27, 37, 0.25);
     --custom-shadow: rgba(4, 2, 2, 0.6);

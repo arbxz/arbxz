@@ -17,14 +17,14 @@ const MainBanner = () => {
         <div className="flex flex-col md:flex-row lg:flex-col gap-4 text-center lg:w-1/3">
           <Card
             background="bg-arbxz-accent"
-            styles="flex items-center justify-center p-16 md:w-1/2 lg:w-full h-full lg:h-1/2">
-            <div className="text-white text-6xl lg:text-6xl">Arbxz</div>
+            styles="flex items-center justify-center p-8 md:w-1/2 lg:w-full h-full lg:h-1/2">
+            <div className="text-white text-5xl lg:text-5xl">Arbxz</div>
           </Card>
 
           <Card
             background="glass"
-            styles="flex items-center justify-center p-16 h-full">
-            <div className="text-foreground text-4xl">
+            styles="flex items-center justify-center p-8 h-full">
+            <div className="text-foreground text-3xl">
               {t("quote")}
               <FontAwesomeIcon className="text-4xl" icon={faQuoteRight} />
             </div>
@@ -36,11 +36,15 @@ const MainBanner = () => {
             background="glass"
             styles="flex items-center justify-center w-full h-full overflow-hidden">
             <div className="w-auto py-8 md:py-16 lg:py-18">
-              <div className="relative lg:max-w-3xl w-full mb-8 px-4 flex md:flex-row flex-col gap-4 items-center md:justify-center">
-                <h1 className="md:w-1/2 text-5xl md:text-7xl md:text-right text-center font-bold">
-                  {t("job")}
-                </h1>
-                <TextSlider />
+              <div className="relative mb-8 px-4 flex md:flex-row flex-col gap-4 md:gap-24 items-center md:justify-center">
+                <div className="flex-1 flex md:w-1/2 md:justify-end">
+                  <h1 className="text-4xl md:text-5xl md:text-right text-center font-bold md:w-1/2">
+                    {t("job")}
+                  </h1>
+                </div>
+                <div className="flex md:justify-start md:w-1/2">
+                  <TextSlider />
+                </div>
               </div>
             </div>
           </Card>
@@ -48,7 +52,7 @@ const MainBanner = () => {
           <div className="flex flex-wrap md:flex-nowrap gap-4 items-stretch justify-stretch w-full">
             <Card
               background="bg-arbxz-accent"
-              styles="flex w-full items-center p-8 text-white text-6xl text-center">
+              styles="flex w-full items-center p-8 text-white text-5xl text-center">
               <ClockClient />
             </Card>
 

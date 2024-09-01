@@ -16,7 +16,7 @@ const FigmaSection = () => {
             alt={"logo of figma"}
           />
           <div className="max-w-3xl mx-auto text-center md:lg-left">
-            <span className="inline-block p-2 text-background bg-foreground md:text-6xl text-4xl mb-4">
+            <span className="inline-block p-2 text-background bg-foreground md:text-4xl text-4xl mb-4">
               Figma
             </span>
             <br />

@@ -9,10 +9,7 @@ const Home = () => {
   const { isModalOpen, modalContent } = useAppContext();
 
   return (
-    <div
-      className={`${
-        isModalOpen && "overflow-hidden"
-      } overflow-hidden bg-background-secondary`}>
+    <div className={`${isModalOpen && "overflow-hidden"}`}>
       <PageContent />
       {isModalOpen && <Modal isOpen={isModalOpen}>{modalContent}</Modal>}
     </div>

@@ -19,7 +19,7 @@ const ArtSection = () => {
       <div>
         <div>
           <div className="relative">
-            <div className="absolute top-20 -left-36 w-full h-full rotate-45">
+            {/* <div className="absolute top-20 -left-36 w-full h-full rotate-45">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 version="1.1"
@@ -49,26 +49,26 @@ const ArtSection = () => {
                   </marker>
                 </defs>
               </svg>
-            </div>
-            <Moji />
+            </div> */}
+            {/* <Moji /> */}
           </div>
           <div className="relative flex items-center gap-4">
-            <div className="flex text-center p-4 rounded items-center">
+            {/* <div className="flex text-center p-4 rounded items-center">
               <div className="sm:max-w-[150px]">{t("text")}</div>
             </div>
             <Link
               href="https://www.instagram.com/wulver.bd/?hl=en"
               target="_blank"
-              prefetch={false}>
-              <Card
-                background="bg-form-active"
-                styles="flex w-fit justify-between shadow-lg flex-col gap-4 px-4 py-2">
-                <div className="flex gap-4 items-center text-white">
-                  <FontAwesomeIcon className="text-3xl" icon={faInstagram} />
-                  <span>Insta</span>
-                </div>
-              </Card>
-            </Link>
+              prefetch={false}> */}
+            {/* <Card
+              background="bg-form-active"
+              styles="flex w-fit justify-between shadow-lg flex-col gap-4 px-4 py-2">
+              <div className="flex gap-4 items-center text-white">
+                <FontAwesomeIcon className="text-3xl" icon={faInstagram} />
+                <span>Insta</span>
+              </div>
+            </Card> */}
+            {/* </Link> */}
           </div>
         </div>
       </div>

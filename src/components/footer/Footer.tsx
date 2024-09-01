@@ -14,7 +14,7 @@ const Footer = () => {
         prefetch={false}
         className="flex flex-col gap-4 items-center text-xl text-center">
         <span className="inline-block">{t("contact")}</span>
-        <Button intent="secondary" text="LinkedIn" icon={faLinkedin} />
+        <Button intent="primary" text="LinkedIn" icon={faLinkedin} />
       </Link>
       © 2024 Arbaaz Mowlabucus
     </footer>

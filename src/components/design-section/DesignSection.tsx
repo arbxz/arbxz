@@ -17,39 +17,23 @@ const DesignSection = () => {
     <>
       <Container flexDirection="col">
         <div className="relative grid lg:grid-flow-col md:grid-cols-2 w-full gap-4 md:gap-8">
-          <div className="flex flex-col gap-4 w-full">
-            <Card
-              background="glass"
-              styles="group flex items-center justify-center w-full p-16">
-              <div className="text-center text-xl">
-                <div className="relative inline-block mb-4 border border-arbxz-accent text-sm text-arbxz-accent rounded-3xl px-4 py-1 before:content-[''] before:h-full before:w-full before:absolute group-hover:text-white before:top-0 before:-left-40 group-hover:before:left-0 before:-z-0 overflow-hidden before:duration-700 before:transition-all before:bg-arbxz-accent">
-                  <span className="relative z-10">Figma | Adobe XD</span>
-                </div>
-
-                <h2 className="text-4xl md:text-6xl font-semibold mb-4">
-                  UI/<span className="text-arbxz-accent">UX.</span>
-                </h2>
-
-                <div>
-                  <span>{t("text")}</span>
-                </div>
+          <Card
+            background="glass"
+            styles="group flex items-center justify-center w-full p-16">
+            <div className="text-center text-xl">
+              <div className="relative inline-block mb-4 border border-arbxz-accent text-sm text-arbxz-accent rounded-3xl px-4 py-1 before:content-[''] before:h-full before:w-full before:absolute group-hover:text-white before:top-0 before:-left-40 group-hover:before:left-0 before:-z-0 overflow-hidden before:duration-700 before:transition-all before:bg-arbxz-accent">
+                <span className="relative z-10">Figma | Adobe XD</span>
               </div>
-            </Card>
 
-            <Card styles="hidden md:block h-64" background="bg-white">
-              <Image
-                src={
-                  resolvedTheme === "light"
-                    ? "/images/bgProps/dino.gif"
-                    : "/images/bgProps/dino.gif"
-                }
-                width={500}
-                height={200}
-                alt="3dshape image"
-                className="object-cover w-full h-full"
-              />
-            </Card>
-          </div>
+              <h2 className="text-4xl md:text-4xl font-semibold mb-4">
+                UI/<span className="text-arbxz-accent">UX.</span>
+              </h2>
+
+              <div>
+                <span>{t("text")}</span>
+              </div>
+            </div>
+          </Card>
 
           <Card
             background="glass"
@@ -65,7 +49,7 @@ const DesignSection = () => {
                 alt={"logo of figma"}
               />
             </Card>
-            <span className="text-xl md:text-4xl text-center">
+            <span className="text-xl md:text-2xl text-center">
               {t("subheading")}
             </span>
           </Card>

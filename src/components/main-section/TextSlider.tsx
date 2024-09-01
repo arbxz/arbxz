@@ -20,11 +20,11 @@ const TextSlider = () => {
   return (
     <div className="relative mainSection flex flex-col justify-center p-4 rounded-3xl border-4 border-dashed border-arbxz-accent">
       {introText.map((text, index) => (
-        <span className="self-start highlight" key={index}>
+        <span className="self-start" key={index}>
           {text}
         </span>
       ))}
-      <div className="md:text-6xl text-4xl highlight font-semibold self-start">
+      <div className="text-4xl font-semibold self-start">
         <TextTransition springConfig={presets.wobbly}>
           <span>{skills[index % skills.length]}</span>
         </TextTransition>
