@@ -13,7 +13,7 @@ const MainBanner = () => {
   const t = useTranslations("Main");
   return (
     <Container>
-      <div className="flex flex-nowrap flex-col lg:flex-row gap-4 ">
+      <div className="flex flex-nowrap flex-col lg:flex-row gap-4">
         <div className="flex flex-col md:flex-row lg:flex-col gap-4 text-center lg:w-1/3">
           <Card
             background="bg-arbxz-accent"

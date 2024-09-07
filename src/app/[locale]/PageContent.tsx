@@ -8,9 +8,9 @@ import ProjectSection from "@/components/project-section/ProjectSection";
 
 const PageContent = () => {
   return (
-    <div className="overflow-hidden bg-background-secondary">
+    <div className="relative overflow-hidden bg-background-secondary background-grid">
       <Navigation />
-      <main className="relative px-4 text-base text-foreground flex gap-4 flex-col items-center justify-center select-none">
+      <main className="relative px-4 text-base text-foreground flex gap-4 flex-col items-center justify-center select-none z-10">
         <MainBanner />
         <AboutSection />
         <DesignSection />

@@ -7,7 +7,7 @@ import Button from "../ui-elements/Button";
 const Footer = () => {
   const t = useTranslations("Misc");
   return (
-    <footer className="mt-8 flex flex-col justify-center items-center gap-8 text-center py-8 px-4">
+    <footer className="relative mt-8 flex flex-col justify-center items-center gap-8 text-center py-8 px-4 z-20">
       <Link
         href={"https://www.linkedin.com/in/arbaaz-mowlabucus-15bb17160/"}
         target="_blank"

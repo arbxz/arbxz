@@ -116,7 +116,7 @@ const config: Config = {
         },
         ".glass": {
           background: theme("colors.glass"),
-          backdropFilter: "blur(10px)",
+          backdropFilter: "blur( 1px )",
           borderColor: theme("colors.glass-tint"),
           borderWidth: "1px",
         },

@@ -16,20 +16,20 @@ const Navigation = () => {
           <span className="text-arbxz-accent font-semibold">Arbxz</span>
         </Link>
 
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hidden text-md md:flex justify-start items-center gap-4 font-semibold">
-          <Link
+        <div className="hidden text-md md:flex justify-start items-center gap-4 font-semibold">
+          {/* <Link
             prefetch={false}
             className="relative py-2 before:absolute before:bottom-0 before:left-0 before:h-1 before:w-0 before:bg-foreground hover:before:w-full before:transition-all before:duration-300"
             href="#aboutme">
             {t("about")}
-          </Link>
+          </Link> */}
           <Link
             prefetch={false}
             className="relative py-2 before:absolute before:bottom-0 before:left-0 before:h-1 before:w-0 before:bg-foreground hover:before:w-full before:transition-all before:duration-300"
             href="#projects">
             {t("project")}
           </Link>
-          <Link
+          {/* <Link
             prefetch={false}
             className="relative py-2 before:absolute before:bottom-0 before:left-0 before:h-1 before:w-0 before:bg-foreground hover:before:w-full before:transition-all before:duration-300"
             href="#designs">
@@ -40,7 +40,7 @@ const Navigation = () => {
             className="relative py-2 before:absolute before:bottom-0 before:left-0 before:h-1 before:w-0 before:bg-foreground hover:before:w-full before:transition-all before:duration-300"
             href="#art">
             {t("art")}
-          </Link>
+          </Link> */}
         </div>
 
         <NavigationButtons />
