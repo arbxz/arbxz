@@ -27,11 +27,10 @@ html {
     --body: #0d0d0d;
     --glassBg: rgba(23, 19, 18, 0.5);
     --glassBgInvert: rgba(255, 255, 255, 0.5);
-    --glassBgTint: rgba(27, 27, 37, 0.25);
+    --glassBgTint: rgba(138, 138, 150, 0.25);
     --custom-shadow: rgba(4, 2, 2, 0.6);
     --text-active: #03dac6;
     --color-shadow: rgba(0, 113, 227, 0.3);
-
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
 

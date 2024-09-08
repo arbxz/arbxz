@@ -31,7 +31,7 @@ const LocaleSwitch = () => {
       value={value}
       onValueChange={setValue}
       disabled={isPending}>
-      <SelectTrigger className="flex gap-4 items-center justify-center border-[0.5px] p-2 bg-background text-foreground uppercase rounded-md">
+      <SelectTrigger className="flex gap-4 border-[0] border-glass-tint items-center shadow-inner justify-center p-2 bg-background text-foreground uppercase rounded-md">
         <SelectValue placeholder={locale} />
       </SelectTrigger>
       <SelectContent>

@@ -11,10 +11,10 @@ const ThemeToggle = () => {
     <button
       type="button"
       title="Theme toggle"
-      className="flex items-center justify-center p-2 text-xl rounded-full text-foreground"
+      className="flex items-center justify-center p-2 text-xl rounded-full text-foreground bg-background shadow-inner"
       onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}>
       {resolvedTheme == "light" && loaded ? (
-        <FontAwesomeIcon icon={faMoon} />
+        <FontAwesomeIcon width={20} icon={faMoon} />
       ) : (
         <FontAwesomeIcon icon={faSun} />
       )}

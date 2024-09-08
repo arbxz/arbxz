@@ -65,7 +65,7 @@ const ProjectSection = () => {
   const ProjectCard = ({ project }: { project: InterfaceProjectItem }) => {
     return (
       <div
-        className="relative group flex w-full sm:flex-col flex-row rounded-3xl shadow transition-all duration-300 hover:shadow-md overflow-hidden"
+        className="relative group flex w-full sm:flex-col flex-row rounded-3xl shadow transition-all duration-300 hover:shadow-xl overflow-hidden"
         key={project.name}>
         <div className="absolute top-0 left-0 w-full h-full z-10">
           <Image

@@ -7,10 +7,7 @@ interface CardProps {
 const Card = ({ children, background, styles }: CardProps) => {
   return (
     <div
-      className={`relative text-foreground shadow-sm overflow-hidden rounded-3xl ${styles} ${
-        background ||
-        "bg-background hover:scale-[1.02] transition-transform duration-300"
-      }`}>
+      className={`relative text-foreground shadow overflow-hidden rounded-3xl hover:shadow-xl transition-all duration-300 ${styles} ${ background || "bg-background" }`}>
       {children}
     </div>
   );
