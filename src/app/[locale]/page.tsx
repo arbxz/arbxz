@@ -10,7 +10,7 @@ import PageContent from "./PageContent";
 const Home = () => {
   const { isModalOpen, modalContent } = useAppContext();
   const { scrollYProgress } = useScroll();
-  const y = useTransform(scrollYProgress, (latest) => latest * -500);
+  const y = useTransform(scrollYProgress, (latest) => latest * -600);
 
   return (
     <div className="relative bg-background-secondary overflow-hidden">
