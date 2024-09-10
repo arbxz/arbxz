@@ -1,4 +1,5 @@
 # Hi there 👋
+![homelander-the-boys (1)](https://github.com/user-attachments/assets/a1537e63-8eb0-47c8-811c-67ea659e69e8)
 
 I'm Arbaaz Mowlabucus, a passionate Frontend Engineer with a knack for crafting elegant and efficient web applications. I specialize in React, Next.js, and CSS/Sass, constantly pushing the boundaries of what's possible on the web.
 
