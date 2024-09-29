@@ -45,6 +45,19 @@ const ProjectCard = ({ project }: { project: InterfaceProjectItem }) => {
           <Button icon={faGlobe} text="Website" intent="primary" />
         </div>
       </Link>
+      {project.tech.length > 0 && (
+        <div className="absolute bottom-0 right-0 z-20 p-4 rounded-full">
+          {project.tech.map((tech) => (
+            <span
+              key={tech}
+              className={`${
+                tech === "Nuxt" && "text-lime-400 bg-stone-900"
+              } text-xs bg-background text-foreground px-2 py-1 rounded-full ml-2 shadow-inner`}>
+              {tech}
+            </span>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

@@ -6,6 +6,7 @@ import ProjectCard from "./ProjectCard";
 import adminImg from "/public/admin.webp";
 import exxonMotors from "/public/exxonmotors_logo.jpg";
 import nuzanimoImg from "/public/logo_nuzanimo.png";
+import soundBoard from "/public/logo-soundboard.png";
 import jeanPigeonImg from "/public/sample3.webp";
 import zap from "/public/zap-webapp.png";
 
@@ -30,10 +31,24 @@ const ProjectSection = () => {
       tech: ["NextJS"],
     },
     {
+      src: soundBoard,
+      url: "https://nuxt-soundboard.vercel.app",
+      name: "Nuxt Soundboard",
+      description: "A fun side project using Nuxt for personal use :D",
+      tech: ["Nuxt"],
+    },
+    {
       src: adminImg,
       url: "https://arbxz.dev/en/admin",
       name: "Admin Dashboard",
       description: "An admin dashboard created using tailwind",
+      tech: ["NextJS"],
+    },
+    {
+      src: jeanPigeonImg,
+      url: "https://www.jeanpigeon.xyz/",
+      name: "Jean-Pigeon",
+      description: "A small website I co-authored with a friend.",
       tech: ["NextJS"],
     },
     {
@@ -42,21 +57,14 @@ const ProjectSection = () => {
       name: "Exxon Motors",
       description:
         "Product showcase website for Exxon Motors, developed using NextJS and TailwindCSS",
-      tech: ["NextJs", "TailwindCSS", "Sanity"],
+      tech: ["NextJs", "Sanity"],
     },
     {
       src: nuzanimoImg,
       url: "https://www.nuzanimo.org/",
       name: "nuzanimo.org",
       description: "NGO website created to help stray animals",
-      tech: ["NextJs", "TailwindCSS", "Sanity"],
-    },
-    {
-      src: jeanPigeonImg,
-      url: "https://www.jeanpigeon.xyz/",
-      name: "Jean-Pigeon",
-      description: "A small website I co-authored with a friend.",
-      tech: ["NextJS"],
+      tech: ["NextJs", "Sanity"],
     },
   ];
 
