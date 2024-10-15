@@ -1,7 +1,74 @@
-import "@/themes/styles.css";
+import type { Metadata } from "next";
+import { League_Spartan } from "next/font/google";
 
-export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
-  return children;
+import "@/themes/styles.css";
+import { Providers } from "@/app/providers";
+import Navigation from "@/components/navigation/Navigation";
+
+import "@fortawesome/fontawesome-svg-core/styles.css";
+
+const inter = League_Spartan({
+  subsets: ["latin"],
+});
+
+export const metadata: Metadata = {
+  metadataBase: new URL("https://www.arbxz.com"),
+  title: "arbxz | Arbaaz Mowlabucus",
+  description:
+    "Arbaaz Mowlabucus's professional portfolio of frontend projects and illustrations.",
+  authors: {
+    name: "Arbaaz Mowlabucus",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_IE",
+    url: "https://www.arbxz.com/",
+    title: "Arbaaz Mowlabucus | Frontend Engineer",
+    description:
+      "Check out my portfolio and professional skills I gathered throughout my career.",
+
+    siteName: "Arbaz Mowlabucus | Frontend Engineer",
+  },
+  keywords: [
+    "Arbaaz Mowlabucus",
+    "Frontend engineer",
+    "ReactJs",
+    "NextJs",
+    "JavaScript",
+    "Web developer",
+    "Front-end",
+    "developer",
+    "UI/UX",
+    "Portfolio",
+  ],
+  robots: "index, follow",
+};
+
+interface RootLayoutProps {
+  children: React.ReactNode;
+  params: { locale: string };
 }
+
+function RootLayout({
+  children,
+  params: { locale },
+}: Readonly<RootLayoutProps>) {
+  return (
+    <html lang={locale}>
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="google" content="nositelinkssearchbox" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
+      <body className={`${inter.className} bg-background-secondary`}>
+        <Providers>
+          <Navigation />
+
+          <main className="relative overflow-hidden">{children}</main>
+        </Providers>
+      </body>
+    </html>
+  );
+}
+
+export default RootLayout;

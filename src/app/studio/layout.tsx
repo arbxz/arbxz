@@ -1,3 +1,5 @@
+import Container from "@/components/shared/Container";
+
 interface RootLayoutProps {
   children: React.ReactNode;
 }

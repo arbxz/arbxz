@@ -1,14 +1,4 @@
 import type { Metadata } from "next";
-import { League_Spartan } from "next/font/google";
-
-import "@/themes/styles.css";
-import Navigation from "@/components/navigation/Navigation";
-
-import "@fortawesome/fontawesome-svg-core/styles.css";
-
-const inter = League_Spartan({
-  subsets: ["latin"],
-});
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -48,19 +38,7 @@ export const metadata: Metadata = {
 };
 
 function RootLayout({ children }: Readonly<RootLayoutProps>) {
-  return (
-    <html>
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="google" content="nositelinkssearchbox" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-      </head>
-      <body className={inter.className}>
-        <Navigation />
-        {children}
-      </body>
-    </html>
-  );
+  return <>{children}</>;
 }
 
 export default RootLayout;

@@ -13,7 +13,7 @@ const Home = () => {
   const y = useTransform(scrollYProgress, (latest) => latest * -600);
 
   return (
-    <div className="relative bg-background-secondary overflow-hidden">
+    <>
       <motion.div
         className="background-grid"
         style={{
@@ -27,7 +27,7 @@ const Home = () => {
       />
       <PageContent />
       {isModalOpen && <Modal isOpen={isModalOpen}>{modalContent}</Modal>}
-    </div>
+    </>
   );
 };
 
