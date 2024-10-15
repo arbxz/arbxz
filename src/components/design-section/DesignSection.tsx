@@ -1,18 +1,16 @@
 import React from "react";
 
 import Image from "next/image";
-import { useTranslations } from "next-intl";
 
-import Card from "../shared/Card";
-import Container from "../shared/Container";
-import WaveBackground from "../shared/WaveBackground";
+import Card from "@/components/shared/Card";
+import Container from "@/components/shared/Container";
+import WaveBackground from "@/components/shared/WaveBackground";
+
 import clipstudioIcon from "/public/icons/clipstudio.svg";
 import illustratorIcon from "/public/icons/illustrator.svg";
 import psdIcon from "/public/icons/photoshop.svg";
 
 const DesignSection = () => {
-  const t = useTranslations("UX");
-
   return (
     <Container flexDirection="col">
       <div className="relative grid lg:grid-flow-col md:grid-cols-2 w-full gap-4 md:gap-8">
@@ -29,7 +27,7 @@ const DesignSection = () => {
             </h2>
 
             <div>
-              <span>{t("text")}</span>
+              <span>I also prepare sketches customized to your needs.</span>
             </div>
           </div>
         </Card>
@@ -49,7 +47,7 @@ const DesignSection = () => {
             />
           </Card>
           <span className="text-xl md:text-2xl text-center">
-            {t("subheading")}
+            I use Figma, efficiently creating wireframes and prototypes.
           </span>
         </Card>
 

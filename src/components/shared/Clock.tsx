@@ -22,7 +22,7 @@ const Clock = () => {
   });
 
   return (
-    <div className="w-full">
+    <div suppressHydrationWarning={true} className="w-full">
       <h2>{formattedTime}</h2>
     </div>
   );

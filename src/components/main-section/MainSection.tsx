@@ -2,15 +2,14 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
 
-import Card from "../shared/Card";
-import Container from "../shared/Container";
+import Card from "@/components/shared/Card";
+import Container from "@/components/shared/Container";
+
 import ClockClient from "./ClockClient";
 import TextSlider from "./TextSlider";
 
 const MainBanner = () => {
-  const t = useTranslations("Main");
   return (
     <Container>
       <div className="flex flex-nowrap flex-col lg:flex-row gap-4">
@@ -25,7 +24,7 @@ const MainBanner = () => {
             background="glass"
             styles="flex items-center justify-center p-8 h-full">
             <div className="text-foreground text-3xl">
-              {t("quote")}
+              Crafting Digital Experiences, One Line of Code at a Time.
               <FontAwesomeIcon className="text-4xl" icon={faQuoteRight} />
             </div>
           </Card>
@@ -39,7 +38,7 @@ const MainBanner = () => {
               <div className="relative mb-8 px-4 flex md:flex-row flex-col gap-4 md:gap-24 items-center md:justify-center">
                 <div className="flex-1 flex md:w-1/2 md:justify-end">
                   <h1 className="text-4xl md:text-5xl md:text-right text-center font-bold md:w-1/2">
-                    {t("job")}
+                    Frontend Engineer
                   </h1>
                 </div>
                 <div className="flex md:justify-start md:w-1/2">
@@ -67,7 +66,7 @@ const MainBanner = () => {
                   href="https://github.com/arbxz"
                   target="_blank"
                   prefetch={false}>
-                  {t("open")}
+                  Open me
                 </Link>
               </Card>
 
@@ -81,7 +80,7 @@ const MainBanner = () => {
                   href="https://www.linkedin.com/in/arbaaz-mowlabucus-15bb17160/"
                   target="_blank"
                   prefetch={false}>
-                  {t("open")}
+                  Open me
                 </Link>
               </Card>
             </div>

@@ -1,11 +1,9 @@
-import { useTranslations } from "next-intl";
+import Container from "@/components/shared/Container";
+import MusicPlayer from "@/components/shared/MusicPlayer";
 
-import Container from "../shared/Container";
-import MusicPlayer from "../shared/MusicPlayer";
 import About from "./About";
 
 const AboutSection = () => {
-  const t = useTranslations("Misc");
   return (
     <div id="skils" className="w-full">
       <Container>
@@ -14,7 +12,7 @@ const AboutSection = () => {
             <About />
           </div>
           <div className="w-full">
-            <MusicPlayer text={t("music")} />
+            <MusicPlayer text={"Listen to some music"} />
           </div>
         </div>
       </Container>

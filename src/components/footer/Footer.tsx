@@ -1,11 +1,9 @@
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
-import { useTranslations } from "next-intl";
 
-import Button from "../ui-elements/Button";
+import Button from "@/components/ui-elements/Button";
 
 const Footer = () => {
-  const t = useTranslations("Misc");
   return (
     <footer className="relative mt-8 flex flex-col justify-center items-center gap-8 text-center py-8 px-4 z-20">
       <Link
@@ -13,7 +11,7 @@ const Footer = () => {
         target="_blank"
         prefetch={false}
         className="flex flex-col gap-4 items-center text-xl text-center">
-        <span className="inline-block">{t("contact")}</span>
+        <span className="inline-block">Contact me !</span>
         <Button intent="primary" text="LinkedIn" icon={faLinkedin} />
       </Link>
       © 2024 Arbaaz Mowlabucus

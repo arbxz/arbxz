@@ -1,13 +1,18 @@
 import type { Metadata } from "next";
 import { League_Spartan } from "next/font/google";
 
-import { Providers } from "@/app/providers";
+import "@/themes/styles.css";
+import Navigation from "@/components/navigation/Navigation";
 
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
 const inter = League_Spartan({
   subsets: ["latin"],
 });
+
+interface RootLayoutProps {
+  children: React.ReactNode;
+}
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.arbxz.com"),
@@ -42,24 +47,17 @@ export const metadata: Metadata = {
   robots: "index, follow",
 };
 
-interface RootLayoutProps {
-  children: React.ReactNode;
-  params: { locale: string };
-}
-
-function RootLayout({
-  children,
-  params: { locale },
-}: Readonly<RootLayoutProps>) {
+function RootLayout({ children }: Readonly<RootLayoutProps>) {
   return (
-    <html lang={locale}>
+    <html>
       <head>
         <meta charSet="utf-8" />
         <meta name="google" content="nositelinkssearchbox" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className={inter.className}>
-        <Providers>{children}</Providers>
+        <Navigation />
+        {children}
       </body>
     </html>
   );
