@@ -1,6 +1,7 @@
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
 import Link from "next/link";
 
 import Card from "@/components/shared/Card";
@@ -17,13 +18,19 @@ const MainBanner = () => {
           <Card
             background="bg-arbxz-accent"
             styles="flex items-center justify-center p-8 md:w-1/2 lg:w-full h-full lg:h-1/2">
-            <div className="text-white text-5xl lg:text-5xl">Arbxz</div>
+            <Image
+              alt="arbxz-logo"
+              src={"/icons/logo.png"}
+              className="filter brightness-0 invert "
+              width={100}
+              height={100}
+            />
           </Card>
 
           <Card
             background="glass"
-            styles="flex items-center justify-center p-8 h-full">
-            <div className="text-foreground text-3xl">
+            styles="flex flex-1 items-center justify-center p-8 h-full">
+            <div className="text-foreground text-2xl">
               Crafting Digital Experiences, One Line of Code at a Time.
               <FontAwesomeIcon className="text-4xl" icon={faQuoteRight} />
             </div>
@@ -34,16 +41,21 @@ const MainBanner = () => {
           <Card
             background="glass"
             styles="flex items-center justify-center w-full h-full overflow-hidden">
-            <div className="w-auto py-8 md:py-16 lg:py-18">
-              <div className="relative mb-8 px-4 flex md:flex-row flex-col gap-4 md:gap-24 items-center md:justify-center">
-                <div className="flex-1 flex md:w-1/2 md:justify-end">
-                  <h1 className="text-4xl md:text-5xl md:text-right text-center font-bold md:w-1/2">
-                    Frontend Engineer
+            <div className="w-auto py-8 md:py-8 lg:py-14">
+              <div className="relative mb-8 px-4 flex flex-col gap-4 items-center">
+                <div className="flex justify-end items-end text-center">
+                  <h1 className="text-4xl md:text-5xl font-bold">
+                    Frontend Engineer. <br />
+                    <div className="inline-block animate-bounce py-4">🤖</div>
+                    <div className="inline-block animate-bounce delay-100 py-4">
+                      🚀
+                    </div>
+                    <div className="inline-block animate-bounce delay-300 py-4">
+                      🔨
+                    </div>
                   </h1>
                 </div>
-                <div className="flex md:justify-start md:w-1/2">
-                  <TextSlider />
-                </div>
+                <TextSlider />
               </div>
             </div>
           </Card>

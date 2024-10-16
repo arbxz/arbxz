@@ -10,8 +10,7 @@ const Footer = () => {
         href={"https://www.linkedin.com/in/arbaaz-mowlabucus-15bb17160/"}
         target="_blank"
         prefetch={false}
-        className="flex flex-col gap-4 items-center text-xl text-center">
-        <span className="inline-block">Contact me !</span>
+        className="text-sm">
         <Button intent="primary" text="LinkedIn" icon={faLinkedin} />
       </Link>
       © 2024 Arbaaz Mowlabucus

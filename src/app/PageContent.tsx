@@ -1,8 +1,6 @@
 import AboutSection from "@/components/about-section/AboutSection";
 import DesignSection from "@/components/design-section/DesignSection";
-import Footer from "@/components/footer/Footer";
 import MainBanner from "@/components/main-section/MainSection";
-import Navigation from "@/components/navigation/Navigation";
 import ProjectSection from "@/components/project-section/ProjectSection";
 
 const PageContent = () => {
@@ -15,7 +13,6 @@ const PageContent = () => {
         <div className="px-4 h-1 w-full bg-arbxz-accent max-w-4xl rounded my-4 shadow"></div>
         <ProjectSection />
       </div>
-      <Footer />
     </div>
   );
 };

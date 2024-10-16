@@ -1,7 +1,8 @@
+import Link from "next/link";
+
 import Card from "@/components/shared/Card";
 import Button from "@/components/ui-elements/Button";
 import Input from "@/components/ui-elements/Input";
-import { Link } from "@/utils/navigation";
 
 function SignIn() {
   return (

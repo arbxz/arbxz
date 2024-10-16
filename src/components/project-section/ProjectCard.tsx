@@ -1,11 +1,10 @@
 import { useRef } from "react";
 
-import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { useInView } from "framer-motion";
+import { Globe } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-import Button from "../ui-elements/Button";
 import { InterfaceProjectItem } from "./ProjectSection";
 
 const ProjectCard = ({ project }: { project: InterfaceProjectItem }) => {
@@ -36,13 +35,16 @@ const ProjectCard = ({ project }: { project: InterfaceProjectItem }) => {
         href={project.url}
         prefetch={false}
         target="_blank"
-        className="flex flex-wrap items-center w-full h-56 opacity-0 hover:opacity-100 before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:z-10 z-20 before:bg-background hover:before:opacity-95 transition-all duration-300 cursor-pointer">
+        className="flex flex-wrap items-center w-full h-56 opacity-0 hover:opacity-100 before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:z-10 z-20 before:bg-background hover:before:opacity-100 transition-all duration-300 cursor-pointer">
         <div className="z-30 flex flex-col items-center gap-2 w-full p-4 text-foreground text-left">
           <span className="block text-lg font-semibold">{project.name}</span>
-          <span className="text-center text-base overflow-hidden text-ellipsis mb-2">
+          <small className="text-center text-sm overflow-hidden text-ellipsis mb-2 leading-4">
             {project.description}
-          </span>
-          <Button icon={faGlobe} text="Website" intent="primary" />
+          </small>
+          <div className="flex gap-2 items-center px-4 py-1 border-[1px] border-white rounded-full">
+            <Globe size={14} />
+            <small>Website.</small>
+          </div>
         </div>
       </Link>
       {project.tech.length > 0 && (

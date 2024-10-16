@@ -26,8 +26,8 @@ const DesignSection = () => {
               UI/<span className="text-arbxz-accent">UX.</span>
             </h2>
 
-            <div>
-              <span>I also prepare sketches customized to your needs.</span>
+            <div className="leading-5">
+              I also prepare sketches customized to your needs.
             </div>
           </div>
         </Card>
@@ -46,9 +46,9 @@ const DesignSection = () => {
               alt={"logo of figma"}
             />
           </Card>
-          <span className="text-xl md:text-2xl text-center">
+          <p className="text-xl text-center leading-5">
             I use Figma, efficiently creating wireframes and prototypes.
-          </span>
+          </p>
         </Card>
 
         <div className="flex justify-center lg:flex-col gap-4">

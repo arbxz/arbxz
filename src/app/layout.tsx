@@ -3,6 +3,7 @@ import { League_Spartan } from "next/font/google";
 
 import "@/themes/styles.css";
 import { Providers } from "@/app/providers";
+import Footer from "@/components/footer/Footer";
 import Navigation from "@/components/navigation/Navigation";
 
 import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -60,11 +61,12 @@ function RootLayout({
         <meta name="google" content="nositelinkssearchbox" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      <body className={`${inter.className} bg-background-secondary`}>
+      <body
+        className={`${inter.className} bg-background-secondary antialiased`}>
         <Providers>
           <Navigation />
-
           <main className="relative overflow-hidden">{children}</main>
+          <Footer />
         </Providers>
       </body>
     </html>

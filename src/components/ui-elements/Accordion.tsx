@@ -1,8 +1,7 @@
 import { useState } from "react";
 
 import { AnimatePresence, motion, Variants } from "framer-motion";
-
-import { Link } from "@/utils/navigation";
+import Link from "next/link";
 
 interface AccordionProps {
   title: React.ReactNode | string;

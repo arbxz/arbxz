@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { motion } from "framer-motion";
 
-import Accordion from "../ui-elements/Accordion";
+import Accordion from "@/components/ui-elements/Accordion";
 
 const uiOptions = [
   { label: "ui.", href: "/admin/" },

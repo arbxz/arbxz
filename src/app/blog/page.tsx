@@ -1,21 +1,37 @@
-import BlogItem from "@/components/blog/BlogItem";
-import Container from "@/components/shared/Container";
-import { getPosts } from "@/sanity/sanity-utils";
+// "use client";
 
-const BlogPage = async () => {
-  const posts = await getPosts();
+import BlogPage from "./PageContent";
 
-  return (
-    <Container>
-      <div className="py-5">
-        {posts?.length > 0 ? (
-          posts.map((post: any) => <BlogItem key={post._id} blog={post} />)
-        ) : (
-          <p>No posts found</p>
-        )}
-      </div>
-    </Container>
-  );
+// import { motion, useScroll, useTransform } from "framer-motion";
+
+// import BlogPage from "./PageContent";
+
+// const Page = () => {
+//   const { scrollYProgress } = useScroll();
+//   const y = useTransform(scrollYProgress, (latest) => latest * -600);
+
+//   return (
+//     <>
+//       <motion.div
+//         className="background-grid"
+//         style={{
+//           position: "absolute",
+//           left: 0,
+//           top: y,
+//           width: "100%",
+//           height: "100%",
+//           zIndex: 0,
+//         }}
+//       />
+//       <BlogPage />
+//     </>
+//   );
+// };
+
+// export default Page;
+
+const Page = () => {
+  return <BlogPage />;
 };
 
-export default BlogPage;
+export default Page;

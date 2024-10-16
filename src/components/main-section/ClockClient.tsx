@@ -1,5 +1,5 @@
 "use client";
-import Clock from "../shared/Clock";
+import Clock from "@/components/shared/Clock";
 
 const ClockClient = () => {
   return <Clock />;

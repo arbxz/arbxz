@@ -32,13 +32,7 @@ interface ButtonProps extends VariantProps<typeof buttonStyles> {
   // action: () => void;
 }
 
-export default function Button({
-  intent,
-  text,
-  icon,
-  // action,
-  ...props
-}: ButtonProps) {
+export default function Button({ intent, text, icon, ...props }: ButtonProps) {
   return (
     <motion.button
       type="button"

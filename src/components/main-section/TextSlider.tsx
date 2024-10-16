@@ -18,13 +18,19 @@ const TextSlider = () => {
   }, []);
 
   return (
-    <div className="relative mainSection flex flex-col justify-center p-4 rounded-3xl border-4 border-dashed border-arbxz-accent">
+    <div className="relative mainSection flex flex-col text-sm font-normal leading-4 p-4 md:p-8 rounded-3xl">
+      <div>
+        <div className="inline-block mb-4 border border-arbxz-accent text-xs text-arbxz-accent rounded-full px-2 py-1">
+          About me ?
+        </div>
+      </div>
+
       {introText.map((text, index) => (
         <span className="self-start" key={index}>
           {text}
         </span>
       ))}
-      <div className="text-4xl font-semibold self-start">
+      <div className="text-4xl font-bold mt-4 md:mt-6">
         <TextTransition springConfig={presets.wobbly}>
           <span>{skills[index % skills.length]}</span>
         </TextTransition>
