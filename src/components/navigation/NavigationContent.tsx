@@ -20,11 +20,11 @@ const NavigationContent = ({ isBlog }: NavigationContentProps) => {
           </small>
         </Link>
 
-        <Link
+        {/* <Link
           href="/blog"
           className="relative p-2 hover:-translate-y-2 transition-all duration-300">
           blog.
-        </Link>
+        </Link> */}
 
         <div className="flex gap-4 items-center ml-auto">
           <ThemeToggle />

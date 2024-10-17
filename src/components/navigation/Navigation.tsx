@@ -12,7 +12,6 @@ const Navigation = () => {
 
   useEffect(() => {
     if (pathname.includes("blog")) {
-      console.log(pathname);
       setIsBlog(true);
     } else {
       setIsBlog(false);

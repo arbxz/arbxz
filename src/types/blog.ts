@@ -14,6 +14,7 @@ export type Author = {
 export type Blog = {
   _id: number;
   title: string;
+  excerpt: string;
   slug: any;
   body: PortableTextBlock[];
   mainImage: any;

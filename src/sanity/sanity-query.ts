@@ -1,9 +1,7 @@
 import { groq } from "next-sanity";
 const postData = `{
   title,
-  metadata,
   slug,
-  tags,
   author->{
     _id,
     name,
@@ -11,7 +9,9 @@ const postData = `{
     image,
     bio
   },
+  excerpt,
   mainImage,
+  tags,
   publishedAt,
   body
 }`;

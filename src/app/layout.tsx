@@ -62,10 +62,10 @@ function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body
-        className={`${inter.className} bg-background-secondary antialiased`}>
+        className={`${inter.className} bg-background-secondary antialiased flex flex-col min-h-screen`}>
         <Providers>
           <Navigation />
-          <main className="relative overflow-hidden">{children}</main>
+          <main className="relative overflow-hidden flex-1">{children}</main>
           <Footer />
         </Providers>
       </body>

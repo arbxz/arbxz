@@ -12,16 +12,30 @@ const BlogItem = ({ blog }: { blog: Blog }) => {
     <Link
       href={`/blog/${blog.slug.current}`}
       className="group block text-foreground w-full p-5 rounded-xl border-2 border-background bg-glass hover:border-indigo-500 transition-all duration-300">
-      <article>
-        <h3 className="mb-1 text-2xl font-bold tracking-tight group-hover:text-indigo-600">
-          {blog.title}
-        </h3>
-        <div className="mb-4">
-          <div className="text-sm text-foreground-shade font-semibold">
-            <span className="text-indigo-500 mr-1">#</span>Hashtag
-          </div>
+      <article className="grid grid-flow-row">
+        <div className="mb-2">
+          <h3 className="mb-1 text-2xl font-bold tracking-tight group-hover:text-indigo-600">
+            {blog.title}
+          </h3>
+          {blog.excerpt && (
+            <p>
+              {blog.excerpt} <br />
+              <span className="block text-right text-indigo-500 font-semibold w-full">
+                Read more...
+              </span>
+            </p>
+          )}
         </div>
-        <div className="flex flex-col gap-4 items-start">
+        {/* {blog.tags && (
+          <div className="mb-4 text-sm text-foreground-shade font-semibold">
+            {blog.tags.map((tag, index) => (
+              <span key={`${tag}-${index}`}>
+                <span className="text-indigo-500 mr-1">#</span> {tag[index]}
+              </span>
+            ))}
+          </div>
+        )} */}
+        <div className="flex flex-row gap-4 items-start">
           <div className="flex gap-4 items-start">
             <Image
               src={urlFor(blog.author.image).url()}
@@ -41,8 +55,8 @@ const BlogItem = ({ blog }: { blog: Blog }) => {
               </small>
             </div>
           </div>
-          <div className="text-xs flex items-center gap-2 text-foreground ml-auto">
-            <Eye size={16} className="text-indigo-500" /> 75 Impressions
+          <div className="text-xs flex items-center gap-2 text-foreground ml-auto mt-auto">
+            <Eye size={16} className="text-indigo-500" /> 75
           </div>
         </div>
       </article>

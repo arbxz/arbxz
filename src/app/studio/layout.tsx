@@ -1,19 +1,14 @@
-import Container from "@/components/shared/Container";
-
 interface RootLayoutProps {
   children: React.ReactNode;
 }
 
 function RootLayout({ children }: Readonly<RootLayoutProps>) {
   return (
-    <html suppressHydrationWarning={true}>
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="google" content="nositelinkssearchbox" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-      </head>
-      <body>{children}</body>
-    </html>
+    <div
+      suppressHydrationWarning={true}
+      className="fixed top-0 left-0 w-full min-h-screen z-50">
+      {children}
+    </div>
   );
 }
 

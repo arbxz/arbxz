@@ -48,7 +48,9 @@ const BlogPage = async () => {
 
       <div className="grid grid-flow-col gap-4 py-5 w-full">
         {posts?.length > 0 ? (
-          posts.map((post: any) => <BlogItem key={post._id} blog={post} />)
+          posts.map((post: any) => (
+            <BlogItem key={post.title + posts.indexOf} blog={post} />
+          ))
         ) : (
           <p className="text-center py-8 font-semibold">
             Sadly we don&apos;t have anything here right now 🥲

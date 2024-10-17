@@ -48,9 +48,7 @@ AlertProps) => {
 
   useEffect(() => {
     x.onChange(() => {
-      console.log("x.get", x.get);
       if (x.get() > 200 || x.get() < -200) {
-        console.log("im in");
         setIsVisible(false);
       }
     });
