@@ -3,13 +3,7 @@ interface RootLayoutProps {
 }
 
 function RootLayout({ children }: Readonly<RootLayoutProps>) {
-  return (
-    <div
-      suppressHydrationWarning={true}
-      className="fixed top-0 left-0 w-full min-h-screen z-50">
-      {children}
-    </div>
-  );
+  return <div suppressHydrationWarning={true}>{children}</div>;
 }
 
 export default RootLayout;

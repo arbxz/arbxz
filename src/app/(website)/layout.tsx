@@ -1,19 +1,6 @@
 import type { Metadata } from "next";
-import { League_Spartan } from "next/font/google";
-
-import "@/themes/styles.css";
-import { Providers } from "@/app/providers";
-
-import "@fortawesome/fontawesome-svg-core/styles.css";
-
-const inter = League_Spartan({
-  subsets: ["latin"],
-});
-
-interface RootLayoutProps {
-  children: React.ReactNode;
-  params: { locale: string };
-}
+import Footer from "@/components/footer/Footer";
+import Navigation from "@/components/navigation/Navigation";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.arbxz.com"),
@@ -48,22 +35,17 @@ export const metadata: Metadata = {
   robots: "index, follow",
 };
 
-function RootLayout({
-  children,
-  params: { locale },
-}: Readonly<RootLayoutProps>) {
+interface RootLayoutProps {
+  children: React.ReactNode;
+}
+
+function RootLayout({ children }: Readonly<RootLayoutProps>) {
   return (
-    <html lang={locale}>
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="google" content="nositelinkssearchbox" />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-      </head>
-      <body
-        className={`${inter.className} bg-background-secondary antialiased flex flex-col min-h-screen`}>
-        <Providers>{children}</Providers>
-      </body>
-    </html>
+    <>
+      <Navigation />
+      <main className="relative overflow-hidden flex-1">{children}</main>
+      <Footer />
+    </>
   );
 }
 

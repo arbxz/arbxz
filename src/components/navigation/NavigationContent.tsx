@@ -15,7 +15,7 @@ const NavigationContent = ({ isBlog }: NavigationContentProps) => {
           href="/"
           prefetch={false}>
           <small
-            className={` ${isBlog ? "border-indigo-500 text-indigo-500" : "border-arbxz-accent text-arbxz-accent"} text-sm rounded-full px-4 py-1 border-2 font-semibold`}>
+            className={` ${isBlog ? "border-indigo-500 text-indigo-500" : "border-arbxz-accent text-arbxz-accent"} text-sm rounded-full px-4 py-1 border-2 font-semibold transition-colors duration-300`}>
             Arbxz
           </small>
         </Link>
