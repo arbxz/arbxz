@@ -5,6 +5,8 @@ import { Globe } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
+import { urlFor } from "@/sanity/lib/image";
+
 import { InterfaceProjectItem } from "./ProjectSection";
 
 const ProjectCard = ({ project }: { project: InterfaceProjectItem }) => {
@@ -24,15 +26,14 @@ const ProjectCard = ({ project }: { project: InterfaceProjectItem }) => {
       <div className="absolute top-0 left-0 w-full h-full z-10">
         <Image
           className="object-cover w-full h-full z-10"
-          src={project.src}
+          src={urlFor(project.image).url()}
           height={300}
           width={300}
           alt={project.name}
-          placeholder="blur"
         />
       </div>
       <Link
-        href={project.url}
+        href={project.link}
         prefetch={false}
         target="_blank"
         className="flex flex-wrap items-center w-full h-56 opacity-0 hover:opacity-100 before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:z-10 z-20 before:bg-background hover:before:opacity-100 transition-all duration-300 cursor-pointer">
@@ -47,19 +48,14 @@ const ProjectCard = ({ project }: { project: InterfaceProjectItem }) => {
           </div>
         </div>
       </Link>
-      {project.tech.length > 0 && (
-        <div className="absolute bottom-0 right-0 z-20 p-4 rounded-full">
-          {project.tech.map((tech) => (
-            <span
-              key={tech}
-              className={`${
-                tech === "Nuxt" && "text-lime-400 bg-stone-900"
-              } text-xs bg-background text-foreground px-2 py-1 rounded-full ml-2 shadow-inner`}>
-              {tech}
-            </span>
-          ))}
-        </div>
-      )}
+      <div className="absolute bottom-0 right-0 z-20 p-4 rounded-full">
+        <span
+          className={`${
+            project.framework === "NuxtJs" && "text-lime-400 bg-stone-900"
+          } text-xs bg-background text-foreground px-2 py-1 rounded-full ml-2 shadow-inner`}>
+          {project.framework}
+        </span>
+      </div>
     </div>
   );
 };
