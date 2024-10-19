@@ -1,13 +1,21 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
 import Container from "@/components/shared/Container";
 import { getProjects } from "@/sanity/sanity-utils";
 import { Project } from "@/types/project";
 
 import ProjectCard from "./ProjectCard";
 
-export interface InterfaceProjectItem extends Project {}
+const ProjectSection = () => {
+  const [projectData, setProjectData] = useState<Project[]>([]);
 
-const ProjectSection = async () => {
-  const projects = await getProjects();
+  useEffect(() => {
+    getProjects().then((projects) => {
+      setProjectData(projects);
+    });
+  }, []);
 
   return (
     <Container>
@@ -21,7 +29,7 @@ const ProjectSection = async () => {
             </div>
             <h2 className="font-semibold text-4xl md:text-4xl">projects.</h2>
           </div>
-          {projects.map((project) => (
+          {projectData.map((project) => (
             <ProjectCard key={project.name} project={project} />
           ))}
         </div>

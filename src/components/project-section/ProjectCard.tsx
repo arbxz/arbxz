@@ -6,8 +6,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { urlFor } from "@/sanity/lib/image";
+import { Project } from "@/types/project";
 
-import { InterfaceProjectItem } from "./ProjectSection";
+interface InterfaceProjectItem extends Project {}
 
 const ProjectCard = ({ project }: { project: InterfaceProjectItem }) => {
   const ref = useRef(null);
@@ -21,8 +22,7 @@ const ProjectCard = ({ project }: { project: InterfaceProjectItem }) => {
         opacity: isInView ? 1 : 0,
         transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
       }}
-      className="relative overflow-hidden group flex w-full sm:flex-col flex-row rounded-3xl shadow hover:shadow-xl"
-      key={project.name}>
+      className="relative overflow-hidden group flex w-full sm:flex-col flex-row rounded-3xl shadow hover:shadow-xl">
       <div className="absolute top-0 left-0 w-full h-full z-10">
         <Image
           className="object-cover w-full h-full z-10"
