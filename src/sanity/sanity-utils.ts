@@ -2,8 +2,9 @@ import { type QueryParams } from "next-sanity";
 
 import { client } from "@/sanity/lib/client";
 import { Blog } from "@/types/blog";
+import { Project } from "@/types/project";
 
-import { postQuery, postQueryBySlug } from "./sanity-query";
+import { postQuery, postQueryBySlug, projectQuery } from "./sanity-query";
 
 export async function sanityFetch<QueryResponse>({
   query,
@@ -26,6 +27,16 @@ export const getPosts = async () => {
     qParams: {},
     tags: ["post", "author", "category"],
   });
+  return data;
+};
+
+export const getProjects = async () => {
+  const data: Project[] = await sanityFetch({
+    query: projectQuery,
+    qParams: {},
+    tags: ["project", "category"],
+  });
+
   return data;
 };
 

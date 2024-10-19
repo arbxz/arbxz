@@ -16,7 +16,18 @@ const postData = `{
   body
 }`;
 
+const projectData = `{
+  name,
+  description,
+  link,
+  framework,
+  slug,
+  image
+}`;
+
 export const postQuery = groq`*[_type == "post"] ${postData}`;
+
+export const projectQuery = groq`*[_type == "project"] ${projectData}`;
 
 export const postQueryBySlug = groq`*[_type == "post" && slug.current == $slug][0] ${postData}`;
 
