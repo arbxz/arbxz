@@ -44,7 +44,7 @@ function RootLayout({ children }: Readonly<RootLayoutProps>) {
   return (
     <>
       <Navigation />
-      <main className="relative overflow-hidden flex-1">{children}</main>
+      <main className="relative flex-1">{children}</main>
       <Footer />
     </>
   );

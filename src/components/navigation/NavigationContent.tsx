@@ -15,16 +15,16 @@ const NavigationContent = ({ isBlog }: NavigationContentProps) => {
           href="/"
           prefetch={false}>
           <small
-            className={` ${isBlog ? "border-indigo-500 text-indigo-500" : "border-arbxz-accent text-arbxz-accent"} text-sm rounded-full px-4 py-1 border-2 font-semibold transition-colors duration-300`}>
+            className={` ${isBlog ? "border-green-500 text-green-500" : "border-arbxz-accent text-arbxz-accent"} text-sm rounded-full px-4 py-1 border-2 font-semibold transition-colors duration-300`}>
             Arbxz
           </small>
         </Link>
 
-        {/* <Link
+        <Link
           href="/blog"
           className="relative p-2 hover:-translate-y-2 transition-all duration-300">
           blog.
-        </Link> */}
+        </Link>
 
         <div className="flex gap-4 items-center ml-auto">
           <ThemeToggle />
