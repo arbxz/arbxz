@@ -8,7 +8,7 @@ const AboutSection = () => {
     <div id="skils" className="w-full">
       <Container>
         <div className="flex flex-wrap sm:flex-nowrap w-full gap-4 justify-stretch items-stretch">
-          <div>
+          <div className="w-full">
             <About />
           </div>
           <div className="w-full">

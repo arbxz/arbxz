@@ -12,6 +12,7 @@ const Clock = () => {
     currTime.toLocaleTimeString([], {
       hour: "2-digit",
       minute: "2-digit",
+      hour12: true,
     });
 
   useEffect(() => {
@@ -25,7 +26,9 @@ const Clock = () => {
   }, []); // Empty dependency array ensures that the effect runs only once on mount
 
   return (
-    <div suppressHydrationWarning={true} className="w-full font-thin">
+    <div
+      suppressHydrationWarning={true}
+      className="w-full font-normal uppercase">
       {mounted && time && <h2>{formattedTime(time)}</h2>}
     </div>
   );
