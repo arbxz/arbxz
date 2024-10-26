@@ -11,8 +11,8 @@ import { Project } from "@/types/project";
 interface InterfaceProjectItem extends Project {}
 
 const ProjectCard = ({ project }: { project: InterfaceProjectItem }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref as React.RefObject<Element>, { once: true });
 
   return (
     <div

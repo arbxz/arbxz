@@ -32,7 +32,7 @@ const MainBanner = () => {
             styles="flex flex-1 items-center justify-center p-8 h-full">
             <div className="text-foreground text-2xl">
               Crafting Digital Experiences, One Line of Code at a Time.
-              <FontAwesomeIcon className="text-4xl" icon={faQuoteRight} />
+              <FontAwesomeIcon className="text-3xl ml-2" icon={faQuoteRight} />
             </div>
           </Card>
         </div>
@@ -40,9 +40,9 @@ const MainBanner = () => {
         <div className="flex flex-col justify-center items-center gap-4 w-full">
           <Card
             background="glass"
-            styles="flex items-center justify-center w-full h-full overflow-hidden">
-            <div className="w-auto py-8 md:py-8 lg:py-14">
-              <div className="relative mb-8 px-4 flex flex-col gap-4 items-center">
+            styles="pt-8 lg:pt-14 pb-4 h-full overflow-hidden w-full">
+            <div className="w-auto">
+              <div className="relative px-4 flex flex-col gap-4 items-center">
                 <div className="flex justify-end items-end text-center">
                   <h1 className="text-4xl md:text-5xl font-bold">
                     Frontend Engineer. <br />
@@ -57,6 +57,11 @@ const MainBanner = () => {
                 </div>
                 <TextSlider />
               </div>
+            </div>
+            <div className="text-center pb-8">
+              <span className="text-3xl lg:text-4xl font-semibold">
+                NextJs | ReactJs
+              </span>
             </div>
           </Card>
 

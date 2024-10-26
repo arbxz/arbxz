@@ -37,7 +37,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "dist/types/**/*.ts",
-    "src/context/appContext.js"
+    "src/context/appContext.js",
+    "src/app/providers.js"
   ],
   "exclude": ["node_modules"]
 }
