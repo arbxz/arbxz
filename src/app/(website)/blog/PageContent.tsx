@@ -1,7 +1,6 @@
 import Image from "next/image";
 
 import BlogItem from "@/components/blog/BlogItem";
-import ClockClient from "@/components/main-section/ClockClient";
 import Card from "@/components/shared/Card";
 import { getPosts } from "@/sanity/sanity-utils";
 

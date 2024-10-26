@@ -59,7 +59,7 @@ html {
     --radius: 0.5rem;
   }
 
-  [data-theme="light"] {
+  .light {
     --foreground: rgb(4, 2, 2);
     --foreground-shade: rgba(4, 2, 2, 0.8);
     --graph-grid: #dbdbdb;

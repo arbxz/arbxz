@@ -1,5 +1,3 @@
-import { cva, VariantProps } from "class-variance-authority";
-
 interface InputProps {
   id: string;
   name: string;

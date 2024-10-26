@@ -1,14 +1,8 @@
-import React from "react";
-
 import Image from "next/image";
 
 import Card from "@/components/shared/Card";
 import Container from "@/components/shared/Container";
 import WaveBackground from "@/components/shared/WaveBackground";
-
-import clipstudioIcon from "/public/icons/clipstudio.svg";
-import illustratorIcon from "/public/icons/illustrator.svg";
-import psdIcon from "/public/icons/photoshop.svg";
 
 const DesignSection = () => {
   return (
@@ -55,7 +49,7 @@ const DesignSection = () => {
           <Card styles="h-24 w-24 p-4 flex items-center justify-center">
             <Image
               className="transition-all w-auto duration-300 ease-in-out hover:-translate-y-3"
-              src={psdIcon}
+              src={"/icons/photoshop.svg"}
               width={45}
               height={45}
               alt="photoshop icon"
@@ -64,7 +58,7 @@ const DesignSection = () => {
           <Card styles="h-24 w-24 p-4 flex items-center justify-center">
             <Image
               className="w-auto transition-all duration-300 ease-in-out hover:-translate-y-3"
-              src={illustratorIcon}
+              src={"/icons/illustrator.svg"}
               width={45}
               height={45}
               alt="illustrator icon"
@@ -73,7 +67,7 @@ const DesignSection = () => {
           <Card styles="h-24 w-24 p-4 flex items-center justify-center">
             <Image
               className="transition-all duration-300 ease-in-out hover:-translate-y-3 bg-white rounded-full p-2 overflow-hidden"
-              src={clipstudioIcon}
+              src={"/icons/clipstudio.svg"}
               width={45}
               height={45}
               alt="clipstudio icon"

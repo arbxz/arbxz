@@ -53,7 +53,7 @@ function RootLayout({
   params: { locale },
 }: Readonly<RootLayoutProps>) {
   return (
-    <html lang={locale}>
+    <html className="dark" style={{}} lang={locale}>
       <head>
         <meta charSet="utf-8" />
         <meta name="google" content="nositelinkssearchbox" />
