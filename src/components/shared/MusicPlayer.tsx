@@ -16,12 +16,12 @@ import WaveBackground from "./WaveBackground";
 const tracks = [
   {
     title: "Sleepy Cat",
-    src: "https://assets.mixkit.co/music/preview/mixkit-sleepy-cat-135.mp3",
+    src: "https://www.youtube.com/watch?v=fKF2HIjxtNA",
     author: "Alejandro Magaña (A. M.)",
   },
   {
     title: "Games Worldbeat",
-    src: "https://assets.mixkit.co/music/preview/mixkit-games-worldbeat-466.mp3",
+    src: "https://www.youtube.com/watch?v=fKF2HIjxtNA",
     author: "Bernardo R.",
   },
 ];
