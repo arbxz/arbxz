@@ -21,13 +21,13 @@ const BlogItem = ({ blog }: { blog: Blog }) => {
 
         <div className="p-4 group-hover:translate-x-4 group-hover:translate-y-4 rounded-xl bg-background group-hover:shadow transition-all duration-300">
           <div className="mb-2">
-            <h3 className="mb-1 text-2xl font-bold tracking-tight group-hover:text-green-600">
+            <h3 className="mb-1 text-2xl font-bold tracking-tight group-hover:text-blue-600">
               {blog.title}
             </h3>
             {blog.excerpt && (
               <p>
                 {blog.excerpt} <br />
-                <span className="block text-right text-green-500 font-semibold w-full">
+                <span className="block text-right text-blue-500 font-semibold w-full">
                   Read more...
                 </span>
               </p>
@@ -37,7 +37,7 @@ const BlogItem = ({ blog }: { blog: Blog }) => {
             <div className="mb-4 text-sm text-foreground-shade font-semibold">
               {blog.tags.map((tag, index) => (
                 <span key={`${tag}-${index}`}>
-                  <span className="text-green-500 mr-1">#</span> {tag[index]}
+                  <span className="text-blue-500 mr-1">#</span> {tag[index]}
                 </span>
               ))}
             </div>
@@ -63,11 +63,11 @@ const BlogItem = ({ blog }: { blog: Blog }) => {
               </div>
             </div>
             <div className="text-xs flex items-center gap-2 text-foreground ml-auto mt-auto">
-              <Eye size={16} className="text-green-500" /> 75
+              <Eye size={16} className="text-blue-500" /> 75
             </div>
           </div>
         </div>
-        <div className="bg-green-400 w-full h-2 mt-2 rounded-xl group-hover:translate-x-4 group-hover:w-2 group-hover:translate-y-4 transition-all duration-300"></div>
+        <div className="bg-blue-600 w-full h-2 mt-2 rounded-xl group-hover:translate-x-4 group-hover:w-2 group-hover:translate-y-4 transition-all duration-300"></div>
       </article>
     </Link>
   );

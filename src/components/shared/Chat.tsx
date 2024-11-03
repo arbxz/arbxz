@@ -1,6 +1,16 @@
 import Image from "next/image";
 
-const Chat = () => {
+interface ChatProps {
+  name?: string;
+  message?: string;
+  time?: string;
+}
+
+const Chat = ({
+  name = "Arbaaz Mowlabucus",
+  message = "Hey can you check out this graph ?",
+  time = "19:30",
+}: ChatProps) => {
   return (
     <div className="flex items-center justify-start gap-4 py-2 px-4 rounded-xl shadow-sm cursor-pointer duration-300 transition-all bg-background hover:bg-background-secondary hover:translate-x-1">
       <div className="relative">
@@ -16,10 +26,10 @@ const Chat = () => {
         </span>
       </div>
       <div className="flex flex-col">
-        <span className="font-semibold">Arbaaz Mowlabucus</span>
-        <span className="text-sm">Hey can you check out this graph ?</span>
+        <span className="font-semibold">{name}</span>
+        <span className="text-sm">{message}</span>
       </div>
-      <span className="text-sm font-light self-end ml-auto">19:30</span>
+      <span className="text-sm font-light self-end ml-auto">{time}</span>
     </div>
   );
 };

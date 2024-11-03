@@ -6,17 +6,19 @@ const TextSlider = () => {
   ];
 
   return (
-    <div className="relative mainSection flex flex-col text-sm font-normal leading-4 p-4 md:p-8 rounded-3xl">
+    <div
+      className="flex flex-col text-sm font-normal p-8 md:p-10 rounded-3xl bg-glass border-[1px] border-stone-200 dark:glass hover:shadow-lg transition-shadow duration-300
+    ">
       <div>
-        <div className="inline-block mb-4 border border-arbxz-accent text-sm text-arbxz-accent rounded-full px-2 py-1">
+        <span className="inline-block mb-4 text-sm text-white bg-blue-500 font-medium rounded-full px-4 py-1">
           About me ?
-        </div>
+        </span>
       </div>
 
       {introText.map((text, index) => (
-        <span className="self-start text-base" key={index}>
+        <p className="self-start text-xl lg:text-base leading-5" key={index}>
           {text}
-        </span>
+        </p>
       ))}
     </div>
   );

@@ -64,11 +64,12 @@ const AboutModalContent = () => {
       </div>
 
       <div className="block p-4 w-full h-full md:rounded-xl bg-background">
-        <p className="text-xl text-center max-w-sm mx-auto">
+        <p className="text-xl text-center max-w-sm mx-auto mb-4">
           Professional skills I use in my day to day life as a react developer
         </p>
         <SkillButtons data={skillData} />
-        <p className="text-xl text-center">Hobbies</p>
+        <div className="w-full h-[1px] bg-foreground my-6 px-4"></div>
+        <p className="text-xl text-center mb-4">Hobbies</p>
         <SkillButtons data={hobbyData} isDark />
       </div>
     </div>

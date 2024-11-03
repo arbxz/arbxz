@@ -8,11 +8,11 @@ const BlogPage = async () => {
   const posts = await getPosts();
 
   return (
-    <div className="flex gap-4 flex-col w-full max-w-5xl mx-auto px-4 relative overflow-hidden z-20">
+    <div className="flex gap-4 flex-col w-full max-w-5xl xl:max-w-6xl mx-auto px-4 relative overflow-hidden z-20">
       <div className="flex flex-col lg:flex-row gap-4">
         <div className="h-full hidden lg:block">
           <Card
-            background="bg-green-400"
+            background="bg-blue-600"
             styles="grid grid-row p-8 text-white text-5xl text-center">
             <Image
               className="brightness-0 invert"
@@ -24,7 +24,7 @@ const BlogPage = async () => {
           </Card>
         </div>
 
-        <Card styles="flex-1" background="bg-green-400">
+        <Card styles="flex-1" background="bg-blue-600">
           <div className="h-full w-full px-4 py-4 text-white font-semibold flex items-center justify-center text-center text-3xl">
             <div className="text-right">
               Checkout my articles below 👀

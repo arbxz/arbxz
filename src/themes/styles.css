@@ -62,7 +62,7 @@ html {
   .light {
     --foreground: rgb(4, 2, 2);
     --foreground-shade: rgba(4, 2, 2, 0.8);
-    --graph-grid: #dbdbdb;
+    --graph-grid: #d5d5d5;
     --background: #ffffff;
     --background-secondary: #f5f5f7;
     --background-tertiary: #f7f7f7;
@@ -124,7 +124,7 @@ html {
     background-image: radial-gradient(
       circle at 50% 50%,
       rgba(0, 0, 0, 0) 35%,
-      var(--background-secondary) 75%
+      var(--background-secondary) 80%
     );
     background-size: 100% 100%;
     background-position: center center;
@@ -133,6 +133,15 @@ html {
 }
 
 @layer components {
+  .animate-cat {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 1;
+  }
+
   .spinner {
     position: absolute;
     top: calc(50% - 30px);
@@ -228,5 +237,62 @@ html {
     to {
       transform: rotate(360deg);
     }
+  }
+
+  @keyframes blink-animation {
+    0%,
+    90% {
+      /* Eyes fully open most of the time */
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  /* Frame 1 - Eyes Open */
+  .animate-cat-frame-4 {
+    z-index: 1;
+    opacity: 1;
+    animation: blink-animation 2.4s infinite;
+  }
+
+  /* Frame 2 - Eyes Starting to Close */
+  .animate-cat-frame-3 {
+    z-index: 2;
+    opacity: 0;
+    animation: blink-animation 2.4s infinite;
+    animation-delay: -2.3s; /* Shows briefly during closing */
+  }
+
+  /* Frame 3 - Eyes Almost Closed */
+  .animate-cat-frame-2 {
+    z-index: 3;
+    opacity: 0;
+    animation: blink-animation 2.4s infinite;
+    animation-delay: -2.2s; /* Shows briefly during closing */
+  }
+
+  /* Frame 4 - Eyes Closed */
+  .animate-cat-frame-1 {
+    z-index: 4;
+    opacity: 0;
+    animation: blink-animation 2.4s infinite;
+    animation-delay: -2.1s; /* Shows briefly at peak of blink */
+  }
+
+  @keyframes customBounce {
+    0%,
+    100% {
+      transform: translateY(-5%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+      transform: none;
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+  .animate-custom-bounce {
+    animation: customBounce 3s infinite;
   }
 }
