@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { League_Spartan } from "next/font/google";
+import { Source_Sans_3 } from "next/font/google";
 
 import "@/themes/styles.css";
 import { Providers } from "@/app/providers";
 
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
-const inter = League_Spartan({
+const inter = Source_Sans_3({
+  weight: ["400", "500", "700"],
   subsets: ["latin"],
 });
 

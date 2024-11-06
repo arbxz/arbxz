@@ -37,7 +37,7 @@ const ProjectCard = ({ project }: { project: InterfaceProjectItem }) => {
         prefetch={false}
         target="_blank"
         className="flex flex-wrap items-center w-full h-56 opacity-0 hover:opacity-100 before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:z-10 z-20 before:bg-background hover:before:opacity-100 transition-all duration-300 cursor-pointer">
-        <div className="z-30 flex flex-col items-center gap-2 w-full p-4 text-foreground text-left">
+        <div className="z-30 flex flex-col items-center gap-2 w-full p-4 text-left">
           <span className="block text-lg font-semibold">{project.name}</span>
           <small className="text-center text-sm overflow-hidden text-ellipsis mb-2 leading-4">
             {project.description}

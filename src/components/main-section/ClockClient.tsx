@@ -28,9 +28,7 @@ const ClockClient = () => {
   }, []); // Empty dependency array ensures that the effect runs only once on mount
 
   return (
-    <div
-      suppressHydrationWarning={true}
-      className="w-full font-normal uppercase">
+    <div suppressHydrationWarning={true} className="w-full">
       {mounted && time && <h2>{formattedTime(time)}</h2>}
     </div>
   );

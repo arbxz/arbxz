@@ -12,11 +12,11 @@ const DesignSection = () => {
           background="glass"
           styles="group flex items-center justify-center w-full p-16">
           <div className="text-center text-xl">
-            <div className="relative inline-block mb-4 border border-arbxz-accent text-sm text-arbxz-accent rounded-3xl px-4 py-1 before:content-[''] before:h-full before:w-full before:absolute group-hover:text-white before:top-0 before:-left-40 group-hover:before:left-0 before:-z-0 overflow-hidden before:duration-700 before:transition-all before:bg-arbxz-accent">
+            <div className="relative inline-block mb-4 border border-arbxz-accent text-sm dark:text-white text-arbxz-accent rounded-3xl px-4 py-1 before:content-[''] before:h-full before:w-full before:absolute group-hover:text-white before:top-0 before:-left-40 group-hover:before:left-0 before:-z-0 overflow-hidden before:duration-700 before:transition-all before:bg-arbxz-accent">
               <span className="relative z-10">Figma | Adobe XD</span>
             </div>
 
-            <h2 className="text-4xl md:text-4xl font-semibold mb-4">
+            <h2 className="text-4xl md:text-6xl font-bold mb-4">
               UI/<span className="text-arbxz-accent">UX.</span>
             </h2>
 
@@ -46,7 +46,9 @@ const DesignSection = () => {
         </Card>
 
         <div className="flex justify-center lg:flex-col gap-4">
-          <Card styles="h-24 w-24 p-4 flex items-center justify-center">
+          <Card
+            background="bg-blue-500"
+            styles="h-24 w-24 p-4 flex items-center justify-center">
             <Image
               className="transition-all w-auto duration-300 ease-in-out hover:-translate-y-3"
               src={"/icons/photoshop.svg"}
@@ -55,7 +57,9 @@ const DesignSection = () => {
               alt="photoshop icon"
             />
           </Card>
-          <Card styles="h-24 w-24 p-4 flex items-center justify-center">
+          <Card
+            background="bg-violet-500"
+            styles="h-24 w-24 p-4 flex items-center justify-center">
             <Image
               className="w-auto transition-all duration-300 ease-in-out hover:-translate-y-3"
               src={"/icons/illustrator.svg"}
@@ -64,7 +68,9 @@ const DesignSection = () => {
               alt="illustrator icon"
             />
           </Card>
-          <Card styles="h-24 w-24 p-4 flex items-center justify-center">
+          <Card
+            background="bg-stone-200"
+            styles="h-24 w-24 p-4 flex items-center justify-center">
             <Image
               className="transition-all duration-300 ease-in-out hover:-translate-y-3 bg-white rounded-full p-2 overflow-hidden"
               src={"/icons/clipstudio.svg"}

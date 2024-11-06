@@ -11,7 +11,7 @@ const Footer = () => {
         target="_blank"
         prefetch={false}
         className="text-sm">
-        <Button intent="primary" text="LinkedIn" icon={faLinkedin} />
+        <Button intent="secondary" text="LinkedIn" icon={faLinkedin} />
       </Link>
       © 2024 Arbaaz Mowlabucus
     </footer>

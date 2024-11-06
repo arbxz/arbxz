@@ -1,5 +1,4 @@
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,7 +8,7 @@ import Chat from "@/components/shared/Chat";
 import Container from "@/components/shared/Container";
 
 import ClockClient from "./ClockClient";
-import TextSlider from "./TextSlider";
+import TextCard from "./TextCard";
 
 const MainBanner = () => {
   return (
@@ -56,19 +55,19 @@ const MainBanner = () => {
 
           <div className="flex flex-wrap md:flex-nowrap gap-4 items-stretch justify-stretch w-full">
             <Card
-              background="bg-arbxz-accent"
+              background="animated-background bg-gradient-to-l from-indigo-700 via-violet-500 to-indigo-500"
               styles="flex w-full items-center p-8 text-white text-5xl text-center">
               <ClockClient />
             </Card>
 
             <div className="flex min-w-max gap-4">
-              <Card styles="flex justify-between flex-col gap-4 p-4 bg-foreground">
-                <div className="flex gap-4 items-center text-background">
+              <Card styles="flex justify-between flex-col gap-4 p-4 bg-stone-800">
+                <div className="flex gap-4 items-center text-white">
                   <FontAwesomeIcon className="text-3xl" icon={faGithub} />
                   <span>Github</span>
                 </div>
                 <Link
-                  className="text-foreground bg-background px-4 py-2 rounded-full text-center border-2 border-white transition-colors duration-300 hover:border-background hover:text-background hover:bg-foreground"
+                  className="bg-white text-stone-800 px-4 py-2 rounded-full text-center border-2 border-white transition-colors duration-300 hover:border-white hover:text-white hover:bg-stone-800"
                   href="https://github.com/arbxz"
                   target="_blank"
                   prefetch={false}>
@@ -76,13 +75,13 @@ const MainBanner = () => {
                 </Link>
               </Card>
 
-              <Card styles="flex justify-between flex-col gap-4 p-4">
-                <div className="flex gap-4 items-center">
+              <Card styles="flex justify-between flex-col gap-4 p-4 bg-white">
+                <div className="flex gap-4 items-center  text-stone-800">
                   <FontAwesomeIcon className="text-3xl" icon={faLinkedin} />
                   <span>Linkedin</span>
                 </div>
                 <Link
-                  className="text-background bg-foreground px-4 py-2 rounded-full text-center border-2 border-foreground transition-colors duration-300 hover:border-foreground hover:text-foreground hover:bg-background"
+                  className="text-white bg-stone-800 px-4 py-2 rounded-full text-center border-2 border-stone-800 transition-colors duration-300 hover:border-stone-800 hover:text-stone-800 hover:bg-white"
                   href="https://www.linkedin.com/in/arbaaz-mowlabucus-15bb17160/"
                   target="_blank"
                   prefetch={false}>
@@ -104,14 +103,25 @@ const MainBanner = () => {
             </div>
           </div>
 
-          <div className="lg:absolute top-1/2 lg:-translate-y-1/2 left-0 w-full lg:w-auto">
-            <TextSlider />
+          <div className="group relative lg:absolute top-1/2 lg:-translate-y-1/2 left-0 w-full lg:w-auto">
+            <div className="absolute top-4 -right-4 lg:top-8 lg:-right-8 group-hover:top-0 group-hover:right-0 group-hover:relative group-hover:z-20 duration-300 transition-all">
+              <TextCard
+                title="Ah curious are we"
+                text="I'm also really good in css/scss. I love to design and code beautiful websites."
+              />
+            </div>
+            <div className="relative top-0 right-0 group-hover:top-4 group-hover:-right-4 lg:group-hover:top-8 lg:group-hover:-right-8 group-hover:absolute z-20 group-hover:z-10 duration-300 transition-all">
+              <TextCard
+                title="Who am I ?"
+                text="I'm Arbaaz Mowlabucus, a frontend engineer with speciality in React and Nextjs."
+              />
+            </div>
           </div>
 
           <div className="hidden lg:block lg:absolute bottom-48 right-36 animate-custom-bounce">
             <Card
-              background="bg-arbxz-accent"
-              styles="flex items-center justify-center p-8 md:w-1/2 lg:w-full h-full lg:h-1/2">
+              background="bg-gradient"
+              styles="relative z-50 flex items-center justify-center p-8 md:w-1/2 lg:w-full h-full lg:h-1/2 dark:hover:shadow-indigo-600 hover:shadow-xl">
               <Image
                 alt="arbxz-logo"
                 src={"/icons/logo.png"}
@@ -121,21 +131,6 @@ const MainBanner = () => {
               />
             </Card>
           </div>
-
-          {/* <div className="lg:absolute bottom-48 right-0 h-full lg:h-auto">
-            <Card
-              background="glass"
-              styles="flex flex-1 items-center justify-center p-8 h-full">
-              <div className="text-foreground text-xl">
-                Crafting Digital Experiences, <br />
-                One Line of Code at a Time.
-                <FontAwesomeIcon
-                  className="text-3xl ml-2"
-                  icon={faQuoteRight}
-                />
-              </div>
-            </Card>
-          </div> */}
         </div>
       </div>
     </Container>
