@@ -1,5 +1,4 @@
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Github, Linkedin } from "lucide-react";
 import Link from "next/link";
 
 import ClockClient from "@/components/main-section/ClockClient";
@@ -54,7 +53,7 @@ const MainBanner = () => {
             <div className="flex min-w-max gap-4">
               <Card styles="flex justify-between flex-col gap-4 p-4 bg-stone-800">
                 <div className="flex gap-4 items-center text-white">
-                  <FontAwesomeIcon className="text-3xl" icon={faGithub} />
+                  <Github className="text-3xl" />
                   <span>Github</span>
                 </div>
                 <Link
@@ -68,7 +67,7 @@ const MainBanner = () => {
 
               <Card styles="flex justify-between flex-col gap-4 p-4 bg-white">
                 <div className="flex gap-4 items-center  text-stone-800">
-                  <FontAwesomeIcon className="text-3xl" icon={faLinkedin} />
+                  <Linkedin className="text-3xl" />
                   <span>Linkedin</span>
                 </div>
                 <Link

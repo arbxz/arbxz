@@ -4,8 +4,6 @@ import { Source_Sans_3 } from "next/font/google";
 import "@/themes/styles.css";
 import { Providers } from "@/app/providers";
 
-import "@fortawesome/fontawesome-svg-core/styles.css";
-
 const inter = Source_Sans_3({
   weight: ["400", "500", "700"],
   subsets: ["latin"],

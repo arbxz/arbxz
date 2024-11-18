@@ -1,5 +1,4 @@
-import { faCircleXmark } from "@fortawesome/free-regular-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { CircleX } from "lucide-react";
 
 import { useAppContext } from "@/context/appContext";
 
@@ -59,7 +58,7 @@ const AboutModalContent = () => {
           onClick={() => {
             setIsModalOpen(false);
           }}>
-          <FontAwesomeIcon className="text-3xl" icon={faCircleXmark} />
+          <CircleX className="text-3xl" />
         </button>
       </div>
 

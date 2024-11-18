@@ -1,9 +1,8 @@
 "use client";
 
-import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { cva, VariantProps } from "class-variance-authority";
 import { motion } from "framer-motion";
+import { Icon, IconNode } from "lucide-react";
 
 const buttonStyles = cva(
   "flex gap-4 items-center justify-center rounded-full py-2 px-4 w-full border-2 min-w-[125px] max-w-[150px] font-sm shadow transition-colors duration-300 border-2 focus:ring",
@@ -28,20 +27,18 @@ const buttonStyles = cva(
 
 interface ButtonProps extends VariantProps<typeof buttonStyles> {
   text: string;
-  icon?: IconDefinition;
-  // action: () => void;
+  Icon?: React.ReactNode;
 }
 
-export default function Button({ intent, text, icon, ...props }: ButtonProps) {
+export default function Button({ intent, text, Icon, ...props }: ButtonProps) {
   return (
     <motion.button
       type="button"
       className={buttonStyles({ intent })}
       {...props}
       whileTap={{ scale: 0.95 }}
-      // onClick={action}
     >
-      {icon && <FontAwesomeIcon icon={icon} />}
+      {Icon && Icon }
       {text}
     </motion.button>
   );

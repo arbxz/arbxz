@@ -2,13 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-import { faSpotify } from "@fortawesome/free-brands-svg-icons/faSpotify";
-import { faEllipsis } from "@fortawesome/free-solid-svg-icons/faEllipsis";
-import { faForward } from "@fortawesome/free-solid-svg-icons/faForward";
-import { faPause } from "@fortawesome/free-solid-svg-icons/faPause";
-import { faPlay } from "@fortawesome/free-solid-svg-icons/faPlay";
-import { faPlus } from "@fortawesome/free-solid-svg-icons/faPlus";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { EllipsisIcon, FastForward, Pause, Play, Plus } from "lucide-react";
 
 import Card from "./Card";
 import WaveBackground from "./WaveBackground";
@@ -98,41 +92,32 @@ const MusicPlayer = ({ text }: MusicPlayerProps) => {
           <span className="text-sm">{currentTrack.author}</span>
         </div>
         <div className="hidden lg:flex flex-col items-center justify-center gap-4 text-xl p-4 opacity-80 ml-auto">
-          <FontAwesomeIcon className="text-[#1ED760]" icon={faSpotify} />
-          <FontAwesomeIcon icon={faEllipsis} />
-          <FontAwesomeIcon icon={faPlus} />
+          <EllipsisIcon />
+          <Plus />
         </div>
       </div>
       <div className="relative p-4">
         <WaveBackground />
         <div className="flex justify-center items-center lg:px-8 px-4 pt-2 pb-2 gap-8 text-xl opacity-80">
-          <FontAwesomeIcon
+          <FastForward
             onClick={() => {
               handlePrevious();
             }}
-            icon={faForward}
             className="rotate-180 cursor-pointer"
           />
           <button type="button" onClick={() => setIsPlaying(!isPlaying)}>
             {isPlaying ? (
-              <FontAwesomeIcon
-                icon={faPause}
-                className="flex items-center justify-center rounded-full border border-backgeound p-2 w-6 h-6 cursor-pointer"
-              />
+              <Pause className="flex items-center justify-center rounded-full border border-backgeound p-2 w-6 h-6 cursor-pointer" />
             ) : (
-              <FontAwesomeIcon
-                icon={faPlay}
-                className="cursor-pointer flex items-center justify-center rounded-full border border-backgeound p-2 w-6 h-6"
-              />
+              <Play className="cursor-pointer flex items-center justify-center rounded-full border border-backgeound p-2 w-6 h-6" />
             )}
           </button>
 
-          <FontAwesomeIcon
+          <FastForward
             className="cursor-pointer"
             onClick={() => {
               handleNext();
             }}
-            icon={faForward}
           />
         </div>
         <div className="flex px-8 gap-4">

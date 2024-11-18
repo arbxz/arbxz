@@ -2,9 +2,8 @@
 
 import { useRef } from "react";
 
-import { faBoltLightning } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
+import { Zap } from "lucide-react";
 import Link from "next/link";
 
 import { useAppContext } from "@/context/appContext";
@@ -40,10 +39,7 @@ const AdminNavigation = () => {
           className="flex items-center text-lg gap-2 mr-auto"
           href="/admin"
           prefetch={false}>
-          <FontAwesomeIcon
-            className="text-form-active"
-            icon={faBoltLightning}
-          />
+          <Zap className="text-form-active" />
           <span className="font-semibold text-form-active">Arbxz</span>
           <span className="hidden lg:inline-block">| Admin</span>
         </Link>

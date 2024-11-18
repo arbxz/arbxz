@@ -1,6 +1,4 @@
-import { faEye } from "@fortawesome/free-regular-svg-icons";
-import { faChartLine, faDollar } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { ChartLine, DollarSign, Eye } from "lucide-react";
 
 import Card from "@/components/shared/Card";
 import Chat from "@/components/shared/Chat";
@@ -14,7 +12,7 @@ const PageContent = () => {
             <Card background="glass" styles="bg-foreground flex-grow w-full">
               <div className="flex flex-col gap-1 p-4 text-background">
                 <span className="w-8 h-8 flex items-center justify-center text-center bg-background glass text-foreground shadow-sm rounded-full">
-                  <FontAwesomeIcon className="text-sm" icon={faEye} />
+                  <Eye className="text-sm" />
                 </span>
                 <span className="flex items-center text-2xl">+ 15%</span>
                 <span className="text-sm">Views this month</span>
@@ -24,7 +22,7 @@ const PageContent = () => {
             <Card background="glass" styles="bg-foreground flex-grow w-full">
               <div className="flex flex-col gap-1 p-4 text-background">
                 <span className="w-8 h-8 flex items-center justify-center text-center bg-background glass text-foreground shadow-sm rounded-full">
-                  <FontAwesomeIcon className="text-sm" icon={faDollar} />
+                  <DollarSign className="text-sm" />
                 </span>
                 <span className="flex items-center text-2xl">$ 2799</span>
                 <span className="text-sm">Net Income</span>
@@ -34,7 +32,7 @@ const PageContent = () => {
             <Card background="glass" styles="bg-foreground flex-grow w-full">
               <div className="flex flex-col gap-1 p-4 text-background">
                 <span className="w-8 h-8 flex items-center justify-center text-center bg-background glass text-foreground shadow-sm rounded-full">
-                  <FontAwesomeIcon className="text-sm" icon={faChartLine} />
+                  <ChartLine className="text-sm" />
                 </span>
                 <span className="flex items-center text-2xl">$ 350.00</span>
                 <span className="text-sm">Share prices</span>
