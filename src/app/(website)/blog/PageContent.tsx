@@ -8,7 +8,7 @@ const BlogPage = async () => {
   const posts = await getPosts();
 
   return (
-    <div className="flex gap-4 flex-col w-full max-w-5xl xl:max-w-6xl mx-auto px-4 relative overflow-hidden z-20">
+    <div className="flex gap-4 flex-col w-full max-w-5xl xl:max-w-6xl mx-auto px-4 relative overflow-hidden z-20 mt-24">
       <div className="flex flex-col lg:flex-row gap-4">
         <div className="h-full hidden lg:block">
           <Card

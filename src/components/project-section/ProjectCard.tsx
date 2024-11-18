@@ -23,9 +23,9 @@ const ProjectCard = ({ project }: { project: InterfaceProjectItem }) => {
         transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
       }}
       className="relative overflow-hidden group flex w-full sm:flex-col flex-row rounded-3xl shadow hover:shadow-xl">
-      <div className="absolute top-0 left-0 w-full h-full z-10">
+      <div className="absolute top-0 left-0 w-full h-full z-10 bg-arbxz-accent">
         <Image
-          className="object-cover w-full h-full z-10"
+          className="object-cover w-full h-full z-10 mix-blend-screen grayscale contrast-150"
           src={urlFor(project.image).url()}
           height={300}
           width={300}
@@ -51,7 +51,8 @@ const ProjectCard = ({ project }: { project: InterfaceProjectItem }) => {
       <div className="absolute bottom-0 right-0 z-20 p-4 rounded-full">
         <span
           className={`${
-            project.framework === "NuxtJs" && "text-lime-400 bg-stone-900"
+            project.framework === "NuxtJs" &&
+            "bg-lime-400 text-stone-900 font-semibold"
           } text-xs bg-background text-foreground px-2 py-1 rounded-full ml-2 shadow-inner`}>
           {project.framework}
         </span>

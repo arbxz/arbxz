@@ -2,15 +2,14 @@ import Image from "next/image";
 
 import Card from "@/components/shared/Card";
 import Container from "@/components/shared/Container";
-import WaveBackground from "@/components/shared/WaveBackground";
 
 const DesignSection = () => {
   return (
     <Container flexDirection="col">
-      <div className="relative grid lg:grid-flow-col md:grid-cols-2 w-full gap-4 md:gap-8">
+      <div className="relative w-full">
         <Card
           background="glass"
-          styles="group flex items-center justify-center w-full p-16">
+          styles="md:absolute md:top-1/2 md:-translate-y-1/2 group flex items-center justify-center md:w-auto p-16 mb-4 z-10">
           <div className="text-center text-xl">
             <div className="relative inline-block mb-4 border border-arbxz-accent text-sm dark:text-white text-arbxz-accent rounded-3xl px-4 py-1 before:content-[''] before:h-full before:w-full before:absolute group-hover:text-white before:top-0 before:-left-40 group-hover:before:left-0 before:-z-0 overflow-hidden before:duration-700 before:transition-all before:bg-arbxz-accent">
               <span className="relative z-10">Figma | Adobe XD</span>
@@ -26,26 +25,20 @@ const DesignSection = () => {
           </div>
         </Card>
 
-        <Card
-          background="glass"
-          styles="relative p-4 flex flex-col gap-4 justify-center">
-          <WaveBackground />
-          <Card styles="w-[120px] h-[120px] mx-auto p-4 flex items-center justify-center shadow-inner">
+        <div className="flex justify-end ml-auto z-0">
+          <div className="hidden md:block w-auto rounded-md bg-arbxz-accent overflow-hidden">
             <Image
-              className="p-4"
-              src={"/icons/figma.svg"}
-              width={75}
-              height={75}
+              className="mix-blend-screen grayscale contrast-100"
+              src={"/figma.png"}
+              width={650}
+              height={650}
               loading="lazy"
-              alt={"logo of figma"}
+              alt={"figma screenshot"}
             />
-          </Card>
-          <p className="text-xl text-center leading-5">
-            I use Figma, efficiently creating wireframes and prototypes.
-          </p>
-        </Card>
+          </div>
+        </div>
 
-        <div className="flex justify-center lg:flex-col gap-4">
+        <div className="flex justify-center gap-4 mt-4">
           <Card
             background="bg-blue-500"
             styles="h-24 w-24 p-4 flex items-center justify-center">

@@ -1,6 +1,5 @@
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Image from "next/image";
 import Link from "next/link";
 
 import ClockClient from "@/components/main-section/ClockClient";
@@ -11,14 +10,14 @@ import Chat from "@/components/shared/Chat";
 
 const MainBanner = () => {
   return (
-    <div className="w-full min-h-screen overflow-hidden">
+    <div className="w-full md:min-h-screen overflow-hidden">
       <div className="absolute left-0 top-0 overflow-hidden w-full h-screen z-0">
         <Scene />
       </div>
 
-      <div className="relative min-h-screen w-full mx-auto flex flex-nowrap flex-col lg:flex-row items-end gap-4 py-8 max-w-5xl xl:max-w-6xl z-40">
+      <div className="relative md:min-h-screen w-full mx-auto flex flex-nowrap flex-col lg:flex-row lg:items-end justify-center gap-4 py-8 pt-24 max-w-5xl xl:max-w-6xl z-40">
         <div className="flex flex-col md:flex-row gap-4 items-center justify-center z-10">
-          <div className="lg:absolute lg:w-96 flex flex-col gap-4 lg:top-24 right-0 lg:scale-90 w-full">
+          <div className="md:absolute md:w-96 flex flex-col gap-4 md:top-24 right-0 w-full">
             <Chat message="Hello fellow visitor ! 👋" />
             <div className="ml-4">
               <Chat message="Checkout my portfolio" time="19:31" />
@@ -28,7 +27,7 @@ const MainBanner = () => {
             </div>
           </div>
 
-          <div className="group relative lg:absolute top-1/2 lg:-translate-y-1/2 left-0 w-full lg:w-auto">
+          <div className="scale-90 lg:scale-100 group relative md:absolute top-1/2 md:-translate-y-1/2 left-0 w-full md:w-auto">
             <div className="absolute top-4 -right-4 lg:top-8 lg:-right-8 group-hover:top-0 group-hover:right-0 group-hover:relative group-hover:z-20 duration-300 transition-all">
               <TextCard
                 title="Ah curious are we"
@@ -44,7 +43,7 @@ const MainBanner = () => {
           </div>
         </div>
 
-        <div className="relative mx-auto z-20">
+        <div className="relative mx-auto z-20 mt-auto">
           <div className="relative z-50 flex flex-wrap md:flex-nowrap gap-4 items-stretch justify-stretch w-full">
             <Card
               background="animated-background bg-gradient-to-l from-arbxz-accent via-purple-500 to-purple-600"
