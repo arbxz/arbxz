@@ -1,6 +1,6 @@
-import { CircleX } from "lucide-react";
+import { CircleX } from 'lucide-react';
 
-import { useAppContext } from "@/context/appContext";
+import { useAppContext } from '@/context/appContext';
 
 interface SkillButtonsProps {
   data: string[];
@@ -11,35 +11,36 @@ const AboutModalContent = () => {
   const { setIsModalOpen } = useAppContext();
 
   const skillData = [
-    "Figma",
-    "HTML/TSX/JSX",
-    "CSS/SCSS",
-    "Typescript",
-    "NextJs",
-    "ReactJs",
-    "Cypress",
-    "Vercel",
-    "Redux",
-    "TailwindCSS",
-    "Jest",
+    'Figma',
+    'HTML/TSX/JSX',
+    'CSS/SCSS',
+    'Typescript',
+    'NextJs',
+    'ReactJs',
+    'Cypress',
+    'Vercel',
+    'Redux',
+    'TailwindCSS',
+    'Jest',
   ];
 
   const hobbyData = [
-    "Digital Art",
-    "Art",
-    "Web design",
-    "Photoshop",
-    "Clip studio",
+    'Digital Art',
+    'Art',
+    'Web design',
+    'Photoshop',
+    'Clip studio',
   ];
 
   const SkillButtons = ({ data }: SkillButtonsProps) => {
     return (
-      <div className="flex gap-4 flex-wrap w-full items-center justify-center p-2">
+      <div className="flex w-full flex-wrap items-center justify-center gap-4 p-2">
         {data.map((skill, index) => (
           <button
             type="button"
             key={index}
-            className=" bg-foreground text-background text-xl md:px-8 px-4 md:py-2 py-1 rounded-xl md:rounded-3xl">
+            className="rounded-xl bg-foreground px-4 py-1 text-xl text-background md:rounded-3xl md:px-8 md:py-2"
+          >
             {skill}
           </button>
         ))}
@@ -48,8 +49,8 @@ const AboutModalContent = () => {
   };
 
   return (
-    <div className="relative h-full md:h-auto md:max-w-2xl flex flex-col mx-auto items-center md:justify-center shadow-xl overflow-hidden z-10">
-      <div className="bg-arbxz-accent text-white flex items-center w-full gap-4 p-4 md:mb-2 md:rounded-xl">
+    <div className="relative z-10 mx-auto flex h-full flex-col items-center overflow-hidden shadow-xl md:h-auto md:max-w-2xl md:justify-center">
+      <div className="flex w-full items-center gap-4 bg-arbxz-accent p-4 text-white md:mb-2 md:rounded-xl">
         <h4 className="mr-auto text-xl">Random modal to show my expertise</h4>
 
         <button
@@ -57,18 +58,19 @@ const AboutModalContent = () => {
           className="p-0"
           onClick={() => {
             setIsModalOpen(false);
-          }}>
+          }}
+        >
           <CircleX className="text-3xl" />
         </button>
       </div>
 
-      <div className="block p-4 w-full h-full md:rounded-xl bg-background">
-        <p className="text-xl text-center max-w-sm mx-auto mb-4">
+      <div className="block h-full w-full bg-background p-4 md:rounded-xl">
+        <p className="mx-auto mb-4 max-w-sm text-center text-xl">
           Professional skills I use in my day to day life as a react developer
         </p>
         <SkillButtons data={skillData} />
-        <div className="w-full h-[1px] bg-foreground my-6 px-4"></div>
-        <p className="text-xl text-center mb-4">Hobbies</p>
+        <div className="my-6 h-[1px] w-full bg-foreground px-4"></div>
+        <p className="mb-4 text-center text-xl">Hobbies</p>
         <SkillButtons data={hobbyData} isDark />
       </div>
     </div>

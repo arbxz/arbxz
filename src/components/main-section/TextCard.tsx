@@ -5,16 +5,14 @@ interface TextCardProps {
 
 const TextCard = ({ title, text }: TextCardProps) => {
   return (
-    <div
-      className="md:max-w-72 min-h-max flex flex-col text-sm font-normal p-8 md:p-10 rounded-3xl border-[1px] dark:border-stone-800 border-arbxz-accent glass shadow-lg transition-shadow duration-300
-    ">
+    <div className="glass flex min-h-max flex-col rounded-3xl border-[1px] border-arbxz-accent p-8 text-sm font-normal shadow-lg transition-shadow duration-300 dark:border-stone-800 md:max-w-72 md:p-10">
       <div>
-        <div className="inline-block mb-4 text-sm text-white bg-arbxz-accent font-medium rounded-full px-4 py-1">
+        <div className="mb-4 inline-block rounded-full bg-arbxz-accent px-4 py-1 text-sm font-medium text-white">
           {title}
         </div>
       </div>
 
-      <p className="self-start text-xl lg:text-base leading-5">{text}</p>
+      <p className="self-start text-xl leading-5 lg:text-base">{text}</p>
     </div>
   );
 };

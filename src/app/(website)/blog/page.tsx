@@ -1,6 +1,6 @@
 // "use client";
 
-import BlogPage from "./PageContent";
+import BlogPage from './PageContent';
 
 // import { motion, useScroll, useTransform } from "framer-motion";
 

@@ -1,4 +1,4 @@
-import { PortableTextBlock } from "sanity";
+import { PortableTextBlock } from 'sanity';
 
 export type Author = {
   name: string;

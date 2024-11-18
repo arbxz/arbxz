@@ -1,18 +1,18 @@
-import * as React from "react";
+import * as React from 'react';
 
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
-import Accordion from "@/components/ui-elements/Accordion";
+import Accordion from '@/components/ui-elements/Accordion';
 
 const uiOptions = [
-  { label: "ui.", href: "/admin/" },
-  { label: "forms", href: "/admin/form-view" },
-  { label: "lists.", href: "/admin/list-view" },
+  { label: 'ui.', href: '/admin/' },
+  { label: 'forms', href: '/admin/form-view' },
+  { label: 'lists.', href: '/admin/list-view' },
 ];
 
 const formOptions = [
-  { label: "sign in.", href: "/admin/sign-in" },
-  { label: "sign up", href: "/admin/sign-up" },
+  { label: 'sign in.', href: '/admin/sign-in' },
+  { label: 'sign up', href: '/admin/sign-up' },
 ];
 
 const variants = {

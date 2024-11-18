@@ -1,13 +1,13 @@
-import { OctagonAlert, TriangleAlert, Zap } from "lucide-react";
+import { OctagonAlert, TriangleAlert, Zap } from 'lucide-react';
 
-import Alert from "@/components/ui-elements/Alert";
-import Box from "@/components/ui-elements/Box";
-import Button from "@/components/ui-elements/Button";
-import Checkbox from "@/components/ui-elements/Checkbox";
-import FileUpload from "@/components/ui-elements/FileUpload";
-import Input from "@/components/ui-elements/Input";
-import Radio from "@/components/ui-elements/Radio";
-import TextArea from "@/components/ui-elements/TextArea";
+import Alert from '@/components/ui-elements/Alert';
+import Box from '@/components/ui-elements/Box';
+import Button from '@/components/ui-elements/Button';
+import Checkbox from '@/components/ui-elements/Checkbox';
+import FileUpload from '@/components/ui-elements/FileUpload';
+import Input from '@/components/ui-elements/Input';
+import Radio from '@/components/ui-elements/Radio';
+import TextArea from '@/components/ui-elements/TextArea';
 
 function FormView() {
   return (
@@ -18,16 +18,16 @@ function FormView() {
         <h2 className="text-3xl">Alerts</h2>
 
         <div className="flex flex-col gap-2">
-          <Alert intent="info" text="This is an info alert" Icon={<Zap/>} />
+          <Alert intent="info" text="This is an info alert" Icon={<Zap />} />
           <Alert
             intent="danger"
             text="This is an error alert"
-            Icon={<TriangleAlert/>}
+            Icon={<TriangleAlert />}
           />
           <Alert
             intent="warning"
             text="This is an warning alert"
-            Icon={<OctagonAlert/>}
+            Icon={<OctagonAlert />}
           />
         </div>
 
@@ -36,10 +36,10 @@ function FormView() {
           <Button intent="primary" text="Create" />
           <Button intent="secondary" text="Update" />
           <Button intent="danger" text="Delete" />
-          <Button intent="secondary" text="Icon Button" Icon={<Zap/ >} />
+          <Button intent="secondary" text="Icon Button" Icon={<Zap />} />
         </div>
         <h2 className="text-3xl">Inputs</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           <Input id="textID" name="Textfield" label="Text field" type="text" />
           <Input
             id="emailID"
@@ -73,7 +73,7 @@ function FormView() {
         </div>
         <div className="flex gap-10 md:gap-20">
           <div>
-            <h2 className="text-3xl mb-4">Radio</h2>
+            <h2 className="mb-4 text-3xl">Radio</h2>
             <Radio
               id="basic-plan"
               label="Basic plan"
@@ -90,7 +90,7 @@ function FormView() {
             />
           </div>
           <div>
-            <h2 className="text-3xl mb-4">Checkbox</h2>
+            <h2 className="mb-4 text-3xl">Checkbox</h2>
             <Checkbox
               id="Write"
               label="Write access"

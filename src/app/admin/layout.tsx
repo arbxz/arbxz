@@ -1,14 +1,14 @@
-"use client";
+'use client';
+import React from 'react';
+import { useEffect, useState } from 'react';
 
-import { useEffect, useState } from "react";
+import dynamic from 'next/dynamic';
 
-import dynamic from "next/dynamic";
+import AdminNavigation from '@/components/navigation/AdminNavigation';
+import Loader from '@/components/ui-elements/Loader';
+import { useAppContext } from '@/context/appContext';
 
-import AdminNavigation from "@/components/navigation/AdminNavigation";
-import Loader from "@/components/ui-elements/Loader";
-import { useAppContext } from "@/context/appContext";
-
-const Aside = dynamic(() => import("@/components/aside/Aside"));
+const Aside = dynamic(() => import('@/components/aside/Aside'));
 
 function RootLayout({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState<boolean>(true);
@@ -21,13 +21,13 @@ function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="select-none bg-background-secondary text-foreground">
       {loading ? (
-        <div className="h-screen w-full flex items-center justify-center">
+        <div className="flex h-screen w-full items-center justify-center">
           <Loader />
         </div>
       ) : (
-        <div className="relative flex flex-col gap-4 min-h-screen h-full">
+        <div className="relative flex h-full min-h-screen flex-col gap-4">
           <AdminNavigation />
-          <div className="fixed w-full h-full hidden">
+          <div className="fixed hidden h-full w-full">
             <div id="bg-wrap">
               <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
                 <defs>
@@ -37,12 +37,14 @@ function RootLayout({ children }: { children: React.ReactNode }) {
                     cy="50%"
                     fx="0.441602%"
                     fy="50%"
-                    r=".5">
+                    r=".5"
+                  >
                     <animate
                       attributeName="fx"
                       dur="34s"
                       values="0%;3%;0%"
-                      repeatCount="indefinite"></animate>
+                      repeatCount="indefinite"
+                    ></animate>
                     <stop offset="0%" stopColor="rgba(255, 0, 255, 1)"></stop>
                     <stop offset="100%" stopColor="rgba(255, 0, 255, 0)"></stop>
                   </radialGradient>
@@ -52,12 +54,14 @@ function RootLayout({ children }: { children: React.ReactNode }) {
                     cy="50%"
                     fx="2.68147%"
                     fy="50%"
-                    r=".5">
+                    r=".5"
+                  >
                     <animate
                       attributeName="fx"
                       dur="23.5s"
                       values="0%;3%;0%"
-                      repeatCount="indefinite"></animate>
+                      repeatCount="indefinite"
+                    ></animate>
                     <stop offset="0%" stopColor="rgba(255, 255, 0, 1)"></stop>
                     <stop offset="100%" stopColor="rgba(255, 255, 0, 0)"></stop>
                   </radialGradient>
@@ -67,12 +71,14 @@ function RootLayout({ children }: { children: React.ReactNode }) {
                     cy="50%"
                     fx="0.836536%"
                     fy="50%"
-                    r=".5">
+                    r=".5"
+                  >
                     <animate
                       attributeName="fx"
                       dur="21.5s"
                       values="0%;3%;0%"
-                      repeatCount="indefinite"></animate>
+                      repeatCount="indefinite"
+                    ></animate>
                     <stop offset="0%" stopColor="rgba(0, 255, 255, 1)"></stop>
                     <stop offset="100%" stopColor="rgba(0, 255, 255, 0)"></stop>
                   </radialGradient>
@@ -82,12 +88,14 @@ function RootLayout({ children }: { children: React.ReactNode }) {
                     cy="50%"
                     fx="4.56417%"
                     fy="50%"
-                    r=".5">
+                    r=".5"
+                  >
                     <animate
                       attributeName="fx"
                       dur="23s"
                       values="0%;5%;0%"
-                      repeatCount="indefinite"></animate>
+                      repeatCount="indefinite"
+                    ></animate>
                     <stop offset="0%" stopColor="rgba(0, 255, 0, 1)"></stop>
                     <stop offset="100%" stopColor="rgba(0, 255, 0, 0)"></stop>
                   </radialGradient>
@@ -97,12 +105,14 @@ function RootLayout({ children }: { children: React.ReactNode }) {
                     cy="50%"
                     fx="2.65405%"
                     fy="50%"
-                    r=".5">
+                    r=".5"
+                  >
                     <animate
                       attributeName="fx"
                       dur="24.5s"
                       values="0%;5%;0%"
-                      repeatCount="indefinite"></animate>
+                      repeatCount="indefinite"
+                    ></animate>
                     <stop offset="0%" stopColor="rgba(0,0,255, 1)"></stop>
                     <stop offset="100%" stopColor="rgba(0,0,255, 0)"></stop>
                   </radialGradient>
@@ -112,12 +122,14 @@ function RootLayout({ children }: { children: React.ReactNode }) {
                     cy="50%"
                     fx="0.981338%"
                     fy="50%"
-                    r=".5">
+                    r=".5"
+                  >
                     <animate
                       attributeName="fx"
                       dur="25.5s"
                       values="0%;5%;0%"
-                      repeatCount="indefinite"></animate>
+                      repeatCount="indefinite"
+                    ></animate>
                     <stop offset="0%" stopColor="rgba(255,0,0, 1)"></stop>
                     <stop offset="100%" stopColor="rgba(255,0,0, 0)"></stop>
                   </radialGradient>
@@ -127,7 +139,8 @@ function RootLayout({ children }: { children: React.ReactNode }) {
                   y="0"
                   width="100%"
                   height="100%"
-                  fill="url(#Gradient4)">
+                  fill="url(#Gradient4)"
+                >
                   <animate
                     attributeName="x"
                     dur="20s"
@@ -154,7 +167,8 @@ function RootLayout({ children }: { children: React.ReactNode }) {
                   y="0"
                   width="100%"
                   height="100%"
-                  fill="url(#Gradient5)">
+                  fill="url(#Gradient5)"
+                >
                   <animate
                     attributeName="x"
                     dur="23s"
@@ -181,7 +195,8 @@ function RootLayout({ children }: { children: React.ReactNode }) {
                   y="0"
                   width="100%"
                   height="100%"
-                  fill="url(#Gradient6)">
+                  fill="url(#Gradient6)"
+                >
                   <animate
                     attributeName="x"
                     dur="25s"
@@ -209,24 +224,28 @@ function RootLayout({ children }: { children: React.ReactNode }) {
                   width="100%"
                   height="100%"
                   fill="url(#Gradient1)"
-                  transform="rotate(334.41 50 50)">
+                  transform="rotate(334.41 50 50)"
+                >
                   <animate
                     attributeName="x"
                     dur="20s"
                     values="25%;0%;25%"
-                    repeatCount="indefinite"></animate>
+                    repeatCount="indefinite"
+                  ></animate>
                   <animate
                     attributeName="y"
                     dur="21s"
                     values="0%;25%;0%"
-                    repeatCount="indefinite"></animate>
+                    repeatCount="indefinite"
+                  ></animate>
                   <animateTransform
                     attributeName="transform"
                     type="rotate"
                     from="0 50 50"
                     to="360 50 50"
                     dur="7s"
-                    repeatCount="indefinite"></animateTransform>
+                    repeatCount="indefinite"
+                  ></animateTransform>
                 </rect>
                 <rect
                   x="-2.17916%"
@@ -234,24 +253,28 @@ function RootLayout({ children }: { children: React.ReactNode }) {
                   width="100%"
                   height="100%"
                   fill="url(#Gradient2)"
-                  transform="rotate(255.072 50 50)">
+                  transform="rotate(255.072 50 50)"
+                >
                   <animate
                     attributeName="x"
                     dur="23s"
                     values="-25%;0%;-25%"
-                    repeatCount="indefinite"></animate>
+                    repeatCount="indefinite"
+                  ></animate>
                   <animate
                     attributeName="y"
                     dur="24s"
                     values="0%;50%;0%"
-                    repeatCount="indefinite"></animate>
+                    repeatCount="indefinite"
+                  ></animate>
                   <animateTransform
                     attributeName="transform"
                     type="rotate"
                     from="0 50 50"
                     to="360 50 50"
                     dur="12s"
-                    repeatCount="indefinite"></animateTransform>
+                    repeatCount="indefinite"
+                  ></animateTransform>
                 </rect>
                 <rect
                   x="9.00483%"
@@ -259,36 +282,41 @@ function RootLayout({ children }: { children: React.ReactNode }) {
                   width="100%"
                   height="100%"
                   fill="url(#Gradient3)"
-                  transform="rotate(139.903 50 50)">
+                  transform="rotate(139.903 50 50)"
+                >
                   <animate
                     attributeName="x"
                     dur="25s"
                     values="0%;25%;0%"
-                    repeatCount="indefinite"></animate>
+                    repeatCount="indefinite"
+                  ></animate>
                   <animate
                     attributeName="y"
                     dur="12s"
                     values="0%;25%;0%"
-                    repeatCount="indefinite"></animate>
+                    repeatCount="indefinite"
+                  ></animate>
                   <animateTransform
                     attributeName="transform"
                     type="rotate"
                     from="360 50 50"
                     to="0 50 50"
                     dur="9s"
-                    repeatCount="indefinite"></animateTransform>
+                    repeatCount="indefinite"
+                  ></animateTransform>
                 </rect>
               </svg>
             </div>
           </div>
-          <div className="lg:fixed w-full h-full flex z-0 px-4">
+          <div className="z-0 flex h-full w-full px-4 lg:fixed">
             <Aside />
             <main
               className={`${
                 isAsideOpen
-                  ? "lg:relative fixed left-0 px-4 lg:px-0"
-                  : "relative"
-              } pt-20 lg:pt-24 pb-4 h-full w-full overflow-y-auto no-scrollbar`}>
+                  ? 'fixed left-0 px-4 lg:relative lg:px-0'
+                  : 'relative'
+              } no-scrollbar h-full w-full overflow-y-auto pb-4 pt-20 lg:pt-24`}
+            >
               {children}
             </main>
           </div>

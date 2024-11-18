@@ -1,12 +1,13 @@
-import { useRef } from "react";
+import React from 'react';
+import { useRef } from 'react';
 
-import { useInView } from "framer-motion";
-import { Globe } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
+import { useInView } from 'framer-motion';
+import { Globe } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
 
-import { urlFor } from "@/sanity/lib/image";
-import { Project } from "@/types/project";
+import { urlFor } from '@/sanity/lib/image';
+import { Project } from '@/types/project';
 
 interface InterfaceProjectItem extends Project {}
 
@@ -18,14 +19,15 @@ const ProjectCard = ({ project }: { project: InterfaceProjectItem }) => {
     <div
       ref={ref}
       style={{
-        transform: isInView ? "none" : "translateY(200px)",
+        transform: isInView ? 'none' : 'translateY(200px)',
         opacity: isInView ? 1 : 0,
-        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+        transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
       }}
-      className="relative overflow-hidden group flex w-full sm:flex-col flex-row rounded-3xl shadow hover:shadow-xl">
-      <div className="absolute top-0 left-0 w-full h-full z-10 bg-arbxz-accent">
+      className="group relative flex w-full flex-row overflow-hidden rounded-3xl shadow hover:shadow-xl sm:flex-col"
+    >
+      <div className="absolute left-0 top-0 z-10 h-full w-full bg-arbxz-accent">
         <Image
-          className="object-cover w-full h-full z-10 mix-blend-screen grayscale contrast-150"
+          className="z-10 h-full w-full object-cover mix-blend-screen contrast-150 grayscale"
           src={urlFor(project.image).url()}
           height={300}
           width={300}
@@ -36,24 +38,26 @@ const ProjectCard = ({ project }: { project: InterfaceProjectItem }) => {
         href={project.link}
         prefetch={false}
         target="_blank"
-        className="flex flex-wrap items-center w-full h-56 opacity-0 hover:opacity-100 before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:z-10 z-20 before:bg-background hover:before:opacity-100 transition-all duration-300 cursor-pointer">
-        <div className="z-30 flex flex-col items-center gap-2 w-full p-4 text-left">
+        className="z-20 flex h-56 w-full cursor-pointer flex-wrap items-center opacity-0 transition-all duration-300 before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-full before:bg-background before:content-[''] hover:opacity-100 hover:before:opacity-100"
+      >
+        <div className="z-30 flex w-full flex-col items-center gap-2 p-4 text-left">
           <span className="block text-lg font-semibold">{project.name}</span>
-          <small className="text-center text-sm overflow-hidden text-ellipsis mb-2 leading-4">
+          <small className="mb-2 overflow-hidden text-ellipsis text-center text-sm leading-4">
             {project.description}
           </small>
-          <div className="flex gap-2 items-center px-4 py-1 border-[1px] border-white rounded-full">
+          <div className="flex items-center gap-2 rounded-full border-[1px] border-white px-4 py-1">
             <Globe size={14} />
             <small>Website.</small>
           </div>
         </div>
       </Link>
-      <div className="absolute bottom-0 right-0 z-20 p-4 rounded-full">
+      <div className="absolute bottom-0 right-0 z-20 rounded-full p-4">
         <span
           className={`${
-            project.framework === "NuxtJs" &&
-            "bg-lime-400 text-stone-900 font-semibold"
-          } text-xs bg-background text-foreground px-2 py-1 rounded-full ml-2 shadow-inner`}>
+            project.framework === 'NuxtJs' &&
+            'bg-lime-400 font-semibold text-stone-900'
+          } ml-2 rounded-full bg-background px-2 py-1 text-xs text-foreground shadow-inner`}
+        >
           {project.framework}
         </span>
       </div>

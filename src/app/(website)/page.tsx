@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from 'framer-motion';
 
-import Modal from "@/components/modal/Modal";
-import { useAppContext } from "@/context/appContext";
+import Modal from '@/components/modal/Modal';
+import { useAppContext } from '@/context/appContext';
 
-import PageContent from "./PageContent";
+import PageContent from './PageContent';
 
 const Home = () => {
   const { isModalOpen, modalContent } = useAppContext();
@@ -17,11 +17,11 @@ const Home = () => {
       <motion.div
         className="background-grid"
         style={{
-          position: "absolute",
+          position: 'absolute',
           left: 0,
           top: y,
-          width: "100%",
-          height: "100%",
+          width: '100%',
+          height: '100%',
           zIndex: 0,
         }}
       />

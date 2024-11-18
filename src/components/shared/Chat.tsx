@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 interface ChatProps {
   name?: string;
@@ -7,21 +7,21 @@ interface ChatProps {
 }
 
 const Chat = ({
-  name = "Arbaaz Mowlabucus",
-  message = "Hey can you check out this graph ?",
-  time = "19:30",
+  name = 'Arbaaz Mowlabucus',
+  message = 'Hey can you check out this graph ?',
+  time = '19:30',
 }: ChatProps) => {
   return (
-    <div className="flex items-center justify-start gap-4 py-2 px-4 rounded-xl shadow-sm cursor-pointer duration-300 transition-all bg-background hover:bg-background-secondary hover:translate-x-1">
+    <div className="flex cursor-pointer items-center justify-start gap-4 rounded-xl bg-background px-4 py-2 shadow-sm transition-all duration-300 hover:translate-x-1 hover:bg-background-secondary">
       <div className="relative">
         <Image
           className="rounded-full shadow"
-          src={"/arbaaz-picture.webp"}
+          src={'/arbaaz-picture.webp'}
           width={50}
           height={50}
           alt="user image"
         />
-        <span className="absolute top-0 -left-2 h-6 w-6 flex items-center justify-center text-center text-white bg-arbxz-accent text-xs rounded-full">
+        <span className="absolute -left-2 top-0 flex h-6 w-6 items-center justify-center rounded-full bg-arbxz-accent text-center text-xs text-white">
           25
         </span>
       </div>
@@ -29,7 +29,7 @@ const Chat = ({
         <span className="font-semibold">{name}</span>
         <span className="text-sm">{message}</span>
       </div>
-      <span className="text-sm font-light self-end ml-auto">{time}</span>
+      <span className="ml-auto self-end text-sm font-light">{time}</span>
     </div>
   );
 };

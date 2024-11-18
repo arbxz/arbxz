@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState } from 'react';
 
 const Context = createContext();
 
@@ -18,7 +18,8 @@ export const AppProviderContext = ({ children }) => {
         setIsAsideOpen,
         modalContent,
         setModalContent,
-      }}>
+      }}
+    >
       {children}
     </Context.Provider>
   );

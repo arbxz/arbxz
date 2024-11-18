@@ -1,10 +1,12 @@
+import React from 'react';
+
 interface BoxProps {
   children: React.ReactNode;
 }
 
 const Box = ({ children }: BoxProps) => {
   return (
-    <div className="relative w-full p-4 bg-background shadow rounded-2xl glass">
+    <div className="glass relative w-full rounded-2xl bg-background p-4 shadow">
       {children}
     </div>
   );

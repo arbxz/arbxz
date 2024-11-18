@@ -1,12 +1,13 @@
 {
   "name": "arbxz",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "eslint": "eslint . --fix"
   },
   "dependencies": {
     "@portabletext/react": "^3.1.0",
@@ -44,6 +45,7 @@
   "devDependencies": {
     "@types/three": "^0.170.0",
     "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.8",

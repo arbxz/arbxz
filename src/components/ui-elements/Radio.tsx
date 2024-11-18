@@ -1,5 +1,5 @@
-"use client";
-import { motion } from "framer-motion";
+'use client';
+import { motion } from 'framer-motion';
 
 interface RadioProps {
   id: string;
@@ -11,8 +11,8 @@ interface RadioProps {
 
 const Radio = ({ id, value, ariaLabel, label, subLabel }: RadioProps) => {
   return (
-    <motion.div whileTap={{ scale: 0.95 }} className="flex items-start mb-4">
-      <div className="flex items-center h-5 pl-[24px]">
+    <motion.div whileTap={{ scale: 0.95 }} className="mb-4 flex items-start">
+      <div className="flex h-5 items-center pl-[24px]">
         <input
           id={id}
           aria-describedby={ariaLabel}

@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { Eye } from "lucide-react";
+import { Eye } from 'lucide-react';
 
-import AboutModalContent from "@/components/about-modal-content/AboutModalContent";
-import { useAppContext } from "@/context/appContext";
+import AboutModalContent from '@/components/about-modal-content/AboutModalContent';
+import { useAppContext } from '@/context/appContext';
 
 interface ModalButtonProps {
   buttonText: string;
@@ -18,7 +18,8 @@ const ModalButton = ({ buttonText }: ModalButtonProps) => {
         setModalContent(<AboutModalContent />);
         setIsModalOpen(true);
       }}
-      className="mx-auto text-arbxz-accent bg-background border-arbxz-accent border-2 flex gap-4 items-center text-lg px-6 py-2 rounded-full hover:scale-105 dark:text-white hover:shadow-md transition-all">
+      className="mx-auto flex items-center gap-4 rounded-full border-2 border-arbxz-accent bg-background px-6 py-2 text-lg text-arbxz-accent transition-all hover:scale-105 hover:shadow-md dark:text-white"
+    >
       <Eye />
       {buttonText}
     </button>

@@ -1,6 +1,6 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-import ThemeToggle from "@/components/ui-elements/ThemeToggle";
+import ThemeToggle from '@/components/ui-elements/ThemeToggle';
 
 interface NavigationContentProps {
   isBlog: boolean;
@@ -8,25 +8,28 @@ interface NavigationContentProps {
 
 const NavigationContent = ({ isBlog }: NavigationContentProps) => {
   return (
-    <nav className="fixed left-1/2 -translate-x-1/2 max-w-5xl xl:max-w-6xl top-0 w-full md:px-4 md:py-4 transition-all ease-in-out duration-300 z-50 mx-auto">
-      <div className="glass flex gap-6 w-full justify-start items-center mx-auto px-4 py-3 md:rounded-xl shadow-sm overflow-hidden">
+    <nav className="fixed left-1/2 top-0 z-50 mx-auto w-full max-w-5xl -translate-x-1/2 transition-all duration-300 ease-in-out md:px-4 md:py-4 xl:max-w-6xl">
+      <div className="glass mx-auto flex w-full items-center justify-start gap-6 overflow-hidden px-4 py-3 shadow-sm md:rounded-xl">
         <Link
-          className="flex items-center text-xl gap-2"
+          className="flex items-center gap-2 text-xl"
           href="/"
-          prefetch={false}>
+          prefetch={false}
+        >
           <small
-            className={` ${isBlog ? "border-blue-600 text-blue-500" : "border-arbxz-accent bg-arbxz-accent dark:bg-transparent text-white"} text-sm rounded-full px-4 py-1 border-2 font-semibold transition-colors duration-300`}>
+            className={` ${isBlog ? 'border-blue-600 text-blue-500' : 'border-arbxz-accent bg-arbxz-accent text-white dark:bg-transparent'} rounded-full border-2 px-4 py-1 text-sm font-semibold transition-colors duration-300`}
+          >
             Arbxz
           </small>
         </Link>
 
         <Link
           href="/blog"
-          className="relative p-2 hover:-translate-y-2 transition-all duration-300">
+          className="relative p-2 transition-all duration-300 hover:-translate-y-2"
+        >
           blog.
         </Link>
 
-        <div className="flex gap-4 items-center ml-auto">
+        <div className="ml-auto flex items-center gap-4">
           <ThemeToggle />
         </div>
       </div>

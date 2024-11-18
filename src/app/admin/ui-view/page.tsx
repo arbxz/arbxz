@@ -1,6 +1,6 @@
-import Box from "@/components/ui-elements/Box";
-import Button from "@/components/ui-elements/Button";
-import Input from "@/components/ui-elements/Input";
+import Box from '@/components/ui-elements/Box';
+import Button from '@/components/ui-elements/Button';
+import Input from '@/components/ui-elements/Input';
 
 function Dashboard() {
   return (
@@ -11,7 +11,7 @@ function Dashboard() {
           <Button intent="secondary" text="Update" /> <br /> <br />
           <Button intent="danger" text="Delete" /> <br /> <br />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           <Input id="textID" name="Textfield" label="Text field" type="text" />
           <Input
             id="emailID"

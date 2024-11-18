@@ -1,12 +1,14 @@
-import type { Metadata } from "next";
-import { Source_Sans_3 } from "next/font/google";
+import React from 'react';
 
-import "@/themes/styles.css";
-import { Providers } from "@/app/providers";
+import type { Metadata } from 'next';
+import { Source_Sans_3 } from 'next/font/google';
+
+import '@/themes/styles.css';
+import { Providers } from '@/app/providers';
 
 const inter = Source_Sans_3({
-  weight: ["400", "500", "700"],
-  subsets: ["latin"],
+  weight: ['400', '500', '700'],
+  subsets: ['latin'],
 });
 
 interface RootLayoutProps {
@@ -15,36 +17,36 @@ interface RootLayoutProps {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.arbxz.com"),
-  title: "arbxz | Arbaaz Mowlabucus",
+  metadataBase: new URL('https://www.arbxz.com'),
+  title: 'arbxz | Arbaaz Mowlabucus',
   description:
     "Arbaaz Mowlabucus's professional portfolio of frontend projects and illustrations.",
   authors: {
-    name: "Arbaaz Mowlabucus",
+    name: 'Arbaaz Mowlabucus',
   },
   openGraph: {
-    type: "website",
-    locale: "en_IE",
-    url: "https://www.arbxz.com/",
-    title: "Arbaaz Mowlabucus | Frontend Engineer",
+    type: 'website',
+    locale: 'en_IE',
+    url: 'https://www.arbxz.com/',
+    title: 'Arbaaz Mowlabucus | Frontend Engineer',
     description:
-      "Check out my portfolio and professional skills I gathered throughout my career.",
+      'Check out my portfolio and professional skills I gathered throughout my career.',
 
-    siteName: "Arbaz Mowlabucus | Frontend Engineer",
+    siteName: 'Arbaz Mowlabucus | Frontend Engineer',
   },
   keywords: [
-    "Arbaaz Mowlabucus",
-    "Frontend engineer",
-    "ReactJs",
-    "NextJs",
-    "JavaScript",
-    "Web developer",
-    "Front-end",
-    "developer",
-    "UI/UX",
-    "Portfolio",
+    'Arbaaz Mowlabucus',
+    'Frontend engineer',
+    'ReactJs',
+    'NextJs',
+    'JavaScript',
+    'Web developer',
+    'Front-end',
+    'developer',
+    'UI/UX',
+    'Portfolio',
   ],
-  robots: "index, follow",
+  robots: 'index, follow',
 };
 
 function RootLayout({
@@ -59,7 +61,8 @@ function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body
-        className={`${inter.className} bg-background-secondary antialiased flex flex-col min-h-screen`}>
+        className={`${inter.className} flex min-h-screen flex-col bg-background-secondary antialiased`}
+      >
         <Providers>{children}</Providers>
       </body>
     </html>

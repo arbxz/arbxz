@@ -1,25 +1,26 @@
-import { Eye } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
+import { Eye } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
 
-import { urlFor } from "@/sanity/lib/image";
-import { Blog } from "@/types/blog";
+import { urlFor } from '@/sanity/lib/image';
+import { Blog } from '@/types/blog';
 
 const BlogItem = ({ blog }: { blog: Blog }) => {
   return (
     <Link
       href={`/blog/${blog.slug.current}`}
-      className="group block text-foreground w-full rounded-xl border-background transition-all duration-300">
+      className="group block w-full rounded-xl border-background text-foreground transition-all duration-300"
+    >
       <article className="grid grid-flow-row">
         <Image
           src={urlFor(blog.mainImage).url()}
           alt={blog.title}
           width={500}
           height={300}
-          className="w-full h-auto bg-cover group-hover:translate-x-4 group-hover:-translate-y-4 rounded-xl mb-4 group-hover:shadow transition-all duration-300"
+          className="mb-4 h-auto w-full rounded-xl bg-cover transition-all duration-300 group-hover:-translate-y-4 group-hover:translate-x-4 group-hover:shadow"
         />
 
-        <div className="p-4 group-hover:translate-x-4 group-hover:translate-y-4 rounded-xl bg-background group-hover:shadow transition-all duration-300">
+        <div className="rounded-xl bg-background p-4 transition-all duration-300 group-hover:translate-x-4 group-hover:translate-y-4 group-hover:shadow">
           <div className="mb-2">
             <h3 className="mb-1 text-2xl font-bold tracking-tight group-hover:text-blue-600">
               {blog.title}
@@ -27,23 +28,23 @@ const BlogItem = ({ blog }: { blog: Blog }) => {
             {blog.excerpt && (
               <p>
                 {blog.excerpt} <br />
-                <span className="block text-right text-blue-500 font-semibold w-full">
+                <span className="block w-full text-right font-semibold text-blue-500">
                   Read more...
                 </span>
               </p>
             )}
           </div>
           {blog.tags && (
-            <div className="mb-4 text-sm text-foreground-shade font-semibold">
+            <div className="mb-4 text-sm font-semibold text-foreground-shade">
               {blog.tags.map((tag, index) => (
                 <span key={`${tag}-${index}`}>
-                  <span className="text-blue-500 mr-1">#</span> {tag[index]}
+                  <span className="mr-1 text-blue-500">#</span> {tag[index]}
                 </span>
               ))}
             </div>
           )}
-          <div className="flex flex-row gap-4 items-start">
-            <div className="flex gap-4 items-start">
+          <div className="flex flex-row items-start gap-4">
+            <div className="flex items-start gap-4">
               <Image
                 src={urlFor(blog.author.image).url()}
                 alt={blog.author.name}
@@ -54,20 +55,20 @@ const BlogItem = ({ blog }: { blog: Blog }) => {
               <div>
                 <div>{blog.author.name}</div>
                 <small>
-                  {new Date(blog.publishedAt).toLocaleDateString("en-GB", {
-                    day: "2-digit",
-                    month: "long",
-                    year: "numeric",
+                  {new Date(blog.publishedAt).toLocaleDateString('en-GB', {
+                    day: '2-digit',
+                    month: 'long',
+                    year: 'numeric',
                   })}
                 </small>
               </div>
             </div>
-            <div className="text-xs flex items-center gap-2 text-foreground ml-auto mt-auto">
+            <div className="ml-auto mt-auto flex items-center gap-2 text-xs text-foreground">
               <Eye size={16} className="text-blue-500" /> 75
             </div>
           </div>
         </div>
-        <div className="bg-blue-600 w-full h-2 mt-2 rounded-xl group-hover:translate-x-4 group-hover:w-2 group-hover:translate-y-4 transition-all duration-300"></div>
+        <div className="mt-2 h-2 w-full rounded-xl bg-blue-600 transition-all duration-300 group-hover:w-2 group-hover:translate-x-4 group-hover:translate-y-4"></div>
       </article>
     </Link>
   );

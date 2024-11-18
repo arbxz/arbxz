@@ -1,22 +1,22 @@
-"use client";
+'use client';
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from 'react';
 
-import { EllipsisIcon, FastForward, Pause, Play, Plus } from "lucide-react";
+import { EllipsisIcon, FastForward, Pause, Play, Plus } from 'lucide-react';
 
-import Card from "./Card";
-import WaveBackground from "./WaveBackground";
+import Card from './Card';
+import WaveBackground from './WaveBackground';
 
 const tracks = [
   {
-    title: "Sleepy Cat",
-    src: "https://www.youtube.com/watch?v=fKF2HIjxtNA",
-    author: "Alejandro Magaña (A. M.)",
+    title: 'Sleepy Cat',
+    src: 'https://www.youtube.com/watch?v=fKF2HIjxtNA',
+    author: 'Alejandro Magaña (A. M.)',
   },
   {
-    title: "Games Worldbeat",
-    src: "https://www.youtube.com/watch?v=fKF2HIjxtNA",
-    author: "Bernardo R.",
+    title: 'Games Worldbeat',
+    src: 'https://www.youtube.com/watch?v=fKF2HIjxtNA',
+    author: 'Bernardo R.',
   },
 ];
 
@@ -38,7 +38,7 @@ const MusicPlayer = ({ text }: MusicPlayerProps) => {
       const formatSeconds = seconds < 10 ? `0${seconds}` : `${seconds}`;
       return `${formatMinutes}:${formatSeconds}`;
     }
-    return "00:00";
+    return '00:00';
   };
 
   const handleNext = () => {
@@ -75,8 +75,8 @@ const MusicPlayer = ({ text }: MusicPlayerProps) => {
 
   return (
     <Card styles="relative flex flex-col w-full h-full">
-      <div className="bg-background flex flex-col lg:flex-row items-center justify-start">
-        <div className="relative block h-[250px] sm:h-[170px] w-full lg:w-[200px] bg-music">
+      <div className="flex flex-col items-center justify-start bg-background lg:flex-row">
+        <div className="bg-music relative block h-[250px] w-full sm:h-[170px] lg:w-[200px]">
           <div className="spinner">
             <div></div>
             <div></div>
@@ -86,19 +86,19 @@ const MusicPlayer = ({ text }: MusicPlayerProps) => {
             <div></div>
           </div>
         </div>
-        <div className="lg:px-8 lg:py-4 px-4 py-2">
-          <span className="block text-xl font-semibold mb-2">{text}</span>
+        <div className="px-4 py-2 lg:px-8 lg:py-4">
+          <span className="mb-2 block text-xl font-semibold">{text}</span>
           <span className="block text-lg font-light">{currentTrack.title}</span>
           <span className="text-sm">{currentTrack.author}</span>
         </div>
-        <div className="hidden lg:flex flex-col items-center justify-center gap-4 text-xl p-4 opacity-80 ml-auto">
+        <div className="ml-auto hidden flex-col items-center justify-center gap-4 p-4 text-xl opacity-80 lg:flex">
           <EllipsisIcon />
           <Plus />
         </div>
       </div>
       <div className="relative p-4">
         <WaveBackground />
-        <div className="flex justify-center items-center lg:px-8 px-4 pt-2 pb-2 gap-8 text-xl opacity-80">
+        <div className="flex items-center justify-center gap-8 px-4 pb-2 pt-2 text-xl opacity-80 lg:px-8">
           <FastForward
             onClick={() => {
               handlePrevious();
@@ -107,9 +107,9 @@ const MusicPlayer = ({ text }: MusicPlayerProps) => {
           />
           <button type="button" onClick={() => setIsPlaying(!isPlaying)}>
             {isPlaying ? (
-              <Pause className="flex items-center justify-center rounded-full border border-backgeound p-2 w-6 h-6 cursor-pointer" />
+              <Pause className="border-backgeound flex h-6 w-6 cursor-pointer items-center justify-center rounded-full border p-2" />
             ) : (
-              <Play className="cursor-pointer flex items-center justify-center rounded-full border border-backgeound p-2 w-6 h-6" />
+              <Play className="border-backgeound flex h-6 w-6 cursor-pointer items-center justify-center rounded-full border p-2" />
             )}
           </button>
 
@@ -120,11 +120,11 @@ const MusicPlayer = ({ text }: MusicPlayerProps) => {
             }}
           />
         </div>
-        <div className="flex px-8 gap-4">
-          <div className="relative w-full  py-4">
+        <div className="flex gap-4 px-8">
+          <div className="relative w-full py-4">
             <audio src={currentTrack.src} ref={audioRef} />
-            <div className="h-[2px] w-full rounded-full overflow-hidden bg-arbxz-accent opacity-50"></div>
-            <div className="absolute top-1/2 -translate-y-1/2 h-[2px] w-16 rounded-full overflow-hidden bg-arbxz-accent"></div>
+            <div className="h-[2px] w-full overflow-hidden rounded-full bg-arbxz-accent opacity-50"></div>
+            <div className="absolute top-1/2 h-[2px] w-16 -translate-y-1/2 overflow-hidden rounded-full bg-arbxz-accent"></div>
           </div>
           <span className="text-sm">
             {formatTime(audioRef.current?.duration)}
