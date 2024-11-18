@@ -58,7 +58,7 @@ const DesignSection = () => {
             />
           </Card>
           <Card
-            background="bg-violet-500"
+            background="bg-orange-500"
             styles="h-24 w-24 p-4 flex items-center justify-center">
             <Image
               className="w-auto transition-all duration-300 ease-in-out hover:-translate-y-3"

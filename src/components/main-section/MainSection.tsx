@@ -15,7 +15,7 @@ const MainBanner = () => {
     <Container>
       <div className="flex flex-nowrap flex-col lg:flex-row gap-4">
         <div className="relative flex flex-col justify-center items-center gap-4 w-full z-20">
-          <div className="relative animate-custom-bounce w-full h-[500px] saturate-0">
+          {/* <div className="relative animate-custom-bounce w-full h-[500px] saturate-0">
             <Image
               className="animate-cat"
               width={350}
@@ -51,11 +51,56 @@ const MainBanner = () => {
               src="/cats-animation/cat_logo_4.png"
               alt="cat-logo"
             />
+          </div> */}
+
+          <div className="sketchfab-embed-wrapper">
+            {" "}
+            <iframe
+              title="Sad toaster"
+              frameBorder="0"
+              allow="autoplay; fullscreen; xr-spatial-tracking"
+              xr-spatial-tracking
+              execution-while-out-of-viewport
+              execution-while-not-rendered
+              web-share
+              width="640"
+              height="480"
+              src="https://sketchfab.com/models/9b158486dfa1490eb9157966321283a0/embed?autostart=1&dnt=1">
+              {" "}
+            </iframe>
+            {/* <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+              {" "}
+              <a
+                href="https://sketchfab.com/3d-models/sad-toaster-9b158486dfa1490eb9157966321283a0?utm_medium=embed&utm_campaign=share-popup&utm_content=9b158486dfa1490eb9157966321283a0"
+                target="_blank"
+                rel="nofollow"
+                style="font-weight: bold; color: #1CAAD9;">
+                {" "}
+                Sad toaster{" "}
+              </a>{" "}
+              by{" "}
+              <a
+                href="https://sketchfab.com/tasha.lime?utm_medium=embed&utm_campaign=share-popup&utm_content=9b158486dfa1490eb9157966321283a0"
+                target="_blank"
+                rel="nofollow"
+                style="font-weight: bold; color: #1CAAD9;">
+                {" "}
+                Tasha.Lime{" "}
+              </a>{" "}
+              on{" "}
+              <a
+                href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=9b158486dfa1490eb9157966321283a0"
+                target="_blank"
+                rel="nofollow"
+                style="font-weight: bold; color: #1CAAD9;">
+                Sketchfab
+              </a>
+            </p> */}
           </div>
 
           <div className="flex flex-wrap md:flex-nowrap gap-4 items-stretch justify-stretch w-full">
             <Card
-              background="animated-background bg-gradient-to-l from-indigo-700 via-violet-500 to-indigo-500"
+              background="animated-background bg-gradient-to-l from-arbxz-accent via-purple-500 to-purple-600"
               styles="flex w-full items-center p-8 text-white text-5xl text-center">
               <ClockClient />
             </Card>
@@ -120,7 +165,7 @@ const MainBanner = () => {
 
           <div className="hidden lg:block lg:absolute bottom-48 right-36 animate-custom-bounce">
             <Card
-              background="bg-gradient"
+              background="bg-arbxz-accent"
               styles="relative z-50 flex items-center justify-center p-8 md:w-1/2 lg:w-full h-full lg:h-1/2 dark:hover:shadow-indigo-600 hover:shadow-xl">
               <Image
                 alt="arbxz-logo"

@@ -13,7 +13,7 @@ const AboutSection = () => {
 
         <Link href="/blog" className="w-full">
           <Card
-            background="animated-background bg-gradient-to-tr from-indigo-500 via-indigo-600 to-arbxz-accent duration-500"
+            background="animated-background bg-gradient-to-tr from-arbxz-accent via-purple-600 to-arbxz-accent duration-500"
             styles="flex items-center h-full">
             <div className="text-center px-4 py-8 lg:p-16 w-full text-white">
               <h2 className="text-4xl lg:text-6xl font-bold">blog.</h2>
