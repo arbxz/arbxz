@@ -1,6 +1,6 @@
-import { CircleX } from 'lucide-react';
+import { CircleX } from "lucide-react";
 
-import { useAppContext } from '@/context/appContext';
+import { useAppContext } from "@/context/appContext";
 
 interface SkillButtonsProps {
   data: string[];
@@ -11,25 +11,25 @@ const AboutModalContent = () => {
   const { setIsModalOpen } = useAppContext();
 
   const skillData = [
-    'Figma',
-    'HTML/TSX/JSX',
-    'CSS/SCSS',
-    'Typescript',
-    'NextJs',
-    'ReactJs',
-    'Cypress',
-    'Vercel',
-    'Redux',
-    'TailwindCSS',
-    'Jest',
+    "Figma",
+    "HTML/TSX/JSX",
+    "CSS/SCSS",
+    "Typescript",
+    "NextJs",
+    "ReactJs",
+    "Cypress",
+    "Vercel",
+    "Redux",
+    "TailwindCSS",
+    "Jest",
   ];
 
   const hobbyData = [
-    'Digital Art',
-    'Art',
-    'Web design',
-    'Photoshop',
-    'Clip studio',
+    "Digital Art",
+    "Art",
+    "Web design",
+    "Photoshop",
+    "Clip studio",
   ];
 
   const SkillButtons = ({ data }: SkillButtonsProps) => {

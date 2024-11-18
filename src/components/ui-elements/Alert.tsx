@@ -1,23 +1,23 @@
-'use client';
-import React from 'react';
-import { useEffect, useRef, useState } from 'react';
+"use client";
+import React from "react";
+import { useEffect, useRef, useState } from "react";
 
-import { cva, VariantProps } from 'class-variance-authority';
-import { motion, useDragControls, useMotionValue } from 'framer-motion';
-import { X } from 'lucide-react';
+import { cva, VariantProps } from "class-variance-authority";
+import { motion, useDragControls, useMotionValue } from "framer-motion";
+import { X } from "lucide-react";
 
 const alertStyles = cva(
-  'flex items-center justify-start py-2 px-4 gap-2 text-white rounded-lg',
+  "flex items-center justify-start py-2 px-4 gap-2 text-white rounded-lg",
   {
     variants: {
       intent: {
-        danger: 'bg-danger',
-        warning: 'bg-warning',
-        info: 'bg-form-active',
-        dismiss: 'hidden',
+        danger: "bg-danger",
+        warning: "bg-warning",
+        info: "bg-form-active",
+        dismiss: "hidden",
       },
       defaultVariants: {
-        intent: 'info',
+        intent: "info",
       },
     },
   }
@@ -49,7 +49,7 @@ const Alert = ({ intent, text, Icon }: AlertProps) => {
       dragControls={controls}
       dragConstraints={{ left: 0, right: 0 }}
       className={
-        isVisible ? alertStyles({ intent }) : alertStyles({ intent: 'dismiss' })
+        isVisible ? alertStyles({ intent }) : alertStyles({ intent: "dismiss" })
       }
       ref={ref}
     >

@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-import Container from '@/components/shared/Container';
-import { getProjects } from '@/sanity/sanity-utils';
-import { Project } from '@/types/project';
+import Container from "@/components/shared/Container";
+import { getProjects } from "@/sanity/sanity-utils";
+import { Project } from "@/types/project";
 
-import ProjectCard from './ProjectCard';
+import ProjectCard from "./ProjectCard";
 
 const ProjectSection = () => {
   const [projectData, setProjectData] = useState<Project[]>([]);

@@ -1,7 +1,7 @@
-import Card from '@/components/shared/Card';
-import Button from '@/components/ui-elements/Button';
-import Checkbox from '@/components/ui-elements/Checkbox';
-import Input from '@/components/ui-elements/Input';
+import Card from "@/components/shared/Card";
+import Button from "@/components/ui-elements/Button";
+import Checkbox from "@/components/ui-elements/Checkbox";
+import Input from "@/components/ui-elements/Input";
 
 function SignUp() {
   return (
@@ -61,7 +61,7 @@ function SignUp() {
             id="newsletter"
             label="Subscribe to our newsletter"
             ariaLabel="newsletter checkbox"
-            value={'subscribed'}
+            value={"subscribed"}
           />
 
           <Button intent="secondary" text="sign up." />

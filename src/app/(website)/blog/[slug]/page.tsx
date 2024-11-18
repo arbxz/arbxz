@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import '@/themes/blog.css';
-import RenderBodyContent from '@/components/blog/RenderBodyContent';
-import { getPostBySlug } from '@/sanity/sanity-utils';
+import "@/themes/blog.css";
+import RenderBodyContent from "@/components/blog/RenderBodyContent";
+import { getPostBySlug } from "@/sanity/sanity-utils";
 
 // type Props = {
 //   params: string;

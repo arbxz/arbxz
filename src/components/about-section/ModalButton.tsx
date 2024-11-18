@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { Eye } from 'lucide-react';
+import { Eye } from "lucide-react";
 
-import AboutModalContent from '@/components/about-modal-content/AboutModalContent';
-import { useAppContext } from '@/context/appContext';
+import AboutModalContent from "@/components/about-modal-content/AboutModalContent";
+import { useAppContext } from "@/context/appContext";
 
 interface ModalButtonProps {
   buttonText: string;

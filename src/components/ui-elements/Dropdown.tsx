@@ -1,7 +1,7 @@
-import React from 'react';
-import { useState } from 'react';
+import React from "react";
+import { useState } from "react";
 
-import { motion, Variants } from 'framer-motion';
+import { motion, Variants } from "framer-motion";
 
 interface DropdownProps {
   buttonText: React.ReactNode | string;
@@ -12,7 +12,7 @@ const itemVariants: Variants = {
   open: {
     opacity: 1,
     y: 0,
-    transition: { type: 'spring', stiffness: 300, damping: 24 },
+    transition: { type: "spring", stiffness: 300, damping: 24 },
   },
   closed: { opacity: 0, y: 20, transition: { duration: 0.2 } },
 };
@@ -23,7 +23,7 @@ const Dropdown = ({ buttonText, options }: DropdownProps) => {
   return (
     <motion.nav
       initial={false}
-      animate={isOpen ? 'open' : 'closed'}
+      animate={isOpen ? "open" : "closed"}
       className="relative"
     >
       <motion.button
@@ -49,9 +49,9 @@ const Dropdown = ({ buttonText, options }: DropdownProps) => {
         className="absolute left-1/2 top-full flex w-auto -translate-x-1/2 flex-col gap-2 whitespace-nowrap bg-foreground p-2 shadow"
         variants={{
           open: {
-            clipPath: 'inset(0% 0% 0% 0% round 10px)',
+            clipPath: "inset(0% 0% 0% 0% round 10px)",
             transition: {
-              type: 'spring',
+              type: "spring",
               bounce: 0,
               duration: 0.7,
               delayChildren: 0.3,
@@ -59,9 +59,9 @@ const Dropdown = ({ buttonText, options }: DropdownProps) => {
             },
           },
           closed: {
-            clipPath: 'inset(10% 50% 90% 50% round 10px)',
+            clipPath: "inset(10% 50% 90% 50% round 10px)",
             transition: {
-              type: 'spring',
+              type: "spring",
               bounce: 0,
               duration: 0.3,
             },

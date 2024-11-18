@@ -1,7 +1,7 @@
-import Image from 'next/image';
+import Image from "next/image";
 
-import Card from '@/components/shared/Card';
-import Container from '@/components/shared/Container';
+import Card from "@/components/shared/Card";
+import Container from "@/components/shared/Container";
 
 const DesignSection = () => {
   return (
@@ -30,11 +30,11 @@ const DesignSection = () => {
           <div className="hidden w-auto overflow-hidden rounded-md bg-arbxz-accent md:block">
             <Image
               className="mix-blend-screen contrast-100 grayscale"
-              src={'/figma.png'}
+              src={"/figma.png"}
               width={650}
               height={650}
               loading="lazy"
-              alt={'figma screenshot'}
+              alt={"figma screenshot"}
             />
           </div>
         </div>
@@ -46,7 +46,7 @@ const DesignSection = () => {
           >
             <Image
               className="w-auto transition-all duration-300 ease-in-out hover:-translate-y-3"
-              src={'/icons/photoshop.svg'}
+              src={"/icons/photoshop.svg"}
               width={45}
               height={45}
               alt="photoshop icon"
@@ -58,7 +58,7 @@ const DesignSection = () => {
           >
             <Image
               className="w-auto transition-all duration-300 ease-in-out hover:-translate-y-3"
-              src={'/icons/illustrator.svg'}
+              src={"/icons/illustrator.svg"}
               width={45}
               height={45}
               alt="illustrator icon"
@@ -70,7 +70,7 @@ const DesignSection = () => {
           >
             <Image
               className="overflow-hidden rounded-full bg-white p-2 transition-all duration-300 ease-in-out hover:-translate-y-3"
-              src={'/icons/clipstudio.svg'}
+              src={"/icons/clipstudio.svg"}
               width={45}
               height={45}
               alt="clipstudio icon"

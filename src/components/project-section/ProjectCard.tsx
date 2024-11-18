@@ -1,13 +1,13 @@
-import React from 'react';
-import { useRef } from 'react';
+import React from "react";
+import { useRef } from "react";
 
-import { useInView } from 'framer-motion';
-import { Globe } from 'lucide-react';
-import Image from 'next/image';
-import Link from 'next/link';
+import { useInView } from "framer-motion";
+import { Globe } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
-import { urlFor } from '@/sanity/lib/image';
-import { Project } from '@/types/project';
+import { urlFor } from "@/sanity/lib/image";
+import { Project } from "@/types/project";
 
 interface InterfaceProjectItem extends Project {}
 
@@ -19,9 +19,9 @@ const ProjectCard = ({ project }: { project: InterfaceProjectItem }) => {
     <div
       ref={ref}
       style={{
-        transform: isInView ? 'none' : 'translateY(200px)',
+        transform: isInView ? "none" : "translateY(200px)",
         opacity: isInView ? 1 : 0,
-        transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
+        transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
       }}
       className="group relative flex w-full flex-row overflow-hidden rounded-3xl shadow hover:shadow-xl sm:flex-col"
     >
@@ -54,8 +54,8 @@ const ProjectCard = ({ project }: { project: InterfaceProjectItem }) => {
       <div className="absolute bottom-0 right-0 z-20 rounded-full p-4">
         <span
           className={`${
-            project.framework === 'NuxtJs' &&
-            'bg-lime-400 font-semibold text-stone-900'
+            project.framework === "NuxtJs" &&
+            "bg-lime-400 font-semibold text-stone-900"
           } ml-2 rounded-full bg-background px-2 py-1 text-xs text-foreground shadow-inner`}
         >
           {project.framework}

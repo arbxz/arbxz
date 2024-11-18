@@ -1,8 +1,8 @@
-import React from 'react';
-import { useState } from 'react';
+import React from "react";
+import { useState } from "react";
 
-import { AnimatePresence, motion, Variants } from 'framer-motion';
-import Link from 'next/link';
+import { AnimatePresence, motion, Variants } from "framer-motion";
+import Link from "next/link";
 
 interface AccordionProps {
   title: React.ReactNode | string;
@@ -14,7 +14,7 @@ const itemVariants: Variants = {
   open: {
     opacity: 1,
     y: 0,
-    transition: { type: 'spring', stiffness: 300, damping: 24 },
+    transition: { type: "spring", stiffness: 300, damping: 24 },
   },
   closed: { opacity: 0, y: 20, transition: { duration: 0.2 } },
 };
@@ -29,7 +29,7 @@ const Accordion = ({
   return (
     <motion.div
       initial={false}
-      animate={isOpen ? 'open' : 'closed'}
+      animate={isOpen ? "open" : "closed"}
       className="relative"
     >
       <motion.button
@@ -63,13 +63,13 @@ const Accordion = ({
             variants={{
               open: {
                 opacity: 1,
-                height: 'auto',
-                clipPath: 'inset(0% 0% 0% 0% round 6px)',
+                height: "auto",
+                clipPath: "inset(0% 0% 0% 0% round 6px)",
               },
               collapsed: {
                 opacity: 0,
                 height: 0,
-                clipPath: 'inset(10% 50% 90% 50% round 6px)',
+                clipPath: "inset(10% 50% 90% 50% round 6px)",
               },
             }}
           >

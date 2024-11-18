@@ -1,6 +1,6 @@
-import Link from 'next/link';
+import Link from "next/link";
 
-import ThemeToggle from '@/components/ui-elements/ThemeToggle';
+import ThemeToggle from "@/components/ui-elements/ThemeToggle";
 
 interface NavigationContentProps {
   isBlog: boolean;
@@ -16,7 +16,7 @@ const NavigationContent = ({ isBlog }: NavigationContentProps) => {
           prefetch={false}
         >
           <small
-            className={` ${isBlog ? 'border-blue-600 text-blue-500' : 'border-arbxz-accent bg-arbxz-accent text-white dark:bg-transparent'} rounded-full border-2 px-4 py-1 text-sm font-semibold transition-colors duration-300`}
+            className={` ${isBlog ? "border-blue-600 text-blue-500" : "border-arbxz-accent bg-arbxz-accent text-white dark:bg-transparent"} rounded-full border-2 px-4 py-1 text-sm font-semibold transition-colors duration-300`}
           >
             Arbxz
           </small>

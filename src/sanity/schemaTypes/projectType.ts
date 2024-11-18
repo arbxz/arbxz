@@ -1,38 +1,38 @@
-import { FolderIcon } from '@sanity/icons';
-import { defineField, defineType } from 'sanity';
+import { FolderIcon } from "@sanity/icons";
+import { defineField, defineType } from "sanity";
 
 export const projectType = defineType({
-  name: 'project',
-  title: 'Project',
-  type: 'document',
+  name: "project",
+  title: "Project",
+  type: "document",
   icon: FolderIcon,
   fields: [
     defineField({
-      name: 'name',
-      type: 'string',
+      name: "name",
+      type: "string",
     }),
     defineField({
-      name: 'description',
-      type: 'string',
+      name: "description",
+      type: "string",
     }),
     defineField({
-      name: 'link',
-      type: 'string',
+      name: "link",
+      type: "string",
     }),
     defineField({
-      name: 'framework',
-      type: 'string',
+      name: "framework",
+      type: "string",
     }),
     defineField({
-      name: 'slug',
-      type: 'slug',
+      name: "slug",
+      type: "slug",
       options: {
-        source: 'name',
+        source: "name",
       },
     }),
     defineField({
-      name: 'image',
-      type: 'image',
+      name: "image",
+      type: "image",
       options: {
         hotspot: true,
       },
@@ -40,8 +40,8 @@ export const projectType = defineType({
   ],
   preview: {
     select: {
-      title: 'name',
-      media: 'image',
+      title: "name",
+      media: "image",
     },
   },
 });

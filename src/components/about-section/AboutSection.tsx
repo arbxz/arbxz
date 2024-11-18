@@ -1,9 +1,9 @@
-import Link from 'next/link';
+import Link from "next/link";
 
-import Card from '@/components/shared/Card';
-import Container from '@/components/shared/Container';
+import Card from "@/components/shared/Card";
+import Container from "@/components/shared/Container";
 
-import About from './About';
+import About from "./About";
 
 const AboutSection = () => {
   return (

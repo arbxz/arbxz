@@ -17,7 +17,7 @@ export default function Input({
   return (
     <fieldset className="relative w-full flex-1">
       <input
-        placeholder={' '}
+        placeholder={" "}
         id={id}
         name={name}
         type={type}
@@ -25,13 +25,13 @@ export default function Input({
         {...props}
       />
       <span className="absolute -top-[1px] left-3 h-[4px] w-auto scale-x-[0.001] bg-background transition-transform duration-200 peer-focus:scale-x-100 peer-[:not(:placeholder-shown)]:scale-x-100">
-        <span className="opacity-0">{label + 'x'}</span>
+        <span className="opacity-0">{label + "x"}</span>
       </span>
       <label
         className="absolute left-2 top-[22px] w-fit -translate-y-1/2 cursor-text px-2 text-sm transition-transform duration-200 peer-invalid:text-danger peer-focus:-translate-y-[165%] peer-focus:text-active peer-[:not(:placeholder-shown)]:-translate-y-[165%]"
         htmlFor={id}
       >
-        {label + '.'}
+        {label + "."}
       </label>
       {errorMessage && (
         <p className="invisible mt-2 h-0 text-sm text-danger opacity-0 transition-opacity duration-300 peer-[:not(:focus):invalid]:visible peer-[:not(:focus):invalid]:h-auto peer-[:not(:focus):invalid]:opacity-100">

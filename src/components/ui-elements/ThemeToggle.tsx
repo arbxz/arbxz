@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { MoonIcon, Sun } from 'lucide-react';
-import { useTheme } from 'next-themes';
+import { MoonIcon, Sun } from "lucide-react";
+import { useTheme } from "next-themes";
 
-import { useLoaded } from '@/hooks/useLoaded';
+import { useLoaded } from "@/hooks/useLoaded";
 
 const ThemeToggle = () => {
   const { resolvedTheme, setTheme } = useTheme();
@@ -13,9 +13,9 @@ const ThemeToggle = () => {
       type="button"
       title="Theme toggle"
       className="flex items-center justify-center rounded-full bg-background p-2 text-xl shadow-inner"
-      onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
+      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
     >
-      {resolvedTheme == 'light' && loaded ? (
+      {resolvedTheme == "light" && loaded ? (
         <MoonIcon size={20} />
       ) : (
         <Sun size={20} />

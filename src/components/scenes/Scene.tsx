@@ -1,9 +1,9 @@
-import React, { Suspense, useRef, useState } from 'react';
+import React, { Suspense, useRef, useState } from "react";
 
-import { Html, useProgress } from '@react-three/drei';
-import { Canvas, ThreeElements, useFrame, useLoader } from '@react-three/fiber';
-import * as THREE from 'three';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { Html, useProgress } from "@react-three/drei";
+import { Canvas, ThreeElements, useFrame, useLoader } from "@react-three/fiber";
+import * as THREE from "three";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
 export const Scene = () => {
   return (
@@ -15,8 +15,8 @@ export const Scene = () => {
   );
 };
 
-const Box = (props: ThreeElements['mesh']) => {
-  const gltf = useLoader(GLTFLoader, '/models/che.glb');
+const Box = (props: ThreeElements["mesh"]) => {
+  const gltf = useLoader(GLTFLoader, "/models/che.glb");
   const meshRef = useRef<THREE.Mesh>(null!);
   const [active, setActive] = useState(false);
   useFrame((state, delta) => (meshRef.current.rotation.y += delta));

@@ -1,13 +1,13 @@
-import { OctagonAlert, TriangleAlert, Zap } from 'lucide-react';
+import { OctagonAlert, TriangleAlert, Zap } from "lucide-react";
 
-import Alert from '@/components/ui-elements/Alert';
-import Box from '@/components/ui-elements/Box';
-import Button from '@/components/ui-elements/Button';
-import Checkbox from '@/components/ui-elements/Checkbox';
-import FileUpload from '@/components/ui-elements/FileUpload';
-import Input from '@/components/ui-elements/Input';
-import Radio from '@/components/ui-elements/Radio';
-import TextArea from '@/components/ui-elements/TextArea';
+import Alert from "@/components/ui-elements/Alert";
+import Box from "@/components/ui-elements/Box";
+import Button from "@/components/ui-elements/Button";
+import Checkbox from "@/components/ui-elements/Checkbox";
+import FileUpload from "@/components/ui-elements/FileUpload";
+import Input from "@/components/ui-elements/Input";
+import Radio from "@/components/ui-elements/Radio";
+import TextArea from "@/components/ui-elements/TextArea";
 
 function FormView() {
   return (

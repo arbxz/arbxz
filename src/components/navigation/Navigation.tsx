@@ -1,17 +1,17 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-import { usePathname } from 'next/navigation';
+import { usePathname } from "next/navigation";
 
-import NavigationContent from './NavigationContent';
+import NavigationContent from "./NavigationContent";
 
 const Navigation = () => {
   const pathname = usePathname();
   const [isBlog, setIsBlog] = useState(false);
 
   useEffect(() => {
-    if (pathname.includes('blog')) {
+    if (pathname.includes("blog")) {
       setIsBlog(true);
     } else {
       setIsBlog(false);

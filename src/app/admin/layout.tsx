@@ -1,14 +1,14 @@
-'use client';
-import React from 'react';
-import { useEffect, useState } from 'react';
+"use client";
+import React from "react";
+import { useEffect, useState } from "react";
 
-import dynamic from 'next/dynamic';
+import dynamic from "next/dynamic";
 
-import AdminNavigation from '@/components/navigation/AdminNavigation';
-import Loader from '@/components/ui-elements/Loader';
-import { useAppContext } from '@/context/appContext';
+import AdminNavigation from "@/components/navigation/AdminNavigation";
+import Loader from "@/components/ui-elements/Loader";
+import { useAppContext } from "@/context/appContext";
 
-const Aside = dynamic(() => import('@/components/aside/Aside'));
+const Aside = dynamic(() => import("@/components/aside/Aside"));
 
 function RootLayout({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState<boolean>(true);
@@ -313,8 +313,8 @@ function RootLayout({ children }: { children: React.ReactNode }) {
             <main
               className={`${
                 isAsideOpen
-                  ? 'fixed left-0 px-4 lg:relative lg:px-0'
-                  : 'relative'
+                  ? "fixed left-0 px-4 lg:relative lg:px-0"
+                  : "relative"
               } no-scrollbar h-full w-full overflow-y-auto pb-4 pt-20 lg:pt-24`}
             >
               {children}

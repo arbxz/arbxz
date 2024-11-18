@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 interface ChatProps {
   name?: string;
@@ -7,16 +7,16 @@ interface ChatProps {
 }
 
 const Chat = ({
-  name = 'Arbaaz Mowlabucus',
-  message = 'Hey can you check out this graph ?',
-  time = '19:30',
+  name = "Arbaaz Mowlabucus",
+  message = "Hey can you check out this graph ?",
+  time = "19:30",
 }: ChatProps) => {
   return (
     <div className="flex cursor-pointer items-center justify-start gap-4 rounded-xl bg-background px-4 py-2 shadow-sm transition-all duration-300 hover:translate-x-1 hover:bg-background-secondary">
       <div className="relative">
         <Image
           className="rounded-full shadow"
-          src={'/arbaaz-picture.webp'}
+          src={"/arbaaz-picture.webp"}
           width={50}
           height={50}
           alt="user image"

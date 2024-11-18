@@ -1,6 +1,6 @@
-import Card from '@/components/shared/Card';
+import Card from "@/components/shared/Card";
 
-import ModalButton from './ModalButton';
+import ModalButton from "./ModalButton";
 
 const About = () => {
   return (
@@ -21,7 +21,7 @@ const About = () => {
         </h2>
 
         <div className="mx-auto mt-4 lg:mt-8">
-          <ModalButton buttonText={'open me'} />
+          <ModalButton buttonText={"open me"} />
         </div>
       </div>
     </Card>

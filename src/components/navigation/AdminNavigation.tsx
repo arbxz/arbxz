@@ -1,26 +1,26 @@
-'use client';
+"use client";
 
-import { useRef } from 'react';
+import { useRef } from "react";
 
-import { motion } from 'framer-motion';
-import { Zap } from 'lucide-react';
-import Link from 'next/link';
+import { motion } from "framer-motion";
+import { Zap } from "lucide-react";
+import Link from "next/link";
 
-import { useAppContext } from '@/context/appContext';
-import { useDimensions } from '@/hooks/useDimensions';
+import { useAppContext } from "@/context/appContext";
+import { useDimensions } from "@/hooks/useDimensions";
 
-import Dropdown from '../ui-elements/Dropdown';
-import { MenuToggle } from '../ui-elements/MenuToggle';
-import ThemeToggle from '../ui-elements/ThemeToggle';
+import Dropdown from "../ui-elements/Dropdown";
+import { MenuToggle } from "../ui-elements/MenuToggle";
+import ThemeToggle from "../ui-elements/ThemeToggle";
 
 const AdminNavigation = () => {
   const { isAsideOpen, setIsAsideOpen } = useAppContext();
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
   const userOptions = [
-    { label: 'profile.', action: () => {} },
-    { label: 'account settings.', action: () => {} },
-    { label: 'logout.', action: () => {} },
+    { label: "profile.", action: () => {} },
+    { label: "account settings.", action: () => {} },
+    { label: "logout.", action: () => {} },
   ];
 
   return (
@@ -28,7 +28,7 @@ const AdminNavigation = () => {
       <nav className="glass relative z-50 flex h-auto w-full items-center justify-between gap-2 border-0 border-b-4 border-form-active px-4 py-2 text-foreground shadow shadow-custom-shadow transition-all duration-300 ease-in-out lg:gap-4">
         <motion.nav
           initial={isAsideOpen}
-          animate={isAsideOpen ? 'open' : 'closed'}
+          animate={isAsideOpen ? "open" : "closed"}
           custom={height}
           ref={containerRef}
           className="relative flex flex-col"

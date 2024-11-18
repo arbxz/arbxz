@@ -1,7 +1,7 @@
-import { ChartLine, DollarSign, Eye } from 'lucide-react';
+import { ChartLine, DollarSign, Eye } from "lucide-react";
 
-import Card from '@/components/shared/Card';
-import Chat from '@/components/shared/Chat';
+import Card from "@/components/shared/Card";
+import Chat from "@/components/shared/Chat";
 
 const PageContent = () => {
   return (

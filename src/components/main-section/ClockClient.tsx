@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 const ClockClient = () => {
   const [time, setTime] = useState<Date>(new Date());
@@ -12,8 +12,8 @@ const ClockClient = () => {
 
   const formattedTime = (currTime: Date) =>
     currTime.toLocaleTimeString([], {
-      hour: '2-digit',
-      minute: '2-digit',
+      hour: "2-digit",
+      minute: "2-digit",
       hour12: true,
     });
 

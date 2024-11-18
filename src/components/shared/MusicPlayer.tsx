@@ -1,22 +1,22 @@
-'use client';
+"use client";
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 
-import { EllipsisIcon, FastForward, Pause, Play, Plus } from 'lucide-react';
+import { EllipsisIcon, FastForward, Pause, Play, Plus } from "lucide-react";
 
-import Card from './Card';
-import WaveBackground from './WaveBackground';
+import Card from "./Card";
+import WaveBackground from "./WaveBackground";
 
 const tracks = [
   {
-    title: 'Sleepy Cat',
-    src: 'https://www.youtube.com/watch?v=fKF2HIjxtNA',
-    author: 'Alejandro Magaña (A. M.)',
+    title: "Sleepy Cat",
+    src: "https://www.youtube.com/watch?v=fKF2HIjxtNA",
+    author: "Alejandro Magaña (A. M.)",
   },
   {
-    title: 'Games Worldbeat',
-    src: 'https://www.youtube.com/watch?v=fKF2HIjxtNA',
-    author: 'Bernardo R.',
+    title: "Games Worldbeat",
+    src: "https://www.youtube.com/watch?v=fKF2HIjxtNA",
+    author: "Bernardo R.",
   },
 ];
 
@@ -38,7 +38,7 @@ const MusicPlayer = ({ text }: MusicPlayerProps) => {
       const formatSeconds = seconds < 10 ? `0${seconds}` : `${seconds}`;
       return `${formatMinutes}:${formatSeconds}`;
     }
-    return '00:00';
+    return "00:00";
   };
 
   const handleNext = () => {

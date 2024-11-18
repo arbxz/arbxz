@@ -1,6 +1,6 @@
-import Box from '@/components/ui-elements/Box';
-import Button from '@/components/ui-elements/Button';
-import Input from '@/components/ui-elements/Input';
+import Box from "@/components/ui-elements/Box";
+import Button from "@/components/ui-elements/Button";
+import Input from "@/components/ui-elements/Input";
 
 function Dashboard() {
   return (

@@ -1,7 +1,7 @@
-import AboutSection from '@/components/about-section/AboutSection';
-import DesignSection from '@/components/design-section/DesignSection';
-import MainBanner from '@/components/main-section/MainSection';
-import ProjectSection from '@/components/project-section/ProjectSection';
+import AboutSection from "@/components/about-section/AboutSection";
+import DesignSection from "@/components/design-section/DesignSection";
+import MainBanner from "@/components/main-section/MainSection";
+import ProjectSection from "@/components/project-section/ProjectSection";
 
 const PageContent = () => {
   return (

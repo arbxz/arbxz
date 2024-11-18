@@ -1,9 +1,9 @@
-import { Eye } from 'lucide-react';
-import Image from 'next/image';
-import Link from 'next/link';
+import { Eye } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
-import { urlFor } from '@/sanity/lib/image';
-import { Blog } from '@/types/blog';
+import { urlFor } from "@/sanity/lib/image";
+import { Blog } from "@/types/blog";
 
 const BlogItem = ({ blog }: { blog: Blog }) => {
   return (
@@ -55,10 +55,10 @@ const BlogItem = ({ blog }: { blog: Blog }) => {
               <div>
                 <div>{blog.author.name}</div>
                 <small>
-                  {new Date(blog.publishedAt).toLocaleDateString('en-GB', {
-                    day: '2-digit',
-                    month: 'long',
-                    year: 'numeric',
+                  {new Date(blog.publishedAt).toLocaleDateString("en-GB", {
+                    day: "2-digit",
+                    month: "long",
+                    year: "numeric",
                   })}
                 </small>
               </div>

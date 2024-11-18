@@ -1,8 +1,8 @@
-import Image from 'next/image';
+import Image from "next/image";
 
-import BlogItem from '@/components/blog/BlogItem';
-import Card from '@/components/shared/Card';
-import { getPosts } from '@/sanity/sanity-utils';
+import BlogItem from "@/components/blog/BlogItem";
+import Card from "@/components/shared/Card";
+import { getPosts } from "@/sanity/sanity-utils";
 
 const BlogPage = async () => {
   const posts = await getPosts();

@@ -1,11 +1,11 @@
-import { Github, Linkedin } from 'lucide-react';
-import Link from 'next/link';
+import { Github, Linkedin } from "lucide-react";
+import Link from "next/link";
 
-import ClockClient from '@/components/main-section/ClockClient';
-import TextCard from '@/components/main-section/TextCard';
-import { Scene } from '@/components/scenes/Scene';
-import Card from '@/components/shared/Card';
-import Chat from '@/components/shared/Chat';
+import ClockClient from "@/components/main-section/ClockClient";
+import TextCard from "@/components/main-section/TextCard";
+import { Scene } from "@/components/scenes/Scene";
+import Card from "@/components/shared/Card";
+import Chat from "@/components/shared/Chat";
 
 const MainBanner = () => {
   return (
