@@ -8,7 +8,7 @@ interface NavigationContentProps {
 
 const NavigationContent = ({ isBlog }: NavigationContentProps) => {
   return (
-    <nav className="sticky max-w-5xl xl:max-w-6xl top-0 w-full md:px-4 md:py-4 transition-all ease-in-out duration-300 z-50 mx-auto">
+    <nav className="fixed left-1/2 -translate-x-1/2 max-w-5xl xl:max-w-6xl top-0 w-full md:px-4 md:py-4 transition-all ease-in-out duration-300 z-50 mx-auto">
       <div className="glass flex gap-6 w-full justify-start items-center mx-auto px-4 py-3 md:rounded-xl shadow-sm overflow-hidden">
         <Link
           className="flex items-center text-xl gap-2"

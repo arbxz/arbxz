@@ -3,57 +3,49 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
 
+import ClockClient from "@/components/main-section/ClockClient";
+import TextCard from "@/components/main-section/TextCard";
+import { Scene } from "@/components/scenes/Scene";
 import Card from "@/components/shared/Card";
 import Chat from "@/components/shared/Chat";
-import Container from "@/components/shared/Container";
-
-import ClockClient from "./ClockClient";
-import TextCard from "./TextCard";
 
 const MainBanner = () => {
   return (
-    <Container>
-      <div className="flex flex-nowrap flex-col lg:flex-row gap-4">
-        <div className="relative flex flex-col justify-center items-center gap-4 w-full z-20">
-          <div className="relative animate-custom-bounce w-full h-[500px] saturate-0">
-            <Image
-              className="animate-cat"
-              width={350}
-              height={350}
-              src="/cats-animation/cat_logo_1.png"
-              alt="cat-logo"
-            />
-            <Image
-              className="animate-cat animate-cat-frame-1"
-              width={350}
-              height={350}
-              src="/cats-animation/cat_logo_1.png"
-              alt="cat-logo"
-            />
-            <Image
-              className="animate-cat animate-cat-frame-2"
-              width={350}
-              height={350}
-              src="/cats-animation/cat_logo_2.png"
-              alt="cat-logo"
-            />
-            <Image
-              className="animate-cat animate-cat-frame-3"
-              width={350}
-              height={350}
-              src="/cats-animation/cat_logo_3.png"
-              alt="cat-logo"
-            />
-            <Image
-              className="animate-cat animate-cat-frame-4"
-              width={350}
-              height={350}
-              src="/cats-animation/cat_logo_4.png"
-              alt="cat-logo"
-            />
+    <div className="w-full min-h-screen overflow-hidden">
+      <div className="absolute left-0 top-0 overflow-hidden w-full h-screen z-0">
+        <Scene />
+      </div>
+
+      <div className="relative min-h-screen w-full mx-auto flex flex-nowrap flex-col lg:flex-row items-end gap-4 py-8 max-w-5xl xl:max-w-6xl z-40">
+        <div className="flex flex-col md:flex-row gap-4 items-center justify-center z-10">
+          <div className="lg:absolute lg:w-96 flex flex-col gap-4 lg:top-24 right-0 lg:scale-90 w-full">
+            <Chat message="Hello fellow visitor ! 👋" />
+            <div className="ml-4">
+              <Chat message="Checkout my portfolio" time="19:31" />
+            </div>
+            <div className="ml-8">
+              <Chat message="reach out to me if need arise 😄" time="19:32" />
+            </div>
           </div>
 
-          <div className="flex flex-wrap md:flex-nowrap gap-4 items-stretch justify-stretch w-full">
+          <div className="group relative lg:absolute top-1/2 lg:-translate-y-1/2 left-0 w-full lg:w-auto">
+            <div className="absolute top-4 -right-4 lg:top-8 lg:-right-8 group-hover:top-0 group-hover:right-0 group-hover:relative group-hover:z-20 duration-300 transition-all">
+              <TextCard
+                title="Ah curious are we"
+                text="I'm also really good in css/scss. I love to design and code beautiful websites."
+              />
+            </div>
+            <div className="relative top-0 right-0 group-hover:top-4 group-hover:-right-4 lg:group-hover:top-8 lg:group-hover:-right-8 group-hover:absolute z-20 group-hover:z-10 duration-300 transition-all">
+              <TextCard
+                title="Who am I ?"
+                text="I'm Arbaaz Mowlabucus, a frontend engineer with speciality in React and Nextjs."
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="relative mx-auto z-20">
+          <div className="relative z-50 flex flex-wrap md:flex-nowrap gap-4 items-stretch justify-stretch w-full">
             <Card
               background="animated-background bg-gradient-to-l from-arbxz-accent via-purple-500 to-purple-600"
               styles="flex w-full items-center p-8 text-white text-5xl text-center">
@@ -91,49 +83,8 @@ const MainBanner = () => {
             </div>
           </div>
         </div>
-
-        <div className="flex flex-col md:flex-row gap-4 items-center justify-center z-10">
-          <div className="lg:absolute lg:w-96 flex flex-col gap-4 top-0 right-0 lg:scale-90 w-full">
-            <Chat message="Hello fellow visitor ! 👋" />
-            <div className="ml-4">
-              <Chat message="Checkout my portfolio" time="19:31" />
-            </div>
-            <div className="ml-8">
-              <Chat message="reach out to me if need arise 😄" time="19:32" />
-            </div>
-          </div>
-
-          <div className="group relative lg:absolute top-1/2 lg:-translate-y-1/2 left-0 w-full lg:w-auto">
-            <div className="absolute top-4 -right-4 lg:top-8 lg:-right-8 group-hover:top-0 group-hover:right-0 group-hover:relative group-hover:z-20 duration-300 transition-all">
-              <TextCard
-                title="Ah curious are we"
-                text="I'm also really good in css/scss. I love to design and code beautiful websites."
-              />
-            </div>
-            <div className="relative top-0 right-0 group-hover:top-4 group-hover:-right-4 lg:group-hover:top-8 lg:group-hover:-right-8 group-hover:absolute z-20 group-hover:z-10 duration-300 transition-all">
-              <TextCard
-                title="Who am I ?"
-                text="I'm Arbaaz Mowlabucus, a frontend engineer with speciality in React and Nextjs."
-              />
-            </div>
-          </div>
-
-          <div className="hidden lg:block lg:absolute bottom-48 right-36 animate-custom-bounce">
-            <Card
-              background="bg-arbxz-accent"
-              styles="relative z-50 flex items-center justify-center p-8 md:w-1/2 lg:w-full h-full lg:h-1/2 dark:hover:shadow-indigo-600 hover:shadow-xl">
-              <Image
-                alt="arbxz-logo"
-                src={"/icons/logo.png"}
-                className="filter brightness-0 invert "
-                width={100}
-                height={100}
-              />
-            </Card>
-          </div>
-        </div>
       </div>
-    </Container>
+    </div>
   );
 };
 

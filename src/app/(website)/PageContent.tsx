@@ -11,9 +11,9 @@ const PageContent = () => {
 
         <AboutSection />
 
-        <ProjectSection />
-
         <DesignSection />
+
+        <ProjectSection />
       </div>
     </div>
   );
