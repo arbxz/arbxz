@@ -69,7 +69,7 @@ function FormView() {
           <Input id="urlID" name="URL field" label="URL field" type="url" />
         </div>
         <div>
-          <TextArea id="urlID" name="URL field" label="URL field" type="url" />
+          <TextArea id="urlID" name="URL field" label="URL field" />
         </div>
         <div className="flex gap-10 md:gap-20">
           <div>
