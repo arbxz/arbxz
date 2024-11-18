@@ -18,7 +18,8 @@ export const AppProviderContext = ({ children }) => {
         setIsAsideOpen,
         modalContent,
         setModalContent,
-      }}>
+      }}
+    >
       {children}
     </Context.Provider>
   );

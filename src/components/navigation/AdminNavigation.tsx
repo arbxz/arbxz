@@ -2,9 +2,8 @@
 
 import { useRef } from "react";
 
-import { faBoltLightning } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
+import { Zap } from "lucide-react";
 import Link from "next/link";
 
 import { useAppContext } from "@/context/appContext";
@@ -25,25 +24,24 @@ const AdminNavigation = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full z-10">
-      <nav className="glass relative flex gap-2 lg:gap-4 w-full justify-between items-center text-foreground shadow shadow-custom-shadow h-auto py-2 px-4 border-0 border-b-4 border-form-active transition-all ease-in-out duration-300 z-50">
+    <header className="fixed left-0 top-0 z-10 w-full">
+      <nav className="glass relative z-50 flex h-auto w-full items-center justify-between gap-2 border-0 border-b-4 border-form-active px-4 py-2 text-foreground shadow shadow-custom-shadow transition-all duration-300 ease-in-out lg:gap-4">
         <motion.nav
           initial={isAsideOpen}
           animate={isAsideOpen ? "open" : "closed"}
           custom={height}
           ref={containerRef}
-          className="relative flex flex-col">
+          className="relative flex flex-col"
+        >
           <MenuToggle toggle={() => setIsAsideOpen(!isAsideOpen)} />
         </motion.nav>
 
         <Link
-          className="flex items-center text-lg gap-2 mr-auto"
+          className="mr-auto flex items-center gap-2 text-lg"
           href="/admin"
-          prefetch={false}>
-          <FontAwesomeIcon
-            className="text-form-active"
-            icon={faBoltLightning}
-          />
+          prefetch={false}
+        >
+          <Zap className="text-form-active" />
           <span className="font-semibold text-form-active">Arbxz</span>
           <span className="hidden lg:inline-block">| Admin</span>
         </Link>
@@ -51,7 +49,7 @@ const AdminNavigation = () => {
         <Dropdown
           options={userOptions}
           buttonText={
-            <span className="relative before:absolute before:top-6 before:left-0 before:h-1 before:w-0 before:bg-background hover:before:w-full before:transition-all before:duration-300">
+            <span className="relative before:absolute before:left-0 before:top-6 before:h-1 before:w-0 before:bg-background before:transition-all before:duration-300 hover:before:w-full">
               Arbaaz M.
             </span>
           }

@@ -1,16 +1,13 @@
 import React from "react";
 
-import type { Metadata, ResolvingMetadata } from "next";
-
 import "@/themes/blog.css";
 import RenderBodyContent from "@/components/blog/RenderBodyContent";
-import { urlFor } from "@/sanity/lib/image";
 import { getPostBySlug } from "@/sanity/sanity-utils";
 
-type Props = {
-  params: string;
-  searchParams: { [key: string]: string | string[] | undefined };
-};
+// type Props = {
+//   params: string;
+//   searchParams: { [key: string]: string | string[] | undefined };
+// };
 
 // export async function generateMetadata(
 //   { params }: Props,
@@ -38,16 +35,16 @@ const SingleBlogPage = async ({ params }: { params: any }) => {
   const post = await getPostBySlug(params.slug);
 
   return (
-    <div className="flex gap-4 flex-col w-full max-w-3xl mx-auto px-4 relative overflow-hidden z-20">
+    <div className="relative z-20 mx-auto flex w-full max-w-3xl flex-col gap-4 overflow-hidden px-4">
       <article className="my-10">
         <div className="mb-5 text-center">
-          <h1 className="text-4xl lg:text-8xl py-2 font-bold">{post.title}</h1>
+          <h1 className="py-2 text-4xl font-bold lg:text-8xl">{post.title}</h1>
           <p className="pb-1 text-lg">
-            <span className="font-semibold mr-2 text-green-500">
+            <span className="mr-2 font-semibold text-green-500">
               Published:
             </span>
             {new Date(post.publishedAt).toDateString()}
-            <span className="font-semibold pl-2 text-green-500">by </span>
+            <span className="pl-2 font-semibold text-green-500">by </span>
             {post.author.name}
           </p>
         </div>

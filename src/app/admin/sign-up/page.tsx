@@ -5,12 +5,12 @@ import Input from "@/components/ui-elements/Input";
 
 function SignUp() {
   return (
-    <div className="flex justify-center w-full">
+    <div className="flex w-full justify-center">
       <Card background="glass" styles="mx-auto">
-        <div className="flex flex-col flex-wrap gap-4 justify-center items-center p-4 md:p-8 w-full">
-          <h1 className="text-4xl font-bold gradient-text">Sign Up.</h1>
+        <div className="flex w-full flex-col flex-wrap items-center justify-center gap-4 p-4 md:p-8">
+          <h1 className="gradient-text text-4xl font-bold">Sign Up.</h1>
           <span>Join the team</span>
-          <div className="flex justify-start gap-4 w-full">
+          <div className="flex w-full justify-start gap-4">
             <Input
               id="NameID"
               name="Name"

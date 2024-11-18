@@ -15,25 +15,26 @@ export default function Input({
   ...props
 }: InputProps) {
   return (
-    <fieldset className="relative flex-1 w-full">
+    <fieldset className="relative w-full flex-1">
       <input
         placeholder={" "}
         id={id}
         name={name}
         type={type}
-        className="peer focus:outline-0 invalid:border-danger w-full rounded-md border-[1px] border-foreground-shade bg-transparent px-4 py-2 focus:border-active duration-200 transition-colors"
+        className="peer w-full rounded-md border-[1px] border-foreground-shade bg-transparent px-4 py-2 transition-colors duration-200 invalid:border-danger focus:border-active focus:outline-0"
         {...props}
       />
-      <span className="absolute -top-[1px] left-3 h-[4px] w-auto scale-x-[0.001] peer-focus:scale-x-100 peer-[:not(:placeholder-shown)]:scale-x-100 bg-background duration-200 transition-transform">
+      <span className="absolute -top-[1px] left-3 h-[4px] w-auto scale-x-[0.001] bg-background transition-transform duration-200 peer-focus:scale-x-100 peer-[:not(:placeholder-shown)]:scale-x-100">
         <span className="opacity-0">{label + "x"}</span>
       </span>
       <label
-        className="absolute w-fit top-[22px] -translate-y-1/2 left-2 text-sm px-2 duration-200 transition-transform peer-focus:-translate-y-[165%] peer-invalid:text-danger peer-focus:text-active peer-[:not(:placeholder-shown)]:-translate-y-[165%] cursor-text"
-        htmlFor={id}>
+        className="absolute left-2 top-[22px] w-fit -translate-y-1/2 cursor-text px-2 text-sm transition-transform duration-200 peer-invalid:text-danger peer-focus:-translate-y-[165%] peer-focus:text-active peer-[:not(:placeholder-shown)]:-translate-y-[165%]"
+        htmlFor={id}
+      >
         {label + "."}
       </label>
       {errorMessage && (
-        <p className="mt-2 invisible h-0 peer-[:not(:focus):invalid]:h-auto peer-[:not(:focus):invalid]:visible opacity-0 peer-[:not(:focus):invalid]:opacity-100 duration-300 transition-opacity text-danger text-sm">
+        <p className="invisible mt-2 h-0 text-sm text-danger opacity-0 transition-opacity duration-300 peer-[:not(:focus):invalid]:visible peer-[:not(:focus):invalid]:h-auto peer-[:not(:focus):invalid]:opacity-100">
           {errorMessage}
         </p>
       )}

@@ -2,13 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-import { faSpotify } from "@fortawesome/free-brands-svg-icons/faSpotify";
-import { faEllipsis } from "@fortawesome/free-solid-svg-icons/faEllipsis";
-import { faForward } from "@fortawesome/free-solid-svg-icons/faForward";
-import { faPause } from "@fortawesome/free-solid-svg-icons/faPause";
-import { faPlay } from "@fortawesome/free-solid-svg-icons/faPlay";
-import { faPlus } from "@fortawesome/free-solid-svg-icons/faPlus";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { EllipsisIcon, FastForward, Pause, Play, Plus } from "lucide-react";
 
 import Card from "./Card";
 import WaveBackground from "./WaveBackground";
@@ -81,8 +75,8 @@ const MusicPlayer = ({ text }: MusicPlayerProps) => {
 
   return (
     <Card styles="relative flex flex-col w-full h-full">
-      <div className="bg-background flex flex-col lg:flex-row items-center justify-start">
-        <div className="relative block h-[250px] sm:h-[170px] w-full lg:w-[200px] bg-music">
+      <div className="flex flex-col items-center justify-start bg-background lg:flex-row">
+        <div className="bg-music relative block h-[250px] w-full sm:h-[170px] lg:w-[200px]">
           <div className="spinner">
             <div></div>
             <div></div>
@@ -92,54 +86,45 @@ const MusicPlayer = ({ text }: MusicPlayerProps) => {
             <div></div>
           </div>
         </div>
-        <div className="lg:px-8 lg:py-4 px-4 py-2">
-          <span className="block text-xl font-semibold mb-2">{text}</span>
+        <div className="px-4 py-2 lg:px-8 lg:py-4">
+          <span className="mb-2 block text-xl font-semibold">{text}</span>
           <span className="block text-lg font-light">{currentTrack.title}</span>
           <span className="text-sm">{currentTrack.author}</span>
         </div>
-        <div className="hidden lg:flex flex-col items-center justify-center gap-4 text-xl p-4 opacity-80 ml-auto">
-          <FontAwesomeIcon className="text-[#1ED760]" icon={faSpotify} />
-          <FontAwesomeIcon icon={faEllipsis} />
-          <FontAwesomeIcon icon={faPlus} />
+        <div className="ml-auto hidden flex-col items-center justify-center gap-4 p-4 text-xl opacity-80 lg:flex">
+          <EllipsisIcon />
+          <Plus />
         </div>
       </div>
       <div className="relative p-4">
         <WaveBackground />
-        <div className="flex justify-center items-center lg:px-8 px-4 pt-2 pb-2 gap-8 text-xl opacity-80">
-          <FontAwesomeIcon
+        <div className="flex items-center justify-center gap-8 px-4 pb-2 pt-2 text-xl opacity-80 lg:px-8">
+          <FastForward
             onClick={() => {
               handlePrevious();
             }}
-            icon={faForward}
             className="rotate-180 cursor-pointer"
           />
           <button type="button" onClick={() => setIsPlaying(!isPlaying)}>
             {isPlaying ? (
-              <FontAwesomeIcon
-                icon={faPause}
-                className="flex items-center justify-center rounded-full border border-backgeound p-2 w-6 h-6 cursor-pointer"
-              />
+              <Pause className="border-backgeound flex h-6 w-6 cursor-pointer items-center justify-center rounded-full border p-2" />
             ) : (
-              <FontAwesomeIcon
-                icon={faPlay}
-                className="cursor-pointer flex items-center justify-center rounded-full border border-backgeound p-2 w-6 h-6"
-              />
+              <Play className="border-backgeound flex h-6 w-6 cursor-pointer items-center justify-center rounded-full border p-2" />
             )}
           </button>
 
-          <FontAwesomeIcon
+          <FastForward
             className="cursor-pointer"
             onClick={() => {
               handleNext();
             }}
-            icon={faForward}
           />
         </div>
-        <div className="flex px-8 gap-4">
-          <div className="relative w-full  py-4">
+        <div className="flex gap-4 px-8">
+          <div className="relative w-full py-4">
             <audio src={currentTrack.src} ref={audioRef} />
-            <div className="h-[2px] w-full rounded-full overflow-hidden bg-arbxz-accent opacity-50"></div>
-            <div className="absolute top-1/2 -translate-y-1/2 h-[2px] w-16 rounded-full overflow-hidden bg-arbxz-accent"></div>
+            <div className="h-[2px] w-full overflow-hidden rounded-full bg-arbxz-accent opacity-50"></div>
+            <div className="absolute top-1/2 h-[2px] w-16 -translate-y-1/2 overflow-hidden rounded-full bg-arbxz-accent"></div>
           </div>
           <span className="text-sm">
             {formatTime(audioRef.current?.duration)}

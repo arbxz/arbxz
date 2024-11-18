@@ -18,15 +18,16 @@ const Aside = () => {
       initial={true}
       animate={isAsideOpen ? "open" : "closed"}
       custom={height}
-      ref={containerRef}>
+      ref={containerRef}
+    >
       <motion.aside
-        className={`
-        ${
+        className={` ${
           isAsideOpen
             ? "w-full lg:w-72 lg:translate-x-0 lg:pr-4"
             : "lg:w-0 lg:-translate-x-80"
-        } overflow-hidden origin-top-left transition-all duration-300 fixed lg:relative top-0 left-0 bg-background-secondary p-4 lg:p-0 lg:bg-transparent w-full h-screen lg:h-full pt-20 lg:pt-24 no-scrollbar overflow-y-auto z-50`}
-        variants={sidebar}>
+        } no-scrollbar fixed left-0 top-0 z-50 h-screen w-full origin-top-left overflow-hidden overflow-y-auto bg-background-secondary p-4 pt-20 transition-all duration-300 lg:relative lg:h-full lg:bg-transparent lg:p-0 lg:pt-24`}
+        variants={sidebar}
+      >
         <AsideNavigation />
       </motion.aside>
     </motion.nav>

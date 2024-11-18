@@ -1,3 +1,5 @@
+import React from "react";
+
 import type { Metadata } from "next";
 
 import Footer from "@/components/footer/Footer";
@@ -44,7 +46,7 @@ function RootLayout({ children }: Readonly<RootLayoutProps>) {
   return (
     <>
       <Navigation />
-      <main className="relative flex-1 text-stone-800 dark:text-foreground ">
+      <main className="relative flex-1 text-stone-800 dark:text-foreground">
         {children}
       </main>
       <Footer />

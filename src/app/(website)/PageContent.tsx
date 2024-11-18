@@ -6,14 +6,14 @@ import ProjectSection from "@/components/project-section/ProjectSection";
 const PageContent = () => {
   return (
     <div className="relative z-20">
-      <div className="relative px-4 text-base flex gap-4 flex-col items-center justify-center select-none z-10">
+      <div className="relative z-10 flex select-none flex-col items-center justify-center gap-4 px-4 text-base md:gap-8 lg:gap-16">
         <MainBanner />
 
         <AboutSection />
 
-        <ProjectSection />
-
         <DesignSection />
+
+        <ProjectSection />
       </div>
     </div>
   );

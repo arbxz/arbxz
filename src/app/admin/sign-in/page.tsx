@@ -6,10 +6,10 @@ import Input from "@/components/ui-elements/Input";
 
 function SignIn() {
   return (
-    <div className="flex justify-center w-full">
+    <div className="flex w-full justify-center">
       <Card background="glass" styles="mx-auto">
-        <div className="flex flex-col flex-wrap gap-4 justify-center items-center p-4 md:p-8 w-full">
-          <h1 className="text-4xl font-bold gradient-text">Sign in.</h1>
+        <div className="flex w-full flex-col flex-wrap items-center justify-center gap-4 p-4 md:p-8">
+          <h1 className="gradient-text text-4xl font-bold">Sign in.</h1>
           <Input
             id="EmailID"
             name="User email"
@@ -26,8 +26,9 @@ function SignIn() {
           />
           <Link
             href=""
-            className="hover:scale-[1.05] duration-300 transition-transform"
-            prefetch={false}>
+            className="transition-transform duration-300 hover:scale-[1.05]"
+            prefetch={false}
+          >
             Forgot your password ?
           </Link>
           <Button intent="secondary" text="sign in." />

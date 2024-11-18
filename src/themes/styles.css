@@ -66,10 +66,9 @@ html {
     --background: #ffffff;
     --background-secondary: #f5f5f7;
     --background-tertiary: #f7f7f7;
-    /* --arbxz-accent: hsl(15, 85%, 48%); */
     --accent-2: #def861;
     --body: #f3f3f3;
-    --glassBg: rgba(255, 255, 255, 0.5);
+    --glassBg: rgba(255, 255, 255, 0.8);
     --glassBgInvert: rgba(27, 27, 37, 0.5);
     --glassBgTint: rgba(255, 255, 255, 0.25);
     --custom-shadow: rgb(0 0 0 / 0.1);

@@ -1,7 +1,6 @@
 "use client";
 
-import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { MoonIcon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 
 import { useLoaded } from "@/hooks/useLoaded";
@@ -13,12 +12,13 @@ const ThemeToggle = () => {
     <button
       type="button"
       title="Theme toggle"
-      className="flex items-center justify-center p-2 text-xl rounded-full bg-background shadow-inner"
-      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}>
+      className="flex items-center justify-center rounded-full bg-background p-2 text-xl shadow-inner"
+      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+    >
       {resolvedTheme == "light" && loaded ? (
-        <FontAwesomeIcon width={20} icon={faMoon} />
+        <MoonIcon size={20} />
       ) : (
-        <FontAwesomeIcon icon={faSun} />
+        <Sun size={20} />
       )}
     </button>
   );

@@ -1,10 +1,10 @@
+import React from "react";
+
 import type { Metadata } from "next";
 import { Source_Sans_3 } from "next/font/google";
 
 import "@/themes/styles.css";
 import { Providers } from "@/app/providers";
-
-import "@fortawesome/fontawesome-svg-core/styles.css";
 
 const inter = Source_Sans_3({
   weight: ["400", "500", "700"],
@@ -61,7 +61,8 @@ function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body
-        className={`${inter.className} bg-background-secondary antialiased flex flex-col min-h-screen`}>
+        className={`${inter.className} flex min-h-screen flex-col bg-background-secondary antialiased`}
+      >
         <Providers>{children}</Providers>
       </body>
     </html>
