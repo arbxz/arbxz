@@ -1,4 +1,4 @@
-import { Github, Linkedin } from "lucide-react";
+import { Car, Github, Linkedin } from "lucide-react";
 import Link from "next/link";
 
 import ClockClient from "@/components/main-section/ClockClient";
@@ -16,7 +16,8 @@ const MainBanner = () => {
 
       <div className="relative z-40 mx-auto flex w-full max-w-5xl flex-col flex-nowrap justify-center gap-4 py-8 pt-24 md:min-h-screen lg:flex-row lg:items-end xl:max-w-6xl">
         <div className="z-10 flex flex-col items-center justify-center gap-4 md:flex-row">
-          <div className="right-0 flex w-full flex-col gap-4 md:absolute md:top-24 md:w-96">
+          {/* Message block */}
+          <div className="right-4 flex w-full flex-col gap-4 md:absolute md:top-24 md:w-96">
             <Chat message="Hello fellow visitor ! 👋" />
             <div className="ml-4">
               <Chat message="Checkout my portfolio" time="19:31" />
@@ -26,7 +27,8 @@ const MainBanner = () => {
             </div>
           </div>
 
-          <div className="group relative left-0 top-1/2 w-full scale-90 md:absolute md:w-auto md:-translate-y-1/2 lg:scale-100">
+          {/* text card block */}
+          <div className="group relative left-4 top-1/2 w-full scale-90 md:absolute md:w-auto md:-translate-y-1/2 lg:scale-100">
             <div className="absolute -right-4 top-4 transition-all duration-300 group-hover:relative group-hover:right-0 group-hover:top-0 group-hover:z-20 lg:-right-8 lg:top-8">
               <TextCard
                 title="Ah curious are we"
@@ -39,6 +41,38 @@ const MainBanner = () => {
                 text="I'm Arbaaz Mowlabucus, a frontend engineer with speciality in React and Nextjs."
               />
             </div>
+          </div>
+
+          <div className="absolute bottom-40 left-1/2 hidden -translate-x-1/2 md:block">
+            <p className="glass inline-block rounded-full border-2 border-arbxz-accent border-opacity-30 px-4 py-2 text-center text-sm">
+              <Car className="mr-2 inline-block text-2xl" />
+              <a
+                className="transition-colors duration-300 hover:text-arbxz-accent"
+                href="https://sketchfab.com/3d-models/che-1e529f4b8efc4f20925957a9a4208dcd?utm_medium=embed&utm_campaign=share-popup&utm_content=1e529f4b8efc4f20925957a9a4208dcd"
+                target="_blank"
+                rel="nofollow"
+              >
+                3d model{" "}
+              </a>
+              by{" "}
+              <a
+                className="transition-colors duration-300 hover:text-arbxz-accent"
+                href="https://sketchfab.com/luyssport?utm_medium=embed&utm_campaign=share-popup&utm_content=1e529f4b8efc4f20925957a9a4208dcd"
+                target="_blank"
+                rel="nofollow"
+              >
+                luyssport{" "}
+              </a>
+              on{" "}
+              <a
+                className="transition-colors duration-300 hover:text-arbxz-accent"
+                href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=1e529f4b8efc4f20925957a9a4208dcd"
+                target="_blank"
+                rel="nofollow"
+              >
+                Sketchfab
+              </a>
+            </p>
           </div>
         </div>
 

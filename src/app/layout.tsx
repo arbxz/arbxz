@@ -13,7 +13,6 @@ const inter = Source_Sans_3({
 
 interface RootLayoutProps {
   children: React.ReactNode;
-  params: { locale: string };
 }
 
 export const metadata: Metadata = {
@@ -49,12 +48,9 @@ export const metadata: Metadata = {
   robots: "index, follow",
 };
 
-function RootLayout({
-  children,
-  params: { locale },
-}: Readonly<RootLayoutProps>) {
+function RootLayout({ children }: Readonly<RootLayoutProps>) {
   return (
-    <html className="dark" style={{}} lang={locale}>
+    <html className="dark" style={{}} lang="en">
       <head>
         <meta charSet="utf-8" />
         <meta name="google" content="nositelinkssearchbox" />
