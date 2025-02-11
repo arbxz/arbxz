@@ -22,7 +22,7 @@ html {
     --background: hsl(23, 15%, 10%);
     --background-secondary: hsl(20 14.3% 4.1%);
     --background-tertiary: #676769;
-    --arbxz-accent: #a06aff;
+    --arbxz-accent: hsl(15, 85%, 48%);
     --accent-2: #def861;
     --body: #0d0d0d;
     --glassBg: rgba(23, 19, 18, 0.5);

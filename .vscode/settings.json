@@ -1,6 +1,9 @@
 {
   "i18n-ally.localesPaths": ["messages", "public/locales"],
   "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always"
+  },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },

@@ -15,7 +15,7 @@ const About = () => {
 
         <h2 className="mb-4 text-4xl font-bold lg:text-6xl">
           skill
-          <span className="animate-linear mb-20 bg-gradient-to-r from-arbxz-accent via-purple-400 to-arbxz-accent bg-[length:200%_auto] bg-clip-text font-bold text-transparent">
+          <span className="animate-linear mb-20 bg-gradient-to-r from-arbxz-accent via-red-400 to-arbxz-accent bg-[length:200%_auto] bg-clip-text font-bold text-transparent">
             set.
           </span>
         </h2>

@@ -8,12 +8,9 @@ const PageContent = () => {
     <div className="relative z-20">
       <div className="relative z-10 flex select-none flex-col items-center justify-center gap-4 px-4 text-base md:gap-8 lg:gap-16">
         <MainBanner />
-
-        <AboutSection />
-
-        <DesignSection />
-
         <ProjectSection />
+        <AboutSection />
+        <DesignSection />
       </div>
     </div>
   );

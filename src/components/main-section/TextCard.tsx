@@ -5,9 +5,9 @@ interface TextCardProps {
 
 const TextCard = ({ title, text }: TextCardProps) => {
   return (
-    <div className="flex flex-col rounded-3xl border-[1px] border-arbxz-accent bg-background bg-opacity-60 p-8 text-sm font-normal shadow-lg transition-shadow duration-300 dark:border-stone-800 md:max-w-72 md:p-10">
+    <div className="glass flex flex-col rounded-3xl border-[1px] border-background bg-arbxz-accent bg-opacity-60 p-8 text-sm font-normal text-white shadow-lg transition-shadow duration-300 dark:border-stone-800 md:max-w-72 md:p-10">
       <div>
-        <div className="mb-4 inline-block rounded-full border border-arbxz-accent px-4 py-1 text-sm font-medium text-arbxz-accent">
+        <div className="mb-4 inline-block rounded-full border-2 border-white px-4 py-1 text-sm font-medium">
           {title}
         </div>
       </div>
