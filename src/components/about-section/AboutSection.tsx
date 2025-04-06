@@ -11,7 +11,7 @@ const AboutSection = () => {
       <div className="grid w-full grid-rows-2 gap-4 md:grid-cols-2 md:grid-rows-1">
         <Link href="/blog" className="w-full">
           <Card
-            background="animated-background bg-gradient-to-tr from-arbxz-accent via-red-600 to-arbxz-accent duration-500"
+            background="bg-arbxz-accent duration-500"
             styles="flex items-center h-full"
           >
             <div className="w-full px-4 py-8 text-center text-white lg:p-8">

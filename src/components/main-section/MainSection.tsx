@@ -79,7 +79,7 @@ const MainBanner = () => {
         <div className="relative z-20 mx-auto mt-auto">
           <div className="relative z-50 flex w-full flex-wrap items-stretch justify-stretch gap-4 md:flex-nowrap">
             <Card
-              background="animated-background bg-gradient-to-l from-arbxz-accent via-orange-600 to-red-600"
+              background="bg-arbxz-accent"
               styles="flex w-full items-center p-8 text-white text-5xl text-center"
             >
               <ClockClient />

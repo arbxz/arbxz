@@ -53,7 +53,7 @@ const DesignSection = () => {
             />
           </Card>
           <Card
-            background="bg-orange-500"
+            background="bg-indigo-500"
             styles="h-24 w-24 p-4 flex items-center justify-center"
           >
             <Image
